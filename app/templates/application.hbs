@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#link-to 'new-game'}}
+  <a href="#" class="button expand">Default Color</a>
+{{/link-to}}
 
-{{outlet}}
+<div class="container">
+  <div class="score-drawer-container">
+    {{score-drawer}}
+  </div>
+
+  <div class="container-columns" data-equalizer style="height: 100px;">
+    {{outlet}}
+  </div>
+</div>
