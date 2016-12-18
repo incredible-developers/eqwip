@@ -7,12 +7,6 @@
   flex-direction: row;
 }
 
-.vertical-container{
-  flex-wrap: wrap;
-  flex-direction: column;
-  display: flex;
-  align-self: stretch;
-}
 
 .container-columns {
   flex: 3;
@@ -31,3 +25,57 @@
 .button {
   flex: 1;
 }
+
+body > .ember-view {
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-width: 300px;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------------
+ *    Flex Frame
+ *       ------------------------------------------------------------------------- */
+.flexFrame {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+/* -------------------------------------------------------------------------
+ *    Flex Block
+ *       ------------------------------------------------------------------------- */
+/**
+ *  * 1. Set a default width on flexBlocks to fix flexBlock bug with elements
+ *   *    not respecting their parents bounds
+ *    */
+.flexBlock {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  /* 1 */ }
