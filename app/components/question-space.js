@@ -33,14 +33,41 @@ export default Ember.Component.extend({
           {
             text: "Reach out to family for a loan.",
             resultText: "Zara’s parents deny her request for a loan. Though they support her work as a makeup artist, they do not support her ambition to start a vocational training program. As a mother of two, raising her children should be her main priority, they explain. Zara reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her GHC5000, which she will pay back, with interest, in installments of GHC550 per month for one year (total of GHC6600).",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Apply for a loan through a microfinance institution.",
             resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit. (Try a different option). ",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
            text: "Organize a small loan through a Susu collector.",
             resultText: "Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute GHC350 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (GHC1750). Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -50,10 +77,28 @@ export default Ember.Component.extend({
           {
             text: "Rent a space in central Tamale — it will be easy to attract new clients in the busy city core, and her students will appreciate a central location (GHC4200 for 12 months).",
             resultText: "Renting a space downtown is expensive, but Zara considers it a sound investment. Better to build a beauty bar in an ideal location than have to move and start over again once things are underway, she reasons. However, Zara now has less money to invest on equipment, supplies, and furniture for her beauty bar. Getting to work will also be more difficult — it will be inconvenient, to say the least, to have to haul her children back and forth to the salon.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Rent a space closer to where she lives, on the city’s periphery. It’s a quieter area, but it’s cheaper, and easier to bring her children along (GHC2400 for 12 months).  ",
             resultText: "It’s not an ideal location, but it’s cheap. Zara can now afford to invest the money she saved on rent on things like couches, salon chairs, mirrors, and other equipment. It’s also in a neighborhood that is close to home, which means she can easily bring her children along. The downside — she will have to work extra hard to attract clients and students from outside of her neighborhood.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -63,10 +108,28 @@ export default Ember.Component.extend({
           {
             text: "Build the website at the EQWIP HUB computer lab. It’s a bit of commute, though — an hour and a half each way. Zara will have to shut down the beauty bar for a day or two, and find a sitter while she is away.",
             resultText: "Working closely with a couple of the volunteers at the EQWIP HUB computer lab over the course of two days, Zara is able to set up a basic website, a business email, and a Facebook page. She adds her business to a number of online business directories, and begins advertising her new website on social media.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Build the website at a local internet cafe near home. Zara can work on the site over the course of several mornings, while the children are at school and the beauty bar is still closed.",
             resultText: "Zara spends several mornings at an Internet cafe trying to build the website. The computers are very slow, and the Internet cuts out intermittently. After three frustrating mornings, she gives up. What a waste of time (and GHC25)! She does, however, manage to set up a Facebook page for her salon, which she asks her friends to share widely.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -76,10 +139,28 @@ export default Ember.Component.extend({
           {
             text: "Pass on the offer. Though Zara needs the money, she thinks it will be a challenge to arrive on time for the wedding. The rainy season has just begun, and many of the roads in rural areas have been rained out.",
             resultText: "It hurts to turn down a big paycheque, but Zara has a number of clients booked already — they are her main priority.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Accept the client, cancel previous appointments, and prepare the children for the 5 hour journey to Bolgatanga!",
             resultText: "Despite her family’s admonishment, Zara and her children take the Metro Mass Transit bus to Bolgatanga (GHC45). Next, she hires a Yellow Yellow to take them to the wedding venue, which is located a few kilometers outside of town. The driver charges you extra for the two children and all your supplies (GHC10). The journey to the venue is long, hot, and uncomfortable, but Zara arrives just in time, with two upset children in tow. After the job, Zara embarks home, arriving after midnight, exhausted. (GHC55). The next day, she will have to call and apologize to the customers whose appointments she cancelled without notice.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -89,10 +170,28 @@ export default Ember.Component.extend({
           {
             text: "Purchase GHC750 worth of prime time radio ads. This will be used to pay for a series of day-time mentions on Diamond FM and a series of evening messages on NorthStar Radio.",
             resultText: "The ads seem to do the trick! Over the next couple of weeks, new customers trickle in, and Zara manages to book a number of weddings and events for the coming months. Her vocational training courses also receive a considerable bump in sign-ups. This successful marketing campaign should improve Zara’s profit margin over the next several months.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Purchase a smartphone (GHC700) and data package (GHC20 per month), and develop a social media campaign to promote the business online.",
             resultText: "Radio ads might have a broader, more immediate reach, but a social media campaign can be  refined and developed over time, Zara figures. Now that she has a smartphone, she can update her Facebook page regularly, and share details of her business throughout various channels on WhatsApp. She also consults with some of her colleagues from her EQWIP HUBs training course — particularly the social media-savvy ones. Their advice is to focus not on advertising your business per se, but on building your business’s brand. To do this, her colleagues explain, Zara should regularly post photos and videos that convey her salon’s unique style and culture. If done right, the customers will follow.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -102,10 +201,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -115,10 +232,28 @@ export default Ember.Component.extend({
           {
             text: "Hire Sandra! This is a great opportunity to add value to the training courses. (GHC150 per month).",
             resultText: "Sandra turns out to be a terrific teacher and mentor for Zara’s students — her environmental training sessions are a big hit, not only for the students, but on social media as well. As an end of the month bonus, Zara also notices that her hydro bill has dropped, significantly.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "The environment is important, but saving money is still a priority for a start-up in a stage of relative infancy. Zara promises to keep a closer eye on her students’ behaviour.",
             resultText: "Zara does her best to convince her students to be more careful with water, and to be conscious of what they do with their waste. Though some students seem to get the message, it doesn't click with others. She can’t help but notice, now, that her hydro bill has risen significantly in recent months (GHC25 per month).",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -128,10 +263,28 @@ export default Ember.Component.extend({
           {
             text: "Get the paperwork together, and register! To operate legally, Zara will need to apply for a Tax Identification Number (GHC25) and register her business as a sole proprietorship (GHC35).",
             resultText: "Zara’s husband spends the better part of a weekend sorting through the convoluted paperwork for the application. On Monday, she heads to the registration office, but there is a massive queue. She waits for a few hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Annoyed and tired, Zara decides to go home.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Non-registered small businesses rarely run into problems. The government has been saying this for years! Might as well take the risk.",
             resultText: "Zara hopes that the government is bluffing. Only time will tell.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -141,14 +294,41 @@ export default Ember.Component.extend({
           {
             text: "Apologize to the cousin, and offer to work the wedding for free. Zara’s extended family has not only provided her with plenty of support these past months, but has also become an essential source for customer referrals around town. She does not want to put these relationships into jeopardy.",
             resultText: "Zara’s cousin apologizes for getting upset. He thanks her graciously, and leaves. Zara will have to lose a day’s income to work the wedding pro bono (GHC500).",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Zara stands her ground, and tells him that he has to pay full price. This business is the source of Zara’s livelihood, and she cannot afford to give away a free lunch.",
             resultText: "Zara’s cousin gets angry, and storms off, saying that he will find someone else to do the makeup for his wife. Not only has she lost the gig, but she has also created further tension with her family.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Offer a ‘family discount’ (GHC300)  in exchange for future babysitting.",
             resultText: "Zara’s cousin reluctantly accepts the counteroffer, and promises to take care of the kids when needed. It’s not a perfect deal, but at least Zara doesn’t lose a full day’s income.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -158,10 +338,28 @@ export default Ember.Component.extend({
           {
             text: "The registration office in Accra is known to be much bigger and better organized than the one in Tamale. Many claim that it’s faster to simply bus to Accra than to queue up here in town. Road trip!",
             resultText: "Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (GHC90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! She is told that it will take 60 days to review the application. Frustrating, but that’s the way it goes. With a couple of hours to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (GHC100). She will be able to sell these to her customers at a premium.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these Goro boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the Goro Boys GHC200 for their services.",
             resultText: "The Goro Boys do their thing. One week later, Zara receives word that her business has successfully been registered.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -171,10 +369,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -184,10 +400,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -199,10 +433,28 @@ export default Ember.Component.extend({
           {
             text: "Reach out to family for a loan.",
             resultText: "Though they do not have a lot of money, Kojo asks his family for a loan of GHC3000. Kojo’s two older siblings and uncle are happy to help him out. His father, however, is very reluctant — he worked hard to pay for his son’s tertiary education, and does not understand why he is building gadgets instead of finding a real job. He finally concedes, but warns Kojo that the family will not lend him any more money if he is not able to repay the loan within a year. Kojo promises to pay back the the loan in monthly installments of GHC250.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Apply for part-time work as a teacher or a tutor at the local secondary school.",
             resultText: "Kojo’s background in accounting qualifies him to teach mathematics to high school students. He can earn GHC500 per month teaching 3 afternoons a week, though this means that he will have less time to focus on his business.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -212,10 +464,28 @@ export default Ember.Component.extend({
           {
             text: "Hire a developer to build the mobile application. Kojo gets a quote from a development firm that can build a basic mobile application over the course of 3 months for GHC3500.",
             resultText: "Kojo is confident in his decision. He has found a developer that he can trust will deliver a quality product. The developer also agrees to accept payment in monthly installments of GHC875, starting next month.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Enroll in a coding bootcamp, and learn how to build the app ‘in-house’. The Code School is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs GHC1000 up front. He will also have to purchase a laptop (GHC1100).",
             resultText: "As the name implies, coding bootcamps are no a walk in the park. Every weekday morning for 8 weeks straight, Kojo will have to work extremely hard to learn the fundamental technical skills needed to build a mobile app. However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program. A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -225,10 +495,28 @@ export default Ember.Component.extend({
           {
             text: "Offer to provide pro bono environmental training sessions for the staff of each business that agrees to pilot the project. It may be idealistic, but Kojo thinks that if he can convince people about the benefits of recycling and waste management, they will be more than happy to play their part.",
             resultText: "The offer seems to work. Kojo manages to secure partnerships with 4 additional clients, including the general manager of a supermarket chain with several stores across the city. The general manager, though hesitant at first, agrees to pilot the project at 5 locations, provided that he won’t have to commit any of his own time or resources. Kojo is thrilled to have secured  a major client, but he has to get organized. He will need to spend a number of evenings planning and conducting research for a presentation on environmental responsibility. It’s a lot of work, but Kojo enjoys it — plus he can use the presentation he prepares to pitch to future clients.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Offer to promote each partnership across social media, and to include a list of participating businesses on the application, once it is developed. Kojo is tech savvy, and knows how to create a buzz online. He will try to convince potential clients that partnering with an environmentally responsible initiative will be good for their business.",
             resultText: "The idea works wonderfully — what kind of business would turn down free publicity? Kojo quickly secures enough clients to pilot the project, but fears that some of the businesses that sign up are trying to take advantage of him. After all, there is no real way to ensure that the businesses actually sort the waste or even use the application once it's ready.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -238,10 +526,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -251,10 +557,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -264,10 +588,28 @@ export default Ember.Component.extend({
           {
             text: "Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (GHC80 per week).",
             resultText: "Adding a Motorking driver to the monthly payroll won’t be easy, but Kojo thinks that a rapid expansion into Awoshie will impress potential investors. By the end of the month, Kojo manages to secure 10 new clients, most of which are using the app on a regular basis.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Offer new clients in Awoshie and additional GHC10 per load that they drop off at the collections site for the first 3 months. Kojo will have to pay this extra sum out of his own pocket.",
             resultText: "A number of smaller businesses in Awoshie are convinced by this added incentive, and sign up for Recycle Accra! The larger businesses are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them. By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -277,10 +619,28 @@ export default Ember.Component.extend({
           {
             text: "Inform the Recycle Accra! clients in Awoshie that, due to unforeseen circumstances, services will have to be paused for the next three months. The last thing Kojo’s project needs right now is legal trouble!",
             resultText: "Kojo is frustrated by these unexpected bureaucratic obstacles — many of his clients in Awoshie will likely stop using his app altogether. However, he is confident that he made the right choice to stay within the parameters of the law!",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Offer a GHC150 bribe to the registration officer in order to fastrack the application process. Neither potential investors nor RWS would be impressed should Kojo suddenly have to cut off service to a major segment of his clientele.",
             resultText: "The officer accepts the bribe, and, within one week, Recycle Accra! is an officially registered business. Kojo is relieved, but he doubts that that is the last he will hear from his rivals in Awoshie. Indeed, within the month, two of his clients cancel their subscription to Recycle Accra!, explaining that they have been advised to cut ties with Kojo’s new enterprise.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -290,10 +650,28 @@ export default Ember.Component.extend({
           {
             text: "Purchase specially outfitted plastic recycle bins from RWS, and install them in strategic locations — next to open drains or near busy marketplaces. This won’t be a cheap endeavor — in addition to purchasing the bins, Kojo will also have to hire a Motorking driver to make weekly pickups (RWS trucks will not be able to operate in these busy areas). He will also have to hire a number individuals to teach and encourage Accrans how to properly use the bins once they are introduced! In total, Kojo estimates that he will need to fork over about GHC500 to pull this off.",
             resultText: "Kojo hires a number of enthusiastic youth that are willing to encourage the use of his newly installed bins, and this seems to do the trick. By the end of the month, all 6 of Kojo’s bins are being filled and transferred to RWS on a regular, weekly basis. This is not only good publicity for Recycle Accra!, the logo of which is pasted all over the bins, but the plastic that Kojo ships to RWS also brings in an extra  200 cedis a week.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Launch a social media campaign to raise awareness about the causes of flooding, and ways that Accrans can deal with their waste more responsibly. Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
             resultText: "Kojo’s brother-in-law is happy to help. Together, they put together a series of infographics that provide helpful tips on recycling, composting, and responsibly sorting waste. The NGO also offers to donate 300GHC to the campaign, which Kojo puts towards advertisements on Facebook and Twitter.The social media campaign really seems to strike a chord in the weeks following the floods. It is shared thousands of times, and even promoted by Accra’s municipal authorities. It’s not clear to Kojo whether the campaign will significantly bolster the use of Recycle Accra! — it seems like those sharing his social media posts are chiefly concerned with the content, rather than the business it is also promoting. However, Kojo is very pleased with the campaign’s success — for a meagre amount of money, he was able to use his business to effectively promote environmental responsibility in the city he loves.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -303,10 +681,28 @@ export default Ember.Component.extend({
           {
             text: "Family first. Offer your sister GHC250, to cover school fees and to buy her children some new school clothes.",
             resultText: "Kojo’s sister is extremely grateful, as are his nephew and nieces. He will have to slog through the next few months with his old equipment, but he feels go about fulfilling his brotherly duty.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Recycle Accra! has almost reached the investment stage of its development, and Kojo doesn’t think he can part with any cash right now. Kojo apologizes to his sister, and promises to cover the fees, plus more, next year. He is sure she will understand.",
             resultText: "Kojo upgrades the equipment in his home office. His sister is extremely  upset that he would prioritize his business over his family.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -316,10 +712,28 @@ export default Ember.Component.extend({
           {
             text: "Invest in a series of targeted advertisements on Facebook, Twitter, and WhatsApp (GHC80). The advertisements offer a promotion — if any business refers another business to sign up for Recycle App, they will receive an extra GHC10 per load for one month.",
             resultText: "The targeted ads generate plenty of likes, plenty of traffic on the Recycle Accra! website, and a significant spike in mobile application downloads. A fews weeks pass, however, and it appears as though the initial spike in traffic does not translate to an equivalent spike in business — indeed, the number of people who actually use the application did not rise significantly. Still, the campaign generated a lot of buzz around Recycle Accra!, the type of buzz that potential investors will certainly appreciate.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "To save money, Kojo decides to go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but, hey — there’s nothing more effective than a face-to-face conversation.",
             resultText: "Kojo’s door-to-door undertaking is exhausting, but proves fruitful. He secures a number of high profile clients, including a college and a hotel. Taking out advertisements online or in a newspaper probably would have had a broader reach, but Kojo is confident that his new clients will make good use of the mobile application. Plus, if all goes well, these high profile clients will look good on a investment proposal.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -329,10 +743,28 @@ export default Ember.Component.extend({
           {
             text: "Sign up! This sounds like a great opportunity for Kojo to meet fellow social entrepreneurs, and to hone his coding skills.",
             resultText: "Though his team does not win the hackathon, Kojo has an excellent time. His team was building an application that helps connect Ghanaians to affordable health care professionals in their area, and Kojo was able to contribute his GIS digital mapping skills. More importantly, the hackathon helped Kojo expand his network — throughout the weekend, he forged a close connection with a terrific web designer, who offered her help to improve the look and interface of Recycle Accra!, and deepened his friendship with the app’s main developer, an experienced coder who has promised to help Kojo with any bugs he many have in the future. Kojo was also able to practice pitching a business idea to investors, and was provided with invaluable feedback and mentorship from the hackathon judges.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Maybe next time. Cash is low, and Kojo would rather focus on his own application at this time.",
             resultText: "Accra loves hackathons. There will be plenty of opportunities in the future.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -342,10 +774,28 @@ export default Ember.Component.extend({
           {
             text: "Pay a professional business consultant to improve Kojo’s business proposal, and streamline the plan to generate revenue (GHC500).",
             resultText: "Kojo finds a highly esteemed (and expensive) business consult located in the affluent East Ridge neighborhood of Accra. After waiting in the consultant’s office for many hours, he briefly meets with the consultant, an intimidating older man to whom he hands his business proposal after a brusk meeting. Two days and 500 cedis later, Kojo receives the newly revised business proposal. The consultant has overhauled the business proposal, which now places a heavy emphasis on introducing a monthly pay scale for current clients, and charging new clients a initial download fee. Kojo is a bit overwhelmed by these changes, and is not sure how the consultant determined they were necessary. The proposal, however, appears professional and clearly thought out, and Kojo sees no choice but to trust the consultant.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "Seek advice and mentorship from local business and community development leaders. One of Kojo’s close friends, Donna, is currently enrolled in the EQWIP HUBs entrepreneurship training program. The EQWIP HUB Network, she explains, connects young entrepreneurs to mentors within the community. She thinks they will be able to help him out.",
             resultText: "Kojo meets up with Donna at the EQWIP HUB one day after her training. After a long discussion about his business proposal, one of the staff members offers to connect Kojo to the Executive Director of a major environmental NGO that is based in Accra, but that operates throughout Western Africa. They set up a Skype meeting. The meeting is eye-opening. The Executive Director thinks that Kojo has an excellent product, but  recommends that he focus less on monetizing the application, and more on building partnerships with nonprofit or governmental organizations that have a vested interest in promoting environmental stewardship.",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -355,10 +805,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },      
@@ -368,10 +836,28 @@ export default Ember.Component.extend({
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
           {
             text: "",
             resultText: "",
+            impact: {
+              cash: ,
+              income: ,
+              resilience: ,
+              environment: ,
+              debt: ,
+              debtPayments:,
+              assets:,
+            },
           },
         ]
       },
@@ -435,7 +921,7 @@ export default Ember.Component.extend({
               debt: ,
               debtPayments:,
               assets:,
-            }
+            },
           },
           {
             text: "Don’t approach the manager. It will be embarrassing if she is rejected in front of her uncle. Plus, Lamisi thinks it is unlikely that the restaurant manager will partner with a female poultry farmer.",
