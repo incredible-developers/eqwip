@@ -28,41 +28,41 @@ export default Ember.Component.extend({
   questions: {
     'Kojo': {
       1: {
-        questionText: "This is the text from the first question",
+        questionText: "First thing’s first — Kojo will need cash to fund his business endeavor! Currently, he has GHC1100 in savings, which he accumulated during his time with the national service. He figures he will need a lot more than that to successfully build a viable mobile application. Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Reach out to family for a loan.",
+            resultText: "Though they do not have a lot of money, Kojo asks his family for a loan of GHC3000. Kojo’s two older siblings and uncle are happy to help him out. His father, however, is very reluctant — he worked hard to pay for his son’s tertiary education, and does not understand why he is building gadgets instead of finding a real job. He finally concedes, but warns Kojo that the family will not lend him any more money if he is not able to repay the loan within a year. Kojo promises to pay back the the loan in monthly installments of GHC250."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Apply for part-time work as a teacher or a tutor at the local secondary school.",
+            resultText: "Kojo’s background in accounting qualifies him to teach mathematics to high school students. He can earn GHC500 per month teaching 3 afternoons a week, though this means that he will have less time to focus on his business."
           },
         ]
       },
       2: {
-        questionText: "This is the text from the first question",
+        questionText: "Now that Kojo has found a source of cash, it’s time to build the mobile application! Though Kojo has some experience building websites and a rudimentary understanding of coding, he will not be able to build a fully functional app on his own.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Hire a developer to build the mobile application. Kojo gets a quote from a development firm that can build a basic mobile application over the course of 3 months for GHC3500.",
+            resultText: "Kojo is confident in his decision. He has found a developer that he can trust will deliver a quality product. The developer also agrees to accept payment in monthly installments of GHC875, starting next month."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Enroll in a coding bootcamp, and learn how to build the app ‘in-house’. The Code School is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs GHC1000 up front. He will also have to purchase a laptop (GHC1100).",
+            resultText: "As the name implies, coding bootcamps are no a walk in the park. Every weekday morning for 8 weeks straight, Kojo will have to work extremely hard to learn the fundamental technical skills needed to build a mobile app. However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program. A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function."
           },
         ]
       },
       3: {
-        questionText: "This is the text from the first question",
+        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started. RWS is willing to pay GHC35 per 25 kilogram load of plastics. Each client will receive GHC25 per load, GHC10 of which will go to Kojo to fund his operations. After meeting with dozens of business owners and managers, and Kojo manages to generate a lot of interest in his app, but is unable to secure commitments from more than 2 or 3 clients. Many of the potential clients are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash! In other words, Kojo needs to add value to business proposition.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Offer to provide pro bono environmental training sessions for the staff of each business that agrees to pilot the project. It may be idealistic, but Kojo thinks that if he can convince people about the benefits of recycling and waste management, they will be more than happy to play their part.",
+            resultText: "The offer seems to work. Kojo manages to secure partnerships with 4 additional clients, including the general manager of a supermarket chain with several stores across the city. The general manager, though hesitant at first, agrees to pilot the project at 5 locations, provided that he won’t have to commit any of his own time or resources. Kojo is thrilled to have secured  a major client, but he has to get organized. He will need to spend a number of evenings planning and conducting research for a presentation on environmental responsibility. It’s a lot of work, but Kojo enjoys it — plus he can use the presentation he prepares to pitch to future clients."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Offer to promote each partnership across social media, and to include a list of participating businesses on the application, once it is developed. Kojo is tech savvy, and knows how to create a buzz online. He will try to convince potential clients that partnering with an environmentally responsible initiative will be good for their business.",
+            resultText: "The idea works wonderfully — what kind of business would turn down free publicity? Kojo quickly secures enough clients to pilot the project, but fears that some of the businesses that sign up are trying to take advantage of him. After all, there is no real way to ensure that the businesses actually sort the waste or even use the application once it's ready."
           },
         ]
       },
@@ -93,71 +93,97 @@ export default Ember.Component.extend({
         ]
       },
       6: {
-        questionText: "This is the text from the first question",
+        questionText: "With the pilot well underway, Kojo is looking to expand his clientele. After doing some research, he decides to target clients in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services. He is able to easily identify a dozen clients in the area that are interested in Recycle Accra! RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (GHC80 per week).",
+            resultText: "Adding a Motorking driver to the monthly payroll won’t be easy, but Kojo thinks that a rapid expansion into Awoshie will impress potential investors. By the end of the month, Kojo manages to secure 10 new clients, most of which are using the app on a regular basis."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Offer new clients in Awoshie and additional GHC10 per load that they drop off at the collections site for the first 3 months. Kojo will have to pay this extra sum out of his own pocket.",
+            resultText: "A number of smaller businesses in Awoshie are convinced by this added incentive, and sign up for Recycle Accra! The larger businesses are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them. By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis."
           },
         ]
       },
       7: {
-        questionText: "This is the text from the first question",
+        questionText: "Things seem to be going well as Kojo enters the third and final month of the pilot stage of Recycle Accra! The pilot is expanding slowly, but steadily, and he has received significant amounts of positive feedback. However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government. Within a week, Kojo receives a cease and desist notice from the municipal government. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. However, Kojo is unwilling to be intimidated or pushed out of Awoshie. He his paperwork together, and heads to the registration office. To operate legally, he will need to apply for a Business Operating Permit (GHC500). Unfortunately, the clerk at the office tells Kojo that it will take at least 90 days to review his application.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Inform the Recycle Accra! clients in Awoshie that, due to unforeseen circumstances, services will have to be paused for the next three months. The last thing Kojo’s project needs right now is legal trouble!",
+            resultText: "Kojo is frustrated by these unexpected bureaucratic obstacles — many of his clients in Awoshie will likely stop using his app altogether. However, he is confident that he made the right choice to stay within the parameters of the law!"
           },
           {
-            text: "",
-            resultText: ""
+            text: "Offer a GHC150 bribe to the registration officer in order to fastrack the application process. Neither potential investors nor RWS would be impressed should Kojo suddenly have to cut off service to a major segment of his clientele.",
+            resultText: "The officer accepts the bribe, and, within one week, Recycle Accra! is an officially registered business. Kojo is relieved, but he doubts that that is the last he will hear from his rivals in Awoshie. Indeed, within the month, two of his clients cancel their subscription to Recycle Accra!, explaining that they have been advised to cut ties with Kojo’s new enterprise."
           },
         ]
       },
       8: {
-        questionText: "This is the text from the first question",
+        questionText: "Mid-way through July, Ghana is hit by a major rainstorm. Within 24 hours, major floods sweep across Accra, causing millions of dollars of damage. These floods, which have been happening on a cyclical basis in recent years, are caused in part by plastic bags and other waste that is disposed of near open drainage systems. Now that Recycle Accra! has found its footing, Kojo senses an opportunity to not only to help alleviate the strain on the city’s drainage system, but to grow his business at the same time.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Purchase specially outfitted plastic recycle bins from RWS, and install them in strategic locations — next to open drains or near busy marketplaces. This won’t be a cheap endeavor — in addition to purchasing the bins, Kojo will also have to hire a Motorking driver to make weekly pickups (RWS trucks will not be able to operate in these busy areas). He will also have to hire a number individuals to teach and encourage Accrans how to properly use the bins once they are introduced! In total, Kojo estimates that he will need to fork over about GHC500 to pull this off.",
+            resultText: "Kojo hires a number of enthusiastic youth that are willing to encourage the use of his newly installed bins, and this seems to do the trick. By the end of the month, all 6 of Kojo’s bins are being filled and transferred to RWS on a regular, weekly basis. This is not only good publicity for Recycle Accra!, the logo of which is pasted all over the bins, but the plastic that Kojo ships to RWS also brings in an extra  200 cedis a week."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Launch a social media campaign to raise awareness about the causes of flooding, and ways that Accrans can deal with their waste more responsibly. Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
+            resultText: "Kojo’s brother-in-law is happy to help. Together, they put together a series of infographics that provide helpful tips on recycling, composting, and responsibly sorting waste. The NGO also offers to donate 300GHC to the campaign, which Kojo puts towards advertisements on Facebook and Twitter.The social media campaign really seems to strike a chord in the weeks following the floods. It is shared thousands of times, and even promoted by Accra’s municipal authorities. It’s not clear to Kojo whether the campaign will significantly bolster the use of Recycle Accra! — it seems like those sharing his social media posts are chiefly concerned with the content, rather than the business it is also promoting. However, Kojo is very pleased with the campaign’s success — for a meagre amount of money, he was able to use his business to effectively promote environmental responsibility in the city he loves."
           },
         ]
       },
       9: {
-        questionText: "This is the text from the first question",
+        questionText: "Things seem to be back on track. With dozens of clients using the application regularly in a number of neighborhoods across Accra, RWS is now providing each new client with specialized recycling bins, free of charge. Kojo is now looking to upgrade some of his equipment — a new modem, router, and an external hard drive will go a long way (GHC 250). Before he makes any purchases, however, Kojo receives a phone call from sister. Her three young children are heading back to school next month, and she need money for their school fees (GHC200).",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Family first. Offer your sister GHC250, to cover school fees and to buy her children some new school clothes.",
+            resultText: "Kojo’s sister is extremely grateful, as are his nephew and nieces. He will have to slog through the next few months with his old equipment, but he feels go about fulfilling his brotherly duty."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Recycle Accra! has almost reached the investment stage of its development, and Kojo doesn’t think he can part with any cash right now. Kojo apologizes to his sister, and promises to cover the fees, plus more, next year. He is sure she will understand.",
+            resultText: "Kojo upgrades the equipment in his home office. His sister is extremely  upset that he would prioritize his business over his family."
           },
         ]
       },
       10: {
-        questionText: "This is the text from the first question",
+        questionText: "September arrives, and Kojo is determined to further expand the reach of Recycle Accra! He sets his sights on the affluent neighborhood of Dansoman.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Invest in a series of targeted advertisements on Facebook, Twitter, and WhatsApp (GHC80). The advertisements offer a promotion — if any business refers another business to sign up for Recycle App, they will receive an extra GHC10 per load for one month.",
+            resultText: "The targeted ads generate plenty of likes, plenty of traffic on the Recycle Accra! website, and a significant spike in mobile application downloads. A fews weeks pass, however, and it appears as though the initial spike in traffic does not translate to an equivalent spike in business — indeed, the number of people who actually use the application did not rise significantly. Still, the campaign generated a lot of buzz around Recycle Accra!, the type of buzz that potential investors will certainly appreciate."
           },
           {
-            text: "",
-            resultText: ""
+            text: "To save money, Kojo decides to go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but, hey — there’s nothing more effective than a face-to-face conversation.",
+            resultText: "Kojo’s door-to-door undertaking is exhausting, but proves fruitful. He secures a number of high profile clients, including a college and a hotel. Taking out advertisements online or in a newspaper probably would have had a broader reach, but Kojo is confident that his new clients will make good use of the mobile application. Plus, if all goes well, these high profile clients will look good on a investment proposal."
           },
         ]
       },
       11: {
+        questionText: "One of Kojo’s colleagues from the bootcamp invites him to take part in a hackathon — a weekend event where teams of computer coders, programmers, designers, and social entrepreneurs compete to develop a viable web or mobile based computer program. The hackathon, which will be held at the U-Code computer lab in Accra, will be judged by an esteemed panel of local and international judges. The contest costs GHC350 to enter. The hackathon will be highly competitive, but the winning team will get to work with business experts and a tech incubator to further develop their idea.",
+        answerOptions: [
+          {
+            text: "Sign up! This sounds like a great opportunity for Kojo to meet fellow social entrepreneurs, and to hone his coding skills.",
+            resultText: "Though his team does not win the hackathon, Kojo has an excellent time. His team was building an application that helps connect Ghanaians to affordable health care professionals in their area, and Kojo was able to contribute his GIS digital mapping skills. More importantly, the hackathon helped Kojo expand his network — throughout the weekend, he forged a close connection with a terrific web designer, who offered her help to improve the look and interface of Recycle Accra!, and deepened his friendship with the app’s main developer, an experienced coder who has promised to help Kojo with any bugs he many have in the future. Kojo was also able to practice pitching a business idea to investors, and was provided with invaluable feedback and mentorship from the hackathon judges."
+          },
+          {
+            text: "Maybe next time. Cash is low, and Kojo would rather focus on his own application at this time.",
+            resultText: "Accra loves hackathons. There will be plenty of opportunities in the future."
+          },
+        ]
+      },
+      12: {
+        questionText: "Business is doing well. Recycle Accra! has now been downloaded over 200 times, and has over 50 regular users in four different neighborhoods throughout Accra. Kojo’s cash is running low, however, and he doesn’t think he will be able to expand his business much further without investors. However, Kojo is not confident that his business proposal will be able to win over potential investors. In particular, he needs to find an effective way to convey his plan to monetize the application, and generate a more steady flow of revenue.",
+        answerOptions: [
+          {
+            text: "Pay a professional business consultant to improve Kojo’s business proposal, and streamline the plan to generate revenue (GHC500).",
+            resultText: "Kojo finds a highly esteemed (and expensive) business consult located in the affluent East Ridge neighborhood of Accra. After waiting in the consultant’s office for many hours, he briefly meets with the consultant, an intimidating older man to whom he hands his business proposal after a brusk meeting. Two days and 500 cedis later, Kojo receives the newly revised business proposal. The consultant has overhauled the business proposal, which now places a heavy emphasis on introducing a monthly pay scale for current clients, and charging new clients a initial download fee. Kojo is a bit overwhelmed by these changes, and is not sure how the consultant determined they were necessary. The proposal, however, appears professional and clearly thought out, and Kojo sees no choice but to trust the consultant."
+          },
+          {
+            text: "Seek advice and mentorship from local business and community development leaders. One of Kojo’s close friends, Donna, is currently enrolled in the EQWIP HUBs entrepreneurship training program. The EQWIP HUB Network, she explains, connects young entrepreneurs to mentors within the community. She thinks they will be able to help him out.",
+            resultText: "Kojo meets up with Donna at the EQWIP HUB one day after her training. After a long discussion about his business proposal, one of the staff members offers to connect Kojo to the Executive Director of a major environmental NGO that is based in Accra, but that operates throughout Western Africa. They set up a Skype meeting. The meeting is eye-opening. The Executive Director thinks that Kojo has an excellent product, but  recommends that he focus less on monetizing the application, and more on building partnerships with nonprofit or governmental organizations that have a vested interest in promoting environmental stewardship."
+          },
+        ]
+      },
+            13: {
         questionText: "This is the text from the first question",
         answerOptions: [
           {
@@ -169,8 +195,8 @@ export default Ember.Component.extend({
             resultText: ""
           },
         ]
-      },
-      12: {
+      },      
+      14: {
         questionText: "This is the text from the first question",
         answerOptions: [
           {
