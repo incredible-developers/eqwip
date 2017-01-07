@@ -41,15 +41,15 @@ export default Ember.Component.extend({
         ]
       },
       2: {
-        questionText: "This is the text from the first question",
+        questionText: "Now that Kojo has found a source of cash, it’s time to build the mobile application! Though Kojo has some experience building websites and a rudimentary understanding of coding, he will not be able to build a fully functional app on his own.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Hire a developer to build the mobile application. Kojo gets a quote from a development firm that can build a basic mobile application over the course of 3 months for GHC3500.",
+            resultText: "Kojo is confident in his decision. He has found a developer that he can trust will deliver a quality product. The developer also agrees to accept payment in monthly installments of GHC875, starting next month."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Enroll in a coding bootcamp, and learn how to build the app ‘in-house’. The Code School is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs GHC1000 up front. He will also have to purchase a laptop (GHC1100).",
+            resultText: "As the name implies, coding bootcamps are no a walk in the park. Every weekday morning for 8 weeks straight, Kojo will have to work extremely hard to learn the fundamental technical skills needed to build a mobile app. However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program. A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function."
           },
         ]
       },
