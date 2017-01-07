@@ -132,15 +132,15 @@ export default Ember.Component.extend({
         ]
       },
       9: {
-        questionText: "This is the text from the first question",
+        questionText: "Things seem to be back on track. With dozens of clients using the application regularly in a number of neighborhoods across Accra, RWS is now providing each new client with specialized recycling bins, free of charge. Kojo is now looking to upgrade some of his equipment — a new modem, router, and an external hard drive will go a long way (GHC 250). Before he makes any purchases, however, Kojo receives a phone call from sister. Her three young children are heading back to school next month, and she need money for their school fees (GHC200).",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Family first. Offer your sister GHC250, to cover school fees and to buy her children some new school clothes.",
+            resultText: "Kojo’s sister is extremely grateful, as are his nephew and nieces. He will have to slog through the next few months with his old equipment, but he feels go about fulfilling his brotherly duty."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Recycle Accra! has almost reached the investment stage of its development, and Kojo doesn’t think he can part with any cash right now. Kojo apologizes to his sister, and promises to cover the fees, plus more, next year. He is sure she will understand.",
+            resultText: "Kojo upgrades the equipment in his home office. His sister is extremely  upset that he would prioritize his business over his family."
           },
         ]
       },
