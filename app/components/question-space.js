@@ -54,15 +54,15 @@ export default Ember.Component.extend({
         ]
       },
       3: {
-        questionText: "This is the text from the first question",
+        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started. RWS is willing to pay GHC35 per 25 kilogram load of plastics. Each client will receive GHC25 per load, GHC10 of which will go to Kojo to fund his operations. After meeting with dozens of business owners and managers, and Kojo manages to generate a lot of interest in his app, but is unable to secure commitments from more than 2 or 3 clients. Many of the potential clients are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash! In other words, Kojo needs to add value to business proposition.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Offer to provide pro bono environmental training sessions for the staff of each business that agrees to pilot the project. It may be idealistic, but Kojo thinks that if he can convince people about the benefits of recycling and waste management, they will be more than happy to play their part.",
+            resultText: "The offer seems to work. Kojo manages to secure partnerships with 4 additional clients, including the general manager of a supermarket chain with several stores across the city. The general manager, though hesitant at first, agrees to pilot the project at 5 locations, provided that he won’t have to commit any of his own time or resources. Kojo is thrilled to have secured  a major client, but he has to get organized. He will need to spend a number of evenings planning and conducting research for a presentation on environmental responsibility. It’s a lot of work, but Kojo enjoys it — plus he can use the presentation he prepares to pitch to future clients."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Offer to promote each partnership across social media, and to include a list of participating businesses on the application, once it is developed. Kojo is tech savvy, and knows how to create a buzz online. He will try to convince potential clients that partnering with an environmentally responsible initiative will be good for their business.",
+            resultText: "The idea works wonderfully — what kind of business would turn down free publicity? Kojo quickly secures enough clients to pilot the project, but fears that some of the businesses that sign up are trying to take advantage of him. After all, there is no real way to ensure that the businesses actually sort the waste or even use the application once it's ready."
           },
         ]
       },
