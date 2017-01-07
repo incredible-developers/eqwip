@@ -31,7 +31,6 @@ export default Ember.Component.extend({
           3: "Third Option",
         }
       },
-
       2: {
         questionText: "More Text from a second question",
         answerOptions: {
@@ -81,7 +80,6 @@ export default Ember.Component.extend({
           },
         ]
       },
->>>>>>> 9658a2d1247c8cd7786a93ee5b09ed10278073f3
     }
   },
 
