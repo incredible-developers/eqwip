@@ -28,20 +28,160 @@ export default Ember.Component.extend({
   questions: {
     'Kojo': {
       1: {
-        'questionText': "This is the text from the first question",
-        'answerOptions': {
-          1: "First Option",
-          2: "Second Option",
-          3: "Third Option",
-        }
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
       },
       2: {
-        questionText: "More Text from a second question",
-        answerOptions: {
-          1: "Option for question 2",
-          2: "Second Option",
-          3: "Third Option",
-        }
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      3: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      4: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      5: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      6: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      7: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      8: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      9: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      10: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      11: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      12: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
       },
     },
     'Lamisi': {
