@@ -183,6 +183,32 @@ export default Ember.Component.extend({
           },
         ]
       },
+            13: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },      
+      14: {
+        questionText: "This is the text from the first question",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
     },
     'Lamisi': {
       1: {
