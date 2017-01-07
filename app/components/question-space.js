@@ -44,15 +44,16 @@ export default Ember.Component.extend({
         ]
       },
       2: {
-        questionText: "",
+        questionText: "Now that she has funding, Zara needs to rent a location for her beauty bar.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Rent a space in central Tamale — it will be easy to attract new clients in the busy city core, and her students will appreciate a central location (GHC4200 for 12 months).",
+            resultText: "Renting a space downtown is expensive, but Zara considers it a sound investment. Better to build a beauty bar in an ideal location than have to move and start over again once things are underway, she reasons. However, Zara now has less money to invest on equipment, supplies, and furniture for her beauty bar. Getting to work will also be more difficult — it will be inconvenient, to say the least, to have to haul her children back and forth to the salon."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Rent a space closer to where she lives, on the city’s periphery. It’s a quieter area, but it’s cheaper, and easier to bring her children along (GHC2400 for 12 months).
+",
+            resultText: "It’s not an ideal location, but it’s cheap. Zara can now afford to invest the money she saved on rent on things like couches, salon chairs, mirrors, and other equipment. It’s also in a neighborhood that is close to home, which means she can easily bring her children along. The downside — she will have to work extra hard to attract clients and students from outside of her neighborhood."
           },
         ]
       },
