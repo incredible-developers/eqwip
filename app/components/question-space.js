@@ -66,7 +66,8 @@ export default Ember.Component.extend({
             text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area."
           },
         ]
-      }
+      },
+
     }
   },
 
