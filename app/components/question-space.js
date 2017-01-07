@@ -158,6 +158,25 @@ In order to supply these restaurants, Lamisi will need to purchase new equipment
           },
         ]
       },
+      13: {
+        questionText: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).
+
+(Click Next)
+
+Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion. 
+
+She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
+        answerOptions: [
+          {
+            text: "Let him take the birds for free. It’s best to avoid any more family tension.",
+            resultText: "That stings, but Lamisi didn’t think she had a choice. Her family already disapproves of her business, and she doesn’t want to create any more bad blood.",
+          },
+          {
+            text: "Call his bluff, and offer to provide the half-dozen birds for a discounted price of GHC100.",
+            resultText: "Lamisi’s cousin shakes off her counter-offer. He takes two of the live birds, and leaves. He claims that he will give her money for them next time he see her, but this seems unlikely. Lamisi’s pride and self-esteem are hurt by this unpleasant and costly encounter."
+          },
+        ]
+      },
     }
   },
 
