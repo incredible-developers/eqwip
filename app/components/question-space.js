@@ -28,15 +28,15 @@ export default Ember.Component.extend({
   questions: {
     'Kojo': {
       1: {
-        questionText: "This is the text from the first question",
+        questionText: "First thing’s first — Kojo will need cash to fund his business endeavor! Currently, he has GHC1100 in savings, which he accumulated during his time with the national service. He figures he will need a lot more than that to successfully build a viable mobile application. Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Reach out to family for a loan.",
+            resultText: "Though they do not have a lot of money, Kojo asks his family for a loan of GHC3000. Kojo’s two older siblings and uncle are happy to help him out. His father, however, is very reluctant — he worked hard to pay for his son’s tertiary education, and does not understand why he is building gadgets instead of finding a real job. He finally concedes, but warns Kojo that the family will not lend him any more money if he is not able to repay the loan within a year. Kojo promises to pay back the the loan in monthly installments of GHC250."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Apply for part-time work as a teacher or a tutor at the local secondary school.",
+            resultText: "Kojo’s background in accounting qualifies him to teach mathematics to high school students. He can earn GHC500 per month teaching 3 afternoons a week, though this means that he will have less time to focus on his business."
           },
         ]
       },
