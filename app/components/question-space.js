@@ -38,6 +38,7 @@ export default Ember.Component.extend({
             text: "Apply for a loan through a microfinance institution.",
             resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit. (Try a different option). "
           },
+          {
            text: "Organize a small loan through a Susu collector.",
             resultText: "Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute GHC350 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (GHC1750). Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs."
           },
@@ -51,8 +52,7 @@ export default Ember.Component.extend({
             resultText: "Renting a space downtown is expensive, but Zara considers it a sound investment. Better to build a beauty bar in an ideal location than have to move and start over again once things are underway, she reasons. However, Zara now has less money to invest on equipment, supplies, and furniture for her beauty bar. Getting to work will also be more difficult — it will be inconvenient, to say the least, to have to haul her children back and forth to the salon."
           },
           {
-            text: "Rent a space closer to where she lives, on the city’s periphery. It’s a quieter area, but it’s cheaper, and easier to bring her children along (GHC2400 for 12 months).
-",
+            text: "Rent a space closer to where she lives, on the city’s periphery. It’s a quieter area, but it’s cheaper, and easier to bring her children along (GHC2400 for 12 months).  ",
             resultText: "It’s not an ideal location, but it’s cheap. Zara can now afford to invest the money she saved on rent on things like couches, salon chairs, mirrors, and other equipment. It’s also in a neighborhood that is close to home, which means she can easily bring her children along. The downside — she will have to work extra hard to attract clients and students from outside of her neighborhood."
           },
         ]
@@ -145,10 +145,10 @@ export default Ember.Component.extend({
           {
             text: "Zara stands her ground, and tells him that he has to pay full price. This business is the source of Zara’s livelihood, and she cannot afford to give away a free lunch.",
             resultText: "Zara’s cousin gets angry, and storms off, saying that he will find someone else to do the makeup for his wife. Not only has she lost the gig, but she has also created further tension with her family."
-            {
+          },
+          {
             text: "Offer a ‘family discount’ (GHC300)  in exchange for future babysitting.",
             resultText: "Zara’s cousin reluctantly accepts the counteroffer, and promises to take care of the kids when needed. It’s not a perfect deal, but at least Zara doesn’t lose a full day’s income."
-          },
           },
         ]
       },

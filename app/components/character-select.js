@@ -2,6 +2,24 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   characterSelected: '',
+  startingCash: Ember.computed('characterSelected',function() {
+    var character = this.get("characterSelected")
+    if (character == "Lamisi") {
+      return 0
+    } else {
+      return 1100
+    }
+  }),
+  startingIncome: Ember.computed('characterSelected',function() {
+    var character = this.get("characterSelected")
+    if (character == 'Zara') {
+      return 800
+    } else if (character == "Lamisi") {
+      return 340
+    } else if (character == "Kojo") {
+      return 0
+    }
+  }),
   zaraSelected: Ember.computed('characterSelected', function() {
     return this.get('characterSelected') === 'Zara';
   }),
