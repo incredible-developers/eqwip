@@ -153,15 +153,15 @@ export default Ember.Component.extend({
         ]
       },
       10: {
-        questionText: "",
+        questionText: "The pressure on Zara to register her business is mounting. Not only have the police followed up with their promise to crack down on illegal businesses, but many of Zara’s students have also been asking about accreditation. How will their training be recognized by potential employers or customers if the vocational training center was not even legally registered? Her husband has offered to stand in line at the registration office on her behalf, but he has not been able to book a weekday off of work. Zara herself is unwilling to return to the notorious Tamale office on her own.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "The registration office in Accra is known to be much bigger and better organized than the one in Tamale. Many claim that it’s faster to simply bus to Accra than to queue up here in town. Road trip!",
+            resultText: "Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (GHC90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! She is told that it will take 60 days to review the application. Frustrating, but that’s the way it goes. With a couple of hours to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (GHC100). She will be able to sell these to her customers at a premium."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these Goro boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the Goro Boys GHC200 for their services.",
+            resultText: "The Goro Boys do their thing. One week later, Zara receives word that her business has successfully been registered."
           },
         ]
       },
