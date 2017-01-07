@@ -93,15 +93,15 @@ export default Ember.Component.extend({
         ]
       },
       6: {
-        questionText: "This is the text from the first question",
+        questionText: "With the pilot well underway, Kojo is looking to expand his clientele. After doing some research, he decides to target clients in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services. He is able to easily identify a dozen clients in the area that are interested in Recycle Accra! RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (GHC80 per week).",
+            resultText: "Adding a Motorking driver to the monthly payroll won’t be easy, but Kojo thinks that a rapid expansion into Awoshie will impress potential investors. By the end of the month, Kojo manages to secure 10 new clients, most of which are using the app on a regular basis."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Offer new clients in Awoshie and additional GHC10 per load that they drop off at the collections site for the first 3 months. Kojo will have to pay this extra sum out of his own pocket.",
+            resultText: "A number of smaller businesses in Awoshie are convinced by this added incentive, and sign up for Recycle Accra! The larger businesses are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them. By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis."
           },
         ]
       },
