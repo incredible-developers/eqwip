@@ -26,7 +26,7 @@ export default Ember.Component.extend({
 
   //like half of our games text is going to be in here, which feels hacky
   questions: {
-    'Musa': {
+    'Kojo': {
       1: {
         'questionText': "This is the text from the first question",
         'answerOptions': {
@@ -97,6 +97,58 @@ export default Ember.Component.extend({
            resultText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive."
          },
        ]
+      },
+      7: {
+        questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (GHC150).",
+        answerOptions: [
+          {
+            text: "Pay the fees, and wish her luck.",
+            resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
+          },
+          {
+            text: "Pay the fees, and offer her an extra GHC100 for school supplies and new clothing.",
+            resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief."
+          },
+        ]
+      },
+      9: {
+       questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more. Esoko just opened a branch in Tamale, the trader explains. Esoko’s Managing Director claims that the branch was established to bridge the gap in information flow between smallholder farmers and key players in the agricultural value chain. This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
+       answerOptions: [
+         {
+           text: "Buy a cell phone and data package, and sign up for Esoko!  (GHC500 for a new phone, plus GHC20/month for data). ",
+           resultText: "What a difference! Corresponding with the Esoko experts provides Lamisi with the confidence to make changes to her business model and the way that she manages her farm. She develops a better system for tracking changes in the market and setting your prices, and a new feed mix that makes use of low-cost substitutes. Esoko also offers tips on how to better clean and maintain the feeding and watering troughs for your birds. Investing in a smartphone has also made it much easier to connect with her current clients and advertise her business using the digital communications tool WhatsApp.",
+         },
+         {
+           text: "Save the cash. Lamisi has contacts in the marketplace that provide information about prices and market trends. Plus, she grew up on a farm! She can take care of her birds without the help of experts in an office far away.",
+           resultText: "Maybe down the road, when Lamisi has more cash saved, she will consider buying a cell phone. Back to work."
+         },
+       ]
+      },
+      10: {
+      questionText: "The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.  Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.  Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.  (Click next) Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.  (Click next) Lamisi comes up with two ways to make use of these findings:",
+      answerOptions: [
+        {
+          text: "Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.” Improve the quality of the product, and increase the price.",
+          resultText: "For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality as advertised! After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (GHC150 per month). She also further expands her pen to create more space for her birds to roam (GHC150) Lamisi will eventually have to raise her prices, but not just yet.",
+        },
+        {
+          text: "Reach out to local restaurants or hotels, and offer to supply, prepare, and deliver a regular shipment of fresh eggs and guinea fowl.  Focus on reliability and customer convenience, in order to better compete with the suppliers of frozen chicken.",
+          resultText: "Lamisi reaches out to three local restaurants, and offers to supply them with a regular shipment of fresh eggs and guinea fowl.  The first restaurateur she speaks to turns her down. He subtly hints that he does not want to rely on a young woman to supply his poultry. However, Lamisi does not give up. She brings a free sample of her products to the next two restaurateurs she visits, both of which agree to a two-week trial! In order to supply these restaurants, Lamisi will need to purchase new equipment and build an isolated area (GHC200) in order to properly kill and dress the birds."
+        },
+      ]
+      },
+      13: {
+        questionText: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).  (Click Next) Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
+        answerOptions: [
+          {
+            text: "Let him take the birds for free. It’s best to avoid any more family tension.",
+            resultText: "That stings, but Lamisi didn’t think she had a choice. Her family already disapproves of her business, and she doesn’t want to create any more bad blood.",
+          },
+          {
+            text: "Call his bluff, and offer to provide the half-dozen birds for a discounted price of GHC100.",
+            resultText: "Lamisi’s cousin shakes off her counter-offer. He takes two of the live birds, and leaves. He claims that he will give her money for them next time he see her, but this seems unlikely. Lamisi’s pride and self-esteem are hurt by this unpleasant and costly encounter."
+          },
+        ]
       },
     }
   },

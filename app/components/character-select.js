@@ -5,8 +5,8 @@ export default Ember.Component.extend({
   zaraSelected: Ember.computed('characterSelected', function() {
     return this.get('characterSelected') === 'Zara';
   }),
-  musaSelected: Ember.computed('characterSelected', function() {
-    return this.get('characterSelected') === 'Musa';
+  kojoSelected: Ember.computed('characterSelected', function() {
+    return this.get('characterSelected') === 'Kojo';
   }),
   lamisiSelected: Ember.computed('characterSelected', function() {
     return this.get('characterSelected') === 'Lamisi';
