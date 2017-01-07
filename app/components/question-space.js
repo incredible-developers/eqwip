@@ -4,6 +4,10 @@ export default Ember.Component.extend({
   character: null,
   answerQuestion: null,
   month: null,
+  renderingResult: null,
+  resultText: '',
+
+  chosenAnswer: null,
 
   currentQuestion: Ember.computed('character', 'month', function() {
       return this.get('questions')[this.get('character')][this.get('month')]
@@ -80,26 +84,30 @@ export default Ember.Component.extend({
           },
         ]
       },
-       5: {
-        questionText: "The government announces that it is cracking down on ‘illegal businesses’. The newspapers claim that inspection officers will be issuing fines to businesses that are not properly registered. ",
-        answerOptions: [
-          {
-            text: "Get the paperwork together, and register! To operate legally, Lamisi will need to apply for a Tax Identification Number (GHC25) and register her business as a sole proprietorship (GHC35).",
-            resultText: "Lamisi spends most of her weekend sorting her way through the convoluted application paperwork. On Monday, she heads to the registration office, but there is a massive queue. She waits for several hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Frustrated and tired, Lamisi decides to go home. The next day, determined to properly register her business, Lamisi decides to hire a man that will wait in line at the office on her behalf. This costs her an extra (GHC50), but it does the trick. A few weeks later, her application is accepted.",
-          },
-          {
-            text: "The government has been saying this for years! Might as well take the risk.",
-            resultText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive."
-          },
-        ]
+
+      5: {
+       questionText: "The government announces that it is cracking down on ‘illegal businesses’. The newspapers claim that inspection officers will be issuing fines to businesses that are not properly registered. ",
+       answerOptions: [
+         {
+           text: "Get the paperwork together, and register! To operate legally, Lamisi will need to apply for a Tax Identification Number (GHC25) and register her business as a sole proprietorship (GHC35).",
+           resultText: "Lamisi spends most of her weekend sorting her way through the convoluted application paperwork. On Monday, she heads to the registration office, but there is a massive queue. She waits for several hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Frustrated and tired, Lamisi decides to go home. The next day, determined to properly register her business, Lamisi decides to hire a man that will wait in line at the office on her behalf. This costs her an extra (GHC50), but it does the trick. A few weeks later, her application is accepted.",
+         },
+         {
+           text: "The government has been saying this for years! Might as well take the risk.",
+           resultText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive."
+         },
+       ]
       },
-      
     }
   },
 
   actions: {
-    answerClicked(a, b) {
-      this.get('answerQuestion')(a, b)
+    renderResult(answer) {
+      this.set('chosenAnswer', answer)
+      this.set('resultText', this.get('chosenAnswer').resultText)
+    },
+    answerClicked(answer) {
+      this.get('answerQuestion')(answer)
     }
   }
 });

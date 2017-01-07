@@ -1,12 +1,24 @@
-{{questionText}}
+{{#if resultText}}
+  {{resultText}}
 
-<br>
-<br>
-<br>
-{{#each answerOptions as |option|}}
-  <div class="flexBlock" {{action "answerClicked" 'Buy a Chicken' 'good' }}>
+  <div class="flexBlock" {{action "answerClicked" option }}>
     <div class="button">
-      {{option.text}}
+      Continue
     </div>
   </div>
-{{/each}}
+{{else}}
+  {{questionText}}
+
+  <br>
+  <br>
+
+  <div class='answers'>
+    {{#each answerOptions as |option|}}
+      <div class="flexBlock" {{action "renderResult" option }}>
+        <div class="button">
+          {{option.text}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
