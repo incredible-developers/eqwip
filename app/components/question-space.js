@@ -28,15 +28,18 @@ export default Ember.Component.extend({
   questions: {
     'Zara': {
       1: {
-        questionText: "",
+        questionText: "Working from home, Zara earns an average of GHC800 per month. She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare her to launch her business. Her husband has agreed to give her access to GHC1100 of their shared personal savings, but she will need much more cash to set up her business. In addition to renting a space, she’ll also need to furnish it, and purchase supplies and equipment. She crunches the numbers, and figures she will need access to about GHC5000, after rent. Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Reach out to family for a loan.",
+            resultText: "Zara’s parents deny her request for a loan. Though they support her work as a makeup artist, they do not support her ambition to start a vocational training program. As a mother of two, raising her children should be her main priority, they explain. Zara reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her GHC5000, which she will pay back, with interest, in installments of GHC550 per month for one year (total of GHC6600)."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Apply for a loan through a microfinance institution.",
+            resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit. (Try a different option). "
+          },
+           text: "Organize a small loan through a Susu collector.",
+            resultText: "Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute GHC350 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (GHC1750). Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs."
           },
         ]
       },
