@@ -93,7 +93,19 @@ export default Ember.Component.extend({
           },
         ]
       },
-      
+      6: {
+        questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (GHC150).",
+        answerOptions: [
+          {
+            text: "Pay the fees, and wish her luck.",
+            resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
+          },
+          {
+            text: "Pay the fees, and offer her an extra GHC100 for school supplies and new clothing.",
+            resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief."
+          },
+        ]
+      },
     }
   },
 
