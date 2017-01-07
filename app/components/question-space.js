@@ -84,15 +84,15 @@ export default Ember.Component.extend({
         ]
       },
       5: {
-        questionText: "",
+        questionText: "Zara’s first vocational training course is underway, which provides her with an influx in cash (GHC2000). Finally, she can afford to advertise her business.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Purchase GHC750 worth of prime time radio ads. This will be used to pay for a series of day-time mentions on Diamond FM and a series of evening messages on NorthStar Radio.",
+            resultText: "The ads seem to do the trick! Over the next couple of weeks, new customers trickle in, and Zara manages to book a number of weddings and events for the coming months. Her vocational training courses also receive a considerable bump in sign-ups. This successful marketing campaign should improve Zara’s profit margin over the next several months."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Purchase a smartphone (GHC700) and data package (GHC20 per month), and develop a social media campaign to promote the business online.",
+            resultText: "Radio ads might have a broader, more immediate reach, but a social media campaign can be  refined and developed over time, Zara figures. Now that she has a smartphone, she can update her Facebook page regularly, and share details of her business throughout various channels on WhatsApp. She also consults with some of her colleagues from her EQWIP HUBs training course — particularly the social media-savvy ones. Their advice is to focus not on advertising your business per se, but on building your business’s brand. To do this, her colleagues explain, Zara should regularly post photos and videos that convey her salon’s unique style and culture. If done right, the customers will follow."
           },
         ]
       },
