@@ -190,11 +190,18 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Purchase vaccinations for the flock. Better safe than sorry",
-            resultText: "Wise choice. It’s much easier to run a successful poultry farm when you have a healthy flock of birds!"
+            resultText: "Wise choice. It’s much easier to run a successful poultry farm when you have a healthy flock of birds!",
+            impact: {
+              cash: -200,
+              resilience: 2,
+            }
           },
           {
             text: "Vaccinations are expensive. Take the risk for now, and reconsider once the flock has grown.",
-            resultText: "Might as well hold off until the rainy season, when birds are more likely to get sick."
+            resultText: "Might as well hold off until the rainy season, when birds are more likely to get sick.",
+            impact: {
+              resilience: -2
+            }
           },
         ]
       },
@@ -204,11 +211,20 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250)",
-            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden. (Cash up)"
+            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden. (Cash up)",
+            impact: {
+              cash: -250,
+              income: 370,
+              resilience: 2,
+              environment: 1
+            }
           },
           {
             text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area.",
-            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench of from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet."
+            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench of from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet.",
+            impact: {
+              environment: 1
+            }
           },
         ]
       },

@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   month: 1,
   answers: {},
   actions: {
-    answerQuestion(answer, impact) {
+    answerQuestion(answer) {
       this.setAnswer(answer)
 
       var nextMonth = this.get('month') + 1
