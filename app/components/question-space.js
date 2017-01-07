@@ -123,15 +123,15 @@ export default Ember.Component.extend({
         ]
       },
       8: {
-        questionText: "",
+        questionText: "The government announces that it is cracking down on ‘illegal businesses’. The papers claim that officers will be issuing fines to businesses that are not properly registered.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Get the paperwork together, and register! To operate legally, Zara will need to apply for a Tax Identification Number (GHC25) and register her business as a sole proprietorship (GHC35).",
+            resultText: "Zara’s husband spends the better part of a weekend sorting through the convoluted paperwork for the application. On Monday, she heads to the registration office, but there is a massive queue. She waits for a few hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Annoyed and tired, Zara decides to go home."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Non-registered small businesses rarely run into problems. The government has been saying this for years! Might as well take the risk.",
+            resultText: "Zara hopes that the government is bluffing. Only time will tell."
           },
         ]
       },
