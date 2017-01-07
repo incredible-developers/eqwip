@@ -26,6 +26,164 @@ export default Ember.Component.extend({
 
   //like half of our games text is going to be in here, which feels hacky
   questions: {
+    'Zara': {
+      1: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      2: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      3: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      4: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      5: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      6: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      7: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      8: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      9: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      10: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      11: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+      12: {
+        questionText: "",
+        answerOptions: [
+          {
+            text: "",
+            resultText: ""
+          },
+          {
+            text: "",
+            resultText: ""
+          },
+        ]
+      },
+    },
     'Kojo': {
       1: {
         questionText: "First thing’s first — Kojo will need cash to fund his business endeavor! Currently, he has GHC1100 in savings, which he accumulated during his time with the national service. He figures he will need a lot more than that to successfully build a viable mobile application. Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
