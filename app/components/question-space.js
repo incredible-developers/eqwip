@@ -63,10 +63,24 @@ export default Ember.Component.extend({
             text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250)"
           },
           {
-            text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area."
+            text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area.",
           },
         ]
-      }
+      },
+      
+      3: {
+        questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled guinea fowl with tuo zaafi. As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
+        answerOptions: [
+          {
+            text: "After dinner, approach the manager, and offer to be his poultry supplier. Lamisi is confident in her product, and believes that risk-taking is the key to growth.  She promises to bring him 2 fowls first thing in the morning to try out.",
+            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose? After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of GHC25 each. He praises her confidence and initiative. Before signing the contract, Lamisi agrees to pay for a veterinarian to assess the health of her birds (GHC350), and hires a Motorking driver to make her deliveries once a week (GHC40/month).",
+          },
+          {
+            text: "Don’t approach the manager. It will be embarrassing if she is rejected in front of her uncle. Plus, Lamisi thinks it is unlikely that the restaurant manager will partner with a female poultry farmer.",
+            resultText: "No risk, no reward. Lamisi leaves the restaurant with a deflated sense of confidence. At least she didn’t have to face rejection."
+          },
+        ]
+      },
     }
   },
 
