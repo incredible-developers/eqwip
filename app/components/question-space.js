@@ -145,15 +145,15 @@ export default Ember.Component.extend({
         ]
       },
       10: {
-        questionText: "This is the text from the first question",
+        questionText: "September arrives, and Kojo is determined to further expand the reach of Recycle Accra! He sets his sights on the affluent neighborhood of Dansoman.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Invest in a series of targeted advertisements on Facebook, Twitter, and WhatsApp (GHC80). The advertisements offer a promotion — if any business refers another business to sign up for Recycle App, they will receive an extra GHC10 per load for one month.",
+            resultText: "The targeted ads generate plenty of likes, plenty of traffic on the Recycle Accra! website, and a significant spike in mobile application downloads. A fews weeks pass, however, and it appears as though the initial spike in traffic does not translate to an equivalent spike in business — indeed, the number of people who actually use the application did not rise significantly. Still, the campaign generated a lot of buzz around Recycle Accra!, the type of buzz that potential investors will certainly appreciate."
           },
           {
-            text: "",
-            resultText: ""
+            text: "To save money, Kojo decides to go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but, hey — there’s nothing more effective than a face-to-face conversation.",
+            resultText: "Kojo’s door-to-door undertaking is exhausting, but proves fruitful. He secures a number of high profile clients, including a college and a hotel. Taking out advertisements online or in a newspaper probably would have had a broader reach, but Kojo is confident that his new clients will make good use of the mobile application. Plus, if all goes well, these high profile clients will look good on a investment proposal."
           },
         ]
       },
