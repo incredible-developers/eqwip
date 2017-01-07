@@ -71,15 +71,15 @@ export default Ember.Component.extend({
         ]
       },
       4: {
-        questionText: "",
+        questionText: "Five women have signed up for Zara’s first vocational training course, which is set to begin on May 1st. A slow start, but a start nonetheless. One of Zara’s customers connects her with a woman who is looking for a makeup artist to service her bridal party. The woman lives in a small town near Bolgatanga, about 150km from Tamale. The artist she had previously booked cancelled on her last minute. Now, she is willing to pay GHC800 for an makeup artist willing to travel to for gig — the day after tomorrow! Zara is on the fence. She needs the cash, but traveling around Northern Ghana is not easy, especially with children.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Pass on the offer. Though Zara needs the money, she thinks it will be a challenge to arrive on time for the wedding. The rainy season has just begun, and many of the roads in rural areas have been rained out.",
+            resultText: "It hurts to turn down a big paycheque, but Zara has a number of clients booked already — they are her main priority."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Accept the client, cancel previous appointments, and prepare the children for the 5 hour journey to Bolgatanga!",
+            resultText: "Despite her family’s admonishment, Zara and her children take the Metro Mass Transit bus to Bolgatanga (GHC45). Next, she hires a Yellow Yellow to take them to the wedding venue, which is located a few kilometers outside of town. The driver charges you extra for the two children and all your supplies (GHC10). The journey to the venue is long, hot, and uncomfortable, but Zara arrives just in time, with two upset children in tow. After the job, Zara embarks home, arriving after midnight, exhausted. (GHC55). The next day, she will have to call and apologize to the customers whose appointments she cancelled without notice."
           },
         ]
       },
