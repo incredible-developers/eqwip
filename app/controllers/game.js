@@ -16,7 +16,6 @@ export default Ember.Controller.extend({
 
   actions: {
     answerQuestion(impact) {
-      console.log(impact)
       this.setAnswer(impact)
 
       this.setImpact(impact)
