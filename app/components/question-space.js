@@ -110,15 +110,15 @@ export default Ember.Component.extend({
         ]
       },
       7: {
-        questionText: "",
+        questionText: "One of Zara’s walk-in clients, Sandra, is a graduate student in environmental sciences at the University of Development Studies in town, and notices that Zara’s students, who were cleaning up after a training session, were not properly sorting their waste or disposing of chemicals — indeed, she spotted one student rinsing out old nail polish bottles and dumping the chemical contents down the drain, a practice known to contaminate the water supply. Sandra offers to design a training module for Zara’s students that focuses on environmental sustainability. For a small fee, she is also willing to spend an hour with each new cohort discussing the benefits of using organic products, teaching them how to properly dispose of chemical waste, and explaining the importance of preserving water in a region prone to drought.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Hire Sandra! This is a great opportunity to add value to the training courses. (GHC150 per month).",
+            resultText: "Sandra turns out to be a terrific teacher and mentor for Zara’s students — her environmental training sessions are a big hit, not only for the students, but on social media as well. As an end of the month bonus, Zara also notices that her hydro bill has dropped, significantly."
           },
           {
-            text: "",
-            resultText: ""
+            text: "The environment is important, but saving money is still a priority for a start-up in a stage of relative infancy. Zara promises to keep a closer eye on her students’ behaviour.",
+            resultText: "Zara does her best to convince her students to be more careful with water, and to be conscious of what they do with their waste. Though some students seem to get the message, it doesn't click with others. She can’t help but notice, now, that her hydro bill has risen significantly in recent months (GHC25 per month)."
           },
         ]
       },
