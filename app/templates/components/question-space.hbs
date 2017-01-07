@@ -1,11 +1,12 @@
 {{#if resultText}}
   {{resultText}}
 
-  <div class="flexBlock" {{action "answerClicked" option }}>
+  <div class="flexBlock" {{action "submitAnswer" option }}>
     <div class="button">
       Continue
     </div>
   </div>
+
 {{else}}
   {{questionText}}
 

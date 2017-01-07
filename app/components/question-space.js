@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   answerQuestion: null,
   month: null,
   renderingResult: null,
-  resultText: '',
+  resultText: null,
 
   chosenAnswer: null,
 
@@ -203,10 +203,12 @@ export default Ember.Component.extend({
         questionText: "As Lamisi’s flock grows, so too does the volume of waste that she must deal with. She’s been dumping the waste in a small creek away from her yard, but her neighbors have started to complain — not only do her actions risk contaminating local water resources, but the stench is unbearable!",
         answerOptions: [
           {
-            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250)"
+            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250)",
+            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden. (Cash up)"
           },
           {
             text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area.",
+            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench of from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet."
           },
         ]
       },
@@ -296,9 +298,11 @@ export default Ember.Component.extend({
   actions: {
     renderResult(answer) {
       this.set('chosenAnswer', answer)
-      this.set('resultText', this.get('chosenAnswer').resultText)
+      this.set('resultText', answer.resultText)
     },
-    answerClicked(answer) {
+    submitAnswer(answer) {
+      this.set('resultText', null)
+      this.set('chosenAnswer', null)
       this.get('answerQuestion')(answer)
     }
   }
