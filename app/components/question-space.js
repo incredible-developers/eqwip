@@ -58,15 +58,15 @@ export default Ember.Component.extend({
         ]
       },
       3: {
-        questionText: "",
+        questionText: "After weeks of tireless work, Zara’s beauty bar is finally set up. Before she gets underway, she crunches out a quick profit analysis. Based on the average number of clients she expects to serve each month, and taking into account the new expenses of that are required to maintain her rental space, Zara expects to earn an average of GHC600 on a monthly basis (GHC200 per month less than she was making before).She will need to expand her business in order to service her debt and create wealth. Zara decides that it is time to launch the vocational training component of her business. She has designed a 2-week training course for young women (GHC500 per person), and will also offer one-day introductory lessons for GHC55.  (Click next) Zara needs to find young people to sign up for her vocational training courses, but doesn’t have enough cash to advertise. During her entrepreneurship training, Zara spent many hours in the computer lab, working closely with volunteers and fellow participants to learn how to develop a website using Squarespace. If she can dedicate a few days of work to it, she thinks she can build a basic website for her business, which she can then share on social media and add to local business directories.",
         answerOptions: [
           {
-            text: "",
-            resultText: ""
+            text: "Build the website at the EQWIP HUB computer lab. It’s a bit of commute, though — an hour and a half each way. Zara will have to shut down the beauty bar for a day or two, and find a sitter while she is away.",
+            resultText: "Working closely with a couple of the volunteers at the EQWIP HUB computer lab over the course of two days, Zara is able to set up a basic website, a business email, and a Facebook page. She adds her business to a number of online business directories, and begins advertising her new website on social media."
           },
           {
-            text: "",
-            resultText: ""
+            text: "Build the website at a local internet cafe near home. Zara can work on the site over the course of several mornings, while the children are at school and the beauty bar is still closed.",
+            resultText: "Zara spends several mornings at an Internet cafe trying to build the website. The computers are very slow, and the Internet cuts out intermittently. After three frustrating mornings, she gives up. What a waste of time (and GHC25)! She does, however, manage to set up a Facebook page for her salon, which she asks her friends to share widely."
           },
         ]
       },
