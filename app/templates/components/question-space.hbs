@@ -1,0 +1,12 @@
+{{questionText}}
+
+<br>
+<br>
+<br>
+{{#each answerOptions as |option|}}
+  <div class="flexBlock" {{action "answerClicked" 'Buy a Chicken' 'good' }}>
+    <div class="button">
+      {{option.text}}
+    </div>
+  </div>
+{{/each}}

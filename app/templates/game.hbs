@@ -1,9 +1,9 @@
 <div class="container">
   <div class="score-drawer-container">
-    {{score-drawer}}
+    {{score-drawer character=character month=month answers=answers}}
   </div>
 
   <div class="container-columns">
-    Question/Game Space
+    {{question-space character=character month=month answerQuestion=(action "answerQuestion")}}
   </div>
 </div>

@@ -38,7 +38,7 @@
 
 <div class="container align-center">
   {{#if characterSelected}}
-    {{#link-to 'game' class="button flexy-guy"}}
+    {{#link-to 'game' (query-params character=characterSelected month=1) class="button flexy-guy"}}
       Start Game as {{characterSelected}}
     {{/link-to}}
   {{/if}}
