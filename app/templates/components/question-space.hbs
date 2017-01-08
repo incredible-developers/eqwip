@@ -1,31 +1,44 @@
-{{#if resultText}}
-  {{resultText}}
+  {{#if resultText}}
+    {{resultText}}
 
-  <div class="flexBlock" {{action "submitAnswer" chosenAnswer.impact}}>
-    {{#if rejected}}
-      <div class="button">
-        Try A Different Option
-      </div>
-    {{else}}
-      <div class="button">
-        Continue
-      </div>
-    {{/if}}
-  </div>
+    <div class="flexBlock" {{action "submitAnswer" chosenAnswer.impact}}>
+      {{#if rejected}}
+        <div class="button">
+          Try A Different Option
+        </div>
+      {{else}}
+        <div class="button">
+          Continue
+        </div>
+      {{/if}}
+    </div>
 
 {{else}}
-  {{questionText}}
 
-  <br>
-  <br>
+  {{#if displaySusuImpact}}
 
-  <div class='answers'>
-    {{#each answerOptions as |option|}}
-      <div class="flexBlock" {{action "renderResult" option }}>
-        <div class="button">
-          {{option.text}}
-        </div>
+    {{susuText}}
+
+    <div class="flexBlock" {{action "handleSusuImpact"}}>
+      <div class="button">
+        Collect your Susu Monies
       </div>
-    {{/each}}
-  </div>
+    </div>
+
+  {{else}}
+    {{questionText}}
+
+    <br>
+    <br>
+
+    <div class='answers'>
+      {{#each answerOptions as |option|}}
+        <div class="flexBlock" {{action "renderResult" option }}>
+          <div class="button">
+            {{option.text}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
 {{/if}}

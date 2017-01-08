@@ -34,6 +34,10 @@ export default Ember.Controller.extend({
 
     startGameClicked: function() {
       this.set('introShown', true)
+    },
+
+    setImpact: function(impact) {
+      this.setImpact(impact)
     }
   },
 
