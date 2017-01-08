@@ -9,6 +9,8 @@ export default Ember.Component.extend({
   rejected: null,
   followUpQuestion: null,
 
+  susuAcknowledged: null,
+
   chosenAnswer: null,
 
   // character specific variables that change
@@ -16,6 +18,7 @@ export default Ember.Component.extend({
   vaccinated: null,
   madeTheDeal: null,
   rebranded: null,
+  hasSusu: null,
 
   currentQuestion: Ember.computed('character', 'month', 'followUpQuestion', function() {
     var question = this.get('questions')[this.get('character')][this.get('month')]
@@ -85,6 +88,7 @@ export default Ember.Component.extend({
               resilience: 3,
               debt: 1750,
               debtPayments: 350,
+              gameFlowVariable: ['hasSusu', true]
             },
           },
         ]
@@ -183,18 +187,31 @@ export default Ember.Component.extend({
         ]
       },
       6: {
-        questionText: "",
+        susuImpact: {
+          text: "Six months have passed, and it’s Zara’s turn once again to access the cash from her Susu circle (GHC1750).",
+          debt: 1750,
+          debtPayments: 350,
+          cash: 1750
+        },
+        questionText: "Zara’s marketing efforts seem to be working. Within a month, 10 more young women have signed up for the 2-week training program (GHC4000) and another 5 have signed up for one-day introductory courses (GHC200). This means a major bump in Zara’s revenue, and a bump in her operating expenses, too. She needs to buy more chairs, more equipment, and more supplies (GHC2500). She also needs help! There is no way she can teach all these young women by herself, and keep up with her regular clients.",
         answerOptions: [
           {
-            text: "",
-            resultText: "",
+            text: "Hire a makeup artist full-time to take on regular clients and help with training (GHC550 per month). Having a second staff member will allow Zara to spend more time with her children, away from work.",
+            resultText: "Though having a new person on the payroll is major expense, it benefits Zara’s business immensely. She is now able to launch a new vocational training course in the late evenings. What’s more, she no longer need to worry about traveling with her children for out of town jobs — the staff member now takes care of any clients that require travel. Still, the added expense puts the pressure on to continue expanding the scope of the business.",
             impact: {
+              cash: 1700,
+              income: -550,
+              resilience: 2,
+              assets: 1,
             },
           },
           {
-            text: "",
-            resultText: "",
+            text: "Create an apprenticeship program that provides more advanced students with the opportunity to practice their skills on walk-in clients, who will pay a slightly discounted price.",
+            resultText: "The apprenticeship program is a hit! Zara’s students are grateful for the opportunity to practice on real customers, and the customers are happy to pay a reduced fee. At the end of the month, Zara finds that she is missing GHC600 in cash. She can only assume that one (or more) of the apprentices has been stealing from her. Without another staff member to assist her, she had no choice but to allow her more advanced students to handle some of the cash from walk-in clients. Zara realizes that she needs to tighten up the way she administers her business and supervises her students.",
             impact: {
+              cash: 1100,
+              resilience: -1,
+              assets: 1,
             },
           },
         ]
@@ -706,6 +723,7 @@ export default Ember.Component.extend({
             text: "Organize a small loan through a Susu collector.",
             resultText: "Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute GHC80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan. (GHC400) Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs. She spends GHC150 expanding her pen and purchasing additional feed.",
             impact: {
+              gameFlowVariable: ['hasSusu', true]
             },
           },
         ]
@@ -872,6 +890,12 @@ export default Ember.Component.extend({
         ]
       },
       10: {
+        susuImpact: {
+          text: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).",
+          debt: 400,
+          debtPayments: 80,
+          cash: 1750
+        },
         questionText: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).  (Click Next) Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
         answerOptions: [
           {
@@ -880,8 +904,6 @@ export default Ember.Component.extend({
             impact: {
               cash: -150,
               resilience: -1,
-              debt: 400,
-              debtPayments: 80,
             }
           },
           {
@@ -890,8 +912,6 @@ export default Ember.Component.extend({
             impact: {
               cash: -50,
               resilience: -2,
-              debt: 400,
-              debtPayments: 80,
             }
           },
         ]
@@ -950,6 +970,22 @@ export default Ember.Component.extend({
     }
   },
 
+  susuImpact: Ember.computed('currentQuestion', function (){
+    var currentQuestion = this.get('currentQuestion')
+    return currentQuestion.susuImpact
+  }),
+
+  susuText: Ember.computed('currentQuestion', function() {
+    var susu = this.get('susuImpact')
+    if (susu != undefined) {
+      return susu.text
+    }
+  }),
+
+  displaySusuImpact: Ember.computed('currentQuestion', 'susuAcknowledged', function(){
+    return (this.get('hasSusu') && this.get('susuImpact') && !this.get('susuAcknowledged'))
+  }),
+
   actions: {
     renderResult(answer) {
       this.set('rejected', false)
@@ -967,7 +1003,7 @@ export default Ember.Component.extend({
         return
       }
 
-      this.setGameflowChangers(answer.gameFlowVariable)
+      this.setGameflowChangers(answer.impact.gameFlowVariable)
       this.get('answerQuestion')(answer.impact)
     },
 
@@ -975,5 +1011,11 @@ export default Ember.Component.extend({
       this.set('resultText', null)
       this.set('chosenAnswer', null)
     },
+
+    handleSusuImpact() {
+      console.log(this.get('resultText'))
+      this.set('susuAcknowledged', true)
+      this.get('setImpact')(this.get('susuImpact'))
+    }
   }
 });
