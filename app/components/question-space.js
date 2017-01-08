@@ -897,6 +897,7 @@ export default Ember.Component.extend({
         ]
       },
       11: {
+        dependsOn: 'rebranded',
         alternate: {
           questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just GHC55 just 3 months ago, now costs GHC100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.",
           answerOptions: [
