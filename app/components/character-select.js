@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   startingCash: Ember.computed('characterSelected',function() {
     var character = this.get("characterSelected")
     if (character == "Lamisi") {
-      return 0
+      return 250
     } else {
       return 1100
     }

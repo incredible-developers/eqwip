@@ -1,5 +1,14 @@
 {{#if gameOverManGameOver}}
- game over component
+{{game-over
+  character=character
+  cash=cash
+  income=income
+  environment=environment
+  assets=assets
+  debt=debt
+  resilience=resilience
+}}
+
 {{else}}
  {{#if introShown}}
     <div class="container">
