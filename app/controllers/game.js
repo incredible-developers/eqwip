@@ -4,6 +4,13 @@ export default Ember.Controller.extend({
   queryParams: ['character', 'month', 'income', 'cash'],
   character: null,
   month: 1,
+  gameOverManGameOver: Ember.computed('month', function() {
+    if (this.get('month') >= 12) {
+      return true
+    } else {
+      return false
+    }
+  }),
   answers: {},
 
   introShown: false,
