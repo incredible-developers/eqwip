@@ -9,13 +9,33 @@ export default Ember.Component.extend({
 
   chosenAnswer: null,
 
+  // character specific variables that change
+  // which questions/answers they receive
+  vaccinated: null,
+  madeTheDeal: null,
+
   currentQuestion: Ember.computed('character', 'month', function() {
-      return this.get('questions')[this.get('character')][this.get('month')]
+    var question = this.get('questions')[this.get('character')][this.get('month')]
+    if (question.dependsOn && this.get(question.dependsOn)) {
+      return question.alternate
     }
-  ),
+    return question
+  }),
 
   questionText: Ember.computed('currentQuestion', function() {
-      return this.get('currentQuestion')['questionText']
+    //  move this optional text logic to set a variable?
+
+      var outputText = this.get('currentQuestion')['questionText']
+      var optionalText = this.get('currentQuestion').optionalText
+
+      if (optionalText) {
+        if (optionalText.toggle) {
+          outputText = optionalText.whenTrue + outputText
+        } else {
+          outputText = optionalText.whenFalse + outputText
+        }
+      }
+      return outputText
     }
   ),
 
@@ -25,6 +45,7 @@ export default Ember.Component.extend({
   }),
 
   //like half of our games text is going to be in here, which feels hacky
+  // nope, its not half, its ~all of it
   questions: {
     'Zara': {
       1: {
@@ -582,18 +603,20 @@ export default Ember.Component.extend({
         questionText: "Though less prone to sickness than chickens, Guinea fowl are susceptible to a number of diseases, including Fowl Pox, Newcastle disease, and Coccidiosis. A disease outbreak will not only decrease Lamisi’s profits, but can potentially decimate her flock.",
         answerOptions: [
           {
-            text: "Purchase vaccinations for the flock. Better safe than sorry",
+            text: "Purchase vaccinations for the flock. Better safe than sorry. (GHC 200).",
             resultText: "Wise choice. It’s much easier to run a successful poultry farm when you have a healthy flock of birds!",
             impact: {
               cash: -200,
               resilience: 2,
+              gameFlowVariable: ['vaccinated', true]
             }
           },
           {
             text: "Vaccinations are expensive. Take the risk for now, and reconsider once the flock has grown.",
             resultText: "Might as well hold off until the rainy season, when birds are more likely to get sick.",
             impact: {
-              resilience: -2
+              resilience: -2,
+              gameFlowVariable: ['vaccinated', false]
             }
           },
         ]
@@ -609,12 +632,12 @@ export default Ember.Component.extend({
               cash: -250,
               income: 370,
               resilience: 2,
-              environment: 1
+              environment: 1,
             }
           },
           {
             text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area.",
-            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench of from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet.",
+            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet.",
             impact: {
               environment: -1
             }
@@ -632,6 +655,7 @@ export default Ember.Component.extend({
               cash: -350,
               income: 225,
               resilience: 3,
+              gameFlowVariable: ['madeTheDeal', true],
             },
           },
           {
@@ -639,7 +663,41 @@ export default Ember.Component.extend({
             resultText: "No risk, no reward. Lamisi leaves the restaurant with a deflated sense of confidence. At least she didn’t have to face rejection.",
             impact: {
               resilience: -2,
+              gameFlowVariable: ['madeTheDeal', false],
             }
+          },
+        ]
+      },
+
+      4: {
+        optionalText: {
+          toggle: 'madeTheDeal',
+          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash.",
+          whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash."
+        },
+
+        questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        answerOptions: [
+          {
+            text: "Reach out to family for a loan.",
+            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is running a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.  Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her GHC1000, which she will pay back, with interest, in installments of GHC100 per month for one year.  Lamisi is relieved to have found a source of cash to invest in her business. She spends GHC150 expanding her pen and purchasing additional feed.",
+            impact: {
+              cash: 850,
+              resilience: 3,
+              debt: 1200,
+              debtPayments: 100
+            },
+          },
+          {
+            text: "Apply for a loan through a microfinance institution.",
+            resultText: "The major microfinance institution operating in Lamisi’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Lamisi’s friends and mentors recommend that she look for a different source of credit. (Try a different option).",
+            reject: true,
+          },
+          {
+            text: "Organize a small loan through a Susu collector.",
+            resultText: "Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute GHC80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan. (GHC400) Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs. She spends GHC150 expanding her pen and purchasing additional feed.",
+            impact: {
+            },
           },
         ]
       },
@@ -653,6 +711,7 @@ export default Ember.Component.extend({
             impact: {
               cash: -110,
               resilience: 2,
+              gameFlowVariable: ['registered', true],
             }
          },
          {
@@ -660,11 +719,30 @@ export default Ember.Component.extend({
            resultText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
             impact: {
               resilience: -1,
+              gameFlowVariable: ['registered', false],
             }
          },
        ]
       },
-      7: {
+      6: {
+        dependsOn: 'vaccinate',
+        alternate: {
+          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (GHC150).",
+          answerOptions: [
+            {
+              text: "alternate answer",
+              resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
+              impact: {
+              }
+            },
+            {
+              text: "Rendered the alternate",
+              resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
+              impact: {
+              }
+            },
+          ]
+        },
         questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (GHC150).",
         answerOptions: [
           {
@@ -681,7 +759,8 @@ export default Ember.Component.extend({
           },
         ]
       },
-      9: {
+      // esoko
+      7: {
        questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more. Esoko just opened a branch in Tamale, the trader explains. Esoko’s Managing Director claims that the branch was established to bridge the gap in information flow between smallholder farmers and key players in the agricultural value chain. This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
        answerOptions: [
          {
@@ -704,33 +783,71 @@ export default Ember.Component.extend({
          },
        ]
       },
-      10: {
-      questionText: "The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.  Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.  Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.  (Click next) Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.  (Click next) Lamisi comes up with two ways to make use of these findings:",
-      answerOptions: [
-        {
-          text: "Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.” Improve the quality of the product, and increase the price.",
-          resultText: "For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality as advertised! After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (GHC150 per month). She also further expands her pen to create more space for her birds to roam (GHC150) Lamisi will eventually have to raise her prices, but not just yet.",
+      // Expansion
+      8: {
+        questionText: "The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.  Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.  Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.  (Click next) Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.  (Click next) Lamisi comes up with two ways to make use of these findings:",
+        answerOptions: [
+          {
+            text: "Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.” Improve the quality of the product, and increase the price.",
+            resultText: "For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality as advertised! After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (GHC150 per month). She also further expands her pen to create more space for her birds to roam (GHC150) Lamisi will eventually have to raise her prices, but not just yet.",
             impact: {
               cash: -150,
               income: -150,
               resilience: 3,
               environment: 1,
               assets: 2,
+              gameFlowVariable: ['rebranded', true]
             }
-        },
-        {
-          text: "Reach out to local restaurants or hotels, and offer to supply, prepare, and deliver a regular shipment of fresh eggs and guinea fowl.  Focus on reliability and customer convenience, in order to better compete with the suppliers of frozen chicken.",
-          resultText: "Lamisi reaches out to three local restaurants, and offers to supply them with a regular shipment of fresh eggs and guinea fowl.  The first restaurateur she speaks to turns her down. He subtly hints that he does not want to rely on a young woman to supply his poultry. However, Lamisi does not give up. She brings a free sample of her products to the next two restaurateurs she visits, both of which agree to a two-week trial! In order to supply these restaurants, Lamisi will need to purchase new equipment and build an isolated area (GHC200) in order to properly kill and dress the birds.",
+          },
+          {
+            text: "Reach out to local restaurants or hotels, and offer to supply, prepare, and deliver a regular shipment of fresh eggs and guinea fowl.  Focus on reliability and customer convenience, in order to better compete with the suppliers of frozen chicken.",
+            resultText: "Lamisi reaches out to three local restaurants, and offers to supply them with a regular shipment of fresh eggs and guinea fowl.  The first restaurateur she speaks to turns her down. He subtly hints that he does not want to rely on a young woman to supply his poultry. However, Lamisi does not give up. She brings a free sample of her products to the next two restaurateurs she visits, both of which agree to a two-week trial! In order to supply these restaurants, Lamisi will need to purchase new equipment and build an isolated area (GHC200) in order to properly kill and dress the birds.",
             impact: {
               cash: -200,
               income: 200,
               resilience: 2,
               environment: -1,
+              gameFlowVariable: ['rebranded', false]
             }
-        },
-      ]
+          },
+        ]
       },
-      13: {
+      9: {
+        dependsOn: 'rebranded',
+        alternate: {
+          questionText: "Lamisi will need to find an efficient way to deliver her products to the two restaurants she has agreed to supply. Unfortunately, getting around in Tamale is not very easy. There is no formal public transit, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances — and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.",
+          answerOptions: [
+            {
+              text: "Hire a Yellow Yellow each week, and personally deliver the products to each restaurant (GHC70 per month). Lamisi wants her partnerships to succeed, which means making sure that her goods arrive on time, and in good order.",
+              resultText: "The restaurateurs are very happy with both Lamisi’s product, and her service. Particularly, they appreciate that she is thorough, punctual, and willing to follow up after the delivery. They are happy to continue with the agreement.",
+              impact: {
+              }
+            },
+            {
+              text: "One of the traders in Lamisi’s Susu circle works as a distributer of Brukina — a popular millet-based drink and breakfast substitute. She works closely with a Motorking driver who delivers Brukina throughout the region for a good rate. Offer your friend’s driver GHC35 a month to add the poultry products to his regular route. Lamisi can save money on transport, and the driver will be happy for the extra cash.",
+              resultText: "The scheme backfires. On the second week, the delivery driver collides with another vehicle, and Lamisi’s eggs are crushed by a tumbling crate of Brukina. She loses a week’s profit, and the restaurant managers are not happy. One of them terminates the contract.",
+              impact: {
+              }
+            },
+          ]
+        },
+        questionText: "Lamisi’s birds are fattening up nicely. Her timing is good, too — the Bugum Chugu (Fire Festival) is just around the corner! The festival, which marks the start of a new lunar year, is one of the most important holidays and biggest parties for residents in northern Ghana. The demand for plump guinea fowl is sure to spike. This is a perfect opportunity to market her new brand, and to attract new customers. She will also need to raise her prices to cover her new expenses.",
+        answerOptions: [
+          {
+            text: "Purchase GHC250 worth of prime time radio ads, which buys a series of day-time mentions on Diamond FM and a series of evening messages on NorthStar Radio.",
+            resultText: "The radio ads work! As the Fire Festival approaches, dozens of new customers arrive. Not everyone who drops by purchases a bird — the prices are too high, some complain — but Lamisi’s farm has never been busier. ",
+            impact: {
+            }
+          },
+          {
+            text: "Book a day off, head to the EQWIP HUBs computer lab downtown, and put together a social media campaign to promote the new brand. Lamisi’s sister is willing to take care of the chores around the farm while she is gone.",
+            resultText: "With the support of EQWIP volunteers and staff, Lamisi creates a basic website her business and adds it to online business directories throughout Tamale. She also launches a Facebook page, and spreads word of her business on WhatsApp. She has to purchase a bigger data package to maintain her social media accounts (GHC35 month), but the social media campaign seem to work! Within a few weeks, her profits begin to rise. Not everyone who drops by purchases from her — the prices are too high, they say — but the farm has never been busier.",
+            impact: {
+            }
+          },
+        ]
+      },
+      10: {
         questionText: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).  (Click Next) Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
         answerOptions: [
           {
@@ -758,15 +875,22 @@ export default Ember.Component.extend({
     }
   },
 
+  setGameflowChangers: function(gameFlowVariable) {
+    if (gameFlowVariable != undefined) {
+      this.set(gameFlowVariable[0], gameFlowVariable[1])
+    }
+  },
+
   actions: {
     renderResult(answer) {
       this.set('chosenAnswer', answer)
+      this.setGameflowChangers(answer.gameFlowVariable)
+      this.get('answerQuestion')(answer.impact)
       this.set('resultText', answer.resultText)
     },
-    submitAnswer(answer) {
+    submitAnswer() {
       this.set('resultText', null)
       this.set('chosenAnswer', null)
-      this.get('answerQuestion')(answer)
     }
   }
 });

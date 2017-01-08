@@ -16,8 +16,6 @@ export default Ember.Controller.extend({
 
   actions: {
     answerQuestion(impact) {
-      this.setAnswer(impact)
-
       this.setImpact(impact)
       this.applyIncome()
 
@@ -30,6 +28,14 @@ export default Ember.Controller.extend({
     var income = parseInt(this.get('income'))
     var currentCash = parseInt(this.get('cash'))
     this.set('cash', currentCash + income)
+
+    var debtPayments = parseInt(this.get('debtPayments'))
+    var debt = this.get('debt')
+
+    if (!!debtPayments && !!debt) {
+      this.set('debt', (debt - debtPayments))
+      this.set('cash', (this.get('cash') - debtPayments))
+    }
   },
 
   setImpact: function(impact) {
@@ -42,15 +48,14 @@ export default Ember.Controller.extend({
     if (impact.income != undefined) {
       this.set('income', parseInt(this.get('income')) + impact.income)
     }
+    if (impact.debt != undefined) {
+      this.set('debt', parseInt(this.get('debt')) + impact.debt)
+    }
+    if (impact.debtPayments != undefined) {
+      this.set('debtPayments', parseInt(this.get('debtPayments')) + impact.debtPayments)
+    }
     if (impact.environment != undefined) {
       this.set('environment', this.get('environment') + impact.environment)
     }
   },
-
-  setAnswer: function(answer) {
-    var answers = this.get('answers')
-
-    answers[this.get('month')] = answer
-    this.set('answers', answers)
-  }
 });
