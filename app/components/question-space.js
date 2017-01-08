@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   month: null,
   renderingResult: null,
   resultText: null,
+  rejected: null,
 
   chosenAnswer: null,
 
@@ -13,6 +14,7 @@ export default Ember.Component.extend({
   // which questions/answers they receive
   vaccinated: null,
   madeTheDeal: null,
+  rebranded: null,
 
   currentQuestion: Ember.computed('character', 'month', function() {
     var question = this.get('questions')[this.get('character')][this.get('month')]
@@ -63,7 +65,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Apply for a loan through a microfinance institution.",
-            resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit. (Try a different option). ",
+            resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit.",
             impact: {
               reject: true,
             },
@@ -711,15 +713,31 @@ export default Ember.Component.extend({
             impact: {
               cash: -110,
               resilience: 2,
-              gameFlowVariable: ['registered', true],
             }
          },
          {
            text: "The government has been saying this for years! Might as well take the risk.",
-           resultText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
             impact: {
-              resilience: -1,
-              gameFlowVariable: ['registered', false],
+              followUpQuestion: {
+                questionText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
+                answerOptions: [
+                  {
+                    text: "Lamisi doesn’t want any more trouble. Ignore the officer’s hint, and accept the fine (GHC 500).",
+                    resultText: "Ouch.",
+                    impact: {
+                      cash: -500,
+                    },
+                  },
+                  {
+                    text: "Offer the officer a GHC150 bribe.",
+                    resultText: "The officer accepts the bribe with little hesitation. Lamisi is off the hook, but she feels that the integrity of her business has been compromised.",
+                    impact: {
+                      cash: -150,
+                      resilience: -1,
+                    },
+                  }
+                ]
+              },
             }
          },
        ]
@@ -883,14 +901,25 @@ export default Ember.Component.extend({
 
   actions: {
     renderResult(answer) {
+      this.set('rejected', false)
       this.set('chosenAnswer', answer)
+      this.set('resultText', answer.resultText)
+
+      if (answer.reject) {
+        this.set('rejected', true)
+        return
+      }
+
       this.setGameflowChangers(answer.gameFlowVariable)
       this.get('answerQuestion')(answer.impact)
-      this.set('resultText', answer.resultText)
+      if (answer.impact.followUpQuestion) {
+        this.set('currentQuestion', answer.impact.followUpQuestion)
+      }
     },
+
     submitAnswer() {
       this.set('resultText', null)
       this.set('chosenAnswer', null)
-    }
+    },
   }
 });

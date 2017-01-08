@@ -2,9 +2,15 @@
   {{resultText}}
 
   <div class="flexBlock" {{action "submitAnswer" chosenAnswer.impact}}>
-    <div class="button">
-      Continue
-    </div>
+    {{#if rejected}}
+      <div class="button">
+        Try A Different Option
+      </div>
+    {{else}}
+      <div class="button">
+        Continue
+      </div>
+    {{/if}}
   </div>
 
 {{else}}

@@ -17,10 +17,12 @@ export default Ember.Controller.extend({
   actions: {
     answerQuestion(impact) {
       this.setImpact(impact)
-      this.applyIncome()
 
-      var nextMonth = this.get('month') + 1
-      this.set('month', nextMonth)
+      if (!impact.followUpQuestion) {
+      this.applyIncome()
+        var nextMonth = this.get('month') + 1
+        this.set('month', nextMonth)
+      }
     }
   },
 
