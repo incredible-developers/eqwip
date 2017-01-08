@@ -6,6 +6,8 @@ export default Ember.Controller.extend({
   month: 1,
   answers: {},
 
+  introShown: false,
+
   // indicators
   cash: null,
   income: null,
@@ -21,6 +23,10 @@ export default Ember.Controller.extend({
       this.applyIncome()
       var nextMonth = this.get('month') + 1
       this.set('month', nextMonth)
+    },
+
+    startGameClicked: function() {
+      this.set('introShown', true)
     }
   },
 

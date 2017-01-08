@@ -1,19 +1,31 @@
-<div class="container">
-  <div class="score-drawer-container">
-    {{score-drawer
-        character=character
-        month=month
-        answers=answers
-        cash=cash
-        income=income
-        environment=environment
-        assets=assets
-        debt=debt
-        resilience=resilience
-    }}
-  </div>
+{{#if introShown}}
+  <div class="container">
+    <div class="score-drawer-container">
+      {{score-drawer
+          character=character
+          month=month
+          answers=answers
+          cash=cash
+          income=income
+          environment=environment
+          assets=assets
+          debt=debt
+          resilience=resilience
+      }}
+    </div>
 
-  <div class="container-columns">
-    {{question-space character=character month=month answerQuestion=(action "answerQuestion")}}
+    <div class="container-columns">
+      {{question-space character=character month=month answerQuestion=(action "answerQuestion")}}
+    </div>
   </div>
-</div>
+{{else}}
+  <div class="flexBlock">
+    im a character intro
+  </div>
+ <!--character intro component-->
+  <div class="flexBlock">
+    <div class='button' {{action 'startGameClicked'}}>
+     Start Game
+   </div>
+ </div>
+{{/if}}
