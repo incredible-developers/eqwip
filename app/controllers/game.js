@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   character: null,
   month: 1,
   gameOverManGameOver: Ember.computed('month', function() {
-    if (this.get('month') >= 12) {
+    if (this.get('month') >= 11) {
       return true
     } else {
       return false

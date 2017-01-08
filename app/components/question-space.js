@@ -808,7 +808,6 @@ export default Ember.Component.extend({
          },
        ]
       },
-      // Expansion
       8: {
         questionText: "The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.  Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.  Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.  (Click next) Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.  (Click next) Lamisi comes up with two ways to make use of these findings:",
         answerOptions: [
@@ -893,6 +892,50 @@ export default Ember.Component.extend({
               resilience: -2,
               debt: 400,
               debtPayments: 80,
+            }
+          },
+        ]
+      },
+      11: {
+        alternate: {
+          questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just GHC55 just 3 months ago, now costs GHC100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.",
+          answerOptions: [
+            {
+              text: "Change the bird feed mix to make use of low-cost substitutes for white corn and soybean meal.",
+              resultText: "After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was. Lamisi fears that her loyal customers may begin to drift, lest she improve the quality of her product.",
+              impact: {
+                income: -35,
+                resilience: -2,
+                environment: -1
+              }
+            },
+            {
+              text: "Raise the prices to account for higher expenses.",
+              resultText: "A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage.  Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.",
+              impact: {
+                income: -40,
+                resilience: 2,
+              }
+            },
+          ]
+        },
+        questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her new bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just GHC55 just 3 months ago, now costs GHC100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these key prices on the rise.",
+        answerOptions: [
+          {
+            text: "Revert back to the old feed mix, which used low-cost substitutes for white corn and soybean meal, and keep your prices where they are. Lamisi will have to wait this out, and hope that the quality of her product does not suffer significantly.",
+            resultText: "After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was. Lamisi fears that her loyal customers may begin to drift, or discover that she has not been fully honest with them.",
+            impact: {
+              income: -50,
+              resilience: -2,
+              environment: -1
+            }
+          },
+          {
+            text: "Raise the prices to account for higher expenses. Lamisi has invested a lot of money in her rebranding efforts, and believes that she has won the loyalty of many customers.",
+            resultText: "A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage. Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.",
+            impact: {
+              income: -65,
+              resilience: 2
             }
           },
         ]
