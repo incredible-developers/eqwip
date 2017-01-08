@@ -159,26 +159,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -281,26 +267,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -312,26 +284,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -407,26 +365,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -438,26 +382,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -619,30 +549,16 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
-      },      
+      },
       14: {
         questionText: "This is the text from the first question",
         answerOptions: [
@@ -650,26 +566,12 @@ export default Ember.Component.extend({
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
           {
             text: "",
             resultText: "",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             },
           },
         ]
@@ -769,26 +671,12 @@ export default Ember.Component.extend({
             text: "Pay the fees, and wish her luck.",
             resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             }
           },
           {
             text: "Pay the fees, and offer her an extra GHC100 for school supplies and new clothing.",
             resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
             impact: {
-              cash: ,
-              income: ,
-              resilience: ,
-              environment: ,
-              debt: ,
-              debtPayments:,
-              assets:,
             }
           },
         ]
@@ -804,8 +692,6 @@ export default Ember.Component.extend({
               income: 200,
               resilience: 3,
               environment: 1,
-              debt: ,
-              debtPayments:,
               assets: 2,
             }
          },
