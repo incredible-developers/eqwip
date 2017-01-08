@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   renderingResult: null,
   resultText: null,
   rejected: null,
+  followUpQuestion: null,
 
   chosenAnswer: null,
 
@@ -16,10 +17,16 @@ export default Ember.Component.extend({
   madeTheDeal: null,
   rebranded: null,
 
-  currentQuestion: Ember.computed('character', 'month', function() {
+  currentQuestion: Ember.computed('character', 'month', 'followUpQuestion', function() {
     var question = this.get('questions')[this.get('character')][this.get('month')]
+    var followUpQuestion = this.get('followUpQuestion')
+
     if (question.dependsOn && this.get(question.dependsOn)) {
       return question.alternate
+    }
+
+    if (followUpQuestion != undefined) {
+      return followUpQuestion
     }
     return question
   }),
@@ -719,7 +726,7 @@ export default Ember.Component.extend({
            text: "The government has been saying this for years! Might as well take the risk.",
             impact: {
               followUpQuestion: {
-                questionText: "Lo and behold, two weeks following the government’s announcement, a inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
+                questionText: "Lo and behold, two weeks following the government’s announcement, an inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
                 answerOptions: [
                   {
                     text: "Lamisi doesn’t want any more trouble. Ignore the officer’s hint, and accept the fine (GHC 500).",
@@ -904,17 +911,20 @@ export default Ember.Component.extend({
       this.set('rejected', false)
       this.set('chosenAnswer', answer)
       this.set('resultText', answer.resultText)
+      this.set('followUpQuestion', null)
 
       if (answer.reject) {
         this.set('rejected', true)
         return
       }
 
+      if (answer.impact.followUpQuestion != undefined) {
+        this.set('followUpQuestion', answer.impact.followUpQuestion)
+        return
+      }
+
       this.setGameflowChangers(answer.gameFlowVariable)
       this.get('answerQuestion')(answer.impact)
-      if (answer.impact.followUpQuestion) {
-        this.set('currentQuestion', answer.impact.followUpQuestion)
-      }
     },
 
     submitAnswer() {
