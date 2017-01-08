@@ -25,5 +25,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('bower_components/justgage-official/raphael-2.1.4.min.js')
+  app.import('bower_components/justgage-official/justgage.js')
   return app.toTree();
 };
