@@ -27,5 +27,6 @@ module.exports = function(defaults) {
 
   app.import('bower_components/justgage-official/raphael-2.1.4.min.js')
   app.import('bower_components/justgage-official/justgage.js')
+  app.import('bower_components/jquery-ui/jquery-ui.min.js')
   return app.toTree();
 };
