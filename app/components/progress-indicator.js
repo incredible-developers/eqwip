@@ -10,6 +10,9 @@ export default Ember.Component.extend({
       min: 0,
       max: 10000,
       value: this.get('value'),
+      hideMinMax: true,
+      hideValue: true,
+      title: "Title"
     });
   },
 
