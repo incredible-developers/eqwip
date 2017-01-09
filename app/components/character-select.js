@@ -15,7 +15,7 @@ export default Ember.Component.extend({
     if (character == 'Zara') {
       return 800
     } else if (character == "Lamisi") {
-      return 340
+      return 0
     } else if (character == "Kojo") {
       return 0
     }
