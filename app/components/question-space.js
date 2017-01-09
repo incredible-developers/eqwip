@@ -634,6 +634,18 @@ export default Ember.Component.extend({
     },
     'Lamisi': {
       1: {
+        questionText: "Lamisi has GHC500 in savings, all of which she is willing to invest in her poultry farm. She’s been raising chicks in her family’s yard for the last few months, and now has about twenty full grown birds. Now, she must build a small bird pen and a series of troughs for water and feed. She uses wooden planks and barbed wire to keep costs low (GHC300). Next, she buys 25 more day-old chicks from a local hatchery, and enough feed to raise them (GHC200). These chicks will take between 4 to 6 months to mature, after which they will be able to lay eggs for up two years. Lamisi expects her flock to eventually produce about one crate of eggs per day, which she can sell for about GHC14. She can also sell her older birds for GHC25 each. She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about GHC340 per month by the end of June.",
+        answerOptions: [
+          {
+            text: "Time to get started!",
+            resultText: null,
+            impact: {
+              income: 340
+            }
+          },
+        ]
+      },
+      2: {
         questionText: "Though less prone to sickness than chickens, Guinea fowl are susceptible to a number of diseases, including Fowl Pox, Newcastle disease, and Coccidiosis. A disease outbreak will not only decrease Lamisi’s profits, but can potentially decimate her flock.",
         answerOptions: [
           {
@@ -656,7 +668,7 @@ export default Ember.Component.extend({
         ]
       },
 
-      2: {
+      3: {
         questionText: "As Lamisi’s flock grows, so too does the volume of waste that she must deal with. She’s been dumping the waste in a small creek away from her yard, but her neighbors have started to complain — not only do her actions risk contaminating local water resources, but the stench is unbearable!",
         answerOptions: [
           {
@@ -679,7 +691,7 @@ export default Ember.Component.extend({
         ]
       },
 
-      3: {
+      4: {
         questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled guinea fowl with tuo zaafi. As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
         answerOptions: [
           {
@@ -703,7 +715,7 @@ export default Ember.Component.extend({
         ]
       },
 
-      4: {
+      5: {
         optionalText: {
           toggle: 'madeTheDeal',
           whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash.",
@@ -737,7 +749,7 @@ export default Ember.Component.extend({
         ]
       },
 
-      5: {
+      6: {
        questionText: "The government announces that it is cracking down on ‘illegal businesses’. The newspapers claim that inspection officers will be issuing fines to businesses that are not properly registered. ",
        answerOptions: [
          {
@@ -775,7 +787,7 @@ export default Ember.Component.extend({
          },
        ]
       },
-      6: {
+      7: {
         dependsOn: 'vaccinate',
         alternate: {
           questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (GHC150).",
@@ -811,7 +823,7 @@ export default Ember.Component.extend({
         ]
       },
       // esoko
-      7: {
+      8: {
        questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more. Esoko just opened a branch in Tamale, the trader explains. Esoko’s Managing Director claims that the branch was established to bridge the gap in information flow between smallholder farmers and key players in the agricultural value chain. This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
        answerOptions: [
          {
@@ -834,7 +846,7 @@ export default Ember.Component.extend({
          },
        ]
       },
-      8: {
+      9: {
         questionText: "The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.  Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.  Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.  (Click next) Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.  (Click next) Lamisi comes up with two ways to make use of these findings:",
         answerOptions: [
           {
@@ -862,7 +874,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      9: {
+      10: {
         dependsOn: 'rebranded',
         alternate: {
           questionText: "Lamisi will need to find an efficient way to deliver her products to the two restaurants she has agreed to supply. Unfortunately, getting around in Tamale is not very easy. There is no formal public transit, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances — and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.",
@@ -897,7 +909,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      10: {
+      11: {
         susuImpact: {
           text: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).",
           debt: 400,
@@ -924,7 +936,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      11: {
+      12: {
         dependsOn: 'rebranded',
         alternate: {
           questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just GHC55 just 3 months ago, now costs GHC100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.",
