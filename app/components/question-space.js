@@ -1033,7 +1033,6 @@ export default Ember.Component.extend({
     },
 
     handleSusuImpact() {
-      console.log(this.get('resultText'))
       this.set('susuAcknowledged', true)
       this.get('setImpact')(this.get('susuImpact'))
     }
