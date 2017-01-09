@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  gage: null,
+  classNames: ['u-marginBottom'],
+  gauge: null,
 
   didInsertElement() {
     this._super(...arguments);
-    this.gage = new JustGage({
+    this.gauge = new JustGage({
       id: this.get('gauge-id'),
       min: 0,
       max: 8000,
@@ -14,11 +15,14 @@ export default Ember.Component.extend({
       hideValue: true,
       title: "Title"
     });
-    this.$('#' + this.get('gauge-id')).tooltip();
+    this.$('#' + this.get('gauge-id')).tooltip({
+      show: false,
+      hide: false,
+    });
   },
 
   didUpdateAttrs() {
     this._super(...arguments);
-    this.gage.refresh(this.get('value'));
+    this.gauge.refresh(this.get('value'));
   }
 });
