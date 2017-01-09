@@ -637,7 +637,7 @@ export default Ember.Component.extend({
         questionText: "Though less prone to sickness than chickens, Guinea fowl are susceptible to a number of diseases, including Fowl Pox, Newcastle disease, and Coccidiosis. A disease outbreak will not only decrease Lamisi’s profits, but can potentially decimate her flock.",
         answerOptions: [
           {
-            text: "Purchase vaccinations for the flock. Better safe than sorry (GHC200).",
+            text: "Purchase vaccinations for the flock. Better safe than sorry. (GHC 200).",
             resultText: "Wise choice. It’s much easier to run a successful poultry farm when you have a healthy flock of birds!",
             impact: {
               cash: -200,
@@ -660,8 +660,8 @@ export default Ember.Component.extend({
         questionText: "As Lamisi’s flock grows, so too does the volume of waste that she must deal with. She’s been dumping the waste in a small creek away from her yard, but her neighbors have started to complain — not only do her actions risk contaminating local water resources, but the stench is unbearable!",
         answerOptions: [
           {
-            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250).",
-            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden.",
+            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (GHC250)",
+            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden. (Cash up)",
             impact: {
               cash: -250,
               income: 370,
@@ -904,7 +904,7 @@ export default Ember.Component.extend({
           debtPayments: 80,
           cash: 1750
         },
-        questionText: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (GHC400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (GHC200).  (Click Next) Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
+        questionText: "Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of GHC150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
         answerOptions: [
           {
             text: "Let him take the birds for free. It’s best to avoid any more family tension.",
