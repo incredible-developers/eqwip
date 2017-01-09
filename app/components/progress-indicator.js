@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
     this.gage = new JustGage({
-      id: "test",
+      id: this.get('gauge-id'),
       min: 0,
       max: 8000,
       value: this.get('value'),
@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       hideValue: true,
       title: "Title"
     });
-    this.$().tooltip();
+    this.$('#' + this.get('gauge-id')).tooltip();
   },
 
   didUpdateAttrs() {
