@@ -19,6 +19,7 @@ export default Ember.Component.extend({
   madeTheDeal: null,
   rebranded: null,
   hasSusu: null,
+  wentToAccra: null,
 
   currentQuestion: Ember.computed('character', 'month', 'followUpQuestion', function() {
     var question = this.get('questions')[this.get('character')][this.get('month')]
@@ -76,9 +77,7 @@ export default Ember.Component.extend({
           {
             text: "Apply for a loan through a microfinance institution.",
             resultText: "The major microfinance institution operating in Zara’s region is no longer operational. The local branches were forced to close following a government investigation, which revealed that investor deposits were being diverted into the bank accounts of firm managers. Zara’s friends and mentors recommend that she look for a different source of credit.",
-            impact: {
-              reject: true,
-            },
+            reject: true,
           },
           {
            text: "Organize a small loan through a Susu collector.",
@@ -295,6 +294,7 @@ export default Ember.Component.extend({
             impact: {
               cash: -190,
               resilience: 2,
+              gameFlowVariable: ['wentToAccra', true]
             },
           },
           {
@@ -303,40 +303,60 @@ export default Ember.Component.extend({
             impact: {
               cash: -200,
               resilience: 1,
+              gameFlowVariable: ['wentToAccra', false]
             },
           },
         ]
       },
       11: {
+        optionalText: {
+          toggle: 'wentToAccra',
+          whenFalse: "Zara’s high school friend, who is visiting Tamale from Accra, brings her a small case of organic makeup products from a specialized manufacturer in the South.  Zara’s students and customers love the organic products.They’re easy to use, and better for both skin and the environment.",
+          whenTrue: "Zara’s students and customers love the organic makeup products that she brought back from Accra. It’s easy to use, and better for both skin and the environment."
+        },
         questionText: "",
         answerOptions: [
           {
-            text: "",
-            resultText: "",
+            text: "Organize a monthly shipment of organic makeup products from Accra to use on and sell to customers.",
+            resultText: "Zara will now have to spend over GHC150 per month on freight, and her supply budget has also increased. Even if she raises her prices slightly, her business’s profit margin will have thinned out.",
             impact: {
+              cash: -100,
+              resilience: 3,
+              environment: 1
             },
           },
           {
-            text: "",
-            resultText: "",
+            text: "Focus on building the business and expanding the vocational training — leave the organic products to the beauty boutiques.",
+            resultText: "The end of the year is coming up, and Zara is going to have to put together enough cash for next year’s rent. It’s not a good time to be spending cash. Maybe next year.",
             impact: {
+              cash: 0
             },
           },
         ]
       },
       12: {
-        questionText: "",
+        optionalText: {
+          toggle: 'hasSusu',
+          whenFalse: "Zara has nearly paid off her debt to her friend and creditor. And she still has access to a nice sum of cash. Her profits, however, have stagnated. She needs to find a way to increase revenue, or otherwise expand her business.",
+          whenTrue: "Zara’s profits have stagnated. She needs to find a way to increase revenue, or otherwise expand her business."
+        },
+        questionText: "As the new year approaches, she wants to set an ambitious, long-term goal on which to focus her efforts in the coming months. She consults with her students, clients, and colleagues for ideas, and comes up with two options.",
         answerOptions: [
           {
-            text: "",
-            resultText: "",
+            text: "Zara knows there is a wider demand for vocational makeup training than her small salon can possibly cater to. Using the power of digital technology, expand the scope and reach of the business by offering online tutorials and vocational training courses that can be accessed by women across the country (and beyond).",
+            resultText: "First thing’s first — Zara will need to purchase a computer (GHC1200 for a new laptop), a webcam (GHC100), and an internet package (GHC35 a month). This is a major investment, but Zara can use the computer for a number of additional purposes, like accounting and managing social media.  Next, Zara will need to film a number of brief tutorials to load onto YouTube and share on social media. These will be used as promotional materials, and as a way to draw in potential students for online training. Once she has established a presence online, Zara can begin creating a online vocational training program that will require payment to access. She may have to hire a web developer down the road to help create an effective platform for her courses.",
             impact: {
+              cash: -1300,
+              income: -35,
+              resilience: 3,
+              assets: 2
             },
           },
           {
-            text: "",
-            resultText: "",
+            text: "Zara wants to expand her vocational training to reach unemployed young women in her region. Though many of these women have secondary or tertiary education, they do not possess the job skills required to find work in today’s market. Reach out to national and international NGOs working locally on issues of youth unemployment or livelihood training, and develop a partnership to subsidize vocational training for unemployed young women.",
+            resultText: "Zara is thrilled to dedicate herself to this important, albeit long-term project. Over the course of a year, Zara has organized and led nearly a dozen vocational training programs. She has witnessed first hand the positive impact that such training has on unemployed women. Many of her former students are now have branched out to start their own businesses, and several others have expressed interest in working at Zara’s salon. Zara takes this message to several NGOs, including NORSAAC and EQWIP HUBs for advice, feedback, and tools for bringing this vision to life. Based on these initial meetings, it sounds like Zara will have to dedicate much of her time and resources to developing this plan over the next several months. However, she is confident that investing in her community is not only a worthwhile cause, but will also strengthen the sustainability of her business over time.",
             impact: {
+              resilience: 3,
             },
           },
         ]
@@ -373,6 +393,7 @@ export default Ember.Component.extend({
             impact: {
               debt: 3500,
               debtPayments:875,
+              gameFlowVariable: ['bootcamp', false]
             },
           },
           {
@@ -381,6 +402,7 @@ export default Ember.Component.extend({
             impact: {
               cash: -2100,
               resilience: 2,
+              gameFlowVariable: ['bootcamp', true]
             },
           },
         ]
@@ -406,40 +428,58 @@ export default Ember.Component.extend({
         ]
       },
       4: {
-        questionText: "This is the text from the first question",
+        dependsOn: 'bootcamp',
+        alternate: {
+          questionText: "At last, the mobile application is ready to go! With 10 clients signed up to Recycle Accra, each of which Kojo expects to produce one 25-kilogram load per week, he will generate a monthly revenue of approximately GHC400.  (Click Next) Kojo meets with each of his clients and their staff, and provides a brief tutorial on the Recycle Accra! app, (and facilitates an environmental training session). During the tutorials, a number of Kojo’s clients request specialized trash bins to help them keep the plastics separate from other trash. Unfortunately, though RWS does have specialized bins, they are not willing to provide them to Kojo’s clients during the pilot stage of the project. They will, however, offer to sell and deliver the bins to Kojo’s clients (GHC400).",
+          answerOptions: [
+            {
+              text: "Fork over the money. Kojo is willing to do what it takes to avoid issues during these early stages of the project.",
+              resultText: "This was not a cheap decision to make, but Kojo’s clients seem happy and eager to get started.",
+              impact: {
+                cash: -400,
+                income: 400,
+                resilience: 1,
+                environment: 1,
+                assets: 2
+              }
+            },
+            {
+              text: "Promise the clients that specialized bins will be provided once the pilot is complete. Request they do their best to properly sort and label their trash in the meantime.",
+              resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refused to collect the plastic waste from two of the supermarket locations, because it was mixed with organic waste and other forms of trash. In order to keep the clients on board and happy, Kojo must reimburse these two clients (GHC50), and purchase each of them a specialized bin from RWS (GHC150)",
+              impact: {
+                cash: -200,
+                income: 400,
+                resilience: -1,
+                environment: -1,
+                assets: 1
+              }
+            },
+          ]
+        },
+        questionText: "At last, the mobile application is ready to go! With 10 clients signed up to Recycle Accra, each of which Kojo expects to produce one 25-kilogram load per week, he will generate a monthly revenue of approximately GHC400. (Click next.) Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at The Code School, gets to work on the mobile application. He runs into very few problems building the basic infrastructure for the application, but runs into trouble trying to develop the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the application is ready to be piloted. During the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo hires a Motorking driver to pick up the missed bins, and reimburses the affected clients out of pocket (GHC70).",
         answerOptions: [
           {
-            text: "",
-            resultText: "",
+            text: "Mistakes are bound to happen in the early phase of things. That’s what pilots are for! Kojo will spend some time at The Code School lab to work out the app’s bugs, and hopefully things will get back on track.",
+            resultText: "After a few all-nighters and extensive testing, Kojo is confident that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
             impact: {
-            },
+              cash: -70,
+              income: 400,
+              assets: 1
+            }
           },
           {
-            text: "",
-            resultText: "",
+            text: "Hire an expert developer to work out the app’s kinks, and to make sure that there won’t be more problems in the future (GHC400).",
+            resultText: "Kojo learned a lot during the bootcamp, but he is still a beginner, in the big scheme of things. Though he built the majority of the application’s code himself, there is always more he can learn from an expert. The developer Kojo hires fixes the application’s GIS, and explains to Kojo exactly what went wrong. Should be smooth sailing from here.",
             impact: {
-            },
+              cash: -470,
+              income: 400,
+              resilience: 2,
+              assets: 1
+            }
           },
         ]
       },
       5: {
-        questionText: "This is the text from the first question",
-        answerOptions: [
-          {
-            text: "",
-            resultText: "",
-            impact: {
-            },
-          },
-          {
-            text: "",
-            resultText: "",
-            impact: {
-            },
-          },
-        ]
-      },
-      6: {
         questionText: "With the pilot well underway, Kojo is looking to expand his clientele. After doing some research, he decides to target clients in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services. He is able to easily identify a dozen clients in the area that are interested in Recycle Accra! RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
@@ -459,7 +499,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      7: {
+      6: {
         questionText: "Things seem to be going well as Kojo enters the third and final month of the pilot stage of Recycle Accra! The pilot is expanding slowly, but steadily, and he has received significant amounts of positive feedback. However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government. Within a week, Kojo receives a cease and desist notice from the municipal government. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. However, Kojo is unwilling to be intimidated or pushed out of Awoshie. He his paperwork together, and heads to the registration office. To operate legally, he will need to apply for a Business Operating Permit (GHC500). Unfortunately, the clerk at the office tells Kojo that it will take at least 90 days to review his application.",
         answerOptions: [
           {
@@ -480,7 +520,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      8: {
+      7: {
         questionText: "Mid-way through July, Ghana is hit by a major rainstorm. Within 24 hours, major floods sweep across Accra, causing millions of dollars of damage. These floods, which have been happening on a cyclical basis in recent years, are caused in part by plastic bags and other waste that is disposed of near open drainage systems. Now that Recycle Accra! has found its footing, Kojo senses an opportunity to not only to help alleviate the strain on the city’s drainage system, but to grow his business at the same time.",
         answerOptions: [
           {
@@ -505,7 +545,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      9: {
+      8: {
         questionText: "Things seem to be back on track. With dozens of clients using the application regularly in a number of neighborhoods across Accra, RWS is now providing each new client with specialized recycling bins, free of charge. Kojo is now looking to upgrade some of his equipment — a new modem, router, and an external hard drive will go a long way (GHC 250). Before he makes any purchases, however, Kojo receives a phone call from sister. Her three young children are heading back to school next month, and she need money for their school fees (GHC200).",
         answerOptions: [
           {
@@ -527,7 +567,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      10: {
+      9: {
         questionText: "September arrives, and Kojo is determined to further expand the reach of Recycle Accra! He sets his sights on the affluent neighborhood of Dansoman.",
         answerOptions: [
           {
@@ -549,7 +589,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      11: {
+      10: {
         questionText: "One of Kojo’s colleagues from the bootcamp invites him to take part in a hackathon — a weekend event where teams of computer coders, programmers, designers, and social entrepreneurs compete to develop a viable web or mobile based computer program. The hackathon, which will be held at the U-Code computer lab in Accra, will be judged by an esteemed panel of local and international judges. The contest costs GHC350 to enter. The hackathon will be highly competitive, but the winning team will get to work with business experts and a tech incubator to further develop their idea.",
         answerOptions: [
           {
@@ -569,7 +609,7 @@ export default Ember.Component.extend({
           },
         ]
       },
-      12: {
+      11: {
         questionText: "Business is doing well. Recycle Accra! has now been downloaded over 200 times, and has over 50 regular users in four different neighborhoods throughout Accra. Kojo’s cash is running low, however, and he doesn’t think he will be able to expand his business much further without investors. However, Kojo is not confident that his business proposal will be able to win over potential investors. In particular, he needs to find an effective way to convey his plan to monetize the application, and generate a more steady flow of revenue.",
         answerOptions: [
           {
@@ -578,6 +618,7 @@ export default Ember.Component.extend({
             impact: {
               cash: -500,
               resilience: 1,
+              gameFlowVariable: ['consultant', true]
             },
           },
           {
@@ -585,40 +626,7 @@ export default Ember.Component.extend({
             resultText: "Kojo meets up with Donna at the EQWIP HUB one day after her training. After a long discussion about his business proposal, one of the staff members offers to connect Kojo to the Executive Director of a major environmental NGO that is based in Accra, but that operates throughout Western Africa. They set up a Skype meeting. The meeting is eye-opening. The Executive Director thinks that Kojo has an excellent product, but  recommends that he focus less on monetizing the application, and more on building partnerships with nonprofit or governmental organizations that have a vested interest in promoting environmental stewardship.",
             impact: {
               resilience: 3,
-            },
-          },
-        ]
-      },
-            13: {
-        questionText: "This is the text from the first question",
-        answerOptions: [
-          {
-            text: "",
-            resultText: "",
-            impact: {
-            },
-          },
-          {
-            text: "",
-            resultText: "",
-            impact: {
-            },
-          },
-        ]
-      },
-      14: {
-        questionText: "This is the text from the first question",
-        answerOptions: [
-          {
-            text: "",
-            resultText: "",
-            impact: {
-            },
-          },
-          {
-            text: "",
-            resultText: "",
-            impact: {
+              gameFlowVariable: ['consultant', false]
             },
           },
         ]
