@@ -7,6 +7,8 @@ export default Ember.Component.extend({
     this._super(...arguments);
     this.gage = new JustGage({
       id: "test",
+      min: 0,
+      max: 10000,
       value: this.get('value'),
     });
   },
