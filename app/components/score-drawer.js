@@ -70,5 +70,39 @@ export default Ember.Component.extend({
     if (character == 'Kojo') {
       return 0
     };
-  })
+  }),
+
+
+  resilienceMin: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return 0
+    };
+
+    if (character == 'Lamisi') {
+      return 0
+    };
+
+    if (character == 'Kojo') {
+      return 0
+    };
+  }),
+
+  resilienceMax: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return 19
+    };
+
+    if (character == 'Lamisi') {
+      return 16
+    };
+
+    if (character == 'Kojo') {
+      return 19
+    };
+  }),
+
 });

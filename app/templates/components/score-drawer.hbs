@@ -13,10 +13,9 @@
     </p>
   </div>
 
-
-  <div class="paddingSmall whiteBorderBottom">
-    Environment: {{environment}}
-    {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
+  <div class="paddingSmall">
+    Resilience: {{resilience}}
+    {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
     {{/progress-indicator}}
   </div>
 
@@ -24,8 +23,10 @@
     Assets: {{assets}}
     {{#progress-indicator value=assets gauge-id='assets-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
   </div>
-  <div class="paddingSmall">
-    Resilience: {{resilience}}
-    {{#progress-indicator value=resilience gauge-id='resilience-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
+
+  <div class="paddingSmall whiteBorderBottom">
+    Environment: {{environment}}
+    {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
+    {{/progress-indicator}}
   </div>
 </div>

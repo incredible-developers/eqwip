@@ -15,6 +15,8 @@ export default Ember.Component.extend({
       value: this.get('value'),
       hideMinMax: true,
       hideValue: true,
+      needleTail: true,
+      pointer: true
     });
   },
 
