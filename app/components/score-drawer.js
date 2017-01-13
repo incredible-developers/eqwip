@@ -38,5 +38,37 @@ export default Ember.Component.extend({
     "October",
     "November",
     "December"
-  ]
+  ],
+
+  environmentMax: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return 3
+    };
+
+    if (character == 'Lamisi') {
+      return 3
+    };
+
+    if (character == 'Kojo') {
+      return 4
+    };
+  }),
+
+  environmentMin: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return -1
+    };
+
+    if (character == 'Lamisi') {
+      return -3
+    };
+
+    if (character == 'Kojo') {
+      return 0
+    };
+  })
 });

@@ -1,21 +1,31 @@
-{{character}}
-<br>
-{{monthName}}
-<br>
-Cash: {{cash}}
-{{#progress-indicator value=cash gauge-id='cash-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
-<br>
-Income: {{income}}
-{{#progress-indicator value=income gauge-id='income-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
-<br>
-Debt:{{debt}}
-{{#progress-indicator value=debt gauge-id='debt-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
-<br>
-Assets: {{assets}}
-{{#progress-indicator value=assets gauge-id='assets-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
-<br>
-Environment: {{environment}}
-{{#progress-indicator value=environment gauge-id='environment-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
-<br>
-Resilience: {{resilience}}
-{{#progress-indicator value=resilience gauge-id='resilience-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
+<div class="eqwipBlue paddingSides">
+  <div class="cashDebtIncomeBox whiteBorderBottom paddingSmall">
+    {{character}}
+    {{monthName}}
+    <p>
+    Cash: ₵{{cash}}
+    </p>
+    <p>
+    Debt: ₵{{debt}}
+    </p>
+    <p>
+    Monthly Income: ₵{{income}}
+    </p>
+  </div>
+
+
+  <div class="paddingSmall whiteBorderBottom">
+    Environment: {{environment}}
+    {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
+    {{/progress-indicator}}
+  </div>
+
+  <div class="paddingSmall whiteBorderBottom">
+    Assets: {{assets}}
+    {{#progress-indicator value=assets gauge-id='assets-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
+  </div>
+  <div class="paddingSmall">
+    Resilience: {{resilience}}
+    {{#progress-indicator value=resilience gauge-id='resilience-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
+  </div>
+</div>
