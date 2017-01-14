@@ -14,12 +14,14 @@
 }
 
 .answerContainer .card {
+  width: 100%;
   padding: 2.5rem 3rem;
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
 }
 
 .answerContainer .card:after {
@@ -47,6 +49,11 @@
 
 .answerContainer .columns:nth-child(3) .card:after {
   content: "3";
+}
+
+.answerContainer .card:hover {
+  transform: translate(0, -16px);
+  box-shadow: inset 0 0 0 0.5rem #FFFFFF, 0 24px 24px rgba(black, 0.1);
 }
 
 .answerContainer .card:hover:after {
