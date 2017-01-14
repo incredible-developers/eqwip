@@ -26,7 +26,10 @@ export default Ember.Component.extend({
   }),
 
   addSusuMarkdown: function (text) {
-    return text.string.replace(this.get('susuRegex'), function(s) {
+    if (!(text.constructor === String)) {
+      text = text.string
+    }
+    return text.replace(this.get('susuRegex'), function(s) {
       return "#SUSU#" + s + "#SUSU#";
     });
   }
