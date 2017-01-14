@@ -12,22 +12,24 @@
 
 {{else}}
  {{#if introShown}}
-    <div class="container">
-      <div class="score-drawer-container">
-        {{score-drawer
-            character=character
-            month=month
-            answers=answers
-            cash=cash
-            income=income
-            environment=environment
-            assets=assets
-            debt=debt
-            resilience=resilience
-        }}
+    <div class="flexBlock">
+      <div class="flexBlock flexBlock--noGrow flexBlock--noShrink">
+        <div class="sidebar">
+          {{score-drawer
+              character=character
+              month=month
+              answers=answers
+              cash=cash
+              income=income
+              environment=environment
+              assets=assets
+              debt=debt
+              resilience=resilience
+          }}
+        </div>
       </div>
 
-      <div class="container-columns">
+      <div class="flexBlock">
         {{question-space character=character month=month answerQuestion=(action "answerQuestion") setImpact=(action "setImpact")}}
       </div>
     </div>

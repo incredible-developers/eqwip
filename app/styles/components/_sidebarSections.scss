@@ -1,0 +1,27 @@
+.sidebar-section {
+}
+
+.sidebar-section--header {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  background: $color-blueDark;
+}
+
+.sidebar-section-month {
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  display: inline-block;
+  background: darken($color-blueDark, 5%);
+}
+
+.sidebar-section--totals {
+  background: lighten($color-blueDark, 5%);
+}
+
+.sidebar-gauge {
+  text-align: center;
+  border-bottom: 1px solid $color-blue;
+}
+
+.sidebar-gauge .ember-view {
+  display: inline-block;
+}
