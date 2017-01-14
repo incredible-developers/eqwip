@@ -17,7 +17,8 @@ export default Ember.Component.extend({
       hideValue: true,
       needleTail: true,
       pointer: true,
-      levelColors: ['#DC3912', "#f9c802", '#00FF00']
+      levelColors: ['#DC3912', "#f9c802", '#00FF00'],
+      gaugeColor: 'white',
     });
   },
 

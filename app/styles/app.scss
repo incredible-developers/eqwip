@@ -128,6 +128,15 @@ body > .ember-view {
   transition: width 1s;
 }
 
+.indicator-gradient{
+  background: #DC3912; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #DC3912,#f9c802, #00FF00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #DC3912, #f9c802, #00FF00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #DC3912, #f9c802, #00FF00); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #DC3912, #f9c802, #00FF00); /* Standard syntax */
+}
+
+
 .indicator-container {
   width:160px;
   height:40px;

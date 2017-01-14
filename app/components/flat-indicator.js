@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'div',
   attributeBindings: ['style'],
-  classNames: ['indicator-container'],
+  classNames: ['indicator-container indicator-gradient'],
   min: null,
   max: null,
   value: null,
