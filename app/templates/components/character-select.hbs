@@ -1,45 +1,93 @@
-<div class="container">
-  Choose your character, and the type of business you would like to launch. By clicking on each character, you will be able to preview their extended bio.
-</div>
-
-<br>
-
-<div class="container align-center">
-  <div class="container-columns" {{action "selectCharacter" 'Lamisi'}}>
-    Lamisi: Agribusiness Entrepreneur
-  </div>
-
-  <div class="container-columns" {{action "selectCharacter" 'Kojo'}}>
-    Kojo: Mobile App Developer
-  </div>
-
-  <div class="container-columns" {{action "selectCharacter" 'Zara'}}>
-    Zara: Vocational Trainer
+<div class="row align-center">
+  <div class="small-12 medium-8 columns u-textCenter">
+    <h2 class="u-colorBlueDark">Character Selection</h2>
+    <p>
+      Choose your character, and the type of business you would like to launch.
+    </p>
   </div>
 </div>
 
-<br>
+<div class="row align-center">
+  <div class="small-12 medium-10 columns">
+    <div class="row">
+      <div class="small-12 medium-expand columns">
+        <div class="card">
+          <div class="avatar u-marginBottom">
 
-{{#if characterSelected}}
-  <div class="bio">
-    {{#if zaraSelected}}
-      Zara is a 31-year-old mother of two young children living Tamale. She has a University Degree in Marketing and Finance. She is a trained makeup artist, who plans to start a vocational training program to teach makeup artistry to young girls in her community.
-    {{/if}}
-    {{#if kojoSelected}}
-      Kojo is a 22-year-old youth living in Accra. A skilled weaver, he wants to build a business that uses technology to sell and ship his clothing to customers living overseas.
-    {{/if}}
-    {{#if lamisiSelected}}
-      Lamisi is a 26-year-old woman living in Tamale. Currently unemployed, she has a background in animal husbandry, and a Higher National Diploma in Business Administration. Lamisi wants to launch a small poultry farm that sells live guinea fowl and eggs.
-    {{/if}}
+          </div>
+          <h2>Lamisi</h2>
+          <h3 class="u-marginBottom">Agribusiness Entrepreneur</h3>
+          {{#if characterSelected}}
+            {{#if lamisiSelected}}
+              <p class="u-textSmall u-lineHeightSmall">
+                Zara is a 31-year-old mother of two young children living Tamale. She has a University Degree in Marketing and Finance. She is a trained makeup artist, who plans to start a vocational training program to teach makeup artistry to young girls in her community.
+              </p>
+            {{/if}}
+          {{/if}}
+
+          {{#if lamisiSelected}}
+            {{#link-to 'game' (query-params character=characterSelected income=startingIncome cash=startingCash) class="button button--green"}}
+              Start Game as {{characterSelected}}
+            {{/link-to}}
+          {{else}}
+            <div class="button button--blue" {{action "selectCharacter" 'Lamisi'}}>
+              Select
+            </div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="small-12 medium-expand columns">
+        <div class="card">
+          <div class="avatar u-marginBottom">
+
+          </div>
+          <h2>Kojo</h2>
+          <h3 class="u-marginBottom">Mobile App Developer</h3>
+          {{#if characterSelected}}
+            {{#if kojoSelected}}
+              <p class="u-textSmall u-lineHeightSmall">
+                Kojo is a 22-year-old youth living in Accra. A skilled weaver, he wants to build a business that uses technology to sell and ship his clothing to customers living overseas.
+              </p>
+            {{/if}}
+          {{/if}}
+
+          {{#if kojoSelected}}
+            {{#link-to 'game' (query-params character=characterSelected income=startingIncome cash=startingCash) class="button button--green"}}
+              Start Game as {{characterSelected}}
+            {{/link-to}}
+          {{else}}
+            <div class="button button--blue" {{action "selectCharacter" 'Kojo'}}>
+              Select
+            </div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="small-12 medium-expand columns">
+        <div class="card">
+          <div class="avatar u-marginBottom">
+
+          </div>
+          <h2>Zara</h2>
+          <h3 class="u-marginBottom">Vocational Trainer</h3>
+          {{#if characterSelected}}
+            {{#if zaraSelected}}
+              <p class="u-textSmall u-lineHeightSmall">
+                Zara is a 31-year-old mother of two young children living Tamale. She has a University Degree in Marketing and Finance. She is a trained makeup artist, who plans to start a vocational training program to teach makeup artistry to young girls in her community.
+              </p>
+            {{/if}}
+          {{/if}}
+
+          {{#if zaraSelected}}
+            {{#link-to 'game' (query-params character=characterSelected income=startingIncome cash=startingCash) class="button button--green"}}
+              Start Game as {{characterSelected}}
+            {{/link-to}}
+          {{else}}
+            <div class="button button--blue" {{action "selectCharacter" 'Zara'}}>
+              Select
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
   </div>
-{{/if}}
-
-<br>
-
-<div class="container align-center">
-  {{#if characterSelected}}
-    {{#link-to 'game' (query-params character=characterSelected income=startingIncome cash=startingCash) class="button flexy-guy"}}
-      Start Game as {{characterSelected}}
-    {{/link-to}}
-  {{/if}}
 </div>

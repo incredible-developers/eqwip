@@ -32,13 +32,15 @@
       </div>
     </div>
   {{else}}
-    <div class="flexBlock">
-      {{character-intro character=character}}
+    <div class="flexBlock u-padding">
+      <div class="row collapse">
+        <div class="small-12 medium-8 columns">
+          {{character-intro character=character}}
+          <div class="button button--green u-marginBottom u-marginTop" {{action 'startGameClicked'}}>
+           Continue
+         </div>
+        </div>
+      </div>
     </div>
-    <div class="flexBlock">
-      <div class='button' {{action 'startGameClicked'}}>
-       Start Game
-     </div>
-   </div>
   {{/if}}
 {{/if}}

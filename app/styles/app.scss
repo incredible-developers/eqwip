@@ -10,12 +10,18 @@
 @import "utilities";
 @import "hacky";
 
+@font-face {
+  font-family: "Calibre-Regular";
+  font-weight: bold;
+  src: url("/assets/fonts/Calibre-Regular.otf") format('opentype');
+ }
+
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Calibre-Regular';
 }
 
 body > .ember-view {
