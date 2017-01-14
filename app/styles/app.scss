@@ -1,12 +1,38 @@
-@import "settings";
+// @import "settings";
+// @import "foundation";
+@import "reset";
+@import "variables";
+@import "layout";
+@import "components";
+@import "typography";
+@import "flex";
+@import "grid";
+@import "utilities";
+@import "hacky";
 
-@import "foundation";
+html, body {
+  height: 100%;
+}
 
-@font-face {
-  font-family: "Calibre-Regular";
-  font-weight: bold;
-  src: url("/assets/fonts/Calibre-Regular.otf") format('opentype');
- }
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+body > .ember-view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 10rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
 
 .container {
   display: flex;
@@ -32,95 +58,6 @@
   align-items: center;
 }
 
-.button {
-  flex: 1;
-}
-
-body > .ember-view {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Calibre-Regular';
-}
-
-body {
-  min-width: 300px;
-  font-size: 16px;
-  background-color: #FFFFFF;
-}
-
-/* -------------------------------------------------------------------------
- *    Flex Frame
- *       ------------------------------------------------------------------------- */
-.flexFrame {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
- }
-
-
- .columns {
-   position: relative;
-   -webkit-box-flex: 1;
-   -webkit-flex: 1 1 0%;
-   -ms-flex: 1 1 0%;
-   flex: 1 1 0%;
-   min-width: 0;
-   padding-left: 1rem;
-   padding-right: 1rem; }
-
-
-/* -------------------------------------------------------------------------
- *    Flex Block
- *       ------------------------------------------------------------------------- */
-/**
- *  * 1. Set a default width on flexBlocks to fix flexBlock bug with elements
- *   *    not respecting their parents bounds
- *    */
-
-body > .ember-view {
-}
-
-.spaced {
-  justify-content: space-around;
-}
-
-.flexBlock {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-  flex-grow: 1;
-  /* 1 */
-}
-
 .indicator-bar{
   border-right: 6px solid black;
   height: 100%;
@@ -136,183 +73,8 @@ body > .ember-view {
   background: linear-gradient(to right, #DC3912, #f9c802, #00FF00); /* Standard syntax */
 }
 
-
 .indicator-container {
   width:160px;
   height:40px;
   background-color: white;
 }
-
-.paddingSides {
-  padding: 0px 10px 0px 10px;
-}
-
-.paddingSmall {
-  padding: 10px;
-}
-
-.eqwipBlue {
-  background: #2b71b1;
-  color: #ffffff !important;
-  h4 {
-    color: #ffffff !important;
-  }
-  h3 {
-    color: #ffffff !important;
-  }
-}
-
-.eqwipGreen {
-  background: rgb(184, 206, 56);
-}
-
-h1 {
-  font-size:4em;
-  line-height: 1em;
-  text-transform:none;
-  padding-bottom: 20px;
-  font-weight: normal;
-  color: #0076bb;
-  font-family: "Calibre-Semibold",sans-serif;
-}
-
-.button {
-}
-
-/* Small Columns */
-.small-1 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 8.33333%;
-  -ms-flex: 0 0 8.33333%;
-  flex: 0 0 8.33333%;
-  max-width: 8.33333%; }
-
-.small-2 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 16.66667%;
-  -ms-flex: 0 0 16.66667%;
-  flex: 0 0 16.66667%;
-  max-width: 16.66667%; }
-
-.small-3 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 25%;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%; }
-
-.small-4 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 33.33333%;
-  -ms-flex: 0 0 33.33333%;
-  flex: 0 0 33.33333%;
-  max-width: 33.33333%; }
-
-.small-5 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 41.66667%;
-  -ms-flex: 0 0 41.66667%;
-  flex: 0 0 41.66667%;
-  max-width: 41.66667%; }
-
-.small-6 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%; }
-
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  /* 1 */
-  min-width: 0;
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto; }
-
-.flexContent {
-  position: relative;
-  display: block;
-  width: 100%; }
-
-.flexBlock--noGrow {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0; }
-
-.u-marginSmallest {
-  margin: 0.25rem !important; }
-
-.u-marginSmaller {
-  margin: 0.5rem !important; }
-
-.u-marginSmall {
-  margin: 1rem !important; }
-
-.u-margin {
-  margin: 2rem !important; }
-
-.u-marginLarge {
-  margin: 2.5rem !important; }
-
-.u-marginLarger {
-  margin: 3rem !important; }
-
-.u-marginLargest {
-  margin: 3.5rem !important; }
-
-.u-marginAuto {
-  margin: auto !important; }
-
-.u-marginNone {
-  margin: 0 !important; }
-
-/* -------------------------------------------------------------------------
- *    Margin Bottom
- *       ------------------------------------------------------------------------- */
-.u-marginBottomSmallest {
-  margin-bottom: 0.25rem !important; }
-
-.u-marginBottomSmaller {
-  margin-bottom: 0.5rem !important; }
-
-.u-marginBottomSmall {
-  margin-bottom: 1rem !important; }
-
-.u-marginBottom {
-  margin-bottom: 2rem !important; }
-
-.u-marginBottomLarge {
-  margin-bottom: 2.5rem !important; }
-
-.u-marginBottomLarger {
-  margin-bottom: 3rem !important; }
-
-.u-marginBottomLargest {
-  margin-bottom: 3.5rem !important; }
-
-.u-marginBottomAuto {
-  margin-bottom: auto !important; }
-
-.u-marginBottomNone {
-  margin-bottom: 0 !important; }
-
-.u-textLeft {
-  text-align: left !important; }
-
-.u-textRight {
-  text-align: right !important; }
-
-.u-textCenter {
-  text-align: center !important; }

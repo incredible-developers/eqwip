@@ -1,0 +1,36 @@
+.button {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: grey;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: $bold;
+  transition: all 0.2s;
+}
+
+.button--blue {
+  background: $color-blue;
+  box-shadow: 0 0.3125rem 0 0 darken($color-blue, 10%);
+}
+
+.button--green {
+  background: $color-green;
+  box-shadow: 0 0.3125rem 0 0 darken($color-green, 10%);
+}
+
+.button--blue:hover {
+  margin-top: 3px;
+  background: darken($color-blue, 10%);
+  box-shadow: 0 0.1875rem 0 0 darken($color-blue, 10%);
+}
+
+.button--green:hover {
+  margin-top: 3px;
+  background: darken($color-green, 10%);
+  box-shadow: 0 0.1875rem 0 0 darken($color-green, 10%);
+}
