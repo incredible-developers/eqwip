@@ -1,16 +1,24 @@
 {{#if resultText}}
-  {{resultText}}
+  <div class="row align-center u-marginBottom">
+    <div class="small-12 medium-8 columns u-textCenter">
+      <p class="u-colorBlueDark">
+        {{resultText}}
+      </p>
+    </div>
+  </div>
 
-  <div class="flexBlock" {{action "submitAnswer" chosenAnswer.impact}}>
-    {{#if rejected}}
-      <div class="button">
-        Try A Different Option
-      </div>
-    {{else}}
-      <div class="button">
-        Continue
-      </div>
-    {{/if}}
+  <div class="row align-center u-marginBottom" {{action "submitAnswer" chosenAnswer.impact}}>
+    <div class="small-12 medium-8 columns u-textCenter">
+      {{#if rejected}}
+        <div class="button button--blue">
+          Try A Different Option
+        </div>
+      {{else}}
+        <div class="button button--blue">
+          Continue
+        </div>
+      {{/if}}
+    </div>
   </div>
 
 {{else}}
@@ -26,16 +34,20 @@
     </div>
 
   {{else}}
-    {{questionText}}
-
-    <br>
-    <br>
-
-    <div class='answers'>
+    <div class="row align-center u-marginBottom">
+      <div class="small-12 medium-8 columns u-textCenter">
+        <p class="u-colorBlueDark">
+          {{questionText}}
+        </p>
+      </div>
+    </div>
+    <div class="answerContainer row align-center row--equalHeightColumns">
       {{#each answerOptions as |option|}}
-        <div class="flexBlock" {{action "renderResult" option }}>
-          <div class="button">
-            {{option.text}}
+        <div class="columns" {{action "renderResult" option }}>
+          <div class="card card--answer">
+            <p>
+              {{option.text}}
+            </p>
           </div>
         </div>
       {{/each}}

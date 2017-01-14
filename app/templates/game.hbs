@@ -1,15 +1,18 @@
 {{#if gameOverManGameOver}}
-{{game-over
-  character=character
-  cash=cash
-  income=income
-  environment=environment
-  assets=assets
-  debt=debt
-  resilience=resilience
-  assetsArray=assetsArray
-}}
-
+  <div class="flexBlock">
+    <div class="storyContainer">
+      {{game-over
+        character=character
+        cash=cash
+        income=income
+        environment=environment
+        assets=assets
+        debt=debt
+        resilience=resilience
+        assetsArray=assetsArray
+      }}
+    </div>
+  </div>
 {{else}}
  {{#if introShown}}
     <div class="flexBlock">
@@ -30,7 +33,9 @@
       </div>
 
       <div class="flexBlock">
-        {{question-space character=character month=month answerQuestion=(action "answerQuestion") setImpact=(action "setImpact")}}
+        <div class="storyContainer">
+          {{question-space character=character month=month answerQuestion=(action "answerQuestion") setImpact=(action "setImpact")}}
+        </div>
       </div>
     </div>
   {{else}}
