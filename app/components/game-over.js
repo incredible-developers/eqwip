@@ -282,5 +282,42 @@ export default Ember.Component.extend({
     if (character == 'Kojo') {
       return this.get('environment') <= 1
     };
-  })
+  }),
+
+  resilienceHigh: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return this.get('assets') >= 7
+    };
+
+    if (character == 'Lamisi') {
+      return this.get('assets') >= 3
+    };
+
+    if (character == 'Kojo') {
+      return this.get('assets') >= 3
+    };
+  }),
+
+  resilienceLow: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return this.get('assets') <= 3
+    };
+
+    if (character == 'Lamisi') {
+      return this.get('assets') < 2
+    };
+
+    if (character == 'Kojo') {
+      return this.get('assets') <= 2
+    };
+  }),
+
+  assetsMedium: Ember.computed('character', function() {
+    var character = this.get('character')
+    !(this.get('assetsHigh') || this.get('assetsLow'))
+  }),
 });

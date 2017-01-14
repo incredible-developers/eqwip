@@ -68,6 +68,9 @@ export default Ember.Controller.extend({
     if (impact.debt != undefined) {
       this.set('debt', parseInt(this.get('debt')) + impact.debt)
     }
+    if (impact.assets != undefined) {
+      this.set('assets', parseInt(this.get('assets')) + impact.assets)
+    }
     if (impact.debtPayments != undefined) {
       this.set('debtPayments', parseInt(this.get('debtPayments')) + impact.debtPayments)
     }

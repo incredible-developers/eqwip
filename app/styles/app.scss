@@ -121,6 +121,19 @@ body > .ember-view {
   /* 1 */
 }
 
+.indicator-bar{
+  border-right: 5px solid black;
+  height: 100%;
+  -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
+}
+
+.indicator-container {
+  width:160px;
+  height:40px;
+  background-color: white;
+}
+
 .paddingSides {
   padding: 0px 10px 0px 10px;
 }

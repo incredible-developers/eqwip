@@ -105,4 +105,36 @@ export default Ember.Component.extend({
     };
   }),
 
+  assetsMin: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return 0
+    };
+
+    if (character == 'Lamisi') {
+      return 0
+    };
+
+    if (character == 'Kojo') {
+      return 0
+    };
+  }),
+
+  assetsMax: Ember.computed('character', function() {
+    var character = this.get('character')
+
+    if (character == 'Zara') {
+      return 9
+    };
+
+    if (character == 'Lamisi') {
+      return 4
+    };
+
+    if (character == 'Kojo') {
+      return 4
+    };
+  }),
+
 });

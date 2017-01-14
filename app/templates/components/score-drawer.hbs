@@ -13,7 +13,7 @@
     </p>
   </div>
 
-  <div class="paddingSmall">
+  <div class="paddingSmall whiteBorderBottom">
     Resilience: {{resilience}}
     {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
     {{/progress-indicator}}
@@ -21,7 +21,9 @@
 
   <div class="paddingSmall whiteBorderBottom">
     Assets: {{assets}}
-    {{#progress-indicator value=assets gauge-id='assets-gauge' tooltip-content='tooltip content'}}{{/progress-indicator}}
+    {{#flat-indicator value=assets min=assetsMin max=assetsMax}}
+      <div class="indicator-bar"></div>
+    {{/flat-indicator}}
   </div>
 
   <div class="paddingSmall whiteBorderBottom">
