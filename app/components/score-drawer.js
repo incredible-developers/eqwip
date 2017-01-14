@@ -60,7 +60,7 @@ export default Ember.Component.extend({
     var character = this.get('character')
 
     if (character == 'Zara') {
-      return -1
+      return -3
     };
 
     if (character == 'Lamisi') {
@@ -68,7 +68,7 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Kojo') {
-      return 0
+      return -4
     };
   }),
 

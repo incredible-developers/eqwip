@@ -16,7 +16,8 @@ export default Ember.Component.extend({
       hideMinMax: true,
       hideValue: true,
       needleTail: true,
-      pointer: true
+      pointer: true,
+      levelColors: ['#DC3912', "#f9c802", '#00FF00']
     });
   },
 
