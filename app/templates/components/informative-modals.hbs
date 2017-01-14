@@ -1,0 +1,11 @@
+{{#each partials as |partial| ~}}
+  {{~#if partial.isSusu ~}}
+    <span {{action 'renderModal'}}>
+      {{~partial.content~}}
+    </span>
+  {{~else~}}
+    <span style="white-space: pre-line">
+      {{~partial.content~}}
+    </span>
+  {{~/if}}
+{{~/each}}

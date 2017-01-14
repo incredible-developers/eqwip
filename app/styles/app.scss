@@ -78,3 +78,6 @@ body > .ember-view {
   height:40px;
   background-color: white;
 }
+
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";

@@ -1058,6 +1058,9 @@ export default Ember.Component.extend({
   }),
 
   actions: {
+    renderModal() {
+      console.log('im getting called')
+    },
     renderResult(answer) {
       this.set('rejected', false)
       this.set('chosenAnswer', answer)
