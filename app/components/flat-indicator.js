@@ -28,7 +28,7 @@ export default Ember.Component.extend({
 
     var valueIndex = list.indexOf(this.get('value'));
     var percentValue = (valueIndex / list.length);
-    var actualWidth = 160 * percentValue
+    var actualWidth = 200 * percentValue
     el.width(actualWidth + 'px')
   }
 });

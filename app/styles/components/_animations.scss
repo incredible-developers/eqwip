@@ -1,0 +1,15 @@
+.fadeUp {
+  animation: fade-up 1s ease;
+}
+
+@keyframes fade-up {
+  0% {
+    margin-top: 10rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0rem;
+    visibility: visible;
+    opacity: 1;
+  }
+}

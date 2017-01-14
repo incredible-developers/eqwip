@@ -1,34 +1,96 @@
-<div class="eqwipBlue paddingSides">
-  <div class="cashDebtIncomeBox whiteBorderBottom paddingSmall">
-    {{character}}
-    {{monthName}}
-    <p>
-    Cash: ₵{{cash}}
-    </p>
-    <p>
-    Debt: ₵{{debt}}
-    </p>
-    <p>
-    Monthly Income: ₵{{income}}
-    </p>
-  </div>
+<div class="sidebar-section sidebar-section--header">
+  <div class="row align-middle">
+    <div class="shrink columns u-paddingRightNone">
+      <div class="avatar avatar--small">
 
-  <div class="paddingSmall whiteBorderBottom">
-    Resilience: {{resilience}}
-    {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
-    {{/progress-indicator}}
+      </div>
+    </div>
+    <div class="columns">
+      <h3 class="u-colorTeal">{{character}}</h3>
+    </div>
+    <div class="columns shrink">
+      <div class="sidebar-section-month">
+        {{monthName}}
+      </div>
+    </div>
   </div>
-
-  <div class="paddingSmall whiteBorderBottom">
-    Assets: {{assets}}
-    {{#flat-indicator value=assets min=assetsMin max=assetsMax}}
-      <div class="indicator-bar"></div>
-    {{/flat-indicator}}
+</div>
+<div class="sidebar-section sidebar-section--totals">
+  <div class="totalsList">
+    <div class="row align-middle">
+      <div class="columns totalsList-label">
+        Cash
+      </div>
+      <div class="columns totalsList-total">
+        ₵{{cash}}
+      </div>
+    </div>
+    <div class="row align-middle">
+      <div class="columns totalsList-label">
+        Debt
+      </div>
+      <div class="columns totalsList-total">
+        ₵{{debt}}
+      </div>
+    </div>
+    <div class="row align-middle">
+      <div class="columns totalsList-label">
+        Monthly Income
+      </div>
+      <div class="columns totalsList-total">
+        ₵{{income}}
+      </div>
+    </div>
   </div>
-
-  <div class="paddingSmall whiteBorderBottom">
-    Environment: {{environment}}
-    {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
-    {{/progress-indicator}}
+</div>
+<div class="sidebar-section sidebar-section--gauges">
+  <div class="row">
+    <div class="columns">
+      <div class="row">
+        <div class="columns totalsList-label">
+          Resilience
+        </div>
+        <div class="columns totalsList-total">
+          {{resilience}}
+        </div>
+      </div>
+      <div class="sidebar-gauge">
+        {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
+        {{/progress-indicator}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="row">
+        <div class="columns totalsList-label">
+          Assets
+        </div>
+        <div class="columns totalsList-total">
+          {{assets}}
+        </div>
+      </div>
+      <div class="sidebar-gauge">
+        {{#flat-indicator value=assets min=assetsMin max=assetsMax}}
+          <div class="indicator-bar"></div>
+        {{/flat-indicator}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="row">
+        <div class="columns totalsList-label">
+          Environment
+        </div>
+        <div class="columns totalsList-total">
+          {{environment}}
+        </div>
+      </div>
+      <div class="sidebar-gauge u-borderBottomNone">
+        {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
+        {{/progress-indicator}}
+      </div>
+    </div>
   </div>
 </div>

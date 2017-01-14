@@ -1,0 +1,12 @@
+.avatar {
+  display: inline-block;
+  width: 6rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: $color-grey;
+}
+
+.avatar--small {
+  width: 2rem;
+  height: 2.375rem
+}

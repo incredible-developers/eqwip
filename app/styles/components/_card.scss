@@ -1,0 +1,66 @@
+.card {
+  text-align: center;
+  background: $color-greyLight;
+  border: 1px solid $color-grey;
+  box-shadow: inset 0 0 0 0.5rem #FFFFFF;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card--answer p {
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+.answerContainer .card {
+  width: 100%;
+  padding: 2.5rem 3rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.answerContainer .card:after {
+  z-index: 1;
+  content: "1";
+  position: absolute;
+  display: inline-block;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: $color-orange;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: white;
+  text-align: left;
+  padding: 0.65rem 0.75rem 0.25rem 0.75rem;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+
+.answerContainer .columns:nth-child(2) .card:after {
+  content: "2";
+}
+
+.answerContainer .columns:nth-child(3) .card:after {
+  content: "3";
+}
+
+.answerContainer .card:hover {
+  transform: translate(0, -16px);
+  box-shadow: inset 0 0 0 0.5rem #FFFFFF, 0 24px 24px rgba(black, 0.1);
+}
+
+.answerContainer .card:hover:after {
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  border-radius: 0.5rem;
+  background: rgba($color-orange, 0.1);
+  color: $color-orange;
+  transition: all 0.2s;
+}
