@@ -22,6 +22,7 @@ export default Ember.Controller.extend({
   assets: 0,
   resilience: 0,
   environment: 0,
+  assetsArray: [],
 
   actions: {
     answerQuestion(impact) {
@@ -76,6 +77,11 @@ export default Ember.Controller.extend({
     }
     if (impact.environment != undefined) {
       this.set('environment', this.get('environment') + impact.environment)
+    }
+    if (impact.assetText != undefined) {
+      var assArray = this.get('assetsArray')
+      assArray.push(impact.assetText)
+      this.set('assetsArray', assArray)
     }
   },
 });

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   character: null,
-
+  assetsArray: [],
 
   environmentText: Ember.computed('character', function() {
     if (this.get('environmentLow')) {
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
   environmentLowText: Ember.computed('character', function() {
     var character = this.get('character')
     if (character == 'Zara') {
-      return ''
+      return 'Zara’s beauty bar has had a negative impact on the environment. Her students use an excessive amount of water, and are not trained to properly dispose of their chemical waste. Increasingly, businesses are expected to be responsible stewards of the natural environment. Continued disregard may undermine the salon’s sustainability.'
     }
     if (character == 'Lamisi') {
       return 'Lamisi’s poultry farm has had a negative impact on the environment. Increasingly, businesses are expected to be responsible stewards of the natural environment. Continued disregard may undermine her business’s sustainability.'
@@ -34,7 +34,7 @@ export default Ember.Component.extend({
   environmentMediumText: Ember.computed('character', function() {
     var character = this.get('character')
     if (character == 'Zara') {
-      return ''
+      return 'Zara’s business has not had a significant impact on the environment, but there is still lots of room for improvement. A beauty bar can always find ways to conserve more water or better dispose of their chemical waste. Zara may also consider using more organic products. As a social enterprise designed to facilitate and encourage responsible waste management, Recycle Accra! has had a clear positive impact on the environment. Kojo should continue to search for new ways to help his clients to improve their environmental footprint, and to raise awareness about waste management generally.'
     }
     if (character == 'Lamisi') {
       return 'Lamisi’s business has not had a signficnat impact on the environment, but there is still lots of room for improvement. Increasingly, businesses are expected to be responsible stewards of the natural environment. Lamisi should make an effort to better incorporate environmental impact into her decision-making process.'
@@ -47,7 +47,7 @@ export default Ember.Component.extend({
   environmentHighText: Ember.computed('character', function() {
     var character = this.get('character')
     if (character == 'Zara') {
-      return ''
+      return 'Zara’s beauty bar, which sells organic beauty products and offers environmental training sessions to its students, has a reputation among customers for being environmentally responsible. This reputation has attracted new customers, and contributed to the business’s sustainability.'
     }
     if (character == 'Lamisi') {
       return 'As an entrepreneur, Lamisi has proven to be a responsible steward of the environment — and her customers have taken notice. Having a reputation for being environmentally responsible is likely to strengthen the sustainability of Lamisi’s business.'
@@ -133,7 +133,7 @@ export default Ember.Component.extend({
       return 'Lamisi does not have very much cash. This will make it difficult for her to grow her business, and will limit her ability to innovate. She should consider looking for alternative sources of credit, and cutting down on unnecessary expenses.'
     };
     if (character == 'Kojo') {
-      return ''
+      return null
     };
   }),
 
@@ -146,7 +146,7 @@ export default Ember.Component.extend({
       return 'Lamisi has amassed a considerable amount of cash. However, her business is still new, and vulnerable to unexpected changes in the market. She should consider investing some of her capital back into her business in order to make it more resilient. For example, she may invest in technology, advertising, market research, or efforts to innovate her business model.'
     };
     if (character == 'Kojo') {
-      return ''
+      return null
     };
   }),
 
@@ -159,7 +159,7 @@ export default Ember.Component.extend({
       return 'Lamisi has amassed an impressive amount of of cash. She should look for new and innovated ways to invest this capital back into her business, in order to set herself apart from her competition.'
     };
     if (character == 'Kojo') {
-      return ''
+      return null
     };
   }),
 
@@ -175,7 +175,7 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Kojo') {
-      return this.get('cash') <= 4000
+      return this.get('cash') <= 12000
     };
   }),
 
@@ -183,15 +183,15 @@ export default Ember.Component.extend({
     var character = this.get('character')
 
     if (character == 'Zara') {
-      return ((this.get('cash') < 13000) && (this.get('cash') > 8000))
+      return !(this.get('cashLow') || this.get('cashHigh'))
     };
 
     if (character == 'Lamisi') {
-      return ((this.get('cash') > 7000 ) && ((this.get('cash') < 10000 )))
+      return !(this.get('cashLow') || this.get('cashHigh'))
     };
 
     if (character == 'Kojo') {
-      return ((this.get('cash') > 4000 ) && ((this.get('cash') < 7000 )))
+      return !(this.get('cashLow') || this.get('cashHigh'))
     };
   }),
 
@@ -207,7 +207,7 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Kojo') {
-      return this.get('cash') >= 7000
+      return this.get('cash') >= 25000
     };
   }),
 
@@ -265,7 +265,7 @@ export default Ember.Component.extend({
 
   environmentMedium: Ember.computed('character', function() {
     var character = this.get('character')
-    !(this.get('environmentHigh') || this.get('environmentLow'))
+    return !(this.get('environmentHigh') || this.get('environmentLow'))
   }),
 
   environmentLow: Ember.computed('character', function() {
@@ -280,11 +280,11 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Kojo') {
-      return this.get('environment') <= 1
+      false
     };
   }),
 
-  resilienceHigh: Ember.computed('character', function() {
+  assetsHigh: Ember.computed('character', function() {
     var character = this.get('character')
 
     if (character == 'Zara') {
@@ -300,7 +300,7 @@ export default Ember.Component.extend({
     };
   }),
 
-  resilienceLow: Ember.computed('character', function() {
+  assetsLow: Ember.computed('character', function() {
     var character = this.get('character')
 
     if (character == 'Zara') {
@@ -318,6 +318,47 @@ export default Ember.Component.extend({
 
   assetsMedium: Ember.computed('character', function() {
     var character = this.get('character')
-    !(this.get('assetsHigh') || this.get('assetsLow'))
+    return !(this.get('assetsHigh') || this.get('assetsLow'))
+  }),
+
+  assetsText: Ember.computed('character', function() {
+    if (this.get('assetsLow') || this.get('assetsMedium')) {
+      return this.get('assetsLowText')
+    }
+
+    if (this.get('assetsHigh')) {
+      return this.get('assetsHighText')
+    }
+  }),
+
+  assetsHighText: Ember.computed('character', function() {
+    var character = this.get('character')
+    if (character == 'Zara') {
+      return 'In addition to cash, Zara has a great number of non-financial assets, including: ' + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of her business."
+    }
+    if (character == 'Lamisi') {
+      return 'In addition to cash, Lamisi has a great number of non-financial assets, including: ' + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of Lamisi’s business."
+    };
+    if (character == 'Kojo') {
+      return 'In addition to cash, Kojo has a great number of non-financial assets, including: '  + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of Recycle Accra!"
+    };
+  }),
+
+  assetsLowText: Ember.computed('character', function() {
+    var character = this.get('character')
+    if (character == 'Zara') {
+      return 'In addition to cash, Zara has a number of non-financial assets, including: ' + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of her business."
+    }
+    if (character == 'Lamisi') {
+      return 'In addition to cash, Lamisi has a number of non-financial assets, including: ' + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of Lamisi’s business."
+    };
+    if (character == 'Kojo') {
+      return 'In addition to cash, Kojo has a number of non-financial assets, including: ' + this.get('assetsArrayText') + ". These assets have significantly contributed to the sustainability of Recycle Accra!"
+    };
+  }),
+
+  assetsArrayText: Ember.computed('assetsArray', function() {
+    var a = this.get('assetsArray')
+    return [a.slice(0, -1).join(', '), a.slice(-1)[0]].join(a.length < 2 ? '' : ' and ');
   }),
 });

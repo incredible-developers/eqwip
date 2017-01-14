@@ -102,6 +102,7 @@ export default Ember.Component.extend({
               cash: -6000,
               resilience: 3,
               assets:1,
+              assetText: 'equipment, furniture, and supplies for her beauty bar'
             },
           },
           {
@@ -111,6 +112,7 @@ export default Ember.Component.extend({
               cash: -4000,
               resilience: 1,
               assets:3,
+              assetText: 'equipment, furniture, and supplies for her beauty bar'
             },
           },
         ]
@@ -181,6 +183,7 @@ export default Ember.Component.extend({
               income: 250,
               resilience: 3,
               assets:2,
+              assetText : 'a smartphone'
             },
           },
         ]
@@ -349,7 +352,8 @@ export default Ember.Component.extend({
               cash: -1300,
               income: -35,
               resilience: 3,
-              assets: 2
+              assets: 2,
+              assetText: "a computer and webcam"
             },
           },
           {
@@ -683,7 +687,8 @@ export default Ember.Component.extend({
             text: "Time to get started!",
             resultText: null,
             impact: {
-              income: 340
+              income: 0,
+              assetText: "a well built pen"
             }
           },
         ]
@@ -697,7 +702,8 @@ export default Ember.Component.extend({
             impact: {
               cash: -200,
               resilience: 2,
-              gameFlowVariable: ['vaccinated', true]
+              gameFlowVariable: ['vaccinated', true],
+              income: 340
             }
           },
           {
@@ -878,6 +884,7 @@ export default Ember.Component.extend({
               resilience: 3,
               environment: 1,
               assets: 2,
+              assetText: 'a smartphone'
             }
          },
          {
@@ -948,6 +955,7 @@ export default Ember.Component.extend({
             text: "Book a day off, head to the EQWIP HUBs computer lab downtown, and put together a social media campaign to promote the new brand. Lamisi’s sister is willing to take care of the chores around the farm while she is gone.",
             resultText: "With the support of EQWIP volunteers and staff, Lamisi creates a basic website her business and adds it to online business directories throughout Tamale. She also launches a Facebook page, and spreads word of her business on WhatsApp. She has to purchase a bigger data package to maintain her social media accounts (₵35 month), but the social media campaign seem to work! Within a few weeks, her profits begin to rise. Not everyone who drops by purchases from her — the prices are too high, they say — but the farm has never been busier.",
             impact: {
+              assetText: 'a website'
             }
           },
         ]

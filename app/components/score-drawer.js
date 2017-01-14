@@ -81,7 +81,7 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Lamisi') {
-      return 0
+      return -5
     };
 
     if (character == 'Kojo') {

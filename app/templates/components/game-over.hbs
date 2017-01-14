@@ -11,8 +11,10 @@ Medium
 High
 {{/if}}
 
-<br>
-{{cashText}}
+{{#if cashText}}
+  <br>
+  {{cashText}}
+{{/if}}
 <br>
 <br>
 
@@ -47,3 +49,23 @@ Environment Ranking:
 {{#if environmentHigh}}
   High
 {{/if}}
+
+{{environmentText}}
+
+<br>
+<br>
+
+Assets Ranking:
+{{#if assetsLow}}
+  Low
+{{/if}}
+
+{{#if assetsMedium}}
+  Medium
+{{/if}}
+
+{{#if asssetsHigh}}
+  High
+{{/if}}
+
+{{assetsText}}
