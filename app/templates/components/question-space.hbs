@@ -7,14 +7,14 @@
     </div>
   </div>
 
-  <div class="row align-center u-marginBottom" {{action "submitAnswer" chosenAnswer.impact}}>
+  <div class="row align-center u-marginBottom">
     <div class="small-12 medium-8 columns u-textCenter">
       {{#if rejected}}
-        <div class="button button--blue">
+        <div class="button button--blue" {{action "submitAnswer" chosenAnswer.impact}}>
           Try A Different Option
         </div>
       {{else}}
-        <div class="button button--blue">
+        <div class="button button--blue" {{action "submitAnswer" chosenAnswer.impact}}>
           Continue
         </div>
       {{/if}}
@@ -33,9 +33,9 @@
       </div>
     </div>
 
-    <div class="row align-center u-marginBottom" {{action "handleSusuImpact"}}>
+    <div class="row align-center u-marginBottom">
       <div class="small-12 medium-8 columns u-textCenter">
-        <div class="button button--blue">
+        <div class="button button--blue" {{action "handleSusuImpact"}}>
           Collect your Susu Monies
         </div>
       </div>
