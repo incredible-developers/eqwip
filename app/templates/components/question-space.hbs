@@ -25,15 +25,24 @@
 
   {{#if displaySusuImpact}}
 
-    {{susuText}}
+    <div class="row align-center u-marginBottom">
+      <div class="small-12 medium-8 columns u-textCenter">
+        <p class="u-colorBlueDark">
+          {{susuText}}
+        </p>
+      </div>
+    </div>
 
-    <div class="flexBlock" {{action "handleSusuImpact"}}>
-      <div class="button">
-        Collect your Susu Monies
+    <div class="row align-center u-marginBottom" {{action "handleSusuImpact"}}>
+      <div class="small-12 medium-8 columns u-textCenter">
+        <div class="button button--blue">
+          Collect your Susu Monies
+        </div>
       </div>
     </div>
 
   {{else}}
+
     <div class="row align-center u-marginBottom">
       <div class="small-12 medium-8 columns u-textCenter">
         <p class="u-colorBlueDark">
@@ -41,6 +50,7 @@
         </p>
       </div>
     </div>
+
     <div class="answerContainer row align-center row--equalHeightColumns">
       {{#each answerOptions as |option|}}
         <div class="columns" {{action "renderResult" option }}>
@@ -52,5 +62,6 @@
         </div>
       {{/each}}
     </div>
+
   {{/if}}
 {{/if}}
