@@ -1089,6 +1089,10 @@ export default Ember.Component.extend({
     handleSusuImpact() {
       this.set('susuAcknowledged', true)
       this.get('setImpact')(this.get('susuImpact'))
-    }
+    },
+
+    renderDialog: function() {
+      this.toggleProperty('isShowingModal');
+    },
   }
 });

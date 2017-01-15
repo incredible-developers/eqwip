@@ -1,6 +1,6 @@
 {{#each partials as |partial| ~}}
   {{~#if partial.isSusu ~}}
-    <span {{action 'renderModal'}}>
+    <span {{action 'renderModal' bubbles=false}} class='modalLink u-colorBlue'>
       {{~partial.content~}}
     </span>
   {{~else~}}

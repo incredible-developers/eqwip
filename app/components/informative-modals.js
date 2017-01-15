@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   tagName: 'span',
   susuRegex: /susu/i ,
   susuIndicator: "#SUSU#",
+  renderDialog: null,
 
   partials: Ember.computed('inputText', function(){
     let inputText = this.get('inputText');
@@ -32,5 +33,11 @@ export default Ember.Component.extend({
     return text.replace(this.get('susuRegex'), function(s) {
       return "#SUSU#" + s + "#SUSU#";
     });
+  },
+
+  actions: {
+    renderModal() {
+      this.get('renderDialog')()
+    }
   }
 });

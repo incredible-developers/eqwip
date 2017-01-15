@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   queryParams: ['character', 'month', 'income', 'cash'],
+  isShowingModal: false,
   character: null,
   month: 1,
   gameOverManGameOver: Ember.computed('month', function() {
