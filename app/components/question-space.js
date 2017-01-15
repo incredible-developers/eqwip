@@ -768,8 +768,8 @@ export default Ember.Component.extend({
       5: {
         optionalText: {
           toggle: 'madeTheDeal',
-          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash.",
-          whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash."
+          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. ",
+          whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. "
         },
 
         questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
@@ -838,39 +838,45 @@ export default Ember.Component.extend({
        ]
       },
       7: {
-        dependsOn: 'vaccinate',
+        dependsOn: 'vaccinated',
         alternate: {
           questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (₵150).",
           answerOptions: [
             {
-              text: "alternate answer",
+              text: "Pay the fees, and wish her luck.",
               resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
               impact: {
               }
             },
             {
-              text: "Rendered the alternate",
+              text: "Pay the fees, and offer her an extra ₵100 for school supplies and new clothing.",
               resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
               impact: {
               }
             },
           ]
         },
-        questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (₵150).",
-        answerOptions: [
-          {
-            text: "Pay the fees, and wish her luck.",
-            resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
-            impact: {
-            }
-          },
-          {
-            text: "Pay the fees, and offer her an extra ₵100 for school supplies and new clothing.",
-            resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
-            impact: {
-            }
-          },
-        ]
+          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees. However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will either have to hire a veterinarian to tend to the sick birds (₵300), or let them die.",
+          answerOptions: [
+            {
+              text: "Pay the school fees, and hope that the birds can recover on their own.",
+              resultText: "Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks. Lamisi must put her family first. Unfortunately, a half dozen birds pass away from illness, which leads to a significant loss in her productivity. Should have purchased those vaccinations!",
+              impact: {
+                cash: -150,
+                income: -100,
+                resilience: -2,
+                assets: -1
+              }
+            },
+            {
+              text: "Hire the vet to tend to the flock. Someone else will have to cover the school fees this year.",
+              resultText: "The vet is able to nurse the birds back to health, but Lamisi’s family is not happy that she put her business over her family. Now, she will be expected to contribute a larger sum this time next year, or if a new problem should arise.",
+              impact: {
+                cash: -300,
+                resilience: -2,
+              }
+            },
+          ]
       },
       // esoko
       8: {
