@@ -6,8 +6,27 @@
 }
 
 .storyContainer {
+  box-sizing: border-box;
+  width: 100%;
   padding: 2rem;
   display: flex;
   align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+}
+
+.characterSelect {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
   justify-content: center;
 }

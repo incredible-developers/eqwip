@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   characterSelected: '',
+  classNames: ["flexBlock flexVertical"],
   startingCash: Ember.computed('characterSelected',function() {
     var character = this.get("characterSelected")
     if (character == "Lamisi") {

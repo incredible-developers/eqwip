@@ -1,35 +1,29 @@
 {{#if gameOverManGameOver}}
-  <div class="flexBlock">
-    <div class="storyContainer">
-      {{game-over
-        character=character
-        cash=cash
-        income=income
-        environment=environment
-        assets=assets
-        debt=debt
-        resilience=resilience
-        assetsArray=assetsArray
-      }}
-    </div>
-  </div>
+  {{game-over
+    character=character
+    cash=cash
+    income=income
+    environment=environment
+    assets=assets
+    debt=debt
+    resilience=resilience
+    assetsArray=assetsArray
+  }}
 {{else}}
  {{#if introShown}}
     <div class="flexBlock">
-      <div class="flexBlock flexBlock--noGrow flexBlock--noShrink">
-        <div class="sidebar">
-          {{score-drawer
-              character=character
-              month=month
-              answers=answers
-              cash=cash
-              income=income
-              environment=environment
-              assets=assets
-              debt=debt
-              resilience=resilience
-          }}
-        </div>
+      <div class="sidebar flexBlock flexBlock--noGrow flexBlock--noShrink">
+        {{score-drawer
+            character=character
+            month=month
+            answers=answers
+            cash=cash
+            income=income
+            environment=environment
+            assets=assets
+            debt=debt
+            resilience=resilience
+        }}
       </div>
 
       <div class="flexBlock">
@@ -40,12 +34,17 @@
     </div>
   {{else}}
     <div class="flexBlock u-padding">
-      <div class="row collapse">
+      <div class="row collapse fadeUp">
         <div class="small-12 medium-8 columns">
           {{character-intro character=character}}
           <div class="button button--green u-marginBottom u-marginTop" {{action 'startGameClicked'}}>
            Continue
          </div>
+        </div>
+        <div class="small-12 medium-4 columns u-textCenter">
+          <div class="avatar avatar--large u-marginTop">
+
+          </div>
         </div>
       </div>
     </div>

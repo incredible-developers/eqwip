@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ["flexBlock flexVertical"],
   character: null,
   month: null,
   answers: null,

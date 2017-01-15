@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   character: null,
   assetsArray: [],
+  classNames: ["flexBlock flexVertical"],
 
   environmentText: Ember.computed('character', function() {
     if (this.get('environmentLow')) {

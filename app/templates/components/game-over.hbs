@@ -1,73 +1,108 @@
-Cash Ranking:
-{{#if cashLow}}
-Low
-{{/if}}
+<div class="flexBlock flexBlock--noGrow flexBlock--noShrink u-padding">
+  <div class="row">
+    <div class="columns">
+      <h1 class="u-marginBottomNone">Game Over</h1>
+    </div>
+    <div class="columns u-textRight">
+      <div class="button button--blue">
+        Play Again
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flexBlock flexBlock--equalBlocks">
+  <div class="flexBlock u-padding u-bgColorGreen">
+    <div class="flexContent">
+      <h2 class="u-colorWhite u-marginBottom">
+        Cash Ranking
+      </h2>
+      <h3 class="u-colorWhite u-marginBottom">
+        {{#if cashLow}}
+        Low
+        {{/if}}
 
-{{#if cashMedium}}
-Medium
-{{/if}}
+        {{#if cashMedium}}
+        Medium
+        {{/if}}
 
-{{#if cashHigh}}
-High
-{{/if}}
+        {{#if cashHigh}}
+        High
+        {{/if}}
+      </h3>
+      <p class="u-colorWhite">
+        {{#if cashText}}
+          {{cashText}}
+        {{/if}}
+      </p>
+    </div>
+  </div>
+  <div class="flexBlock u-padding u-bgColorBlueDark">
+    <div class="flexContent">
+      <h2 class="u-colorWhite u-marginBottom">
+        Resilience Ranking
+      </h2>
+      <h3 class="u-colorWhite u-marginBottom">
+        {{#if resilienceLow}}
+        Low
+        {{/if}}
 
-{{#if cashText}}
-  <br>
-  {{cashText}}
-{{/if}}
-<br>
-<br>
+        {{#if resilienceMedium}}
+        Medium
+        {{/if}}
 
-Resilience Ranking:
-{{#if resilienceLow}}
-Low
-{{/if}}
+        {{#if resilienceHigh}}
+        High
+        {{/if}}
+      </h3>
+      <p class="u-colorWhite">
+        {{resilienceText}}
+      </p>
+    </div>
+  </div>
+  <div class="flexBlock u-padding u-bgColorBlue">
+    <div class="flexContent">
+      <h2 class="u-colorWhite u-marginBottom">
+        Assets Ranking
+      </h2>
+      <h3 class="u-colorWhite u-marginBottom">
+        {{#if assetsLow}}
+          Low
+        {{/if}}
 
-{{#if resilienceMedium}}
-Medium
-{{/if}}
+        {{#if assetsMedium}}
+          Medium
+        {{/if}}
 
-{{#if resilienceHigh}}
-High
-{{/if}}
+        {{#if asssetsHigh}}
+          High
+        {{/if}}
+      </h3>
+      <p class="u-colorWhite">
+        {{assetsText}}
+      </p>
+    </div>
+  </div>
+  <div class="flexBlock u-padding u-bgColorBlueLight">
+    <div class="flexContent">
+      <h2 class="u-colorWhite u-marginBottom">
+        Environment Ranking
+      </h2>
+      <h3 class="u-colorWhite u-marginBottom">
+        {{#if environmentLow}}
+          Low
+        {{/if}}
 
-<br>
-{{resilienceText}}
-<br>
+        {{#if environmentMedium}}
+          Medium
+        {{/if}}
 
-<br>
-
-Environment Ranking:
-{{#if environmentLow}}
-  Low
-{{/if}}
-
-{{#if environmentMedium}}
-  Medium
-{{/if}}
-
-{{#if environmentHigh}}
-  High
-{{/if}}
-
-<br>
-{{environmentText}}
-
-<br>
-<br>
-
-Assets Ranking:
-{{#if assetsLow}}
-  Low
-{{/if}}
-
-{{#if assetsMedium}}
-  Medium
-{{/if}}
-
-{{#if asssetsHigh}}
-  High
-{{/if}}
-
-<br>
-{{assetsText}}
+        {{#if environmentHigh}}
+          High
+        {{/if}}
+      </h3>
+      <p class="u-colorWhite">
+        {{environmentText}}
+      </p>
+    </div>
+  </div>
+</div>
