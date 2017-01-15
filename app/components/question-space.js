@@ -1115,7 +1115,7 @@ export default Ember.Component.extend({
               )
     } else if (whichModal == 'invest') {
       this.set('currentModalText',
-               '<a href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> Read more about the recent DKM Microfinance Company scandal in Ghana</a>'
+               '<a target="_blank" href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> Read more about the recent DKM Microfinance Company scandal in Ghana</a>'
               )
     } else if (whichModal == 'computer') {
       this.set('currentModalText',
