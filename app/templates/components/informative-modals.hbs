@@ -30,6 +30,11 @@
         {{~partial.content~}}
       </span>
     {{~/if}}
+    {{~#if partial.isWhatsApp ~}}
+      <span {{action 'renderModal' 'whatsapp' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
   {{~else~}}
       <span style="white-space: pre-line">
         {{~partial.content~}}

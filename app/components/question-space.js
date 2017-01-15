@@ -1118,6 +1118,9 @@ export default Ember.Component.extend({
     } else if (whichModal == 'travel') {
       this.set('currentModalText',
                'Though there are buses that travel between cities in Northern Ghana, there is no formal public transit within those cities, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances, or ‘tuk tuks’, and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.'
+    )} else if (whichModal == 'whatsapp') {
+      this.set('currentModalText',
+               "WhatsApp Messenger is a free, cross-platform, instant messaging social media application for smartphones. It's extremely popular in Ghana."
               )}
     else {
       this.set('currentModalText', '')

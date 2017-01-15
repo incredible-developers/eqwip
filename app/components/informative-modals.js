@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   guineaRegex: /guinea fowl/i ,
   eqwipRegex: /eqwip hubs/i ,
   travelRegex: /traveling around Northern Ghana/i ,
+  whatsAppRegex: /WhatsApp/i ,
   eqwipComputerRegex: /EQWIP HUB computer lab/i ,
   susuIndicator: "#SUSU#",
   investRegex: /investor deposits were being diverted into the bank accounts of firm managers/,
@@ -53,6 +54,12 @@ export default Ember.Component.extend({
 
     flattened = [].concat.apply([], flattened);
 
+    flattened = flattened.map((string) => {
+      return string.split("#WHATSAPP#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
     return flattened.map((string) => {
       return {
         content: string,
@@ -62,11 +69,13 @@ export default Ember.Component.extend({
         isComputer: this.get('eqwipComputerRegex').test(string),
         isTravel: this.get('travelRegex').test(string),
         isInvest: this.get('investRegex').test(string),
+        isWhatsApp: this.get('whatsAppRegex').test(string),
         isLinkable: this.get('susuRegex').test(string) ||
           this.get('guineaRegex').test(string) ||
           this.get('eqwipRegex').test(string) ||
           this.get('eqwipComputerRegex').test(string) ||
           this.get('travelRegex').test(string) ||
+          this.get('whatsAppRegex').test(string) ||
           this.get('investRegex').test(string)
       };
     });
@@ -98,6 +107,10 @@ export default Ember.Component.extend({
 
     text = text.replace(this.get('travelRegex'), function(s) {
       return "#TRAVEL#" + s + "#TRAVEL#";
+    });
+
+    text = text.replace(this.get('whatsAppRegex'), function(s) {
+      return "#WHATSAPP#" + s + "#WHATSAPP#";
     });
 
     return text
