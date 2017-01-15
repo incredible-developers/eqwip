@@ -8,6 +8,7 @@ export default Ember.Component.extend({
   resultText: null,
   rejected: null,
   followUpQuestion: null,
+  currentModalText: null,
 
   susuAcknowledged: null,
 
@@ -1058,9 +1059,6 @@ export default Ember.Component.extend({
   }),
 
   actions: {
-    renderModal() {
-      console.log('im getting called')
-    },
     renderResult(answer) {
       this.set('rejected', false)
       this.set('chosenAnswer', answer)
@@ -1091,8 +1089,34 @@ export default Ember.Component.extend({
       this.get('setImpact')(this.get('susuImpact'))
     },
 
-    renderDialog: function() {
+    renderDialog: function(whichModal) {
+      this.setDialogContent(whichModal)
       this.toggleProperty('isShowingModal');
     },
-  }
+  },
+
+  setDialogContent(whichModal) {
+    console.log(whichModal)
+    if(whichModal == 'susu') {
+      this.set('currentModalText', 'Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.  Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year. Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan. There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.')
+    } else if (whichModal == 'guinea') {
+      this.set('currentModalText',
+               'Guinea fowl are a species of bird indigenous to Africa. Lean, nutritious, and rich in fatty acids, guinea fowl is an extremely popular bird in Ghana, and a favorite at roadside barbecue stands and upscale restaurants. Raising guinea fowl is also a relatively low-maintenance gig, when it comes to livestock. The average guinea fowl also produces 55 to 100 eggs per year.'
+              )
+    } else if (whichModal == 'eqwip') {
+      this.set('currentModalText',
+               'EQWIP HUBs offers free entrepreneurship training courses to local youth. These courses are focused on providing youth with opportunities to develop an innovative mindset to approach business idea generation, and on building practical skills with which they can develop, evaluate, and test these ideas. The courses will also enable participants to develop market-relevant skills, build networks, and access technology.'
+              )
+    } else if (whichModal == 'invest') {
+      this.set('currentModalText',
+               '<a href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> Read more about the recent DKM Microfinance Company scandal in Ghana</a>'
+              )
+    } else if (whichModal == 'computer') {
+      this.set('currentModalText',
+               'In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in the Global South.'
+              )}
+    else {
+      this.set('currentModalText', '')
+    }
+  },
 });

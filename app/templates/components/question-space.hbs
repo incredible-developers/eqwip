@@ -1,7 +1,7 @@
 {{#if isShowingModal}}
   {{#modal-dialog close="renderDialog"
     translucentOverlay=true}}
-    a bunch of stuff about susus
+    {{{currentModalText}}}
        <button {{action 'renderDialog'}}>Got it</button>
   {{/modal-dialog}}
 {{/if}}
@@ -10,7 +10,7 @@
   <div class="row align-center u-marginBottom fadeUp">
     <div class="small-12 medium-8 columns u-textCenter">
       <p class="u-blueDark">
-        {{resultText}}
+        {{informative-modals inputText=resultText renderDialog=(action 'renderDialog')}}
       </p>
     </div>
   </div>

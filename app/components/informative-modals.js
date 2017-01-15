@@ -2,8 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'span',
-  susuRegex: /susu/i ,
+  susuRegex: /susu collector/i ,
+  guineaRegex: /guinea fowl/i ,
+  eqwipRegex: /eqwip hubs/i ,
+  eqwipComputerRegex: /EQWIP HUB computer lab/i ,
   susuIndicator: "#SUSU#",
+  investRegex: /investor deposits were being diverted into the bank accounts of firm managers/,
   renderDialog: null,
 
   partials: Ember.computed('inputText', function(){
@@ -18,10 +22,43 @@ export default Ember.Component.extend({
 
     let partialStrings = inputText.split(this.get('susuIndicator'));
 
-    return partialStrings.map((string) => {
+    partialStrings = partialStrings.map((string) => {
+      return string.split("#GUINEA#")
+    })
+
+    var flattened = [].concat.apply([], partialStrings);
+
+    flattened = flattened.map((string) => {
+      return string.split("#EQWIP#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    flattened = flattened.map((string) => {
+      return string.split("#INVEST#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    flattened = flattened.map((string) => {
+      return string.split("#COMPUTER#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    return flattened.map((string) => {
       return {
         content: string,
         isSusu: this.get('susuRegex').test(string),
+        isGuinea: this.get('guineaRegex').test(string),
+        isEqwip: this.get('eqwipRegex').test(string),
+        isComputer: this.get('eqwipComputerRegex').test(string),
+        isInvest: this.get('investRegex').test(string),
+        isLinkable: this.get('susuRegex').test(string) ||
+          this.get('guineaRegex').test(string) ||
+          this.get('eqwipRegex').test(string) ||
+          this.get('eqwipComputerRegex').test(string) ||
+          this.get('investRegex').test(string)
       };
     });
   }),
@@ -30,14 +67,32 @@ export default Ember.Component.extend({
     if (!(text.constructor === String)) {
       text = text.string
     }
-    return text.replace(this.get('susuRegex'), function(s) {
+    text = text.replace(this.get('susuRegex'), function(s) {
       return "#SUSU#" + s + "#SUSU#";
     });
+
+    text = text.replace(this.get('guineaRegex'), function(s) {
+      return "#GUINEA#" + s + "#GUINEA#";
+    });
+
+    text = text.replace(this.get('eqwipComputerRegex'), function(s) {
+      return "#COMPUTER#" + s + "#COMPUTER#";
+    });
+
+    text = text.replace(this.get('eqwipRegex'), function(s) {
+      return "#EQWIP#" + s + "#EQWIP#";
+    });
+
+    text = text.replace(this.get('investRegex'), function(s) {
+      return "#INVEST#" + s + "#INVEST#";
+    });
+
+    return text
   },
 
   actions: {
-    renderModal() {
-      this.get('renderDialog')()
+    renderModal(whichModal) {
+      this.get('renderDialog')(whichModal)
     }
   }
 });

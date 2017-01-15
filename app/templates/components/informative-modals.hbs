@@ -1,11 +1,33 @@
 {{#each partials as |partial| ~}}
-  {{~#if partial.isSusu ~}}
-    <span {{action 'renderModal' bubbles=false}} class='modalLink u-colorBlue'>
-      {{~partial.content~}}
-    </span>
+  {{~#if partial.isLinkable ~}}
+    {{~#if partial.isSusu ~}}
+      <span {{action 'renderModal' 'susu' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
+    {{~#if partial.isGuinea ~}}
+      <span {{action 'renderModal' 'guinea' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
+    {{~#if partial.isEqwip ~}}
+      <span {{action 'renderModal' 'eqwip' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
+    {{~#if partial.isInvest ~}}
+      <span {{action 'renderModal' 'invest' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
+    {{~#if partial.isComputer ~}}
+      <span {{action 'renderModal' 'computer' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
   {{~else~}}
-    <span style="white-space: pre-line">
-      {{~partial.content~}}
-    </span>
+      <span style="white-space: pre-line">
+        {{~partial.content~}}
+      </span>
   {{~/if}}
 {{~/each}}
