@@ -1114,6 +1114,10 @@ export default Ember.Component.extend({
     } else if (whichModal == 'computer') {
       this.set('currentModalText',
                'In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in the Global South.'
+              )
+    } else if (whichModal == 'travel') {
+      this.set('currentModalText',
+               'Though there are buses that travel between cities in Northern Ghana, there is no formal public transit within those cities, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances, or ‘tuk tuks’, and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.'
               )}
     else {
       this.set('currentModalText', '')
