@@ -13,3 +13,17 @@
     opacity: 1;
   }
 }
+
+.modalFadeIn {
+  animation: fade-up 1s ease;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
