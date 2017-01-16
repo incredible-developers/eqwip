@@ -65,7 +65,7 @@
 
     <div class="answerContainer row align-center row--equalHeightColumns">
       {{#each answerOptions as |option|}}
-        <div class="columns" {{action "renderResult" option }}>
+        <div class="small-12 medium-expand columns" {{action "renderResult" option }}>
           <div class="card card--answer">
             <p>
               {{informative-modals inputText=option.text renderDialog=(action 'renderDialog')}}
