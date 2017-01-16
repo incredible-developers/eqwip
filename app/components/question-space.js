@@ -302,7 +302,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these Goro boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the Goro Boys ₵200 for their services.",
+            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the boys ₵200 for their services.",
             resultText: "The Goro Boys do their thing. One week later, Zara receives word that her business has successfully been registered.",
             impact: {
               cash: -200,
@@ -1127,8 +1127,13 @@ export default Ember.Component.extend({
     )} else if (whichModal == 'whatsapp') {
       this.set('currentModalText',
                "WhatsApp Messenger is a free, cross-platform, instant messaging social media application for smartphones. It's extremely popular in Ghana."
-              )}
-    else {
+    )} else if (whichModal == 'norse') {
+      this.set('currentModalText',
+               "NORSAAC is an empowerment for change organization committed to women and young people in Ghana’s Northern Region."
+    )} else if (whichModal == 'goro') {
+      this.set('currentModalText',
+               "<a href='http://3news.com/goro-boys-keep-frustrating-applicants-at-passport-office/' target='_blank'>Learn more</a>"
+              )} else {
       this.set('currentModalText', '')
     }
   },
