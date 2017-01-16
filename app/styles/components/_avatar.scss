@@ -2,8 +2,10 @@
   display: inline-block;
   width: 6rem;
   height: 7rem;
-  border-radius: 50%;
-  background: $color-grey;
+  background-repeat: none;
+  background-size: cover;
+  // border-radius: 50%;
+  // background: $color-grey;
 }
 
 .avatar--small {
@@ -14,4 +16,16 @@
 .avatar--large {
   width: 10rem;
   height: 11.625rem;
+}
+
+.avatar--lamisi {
+  background-image: url("/assets/images/lamisi.svg")
+}
+
+.avatar--kojo {
+  background-image: url("/assets/images/kojo.svg")
+}
+
+.avatar--zara {
+  background-image: url("/assets/images/zara.svg")
 }
