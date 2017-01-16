@@ -45,6 +45,16 @@
         {{~partial.content~}}
       </span>
     {{~/if}}
+    {{~#if partial.isService ~}}
+      <span {{action 'renderModal' 'service' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
+    {{~#if partial.isMotor ~}}
+      <span {{action 'renderModal' 'motor' bubbles=false}} class='modalLink u-colorBlue'>
+        {{~partial.content~}}
+      </span>
+    {{~/if}}
   {{~else~}}
       <span style="white-space: pre-line">
         {{~partial.content~}}

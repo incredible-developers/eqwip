@@ -1134,6 +1134,12 @@ export default Ember.Component.extend({
     )} else if (whichModal == 'norse') {
       this.set('currentModalText',
                "NORSAAC is an empowerment for change organization committed to women and young people in Ghana’s Northern Region."
+    )} else if (whichModal == 'service') {
+      this.set('currentModalText',
+               "Ghanaian students who graduate from accredited tertiary institutions are required by law to do a one-year national service to the country. Graduates are posted to various sectors as service personnel, and provided with a monthly stipend of ₵350. The National Service Secretariat (NSS) is the Government of Ghana agency mandated to formulate policies and structures for national service."
+    )} else if (whichModal == 'motor') {
+      this.set('currentModalText',
+               "A Motorking is a motorized tricycle with a back carriage for transporting goods."
     )} else if (whichModal == 'goro') {
       this.set('currentModalText',
                "<a href='http://3news.com/goro-boys-keep-frustrating-applicants-at-passport-office/' target='_blank'>Learn more</a>"

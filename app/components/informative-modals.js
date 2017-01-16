@@ -12,6 +12,8 @@ export default Ember.Component.extend({
   norseRegex: /NORSAAC/,
   susuIndicator: "#SUSU#",
   investRegex: /investor deposits were being diverted into the bank accounts of firm managers/,
+  serviceRegex: /national service/i,
+  motorRegex: /Motorking/i,
   renderDialog: null,
 
   partials: Ember.computed('inputText', function(){
@@ -40,6 +42,18 @@ export default Ember.Component.extend({
 
     flattened = flattened.map((string) => {
       return string.split("#INVEST#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    flattened = flattened.map((string) => {
+      return string.split("#SERVICE#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    flattened = flattened.map((string) => {
+      return string.split("#MOTOR#")
     })
 
     flattened = [].concat.apply([], flattened);
@@ -85,6 +99,8 @@ export default Ember.Component.extend({
         isInvest: this.get('investRegex').test(string),
         isWhatsApp: this.get('whatsAppRegex').test(string),
         isGoro: this.get('goroRegex').test(string),
+        isService: this.get('serviceRegex').test(string),
+        isMotor: this.get('motorRegex').test(string),
         isNorse: this.get('norseRegex').test(string),
         isLinkable: this.get('susuRegex').test(string) ||
           this.get('guineaRegex').test(string) ||
@@ -94,6 +110,8 @@ export default Ember.Component.extend({
           this.get('whatsAppRegex').test(string) ||
           this.get('goroRegex').test(string) ||
           this.get('norseRegex').test(string) ||
+          this.get('serviceRegex').test(string) ||
+          this.get('motorRegex').test(string) ||
           this.get('investRegex').test(string)
       };
     });
@@ -138,6 +156,15 @@ export default Ember.Component.extend({
     text = text.replace(this.get('norseRegex'), function(s) {
       return "#NORSE#" + s + "#NORSE#";
     });
+
+    text = text.replace(this.get('serviceRegex'), function(s) {
+      return "#SERVICE#" + s + "#SERVICE#";
+    });
+
+    text = text.replace(this.get('motorRegex'), function(s) {
+      return "#MOTOR#" + s + "#MOTOR#";
+    });
+
 
     return text
   },
