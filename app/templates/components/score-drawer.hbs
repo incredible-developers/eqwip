@@ -52,7 +52,7 @@
           {{resilience}}
         </div>
       </div>
-      <div class="sidebar-gauge">
+      <div class="sidebar-gauge show-for-medium-up">
         {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
         {{/progress-indicator}}
       </div>
@@ -68,7 +68,7 @@
           {{assets}}
         </div>
       </div>
-      <div class="sidebar-gauge">
+      <div class="sidebar-gauge show-for-medium-up">
         {{#flat-indicator value=assets min=assetsMin max=assetsMax}}
           <div class="indicator-bar"></div>
         {{/flat-indicator}}
@@ -85,7 +85,7 @@
           {{environment}}
         </div>
       </div>
-      <div class="sidebar-gauge u-borderBottomNone">
+      <div class="sidebar-gauge  show-for-medium-up u-borderBottomNone">
         {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
         {{/progress-indicator}}
       </div>

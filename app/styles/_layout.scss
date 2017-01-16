@@ -1,8 +1,19 @@
 .sidebar {
-  width: 260px;
   background: lighten($color-blueDark, 10%);
   color: white;
-  overflow-y: auto;
+
+  @media screen and (min-width: $medium-screen) {
+    width: 260px;
+    overflow-y: auto;
+  }
+}
+
+.gameContainer.flexBlock {
+  flex-direction: column;
+
+  @media screen and (min-width: $medium-screen) {
+    flex-direction: row;
+  }
 }
 
 .storyContainer {
