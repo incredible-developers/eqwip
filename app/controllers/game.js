@@ -30,6 +30,7 @@ export default Ember.Controller.extend({
       this.setImpact(impact)
 
       this.applyIncome()
+
       var nextMonth = this.get('month') + 1
       this.set('month', nextMonth)
     },

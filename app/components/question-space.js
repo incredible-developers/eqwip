@@ -8,6 +8,7 @@ export default Ember.Component.extend({
   resultText: null,
   rejected: null,
   followUpQuestion: null,
+  currentModalText: null,
 
   susuAcknowledged: null,
 
@@ -301,7 +302,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these Goro boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the Goro Boys ₵200 for their services.",
+            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the boys ₵200 for their services.",
             resultText: "The Goro Boys do their thing. One week later, Zara receives word that her business has successfully been registered.",
             impact: {
               cash: -200,
@@ -767,8 +768,8 @@ export default Ember.Component.extend({
       5: {
         optionalText: {
           toggle: 'madeTheDeal',
-          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash.",
-          whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash."
+          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. ",
+          whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. "
         },
 
         questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
@@ -837,39 +838,45 @@ export default Ember.Component.extend({
        ]
       },
       7: {
-        dependsOn: 'vaccinate',
+        dependsOn: 'vaccinated',
         alternate: {
           questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (₵150).",
           answerOptions: [
             {
-              text: "alternate answer",
+              text: "Pay the fees, and wish her luck.",
               resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
               impact: {
               }
             },
             {
-              text: "Rendered the alternate",
+              text: "Pay the fees, and offer her an extra ₵100 for school supplies and new clothing.",
               resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
               impact: {
               }
             },
           ]
         },
-        questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (₵150).",
-        answerOptions: [
-          {
-            text: "Pay the fees, and wish her luck.",
-            resultText: "Though she would have rather used the money to invest in her business, Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks.",
-            impact: {
-            }
-          },
-          {
-            text: "Pay the fees, and offer her an extra ₵100 for school supplies and new clothing.",
-            resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
-            impact: {
-            }
-          },
-        ]
+          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees. However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will either have to hire a veterinarian to tend to the sick birds (₵300), or let them die.",
+          answerOptions: [
+            {
+              text: "Pay the school fees, and hope that the birds can recover on their own.",
+              resultText: "Lamisi is obligated to help out her family — not only did they provide her with the land needed to start her business, but they have also been increasingly supportive of her endeavor in recent weeks. Lamisi must put her family first. Unfortunately, a half dozen birds pass away from illness, which leads to a significant loss in her productivity. Should have purchased those vaccinations!",
+              impact: {
+                cash: -150,
+                income: -100,
+                resilience: -2,
+                assets: -1
+              }
+            },
+            {
+              text: "Hire the vet to tend to the flock. Someone else will have to cover the school fees this year.",
+              resultText: "The vet is able to nurse the birds back to health, but Lamisi’s family is not happy that she put her business over her family. Now, she will be expected to contribute a larger sum this time next year, or if a new problem should arise.",
+              impact: {
+                cash: -300,
+                resilience: -2,
+              }
+            },
+          ]
       },
       // esoko
       8: {
@@ -1058,9 +1065,6 @@ export default Ember.Component.extend({
   }),
 
   actions: {
-    renderModal() {
-      console.log('im getting called')
-    },
     renderResult(answer) {
       this.set('rejected', false)
       this.set('chosenAnswer', answer)
@@ -1091,8 +1095,46 @@ export default Ember.Component.extend({
       this.get('setImpact')(this.get('susuImpact'))
     },
 
-    renderDialog: function() {
+    renderDialog: function(whichModal) {
+      this.setDialogContent(whichModal)
       this.toggleProperty('isShowingModal');
     },
-  }
+  },
+
+  setDialogContent(whichModal) {
+    console.log(whichModal)
+    if(whichModal == 'susu') {
+      this.set('currentModalText', 'Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.  Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year. Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan. There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.')
+    } else if (whichModal == 'guinea') {
+      this.set('currentModalText',
+               'Guinea fowl are a species of bird indigenous to Africa. Lean, nutritious, and rich in fatty acids, guinea fowl is an extremely popular bird in Ghana, and a favorite at roadside barbecue stands and upscale restaurants. Raising guinea fowl is also a relatively low-maintenance gig, when it comes to livestock. The average guinea fowl also produces 55 to 100 eggs per year.'
+              )
+    } else if (whichModal == 'eqwip') {
+      this.set('currentModalText',
+               'EQWIP HUBs offers free entrepreneurship training courses to local youth. These courses are focused on providing youth with opportunities to develop an innovative mindset to approach business idea generation, and on building practical skills with which they can develop, evaluate, and test these ideas. The courses will also enable participants to develop market-relevant skills, build networks, and access technology.'
+              )
+    } else if (whichModal == 'invest') {
+      this.set('currentModalText',
+               '<a target="_blank" href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> Read more about the recent DKM Microfinance Company scandal in Ghana</a>'
+              )
+    } else if (whichModal == 'computer') {
+      this.set('currentModalText',
+               'In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in the Global South.'
+              )
+    } else if (whichModal == 'travel') {
+      this.set('currentModalText',
+               'Though there are buses that travel between cities in Northern Ghana, there is no formal public transit within those cities, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances, or ‘tuk tuks’, and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.'
+    )} else if (whichModal == 'whatsapp') {
+      this.set('currentModalText',
+               "WhatsApp Messenger is a free, cross-platform, instant messaging social media application for smartphones. It's extremely popular in Ghana."
+    )} else if (whichModal == 'norse') {
+      this.set('currentModalText',
+               "NORSAAC is an empowerment for change organization committed to women and young people in Ghana’s Northern Region."
+    )} else if (whichModal == 'goro') {
+      this.set('currentModalText',
+               "<a href='http://3news.com/goro-boys-keep-frustrating-applicants-at-passport-office/' target='_blank'>Learn more</a>"
+              )} else {
+      this.set('currentModalText', '')
+    }
+  },
 });

@@ -1,8 +1,12 @@
 {{#if isShowingModal}}
   {{#modal-dialog close="renderDialog"
-    translucentOverlay=true}}
-    a bunch of stuff about susus
-       <button {{action 'renderDialog'}}>Got it</button>
+    translucentOverlay=true container-class='card flexBlock flexVertical modalShit'}}
+      <p>
+      {{{currentModalText}}}
+      </p>
+      <div class="button button--blue" {{action 'renderDialog'}}>
+        Got it
+      </div>
   {{/modal-dialog}}
 {{/if}}
 
@@ -10,7 +14,7 @@
   <div class="row align-center u-marginBottom fadeUp">
     <div class="small-12 medium-8 columns u-textCenter">
       <p class="u-blueDark">
-        {{resultText}}
+        {{informative-modals inputText=resultText renderDialog=(action 'renderDialog')}}
       </p>
     </div>
   </div>
