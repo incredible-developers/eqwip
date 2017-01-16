@@ -51,14 +51,14 @@
   {{else}}
     <div class="flexBlock u-padding">
       <div class="row collapse fadeUp">
-        <div class="small-12 medium-8 columns">
+        <div class="small-order-2 medium-order-1 small-12 medium-8 columns">
           {{character-intro character=character}}
           <div class="button button--green u-marginBottom u-marginTop" {{action 'startGameClicked'}}>
            Continue
          </div>
         </div>
-        <div class="small-12 medium-4 columns u-textCenter">
-          {{character-avatar character=character class='avatar--large u-marginTop'}}
+        <div class="small-order-1 medium-order-2 small-12 medium-4 columns u-textCenter">
+          {{character-avatar character=character class='avatar--large u-marginTop u-marginBottom'}}
         </div>
       </div>
     </div>
