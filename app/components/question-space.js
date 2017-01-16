@@ -9,6 +9,7 @@ export default Ember.Component.extend({
   rejected: null,
   followUpQuestion: null,
   currentModalText: null,
+  endGame: null,
 
   susuAcknowledged: null,
 
@@ -1086,6 +1087,10 @@ export default Ember.Component.extend({
     },
 
     submitAnswer() {
+      if (this.get('month') > 12) {
+        this.get('endGame')()
+      }
+
       this.set('resultText', null)
       this.set('chosenAnswer', null)
     },
@@ -1102,7 +1107,6 @@ export default Ember.Component.extend({
   },
 
   setDialogContent(whichModal) {
-    console.log(whichModal)
     if(whichModal == 'susu') {
       this.set('currentModalText', 'Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.  Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year. Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan. There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.')
     } else if (whichModal == 'guinea') {

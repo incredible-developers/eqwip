@@ -63,8 +63,13 @@ export default Ember.Component.extend({
     flattened = [].concat.apply([], flattened);
 
     flattened = flattened.map((string) => {
-      console.log(string)
       return string.split("#GORO#")
+    })
+
+    flattened = [].concat.apply([], flattened);
+
+    flattened = flattened.map((string) => {
+      return string.split("#NORSE#")
     })
 
     flattened = [].concat.apply([], flattened);

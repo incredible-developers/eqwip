@@ -37,7 +37,13 @@
         </div>
         <div class="flexBlock">
           <div class="storyContainer">
-            {{question-space character=character month=month answerQuestion=(action "answerQuestion") setImpact=(action "setImpact")}}
+            {{question-space
+            character=character
+            month=month
+            answerQuestion=(action "answerQuestion")
+            setImpact=(action "setImpact")
+            endGame=(action "endGame")
+            }}
           </div>
         </div>
       </div>

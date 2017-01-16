@@ -5,13 +5,7 @@ export default Ember.Controller.extend({
   isShowingModal: false,
   character: null,
   month: 1,
-  gameOverManGameOver: Ember.computed('month', function() {
-    if (this.get('month') > 12) {
-      return true
-    } else {
-      return false
-    }
-  }),
+  gameOverManGameOver: null,
   answers: {},
 
   introShown: false,
@@ -41,6 +35,10 @@ export default Ember.Controller.extend({
 
     setImpact: function(impact) {
       this.setImpact(impact)
+    },
+
+    endGame() {
+      this.set('gameOverManGameOver', true)
     }
   },
 
