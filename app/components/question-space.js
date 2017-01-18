@@ -713,7 +713,8 @@ export default Ember.Component.extend({
             resultText: "Might as well hold off until the rainy season, when birds are more likely to get sick.",
             impact: {
               resilience: -2,
-              gameFlowVariable: ['vaccinated', false]
+              gameFlowVariable: ['vaccinated', false],
+              income: 340
             }
           },
         ]
