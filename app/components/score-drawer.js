@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   character: null,
   month: null,
   answers: null,
+  currentDialogText: null,
   monthName: Ember.computed('month', 'character', function() {
     if (this.get('character') == 'Lamisi') {
       return this.get('lamisiMonths')[this.get('month') - 1]
@@ -138,4 +139,34 @@ export default Ember.Component.extend({
     };
   }),
 
+  setCurrentDialogText(dialogType) {
+    if (dialogType == 'environment') {
+      this.set('currentDialogText',
+               'The environmental impact gauge measures the impact of your business on the natural environment that it operates in.'
+              )
+    } else if (dialogType == 'resilience') {
+      this.set('currentDialogText',
+               'The resilience gauge measures your ability as an entrepreneur to adapt to changing circumstances and to overcome unexpected challenges. Your resiliency will also impact the likelihood that you will be able to sustain and grow your business over time.'
+              )
+    } else if (dialogType == 'assets') {
+      this.set('currentDialogText',
+               'The assets gauge measures your non-financial assets. This includes things like electronics, vehicles, equipment, stored goods, etc.'
+              )
+    } else if (dialogType == 'cash') {
+      this.set('currentDialogText',
+               'the cash chart'
+              )
+    }
+  },
+
+  actions: {
+    renderDialog(dialogType) {
+      this.setCurrentDialogText(dialogType)
+      this.set('isShowingModal', true)
+    },
+    removeDialog() {
+      this.set('isShowingModal', false)
+      this.setCurrentDialogText(null)
+    }
+  }
 });

@@ -1,3 +1,15 @@
+{{#if isShowingModal}}
+  {{#modal-dialog close="removeDialog"
+    translucentOverlay=true renderInPlace=true container-class="card flexBlock flexVertical modalShit modalFadeIn"}}
+      <p>
+        {{{currentDialogText}}}
+      </p>
+      <div class="button button--blue" {{action 'removeDialog'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
 <div class="sidebar-section sidebar-section--header">
   <div class="row align-middle">
     <div class="shrink columns u-paddingRightNone">
@@ -16,7 +28,7 @@
 <div class="sidebar-section sidebar-section--totals">
   <div class="totalsList">
     <div class="row align-middle">
-      <div class="columns totalsList-label">
+      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'cash'}}>
         Cash
       </div>
       <div class="columns totalsList-total">
@@ -45,7 +57,7 @@
   <div class="row">
     <div class="columns">
       <div class="row">
-        <div class="columns totalsList-label">
+        <div class="columns totalsList-label clickable"  {{action 'renderDialog' 'resilience'}}>
           Resilience
         </div>
         <div class="columns totalsList-total">
@@ -61,7 +73,7 @@
   <div class="row">
     <div class="columns">
       <div class="row">
-        <div class="columns totalsList-label">
+        <div class="columns totalsList-label clickable"  {{action 'renderDialog' 'assets'}}>
           Assets
         </div>
         <div class="columns totalsList-total">
@@ -78,7 +90,7 @@
   <div class="row">
     <div class="columns">
       <div class="row">
-        <div class="columns totalsList-label">
+        <div class="columns totalsList-label clickable" {{action 'renderDialog' 'environment'}}>
           Environmental Impact
         </div>
         <div class="columns totalsList-total">

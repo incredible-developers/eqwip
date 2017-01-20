@@ -13,6 +13,10 @@
   text-transform: uppercase;
 }
 
+.totalsList-label.clickable {
+  cursor: help;
+}
+
 .totalsList-total {
   text-align: right;
   font-size: 1.2rem;
