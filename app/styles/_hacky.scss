@@ -15,16 +15,15 @@
 
 table.simpleTable {
   width:90%;
-  border-top:2px solid $color-blue;
   border-right:2px solid #e5eff8;
   margin:1em auto;
   border-collapse:collapse;
 }
 
 th.simpleTD {
-  background:$color-blue;
+  background: lighten($color-blueDark, 5%);
   text-align:center;
-  h2 {
+  h3 {
     color: white;
   }
 }
