@@ -12,3 +12,27 @@
     margin: auto;
   }
 }
+
+table.simpleTable {
+  width:90%;
+  border-top:2px solid $color-blue;
+  border-right:2px solid #e5eff8;
+  margin:1em auto;
+  border-collapse:collapse;
+}
+
+th.simpleTD {
+  background:$color-blue;
+  text-align:center;
+  h2 {
+    color: white;
+  }
+}
+
+td.simpleTD {
+  color: $color-greyDark;
+  border-bottom:2px solid #e5eff8;
+  border-left:2px solid #e5eff8;
+  padding: .5em 2em;
+  text-align:center;
+}

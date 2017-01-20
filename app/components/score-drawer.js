@@ -153,9 +153,8 @@ export default Ember.Component.extend({
                'The assets gauge measures your non-financial assets. This includes things like electronics, vehicles, equipment, stored goods, etc.'
               )
     } else if (dialogType == 'cash') {
-      this.set('currentDialogText',
-               'the cash chart'
-              )
+      this.set('currentDialogText', null)
+      this.set('showCashChart', true)
     }
   },
 

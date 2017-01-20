@@ -1,12 +1,148 @@
 {{#if isShowingModal}}
   {{#modal-dialog close="removeDialog"
     translucentOverlay=true renderInPlace=true container-class="card flexBlock flexVertical modalShit modalFadeIn"}}
+    {{#if currentDialogText}}
       <p>
         {{{currentDialogText}}}
       </p>
-      <div class="button button--blue" {{action 'removeDialog'}}>
-        Got it
-      </div>
+    {{/if}}
+    {{#if showCashChart}}
+    <p>
+    Ghana’s official currency is the Ghana Cedi (GHC or ₵), which is worth about ⅓ of a Canadian dollar. The following table will give you a brief idea of the prices for common goods in Ghana, and an estimate of the monthly salaries for common vocations.
+    </p>
+    <table class="simpleTable">
+      <tr>
+        <th class="simpleTD">
+          <h2>
+            Item
+          </h2>
+        </th>
+        <th class="simpleTD">
+          <h2>
+            GHC
+          </h2>
+        </th>
+        <th class="simpleTD">
+          <h2>
+            CAD
+          </h2>
+        </th>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Litre of Milk
+        </td>
+        <td class="simpleTD">
+          9
+        </td>
+        <td class="simpleTD">
+          $2.80
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Can of Soda
+        </td>
+        <td class="simpleTD">
+          2
+        </td>
+        <td class="simpleTD">
+          $0.60
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Bottle of Beer
+        </td>
+        <td class="simpleTD">
+          6
+        </td>
+        <td class="simpleTD">
+          $2
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Typical Meal from a Food Stall
+        </td>
+        <td class="simpleTD">
+          5
+        </td>
+        <td class="simpleTD">
+          $1.50
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Typical Meal at a ‘Sit-Down’ Restaurant
+        </td>
+        <td class="simpleTD">
+          30
+        </td>
+        <td class="simpleTD">
+          $9.50
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Public Transit from City Centre to Suburb
+        </td>
+        <td class="simpleTD">
+          3
+        </td>
+        <td class="simpleTD">
+          $1
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Custom, Locally-Made Dress
+        </td>
+        <td class="simpleTD">
+          60
+        </td>
+        <td class="simpleTD">
+          $19
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Monthly Salary of High School Teacher
+        </td>
+        <td class="simpleTD">
+          1200
+        </td>
+        <td class="simpleTD">
+          $380
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Monthly Salary of Retail Associate
+        </td>
+        <td class="simpleTD">
+          300
+        </td>
+        <td class="simpleTD">
+          $95
+        </td>
+      </tr>
+      <tr>
+        <td class="simpleTD">
+          Monthly Salary of Bank Teller
+        </td>
+        <td class="simpleTD">
+          1500
+        </td>
+        <td class="simpleTD">
+          $315
+        </td>
+      </tr>
+  </table>
+    {{/if}}
+    <div class="button button--blue" {{action 'removeDialog'}}>
+      Got it
+    </div>
   {{/modal-dialog}}
 {{/if}}
 
