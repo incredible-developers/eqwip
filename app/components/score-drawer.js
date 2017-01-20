@@ -166,6 +166,7 @@ export default Ember.Component.extend({
     removeDialog() {
       this.set('isShowingModal', false)
       this.setCurrentDialogText(null)
+      this.set('showCashChart', false)
     }
   }
 });
