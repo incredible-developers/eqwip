@@ -38,7 +38,7 @@ export default Ember.Component.extend({
       return 'Zara’s business has not had a significant impact on the environment, but there is still lots of room for improvement. A beauty bar can always find ways to conserve more water or better dispose of their chemical waste. Zara may also consider using more organic products. As a social enterprise designed to facilitate and encourage responsible waste management, Recycle Accra! has had a clear positive impact on the environment. Kojo should continue to search for new ways to help his clients to improve their environmental footprint, and to raise awareness about waste management generally.'
     }
     if (character == 'Lamisi') {
-      return 'Lamisi’s business has not had a signficnat impact on the environment, but there is still lots of room for improvement. Increasingly, businesses are expected to be responsible stewards of the natural environment. Lamisi should make an effort to better incorporate environmental impact into her decision-making process.'
+      return 'Lamisi’s business has not had a signficant impact on the environment, but there is still lots of room for improvement. Increasingly, businesses are expected to be responsible stewards of the natural environment. Lamisi should make an effort to better incorporate environmental impact into her decision-making process.'
     };
     if (character == 'Kojo') {
       return 'As a social enterprise designed to facilitate and encourage responsible waste management, Recycle Accra! has had a clear positive impact on the environment. Kojo should continue to search for new ways to help his clients to improve their environmental footprint, and to raise awareness about waste management generally.'
