@@ -795,6 +795,11 @@ export default Ember.Component.extend({
             text: "Organize a small loan through a Susu collector.",
             resultText: "Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan. (₵400) Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs. She spends ₵150 expanding her pen and purchasing additional feed.",
             impact: {
+              cash: 250,
+              resilience: 1,
+              debt: 400,
+              debtPayments: 80,
+              assets: 1,
               gameFlowVariable: ['hasSusu', true]
             },
           },

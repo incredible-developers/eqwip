@@ -11,9 +11,10 @@ export default Ember.Controller.extend({
   introShown: false,
 
   // indicators
-  cash: null,
-  income: null,
+  cash: 0,
+  income: 0,
   debt: 0,
+  debtPayments: 0,
   assets: 0,
   resilience: 0,
   environment: 0,
