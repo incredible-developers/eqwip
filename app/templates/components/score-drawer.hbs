@@ -172,7 +172,7 @@
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label">
+      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'debt'}}>
         Debt
       </div>
       <div class="columns totalsList-total">
@@ -180,7 +180,7 @@
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label">
+      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'monthlyIncome'}}>
         Monthly Income
       </div>
       <div class="columns totalsList-total">
@@ -193,7 +193,7 @@
   <div class="row">
     <div class="columns">
       <div class="row">
-        <div class="columns totalsList-label clickable"  {{action 'renderDialog' 'resilience'}}>
+        <div class="columns totalsList-label clickable" {{action 'renderDialog' 'resilience'}}>
           Resilience
         </div>
         <div class="columns totalsList-total">
@@ -233,7 +233,7 @@
           {{environment}}
         </div>
       </div>
-      <div class="sidebar-gauge  show-for-medium-up u-borderBottomNone">
+      <div class="sidebar-gauge show-for-medium-up u-borderBottomNone">
         {{#progress-indicator value=environment gauge-id='environment-gauge' max=environmentMax min=environmentMin}}
         {{/progress-indicator}}
       </div>

@@ -155,6 +155,14 @@ export default Ember.Component.extend({
     } else if (dialogType == 'cash') {
       this.set('currentDialogText', null)
       this.set('showCashChart', true)
+    } else if (dialogType == 'monthlyIncome') {
+      this.set('currentDialogText',
+               'This is the amount of profit — revenue minus expenses — that you and your business are raking in each month.'
+              )
+    } else if (dialogType == 'debt') {
+      this.set('currentDialogText',
+               'How much you owe to friends, family, and other creditors.'
+              )
     }
   },
 
