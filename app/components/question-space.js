@@ -683,7 +683,7 @@ export default Ember.Component.extend({
     },
     'Lamisi': {
       1: {
-        questionText: "Lamisi has ₵500 in savings, all of which she is willing to invest in her poultry farm. She’s been raising chicks in her family’s yard for the last few months, and now has about twenty full grown birds. Now, she must build a small bird pen and a series of troughs for water and feed. She uses wooden planks and barbed wire to keep costs low (₵300). Next, she buys 25 more day-old chicks from a local hatchery, and enough feed to raise them (₵200). These chicks will take between 4 to 6 months to mature, after which they will be able to lay eggs for up two years. Lamisi expects her flock to eventually produce about one crate of eggs per day, which she can sell for about ₵14. She can also sell her older birds for ₵25 each. She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about ₵340 per month by the end of June.",
+        questionText: "<p>Lamisi has ₵500 in savings, all of which she is willing to invest in her poultry farm. She’s been raising chicks in her family’s yard for the last few months, and now has about twenty full grown birds.</p> <p> Now, she must build a small bird pen and a series of troughs for water and feed. She uses wooden planks and barbed wire to keep costs low (₵300). Next, she buys 25 more day-old chicks from a local hatchery, and enough feed to raise them (₵200). These chicks will take between 4 to 6 months to mature, after which they will be able to lay eggs for up two years.</p> <p>Lamisi expects her flock to eventually produce about one crate of eggs per day, which she can sell for about ₵14. She can also sell her older birds for ₵25 each.</p> <p>She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about ₵340 per month by the end of June.</p>",
         answerOptions: [
           {
             text: "Time to get started!",
@@ -725,7 +725,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (₵250)",
-            resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment. After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help. Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden. (Cash up)",
+            resultText: "<p>It’s not cheap, but Lamisi feels good about being a responsible steward of the environment.</p> <p>After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help.</p> <p>Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden.</p>",
             impact: {
               cash: -250,
               income: 370,
@@ -735,7 +735,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Continue to dump the waste in the creek, but make an effort to spread it across a larger area.",
-            resultText: "Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench from her farm is enough to turn away customers. Nor are her neighbors impressed. Lamisi may come to regret this choice yet.",
+            resultText: "<p>Lamisi saved a buck, but at the expense of the natural environment, on which she and her neighbors depend. On hot days, the stench from her farm is enough to turn away customers. Nor are her neighbors impressed.</p> <p>Lamisi may end up regretting this choice.</p>",
             impact: {
               environment: -1
             }
@@ -748,7 +748,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "After dinner, approach the manager, and offer to be his poultry supplier. Lamisi is confident in her product, and believes that risk-taking is the key to growth.  She promises to bring him 2 fowls first thing in the morning to try out.",
-            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose? After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative. Before signing the contract, Lamisi agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
+            resultText: "<p>Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?</p> <p>After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative.</p> <p>Before signing the contract, Lamisi agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).</p>",
             impact: {
               cash: -350,
               income: 225,
@@ -778,7 +778,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
-            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is running a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.  Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year.  Lamisi is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.",
+            resultText: "<p>Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is running a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.</p> <p>Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year.</p> <p>Lamisi is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.</p>",
             impact: {
               cash: 850,
               resilience: 3,
@@ -793,7 +793,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Organize a small loan through a Susu collector.",
-            resultText: "Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan. (₵400) Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs. She spends ₵150 expanding her pen and purchasing additional feed.",
+            resultText: "<p>Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (₵400).</p> <p>Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.</p> <p>She spends ₵150 expanding her pen and purchasing additional feed.</p>",
             impact: {
               cash: 250,
               resilience: 1,
@@ -811,7 +811,7 @@ export default Ember.Component.extend({
        answerOptions: [
          {
            text: "Get the paperwork together, and register! To operate legally, Lamisi will need to apply for a Tax Identification Number (₵25) and register her business as a sole proprietorship (₵35).",
-           resultText: "Lamisi spends most of her weekend sorting her way through the convoluted application paperwork. On Monday, she heads to the registration office, but there is a massive queue. She waits for several hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Frustrated and tired, Lamisi decides to go home. The next day, determined to properly register her business, Lamisi decides to hire a man that will wait in line at the office on her behalf. This costs her an extra (₵50), but it does the trick. A few weeks later, her application is accepted.",
+           resultText: "<p>Lamisi spends most of her weekend sorting her way through the convoluted application paperwork. On Monday, she heads to the registration office, but there is a massive queue. She waits for several hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Frustrated and tired, Lamisi decides to go home.</p> <p>The next day, determined to properly register her business, Lamisi decides to hire a man that will wait in line at the office on her behalf. This costs her an extra (₵50), but it does the trick. A few weeks later, her application is accepted.</p>",
             impact: {
               cash: -110,
               resilience: 2,
@@ -857,13 +857,13 @@ export default Ember.Component.extend({
             },
             {
               text: "Pay the fees, and offer her an extra ₵100 for school supplies and new clothing.",
-              resultText: "Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors. As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.",
+              resultText: "<p>Lamisi’s sister is very grateful for the generous gift. Nor does the gesture go unnoticed by the rest of the family, who have been slowly warming to the idea of Lamisi’s business endeavors.</p> <p>As time passes, Lamisi’s siblings and even her parents start offering to help Lamisi around the farm — feeding and caring for the flock, and other simple chores. The support, though modest, comes as a great relief.</p>",
               impact: {
               }
             },
           ]
         },
-          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees. However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will either have to hire a veterinarian to tend to the sick birds (₵300), or let them die.",
+          questionText: "<p>Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.</p> <p>However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will either have to hire a veterinarian to tend to the sick birds (₵300).</p>",
           answerOptions: [
             {
               text: "Pay the school fees, and hope that the birds can recover on their own.",
