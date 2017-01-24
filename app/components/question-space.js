@@ -744,7 +744,7 @@ export default Ember.Component.extend({
       },
 
       4: {
-        questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled guinea fowl with tuo zaafi. As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
+        questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled guinea fowl with <i>tuo zaafi.</i> As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
         answerOptions: [
           {
             text: "After dinner, approach the manager, and offer to be his poultry supplier. Lamisi is confident in her product, and believes that risk-taking is the key to growth.  She promises to bring him 2 fowls first thing in the morning to try out.",
@@ -792,8 +792,8 @@ export default Ember.Component.extend({
             reject: true,
           },
           {
-            text: "Organize a small loan through a Susu collector.",
-            resultText: "<p>Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (₵400).</p> <p>Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.</p> <p>She spends ₵150 expanding her pen and purchasing additional feed.</p>",
+            text: "Organize a small loan through a <i>Susu collector.</i>",
+            resultText: "<p>Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six m onths, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (₵400).</p> <p>Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.</p> <p>She spends ₵150 expanding her pen and purchasing additional feed.</p>",
             impact: {
               cash: 250,
               resilience: 1,
@@ -911,10 +911,10 @@ export default Ember.Component.extend({
        ]
       },
       9: {
-        questionText: "<p>The rainy season is ending, and the Harmattan — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.</p> <p>Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.</p> <p>Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.</p> <p>Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.</p> <p> However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.</p> <p>Lamisi comes up with two ways to make use of these findings:</p>",
+        questionText: "<p>The rainy season is ending, and the <i>Harmattan</i> — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.</p> <p>Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.</p> <p>Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.</p> <p>Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.</p> <p> However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.</p> <p>Lamisi comes up with two ways to make use of these findings:</p>",
         answerOptions: [
           {
-            text: "<p>Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.”</p> <p>Improve the quality of the product, and increase the price.</p>",
+            text: "<p>Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.”</p> <p><i>Improve the quality of the product, and increase the price.</i></p>",
             resultText: "<p>For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality as advertised!</p> <p>After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (₵150 per month). She also further expands her pen to create more space for her birds to roam (₵150).</p> <p>Lamisi will eventually have to raise her prices, but not just yet.</p>",
             impact: {
               cash: -150,
@@ -926,7 +926,7 @@ export default Ember.Component.extend({
             }
           },
           {
-            text: "<p>Reach out to local restaurants or hotels, and offer to supply, prepare, and deliver a regular shipment of fresh eggs and guinea fowl.</p> <p>Focus on reliability and customer convenience, in order to better compete with the suppliers of frozen chicken.</p>",
+            text: "<p>Reach out to local restaurants or hotels, and offer to supply, prepare, and deliver a regular shipment of fresh eggs and guinea fowl.</p> <p><i>Focus on reliability and customer convenience, in order to better compete with the suppliers of frozen chicken.</i></p>",
             resultText: "<p>Lamisi reaches out to three local restaurants, and offers to supply them with a regular shipment of fresh eggs and guinea fowl.</p> <p>The first restaurateur she speaks to turns her down. He subtly hints that he does not want to rely on a young woman to supply his poultry. However, Lamisi does not give up. She brings a free sample of her products to the next two restaurateurs she visits, both of which agree to a two-week trial!</p> <p>In order to supply these restaurants, Lamisi will need to purchase new equipment and build an isolated area (₵200) in order to properly kill and dress the birds.</p>",
             impact: {
               cash: -200,
@@ -951,7 +951,7 @@ export default Ember.Component.extend({
             },
             {
               text: "<p>One of the traders in Lamisi’s Susu circle works as a distributer of Brukina — a popular millet-based drink and breakfast substitute. She works closely with a Motorking driver who delivers Brukina throughout the region for a good rate.</p> <p>Offer your friend’s driver ₵35 a month to add the poultry products to his regular route. Lamisi can save money on transport, and the driver will be happy for the extra cash.</p>",
-              resultText: "<p>The scheme backfires. On the second week, the delivery driver collides with another vehicle, and Lamisi’s eggs are crushed by a tumbling crate of Brukina. She loses a week’s profit, and the restaurant managers are not happy.</p> <p>One of them terminates the contract.</p>",
+              resultText: "<p>The scheme backfires. On the second week, the delivery driver collides with another vehicle, and Lamisi’s eggs are crushed by a tumbling crate of Brukina. She loses a week’s profit, and the restaurant managers are <i>not happy.</i></p> <p>One of them terminates the contract.</p>",
               impact: {
               }
             },
@@ -981,7 +981,7 @@ export default Ember.Component.extend({
           debtPayments: 80,
           cash: 1750
         },
-        questionText: "Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.  She is happy to oblige, and offers the half-dozen birds for a price of ₵150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
+        questionText: "<p>Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.</p> <p>She is happy to oblige, and offers the half-dozen birds for a price of ₵150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.</p>",
         answerOptions: [
           {
             text: "Let him take the birds for free. It’s best to avoid any more family tension.",
@@ -993,7 +993,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Call his bluff, and offer to provide the half-dozen birds for a discounted price of ₵100.",
-            resultText: "Lamisi’s cousin shakes off her counter-offer. He takes two of the live birds, and leaves. He claims that he will give her money for them next time he see her, but this seems unlikely. Lamisi’s pride and self-esteem are hurt by this unpleasant and costly encounter.",
+            resultText: "<p>Lamisi’s cousin shakes off her counter-offer. He takes two of the live birds, and leaves. He claims that he will give her money for them next time he see her, but this seems unlikely.</p> <p>Lamisi’s pride and self-esteem are hurt by this unpleasant and costly encounter.</p>",
             impact: {
               cash: -50,
               resilience: -2,
@@ -1004,11 +1004,11 @@ export default Ember.Component.extend({
       12: {
         dependsOn: 'rebranded',
         alternate: {
-          questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.",
+          questionText: "<p>The <i>Harmattan</i> passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates.</p> <p>A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.</p> <p>It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.</p>",
           answerOptions: [
             {
               text: "Change the bird feed mix to make use of low-cost substitutes for white corn and soybean meal.",
-              resultText: "After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was. Lamisi fears that her loyal customers may begin to drift, lest she improve the quality of her product.",
+              resultText: "<p>After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was.</p> <p>Lamisi fears that her loyal customers may begin to drift, lest she improve the quality of her product.</p>",
               impact: {
                 income: -35,
                 resilience: -2,
@@ -1017,7 +1017,7 @@ export default Ember.Component.extend({
             },
             {
               text: "Raise the prices to account for higher expenses.",
-              resultText: "A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage.  Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.",
+              resultText: "<p>A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage.</p> <p>Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.</p>",
               impact: {
                 income: -40,
                 resilience: 2,
@@ -1025,11 +1025,11 @@ export default Ember.Component.extend({
             },
           ]
         },
-        questionText: "The Harmattan passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her new bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise. It doesn’t look like Lamisi will be able to sustain her business model with these key prices on the rise.",
+        questionText: "<p>The <i>Harmattan</i> passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her new bird feed mix — steadily inflates.</p> <p>A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.</p> <p>It doesn’t look like Lamisi will be able to sustain her business model with these key prices on the rise.</p>",
         answerOptions: [
           {
             text: "Revert back to the old feed mix, which used low-cost substitutes for white corn and soybean meal, and keep your prices where they are. Lamisi will have to wait this out, and hope that the quality of her product does not suffer significantly.",
-            resultText: "After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was. Lamisi fears that her loyal customers may begin to drift, or discover that she has not been fully honest with them.",
+            resultText: "<p>After a couple of weeks, Lamisi’s plump, juicy birds start to thin out — at least to those who look closely. She continue to attract a steady stream of customers, but the feedback she received is less glowing than it once was.</p> <p>Lamisi fears that her loyal customers may begin to drift, or discover that she has not been fully honest with them.</p>",
             impact: {
               income: -50,
               resilience: -2,
@@ -1038,7 +1038,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Raise the prices to account for higher expenses. Lamisi has invested a lot of money in her rebranding efforts, and believes that she has won the loyalty of many customers.",
-            resultText: "A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage. Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.",
+            resultText: "<p>A price increase is tough to swallow in a competitive market, and it turns away several of Lamisi’s customers, especially those looking for live birds. But inflation has had an impact on people across the region, and many of her loyal customers are unwilling to end their patronage.</p> <p>Her monthly profit margin drops, but her reputation for providing high quality products in the region remains intact.</p>",
             impact: {
               income: -65,
               resilience: 2
@@ -1114,7 +1114,7 @@ export default Ember.Component.extend({
 
   setDialogContent(whichModal) {
     if(whichModal == 'susu') {
-      this.set('currentModalText', 'Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.  Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year. Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan. There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.')
+      this.set('currentModalText', '<p>Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.</p> <p>Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year.</p> <p>Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan.</p> <p>There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.</p>')
     } else if (whichModal == 'guinea') {
       this.set('currentModalText',
                'Guinea fowl are a species of bird indigenous to Africa. Lean, nutritious, and rich in fatty acids, guinea fowl is an extremely popular bird in Ghana, and a favorite at roadside barbecue stands and upscale restaurants. Raising guinea fowl is also a relatively low-maintenance gig, when it comes to livestock. The average guinea fowl also produces 55 to 100 eggs per year.'
