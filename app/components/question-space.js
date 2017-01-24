@@ -64,11 +64,11 @@ export default Ember.Component.extend({
   questions: {
     'Zara': {
       1: {
-        questionText: "Working from home, Zara earns an average of ₵800 per month. She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare her to launch her business. Her husband has agreed to give her access to ₵1100 of their shared personal savings, but she will need much more cash to set up her business. In addition to renting a space, she’ll also need to furnish it, and purchase supplies and equipment. She crunches the numbers, and figures she will need access to about ₵5000, after rent. Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "<p>Working from home, Zara earns an average of ₵800 per month. She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare her to launch her business.</p> <p>Her husband has agreed to give her access to ₵1100 of their shared personal savings, but she will need much more cash to set up her business. In addition to renting a space, she’ll also need to furnish it, and purchase supplies and equipment.</p> <p>She crunches the numbers, and figures she will need access to about ₵5000, after rent.</p> <p>Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.</p>",
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
-            resultText: "Zara’s parents deny her request for a loan. Though they support her work as a makeup artist, they do not support her ambition to start a vocational training program. As a mother of two, raising her children should be her main priority, they explain. Zara reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵5000, which she will pay back, with interest, in installments of ₵550 per month for one year (total of ₵6600).",
+            resultText: "<p>Zara’s parents deny her request for a loan. Though they support her work as a makeup artist, they do not support her ambition to start a vocational training program. As a mother of two, raising her children should be her main priority, they explain.</p> <p>Zara reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵5000, which she will pay back, with interest, in installments of ₵550 per month for one year (total of ₵6600).</p>",
             impact: {
               cash: 5000,
               resilience: 2,
@@ -82,8 +82,8 @@ export default Ember.Component.extend({
             reject: true,
           },
           {
-           text: "Organize a small loan through a Susu collector.",
-            resultText: "Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute ₵350 per month. Every six months, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (₵1750). Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.",
+           text: "Organize a small loan through a <i>Susu collector.</i>",
+            resultText: "<p>Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute ₵350 per month. Every six months, a different trader will be given access to the total monthly sum.</p> <p>The group of traders agrees to let Lamisi access the first loan (₵1750). Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.</p>",
             impact: {
               cash: 1750,
               resilience: 3,
@@ -99,7 +99,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Rent a space in central Tamale — it will be easy to attract new clients in the busy city core, and her students will appreciate a central location (₵4200 for 12 months).",
-            resultText: "Renting a space downtown is expensive, but Zara considers it a sound investment. Better to build a beauty bar in an ideal location than have to move and start over again once things are underway, she reasons. However, Zara now has less money to invest on equipment, supplies, and furniture for her beauty bar. Getting to work will also be more difficult — it will be inconvenient, to say the least, to have to haul her children back and forth to the salon.",
+            resultText: "<p>Renting a space downtown is expensive, but Zara considers it a sound investment. Better to build a beauty bar in an ideal location than have to move and start over again once things are underway, she reasons.</p> <p>However, Zara now has less money to invest on equipment, supplies, and furniture for her beauty bar. Getting to work will also be more difficult — it will be inconvenient, to say the least, to have to haul her children back and forth to the salon.</p>",
             impact: {
               cash: -6000,
               resilience: 3,
@@ -109,7 +109,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Rent a space closer to where she lives, on the city’s periphery. It’s a quieter area, but it’s cheaper, and easier to bring her children along (₵2400 for 12 months).  ",
-            resultText: "It’s not an ideal location, but it’s cheap. Zara can now afford to invest the money she saved on rent on things like couches, salon chairs, mirrors, and other equipment. It’s also in a neighborhood that is close to home, which means she can easily bring her children along. The downside — she will have to work extra hard to attract clients and students from outside of her neighborhood.",
+            resultText: "<p>It’s not an ideal location, but it’s cheap. Zara can now afford to invest the money she saved on rent on things like couches, salon chairs, mirrors, and other equipment. It’s also in a neighborhood that is close to home, which means she can easily bring her children along.</p> <p>The downside — she will have to work extra hard to attract clients and students from outside of her neighborhood.</p>",
             impact: {
               cash: -4000,
               resilience: 1,
@@ -120,7 +120,7 @@ export default Ember.Component.extend({
         ]
       },
       3: {
-        questionText: "After weeks of tireless work, Zara’s beauty bar is finally set up. Before she gets underway, she crunches out a quick profit analysis. Based on the average number of clients she expects to serve each month, and taking into account the new expenses of that are required to maintain her rental space, Zara expects to earn an average of ₵600 on a monthly basis (₵200 per month less than she was making before).She will need to expand her business in order to service her debt and create wealth. Zara decides that it is time to launch the vocational training component of her business. She has designed a 2-week training course for young women (₵500 per person), and will also offer one-day introductory lessons for ₵55.  (Click next) Zara needs to find young people to sign up for her vocational training courses, but doesn’t have enough cash to advertise. During her entrepreneurship training, Zara spent many hours in the computer lab, working closely with volunteers and fellow participants to learn how to develop a website using Squarespace. If she can dedicate a few days of work to it, she thinks she can build a basic website for her business, which she can then share on social media and add to local business directories.",
+        questionText: "<p>After weeks of tireless work, Zara’s beauty bar is finally set up.</p> <p>Before she gets underway, she crunches out a quick profit analysis. Based on the average number of clients she expects to serve each month, and taking into account the new expenses of that are required to maintain her rental space, Zara expects to earn an average of ₵600 on a monthly basis (₵200 per month less than she was making before).</p> <p>She will need to expand her business in order to service her debt and create wealth.</p> <p>Zara decides that it is time to launch the vocational training component of her business. She has designed a 2-week training course for young women (₵500 per person), and will also offer one-day introductory lessons for ₵55.</p> <p>Zara needs to find young people to sign up for her vocational training courses, but doesn’t have enough cash to advertise.</p> <p>During her entrepreneurship training, Zara spent many hours in the computer lab, working closely with volunteers and fellow participants to learn how to develop a website using Squarespace. If she can dedicate a few days of work to it, she thinks she can build a basic website for her business, which she can then share on social media and add to local business directories.</p>",
         answerOptions: [
           {
             text: "Build the website at the EQWIP HUB computer lab. It’s a bit of commute, though — an hour and a half each way. Zara will have to shut down the beauty bar for a day or two, and find a sitter while she is away.",
@@ -134,7 +134,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Build the website at a local internet cafe near home. Zara can work on the site over the course of several mornings, while the children are at school and the beauty bar is still closed.",
-            resultText: "Zara spends several mornings at an Internet cafe trying to build the website. The computers are very slow, and the Internet cuts out intermittently. After three frustrating mornings, she gives up. What a waste of time (and ₵25)! She does, however, manage to set up a Facebook page for her salon, which she asks her friends to share widely.",
+            resultText: "<p>Zara spends several mornings at an Internet cafe trying to build the website. The computers are very slow, and the Internet cuts out intermittently. After three frustrating mornings, she gives up. What a waste of time (and ₵25)!</p> <p>She does, however, manage to set up a Facebook page for her salon, which she asks her friends to share widely.</p>",
             impact: {
               cash: -25,
               income: -200,
@@ -144,7 +144,7 @@ export default Ember.Component.extend({
         ]
       },
       4: {
-        questionText: "Five women have signed up for Zara’s first vocational training course, which is set to begin on May 1st. A slow start, but a start nonetheless. One of Zara’s customers connects her with a woman who is looking for a makeup artist to service her bridal party. The woman lives in a small town near Bolgatanga, about 150km from Tamale. The artist she had previously booked cancelled on her last minute. Now, she is willing to pay ₵800 for an makeup artist willing to travel to for gig — the day after tomorrow! Zara is on the fence. She needs the cash, but traveling around Northern Ghana is not easy, especially with children.",
+        questionText: "<p>Five women have signed up for Zara’s first vocational training course, which is set to begin on May 1st. A slow start, but a start nonetheless.</p> <p>One of Zara’s customers connects her with a woman who is looking for a makeup artist to service her bridal party. The woman lives in a small town near Bolgatanga, about 150km from Tamale. The artist she had previously booked cancelled on her last minute. Now, she is willing to pay ₵800 for an makeup artist willing to travel to for gig — the day after tomorrow!</p> <p>Zara is on the fence. She needs the cash, but traveling around Northern Ghana is not easy, especially with children.</p>",
         answerOptions: [
           {
             text: "Pass on the offer. Though Zara needs the money, she thinks it will be a challenge to arrive on time for the wedding. The rainy season has just begun, and many of the roads in rural areas have been rained out.",
@@ -156,7 +156,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Accept the client, cancel previous appointments, and prepare the children for the 5 hour journey to Bolgatanga!",
-            resultText: "Despite her family’s admonishment, Zara and her children take the Metro Mass Transit bus to Bolgatanga (₵45). Next, she hires a Yellow Yellow to take them to the wedding venue, which is located a few kilometers outside of town. The driver charges you extra for the two children and all your supplies (₵10). The journey to the venue is long, hot, and uncomfortable, but Zara arrives just in time, with two upset children in tow. After the job, Zara embarks home, arriving after midnight, exhausted. (₵55). The next day, she will have to call and apologize to the customers whose appointments she cancelled without notice.",
+            resultText: "<p>Despite her family’s admonishment, Zara and her children take the Metro Mass Transit bus to Bolgatanga (₵45). Next, she hires a Yellow Yellow to take them to the wedding venue, which is located a few kilometers outside of town. The driver charges you extra for the two children and all your supplies (₵10).</p> <p>The journey to the venue is long, hot, and uncomfortable, but Zara arrives just in time, with two upset children in tow.</p> <p>After the job, Zara embarks home, arriving after midnight, exhausted. (₵55). The next day, she will have to call and apologize to the customers whose appointments she cancelled without notice.</p>",
             impact: {
               cash: 600,
               income: -50,
@@ -170,7 +170,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Purchase ₵750 worth of prime time radio ads. This will be used to pay for a series of day-time mentions on Diamond FM and a series of evening messages on NorthStar Radio.",
-            resultText: "The ads seem to do the trick! Over the next couple of weeks, new customers trickle in, and Zara manages to book a number of weddings and events for the coming months. Her vocational training courses also receive a considerable bump in sign-ups. This successful marketing campaign should improve Zara’s profit margin over the next several months.",
+            resultText: "<p>The ads seem to do the trick! Over the next couple of weeks, new customers trickle in, and Zara manages to book a number of weddings and events for the coming months. Her vocational training courses also receive a considerable bump in sign-ups.</p> <p>This successful marketing campaign should improve Zara’s profit margin over the next several months.</p>",
             impact: {
               cash: 1250,
               income: 300,
@@ -179,7 +179,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Purchase a smartphone (₵700) and data package (₵20 per month), and develop a social media campaign to promote the business online.",
-            resultText: "Radio ads might have a broader, more immediate reach, but a social media campaign can be  refined and developed over time, Zara figures. Now that she has a smartphone, she can update her Facebook page regularly, and share details of her business throughout various channels on WhatsApp. She also consults with some of her colleagues from her EQWIP HUBs training course — particularly the social media-savvy ones. Their advice is to focus not on advertising your business per se, but on building your business’s brand. To do this, her colleagues explain, Zara should regularly post photos and videos that convey her salon’s unique style and culture. If done right, the customers will follow.",
+            resultText: "<p>Radio ads might have a broader, more immediate reach, but a social media campaign can be  refined and developed over time, Zara figures.</p> <p>Now that she has a smartphone, she can update her Facebook page regularly, and share details of her business throughout various channels on WhatsApp. She also consults with some of her colleagues from her EQWIP HUBs training course — particularly the social media-savvy ones. Their advice is to focus not on advertising your business per se, but on building your business’s brand. To do this, her colleagues explain, Zara should regularly post photos and videos that convey her salon’s unique style and culture. If done right, the customers will follow.</p>",
             impact: {
               cash: 1300,
               income: 250,
@@ -197,11 +197,11 @@ export default Ember.Component.extend({
           debtPayments: 350,
           cash: 1750
         },
-        questionText: "Zara’s marketing efforts seem to be working. Within a month, 10 more young women have signed up for the 2-week training program (₵4000) and another 5 have signed up for one-day introductory courses (₵200). This means a major bump in Zara’s revenue, and a bump in her operating expenses, too. She needs to buy more chairs, more equipment, and more supplies (₵2500). She also needs help! There is no way she can teach all these young women by herself, and keep up with her regular clients.",
+        questionText: "<p>Zara’s marketing efforts seem to be working. Within a month, 10 more young women have signed up for the 2-week training program (₵4000) and another 5 have signed up for one-day introductory courses (₵200).</p> <p>This means a major bump in Zara’s revenue, and a bump in her operating expenses, too. She needs to buy more chairs, more equipment, and more supplies (₵2500).</p> <p>She also needs help! There is no way she can teach all these young women by herself, and keep up with her regular clients.</p>",
         answerOptions: [
           {
             text: "Hire a makeup artist full-time to take on regular clients and help with training (₵550 per month). Having a second staff member will allow Zara to spend more time with her children, away from work.",
-            resultText: "Though having a new person on the payroll is major expense, it benefits Zara’s business immensely. She is now able to launch a new vocational training course in the late evenings. What’s more, she no longer need to worry about traveling with her children for out of town jobs — the staff member now takes care of any clients that require travel. Still, the added expense puts the pressure on to continue expanding the scope of the business.",
+            resultText: "<p>Though having a new person on the payroll is major expense, it benefits Zara’s business immensely. She is now able to launch a new vocational training course in the late evenings. What’s more, she no longer need to worry about traveling with her children for out of town jobs — the staff member now takes care of any clients that require travel.</p> <p>Still, the added expense puts the pressure on to continue expanding the scope of the business.</p>",
             impact: {
               cash: 1700,
               income: -550,
@@ -211,7 +211,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Create an apprenticeship program that provides more advanced students with the opportunity to practice their skills on walk-in clients, who will pay a slightly discounted price.",
-            resultText: "The apprenticeship program is a hit! Zara’s students are grateful for the opportunity to practice on real customers, and the customers are happy to pay a reduced fee. At the end of the month, Zara finds that she is missing ₵600 in cash. She can only assume that one (or more) of the apprentices has been stealing from her. Without another staff member to assist her, she had no choice but to allow her more advanced students to handle some of the cash from walk-in clients. Zara realizes that she needs to tighten up the way she administers her business and supervises her students.",
+            resultText: "<p>The apprenticeship program is a hit! Zara’s students are grateful for the opportunity to practice on real customers, and the customers are happy to pay a reduced fee.</p> <p>At the end of the month, Zara finds that she is missing ₵600 in cash. She can only assume that one (or more) of the apprentices has been stealing from her. Without another staff member to assist her, she had no choice but to allow her more advanced students to handle some of the cash from walk-in clients.</p> <p>Zara realizes that she needs to tighten up the way she administers her business and supervises her students.</p>",
             impact: {
               cash: 1100,
               resilience: -1,
@@ -221,11 +221,11 @@ export default Ember.Component.extend({
         ]
       },
       7: {
-        questionText: "One of Zara’s walk-in clients, Sandra, is a graduate student in environmental sciences at the University of Development Studies in town, and notices that Zara’s students, who were cleaning up after a training session, were not properly sorting their waste or disposing of chemicals — indeed, she spotted one student rinsing out old nail polish bottles and dumping the chemical contents down the drain, a practice known to contaminate the water supply. Sandra offers to design a training module for Zara’s students that focuses on environmental sustainability. For a small fee, she is also willing to spend an hour with each new cohort discussing the benefits of using organic products, teaching them how to properly dispose of chemical waste, and explaining the importance of preserving water in a region prone to drought.",
+        questionText: "<p>One of Zara’s walk-in clients, Sandra, is a graduate student in environmental sciences at the University of Development Studies in town, and notices that Zara’s students, who were cleaning up after a training session, were not properly sorting their waste or disposing of chemicals — indeed, she spotted one student rinsing out old nail polish bottles and dumping the chemical contents down the drain, a practice known to contaminate the water supply.</p> <p>Sandra offers to design a training module for Zara’s students that focuses on environmental sustainability. For a small fee, she is also willing to spend an hour with each new cohort discussing the benefits of using organic products, teaching them how to properly dispose of chemical waste, and explaining the importance of preserving water in a region prone to drought.</p>",
         answerOptions: [
           {
             text: "Hire Sandra! This is a great opportunity to add value to the training courses. (₵150 per month).",
-            resultText: "Sandra turns out to be a terrific teacher and mentor for Zara’s students — her environmental training sessions are a big hit, not only for the students, but on social media as well. As an end of the month bonus, Zara also notices that her hydro bill has dropped, significantly.",
+            resultText: "<p>Sandra turns out to be a terrific teacher and mentor for Zara’s students — her environmental training sessions are a big hit, not only for the students, but on social media as well.</p> <p>As an end of the month bonus, Zara also notices that her utility bill has dropped, significantly.</p>",
             impact: {
               income: -125,
               resilience: 2,
@@ -234,7 +234,7 @@ export default Ember.Component.extend({
           },
           {
             text: "The environment is important, but saving money is still a priority for a start-up in a stage of relative infancy. Zara promises to keep a closer eye on her students’ behaviour.",
-            resultText: "Zara does her best to convince her students to be more careful with water, and to be conscious of what they do with their waste. Though some students seem to get the message, it doesn't click with others. She can’t help but notice, now, that her hydro bill has risen significantly in recent months (₵25 per month).",
+            resultText: "<p>Zara does her best to convince her students to be more careful with water, and to be conscious of what they do with their waste. Though some students seem to get the message, it doesn't click with others.</p> <p>She can’t help but notice, now, that her utility bill has risen significantly in recent months (₵25 per month).</p>",
             impact: {
               income: -35,
               resilience: -1,
@@ -263,7 +263,7 @@ export default Ember.Component.extend({
         ]
       },
       9: {
-        questionText: "Zara’s cousin is getting married this month, and has asked her to be the makeup artist for his wife and her bridal party. Zara emails him a quote for ₵500. He does not respond to the email. A week later, he confronts Zara at work, claiming that he is insulted that she would ask a family member to pay for her services. He angrily demands that she do the work for free.",
+        questionText: "<p>Zara’s cousin is getting married this month, and has asked her to be the makeup artist for his wife and her bridal party. Zara emails him a quote for ₵500.</p> <p>He does not respond to the email. A week later, he confronts Zara at work, claiming that he is insulted that she would ask a family member to pay for her services. He angrily demands that she do the work for free.</p>",
         answerOptions: [
           {
             text: "Apologize to the cousin, and offer to work the wedding for free. Zara’s extended family has not only provided her with plenty of support these past months, but has also become an essential source for customer referrals around town. She does not want to put these relationships into jeopardy.",
@@ -291,11 +291,11 @@ export default Ember.Component.extend({
         ]
       },
       10: {
-        questionText: "The pressure on Zara to register her business is mounting. Not only have the police followed up with their promise to crack down on illegal businesses, but many of Zara’s students have also been asking about accreditation. How will their training be recognized by potential employers or customers if the vocational training center was not even legally registered? Her husband has offered to stand in line at the registration office on her behalf, but he has not been able to book a weekday off of work. Zara herself is unwilling to return to the notorious Tamale office on her own.",
+        questionText: "<p>The pressure on Zara to register her business is mounting. Not only have the police followed up with their promise to crack down on illegal businesses, but many of Zara’s students have also been asking about accreditation. How will their training be recognized by potential employers or customers if the vocational training center was not even legally registered?</p> <p>Her husband has offered to stand in line at the registration office on her behalf, but he has not been able to book a weekday off of work. Zara herself is unwilling to return to the notorious Tamale office on her own.</p>",
         answerOptions: [
           {
             text: "The registration office in Accra is known to be much bigger and better organized than the one in Tamale. Many claim that it’s faster to simply bus to Accra than to queue up here in town. Road trip!",
-            resultText: "Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (₵90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! She is told that it will take 60 days to review the application. Frustrating, but that’s the way it goes. With a couple of hours to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (₵100). She will be able to sell these to her customers at a premium.",
+            resultText: "<p>Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (₵90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! She is told that it will take 60 days to review the application. Frustrating, but that’s the way it goes.</p> <p>With a couple of hours to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (₵100). She will be able to sell these to her customers at a premium.</p>",
             impact: {
               cash: -190,
               resilience: 2,
@@ -303,8 +303,8 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Last time Zara was in line at the registration office, she was approached by a duo of Goro Boys — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again. Head back to the registration office, and offer the boys ₵200 for their services.",
-            resultText: "The Goro Boys do their thing. One week later, Zara receives word that her business has successfully been registered.",
+            text: "<p>Last time Zara was in line at the registration office, she was approached by a duo of <i>Goro Boys</i> — unofficial ‘middle men’ who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again.</p> <p>Head back to the registration office, and offer the boys ₵200 for their services.</p>",
+            resultText: "The <i>Goro Boys</i> do their thing. One week later, Zara receives word that her business has successfully been registered.",
             impact: {
               cash: -200,
               resilience: 1,
@@ -316,14 +316,14 @@ export default Ember.Component.extend({
       11: {
         optionalText: {
           toggle: 'wentToAccra',
-          whenFalse: "Zara’s high school friend, who is visiting Tamale from Accra, brings her a small case of organic makeup products from a specialized manufacturer in the South.  Zara’s students and customers love the organic products.They’re easy to use, and better for both skin and the environment.",
+          whenFalse: "<p>Zara’s high school friend, who is visiting Tamale from Accra, brings her a small case of organic makeup products from a specialized manufacturer in the South.</p> <p>Zara’s students and customers love the organic products.They’re easy to use, and better for both skin and the environment.</p>",
           whenTrue: "Zara’s students and customers love the organic makeup products that she brought back from Accra. It’s easy to use, and better for both skin and the environment."
         },
         questionText: "",
         answerOptions: [
           {
             text: "Organize a monthly shipment of organic makeup products from Accra to use on and sell to customers.",
-            resultText: "Zara will now have to spend over ₵150 per month on freight, and her supply budget has also increased. Even if she raises her prices slightly, her business’s profit margin will have thinned out.",
+            resultText: "<p>Zara will now have to spend over ₵150 per month on freight, and her supply budget has also increased. Even if she raises her prices slightly, her business’s profit margin will have thinned out.</p> <p>She is confident, however, that the availability of environmentally friendly, organic products, will attract new customers, and improve the reputation of her beauty bar. She designs a new social media campaign to promote the value of the organic products she sells.</p>",
             impact: {
               cash: -100,
               resilience: 3,
@@ -348,8 +348,8 @@ export default Ember.Component.extend({
         questionText: "As the new year approaches, she wants to set an ambitious, long-term goal on which to focus her efforts in the coming months. She consults with her students, clients, and colleagues for ideas, and comes up with two options.",
         answerOptions: [
           {
-            text: "Zara knows there is a wider demand for vocational makeup training than her small salon can possibly cater to. Using the power of digital technology, expand the scope and reach of the business by offering online tutorials and vocational training courses that can be accessed by women across the country (and beyond).",
-            resultText: "First thing’s first — Zara will need to purchase a computer (₵1200 for a new laptop), a webcam (₵100), and an internet package (₵35 a month). This is a major investment, but Zara can use the computer for a number of additional purposes, like accounting and managing social media.  Next, Zara will need to film a number of brief tutorials to load onto YouTube and share on social media. These will be used as promotional materials, and as a way to draw in potential students for online training. Once she has established a presence online, Zara can begin creating a online vocational training program that will require payment to access. She may have to hire a web developer down the road to help create an effective platform for her courses.",
+            text: "<p>Zara knows there is a wider demand for vocational makeup training than her small salon can possibly cater to.</p> <p><i>Using the power of digital technology, expand the scope and reach of the business by offering online tutorials and vocational training courses that can be accessed by women across the country (and beyond).</i></p>",
+            resultText: "<p>First thing’s first — Zara will need to purchase a computer (₵1200 for a new laptop), a webcam (₵100), and an internet package (₵35 a month). This is a major investment, but Zara can use the computer for a number of additional purposes, like accounting and managing social media.</p> <p>Next, Zara will need to film a number of brief tutorials to load onto YouTube and share on social media. These will be used as promotional materials, and as a way to draw in potential students for online training.</p> <p>Once she has established a presence online, Zara can begin creating a online vocational training program that will require payment to access. She may have to hire a web developer down the road to help create an effective platform for her courses.</p>",
             impact: {
               cash: -1300,
               income: -35,
@@ -359,8 +359,8 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Zara wants to expand her vocational training to reach unemployed young women in her region. Though many of these women have secondary or tertiary education, they do not possess the job skills required to find work in today’s market. Reach out to national and international NGOs working locally on issues of youth unemployment or livelihood training, and develop a partnership to subsidize vocational training for unemployed young women.",
-            resultText: "Zara is thrilled to dedicate herself to this important, albeit long-term project. Over the course of a year, Zara has organized and led nearly a dozen vocational training programs. She has witnessed first hand the positive impact that such training has on unemployed women. Many of her former students are now have branched out to start their own businesses, and several others have expressed interest in working at Zara’s salon. Zara takes this message to several NGOs, including NORSAAC and EQWIP HUBs for advice, feedback, and tools for bringing this vision to life. Based on these initial meetings, it sounds like Zara will have to dedicate much of her time and resources to developing this plan over the next several months. However, she is confident that investing in her community is not only a worthwhile cause, but will also strengthen the sustainability of her business over time.",
+            text: "<p>Zara wants to expand her vocational training to reach unemployed young women in her region. Though many of these women have secondary or tertiary education, they do not possess the job skills required to find work in today’s market.</p> <p><i>Reach out to national and international NGOs working locally on issues of youth unemployment or livelihood training, and develop a partnership to subsidize vocational training for unemployed young women.</i></p>",
+            resultText: "<p>Zara is thrilled to dedicate herself to this important, albeit long-term project. Over the course of a year, Zara has organized and led nearly a dozen vocational training programs. She has witnessed first hand the positive impact that such training has on unemployed women. Many of her former students are now have branched out to start their own businesses, and several others have expressed interest in working at Zara’s salon.</p> <p>Zara takes this message to several NGOs, including NORSAAC and EQWIP HUBs for advice, feedback, and tools for bringing this vision to life.</p> <p>Based on these initial meetings, it sounds like Zara will have to dedicate much of her time and resources to developing this plan over the next several months. However, she is confident that investing in her community is not only a worthwhile cause, but will also strengthen the sustainability of her business over time.</p>",
             impact: {
               resilience: 3,
             },
