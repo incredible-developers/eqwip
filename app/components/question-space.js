@@ -696,10 +696,10 @@ export default Ember.Component.extend({
         ]
       },
       2: {
-        questionText: "Though less prone to sickness than chickens, Guinea fowl are susceptible to a number of diseases, including Fowl Pox, Newcastle disease, and Coccidiosis. A disease outbreak will not only decrease Lamisi’s profits, but can potentially decimate her flock.",
+        questionText: "Though less prone to sickness than chickens, guinea fowl are susceptible to a number of diseases, including Fowl Pox, Newcastle disease, and Coccidiosis. A disease outbreak will not only decrease Lamisi’s profits, but can potentially decimate her flock.",
         answerOptions: [
           {
-            text: "Purchase vaccinations for the flock. Better safe than sorry. (₵ 200).",
+            text: "Purchase vaccinations for the flock. Better safe than sorry (₵ 200).",
             resultText: "Wise choice. It’s much easier to run a successful poultry farm when you have a healthy flock of birds!",
             impact: {
               cash: -200,
@@ -724,7 +724,7 @@ export default Ember.Component.extend({
         questionText: "As Lamisi’s flock grows, so too does the volume of waste that she must deal with. She’s been dumping the waste in a small creek away from her yard, but her neighbors have started to complain — not only do her actions risk contaminating local water resources, but the stench is unbearable!",
         answerOptions: [
           {
-            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (₵250)",
+            text: "Build an isolated area to dispose the waste material until a specialized compost organization can collect it (₵250).",
             resultText: "<p>It’s not cheap, but Lamisi feels good about being a responsible steward of the environment.</p> <p>After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help.</p> <p>Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden.</p>",
             impact: {
               cash: -250,
@@ -863,7 +863,7 @@ export default Ember.Component.extend({
             },
           ]
         },
-          questionText: "<p>Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.</p> <p>However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will either have to hire a veterinarian to tend to the sick birds (₵300).</p>",
+          questionText: "<p>Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.</p> <p>However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will have to hire a veterinarian to tend to the sick birds (₵300).</p>",
           answerOptions: [
             {
               text: "Pay the school fees, and hope that the birds can recover on their own.",
@@ -967,7 +967,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Book a day off, head to the EQWIP HUBs computer lab downtown, and put together a social media campaign to promote the new brand. Lamisi’s sister is willing to take care of the chores around the farm while she is gone.",
-            resultText: "<p>With the support of EQWIP volunteers and staff, Lamisi creates a basic website her business and adds it to online business directories throughout Tamale. She also launches a Facebook page, and spreads word of her business on WhatsApp.</p> <p>She has to purchase a bigger data package to maintain her social media accounts (₵35 month), but the social media campaign seem to work! Within a few weeks, her profits begin to rise. Not everyone who drops by purchases from her — the prices are too high, they say — but the farm has never been busier.</p>",
+            resultText: "<p>With the support of EQWIP volunteers and staff, Lamisi creates a basic website for her business and adds it to online business directories throughout Tamale. She also launches a Facebook page, and spreads word of her business on WhatsApp.</p> <p>She has to purchase a bigger data package to maintain her social media accounts (₵35 month), but the social media campaign seem to work! Within a few weeks, her profits begin to rise. Not everyone who drops by purchases from her — the prices are too high, they say — but the farm has never been busier.</p>",
             impact: {
               assetText: 'a website'
             }
