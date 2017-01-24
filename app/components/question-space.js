@@ -404,7 +404,7 @@ export default Ember.Component.extend({
           },
           {
             text: "Enroll in a coding bootcamp, and learn how to build the app ‘in-house’. The Code School is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs ₵1000 up front. He will also have to purchase a laptop (₵1100).",
-            resultText: "<p> As the name implies, coding bootcamps are no a walk in the park. Every weekday morning for 8 weeks straight, Kojo will have to work extremely hard to learn the fundamental technical skills needed to build a mobile app.</p> <p>However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program.</p> <p>A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function.</p>",
+            resultText: "<p> As the name implies, a coding bootcamp is no walk in the park. Every weekday morning for 8 weeks straight, Kojo will learn the fundamental technical skills needed to build a mobile app.</p> <p>However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program.</p> <p>A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function.</p>",
             impact: {
               cash: -2100,
               resilience: 2,
@@ -462,7 +462,7 @@ export default Ember.Component.extend({
             },
           ]
         },
-        questionText: "<p>At last, the mobile application is ready to go! With 10 clients signed up to Recycle Accra, each of which Kojo expects to produce one 25-kilogram load per week, he will generate a monthly revenue of approximately ₵400.</p> <p>Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at The Code School, gets to work on the mobile application. He runs into very few problems building the basic infrastructure for the application, but runs into trouble trying to develop the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the application is ready to be piloted.</p> <p>During the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo hires a Motorking driver to pick up the missed bins, and reimburses the affected clients out of pocket (₵70).</p>",
+        questionText: "<p>At last, the mobile application is ready to go! With 10 clients signed up to Recycle Accra!, each of which Kojo expects to produce one 25-kilogram load per week, he will generate a monthly revenue of approximately ₵400.</p> <p>Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at The Code School, gets to work on the mobile application. He runs into very few problems building the basic infrastructure for the application, but runs into trouble trying to develop the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the application is ready to be piloted.</p> <p>During the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo hires a Motorking driver to pick up the missed bins, and reimburses the affected clients out of pocket (₵70).</p>",
         answerOptions: [
           {
             text: "Mistakes are bound to happen in the early phase of things. That’s what pilots are for! Kojo will spend some time at The Code School lab to work out the app’s bugs, and hopefully things will get back on track.",
@@ -497,7 +497,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Offer new clients in Awoshie and additional ₵10 per load that they drop off at the collections site for the first 3 months. Kojo will have to pay this extra sum out of his own pocket.",
+            text: "Offer new clients in Awoshie and additional ₵10 per load if they drop off their waste at the collections site for the first 3 months. Kojo will have to pay this extra sum out of his own pocket.",
             resultText: "<p>A number of smaller businesses in Awoshie are convinced by this added incentive, and sign up for Recycle Accra! The larger businesses are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them.</p> <p>By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis.</p>",
             impact: {
               resilience: 2,
@@ -506,7 +506,7 @@ export default Ember.Component.extend({
         ]
       },
       6: {
-        questionText: "<p>Things seem to be going well as Kojo enters the third and final month of the pilot stage of Recycle Accra! The pilot is expanding slowly, but steadily, and he has received significant amounts of positive feedback.</p> <p>However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government.</p> <p>Within a week, Kojo receives a cease and desist notice from the municipal government. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. However, Kojo is unwilling to be intimidated or pushed out of Awoshie. He his paperwork together, and heads to the registration office.</p> <p>To operate legally, he will need to apply for a Business Operating Permit (₵500). Unfortunately, the clerk at the office tells Kojo that it will take at least 90 days to review his application.</p>",
+        questionText: "<p>Things seem to be going well as Kojo enters the third and final month of the pilot stage of Recycle Accra! The pilot is expanding slowly, but steadily, and he has received significant amounts of positive feedback.</p> <p>However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government.</p> <p>Within a week, Kojo receives a cease and desist notice from the municipal government. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. However, Kojo is unwilling to be intimidated or pushed out of Awoshie. He his paperwork together, and heads to the registration office.</p> <p>To operate legally, he will need to apply for a Business Operating Permit (₵500). Unfortunately, the registration officer tells Kojo that it will take at least 90 days to review his application.</p>",
         answerOptions: [
           {
             text: "Inform the Recycle Accra! clients in Awoshie that, due to unforeseen circumstances, services will have to be paused for the next three months. The last thing Kojo’s project needs right now is legal trouble!",
@@ -530,7 +530,7 @@ export default Ember.Component.extend({
         questionText: "<p>Mid-way through July, Ghana is hit by a major rainstorm. Within 24 hours, major floods sweep across Accra, causing millions of dollars of damage. These floods, which have been happening on a cyclical basis in recent years, are caused in part by plastic bags and other waste that is disposed of near open drainage systems.</p> <p>Now that Recycle Accra! has found its footing, Kojo senses an opportunity to not only to help alleviate the strain on the city’s drainage system, but to grow his business at the same time.</p>",
         answerOptions: [
           {
-            text: "<p>Purchase specially outfitted plastic recycle bins from RWS, and install them in strategic locations — next to open drains or near busy marketplaces.</p> <p>This won’t be a cheap endeavor — in addition to purchasing the bins, Kojo will also have to hire a Motorking driver to make weekly pickups (RWS trucks will not be able to operate in these busy areas). He will also have to hire a number individuals to teach and encourage Accrans how to properly use the bins once they are introduced! In total, Kojo estimates that he will need to fork over about ₵500 to pull this off.</p>",
+            text: "<p>Purchase specially outfitted plastic recycle bins from RWS, and install them in strategic locations — next to open drains or near busy marketplaces.</p> <p>This won’t be a cheap endeavor — in addition to purchasing the bins, Kojo will also have to hire a Motorking driver to make weekly pickups. He will also have to hire a number individuals to teach and encourage Accrans how to properly use the bins once they are introduced! In total, Kojo estimates that he will need to fork over about ₵500 to pull this off.</p>",
             resultText: "<p>Kojo hires a number of enthusiastic youth that are willing to encourage the use of his newly installed bins, and this seems to do the trick. By the end of the month, all 6 of Kojo’s bins are being filled and transferred to RWS on a regular, weekly basis.</p> <p>This is not only good publicity for Recycle Accra!, the logo of which is pasted all over the bins, but the plastic that Kojo ships to RWS also brings in an extra  200 cedis a week.</p>",
             impact: {
               cash: -500,
@@ -556,7 +556,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Family first. Offer your sister ₵250, to cover school fees and to buy her children some new school clothes.",
-            resultText: "Kojo’s sister is extremely grateful, as are his nephew and nieces. He will have to slog through the next few months with his old equipment, but he feels go about fulfilling his brotherly duty.",
+            resultText: "Kojo’s sister is extremely grateful, as are his nephew and nieces. He will have to slog through the next few months with his old equipment, but he feels good about fulfilling his brotherly duty.",
             impact: {
               cash: -250,
               resilience: -1,
@@ -586,7 +586,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "To save money, Kojo decides to go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but, hey — there’s nothing more effective than a face-to-face conversation.",
+            text: "Go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but hey — there’s nothing more effective than a face-to-face conversation.",
             resultText: "<p>Kojo’s door-to-door undertaking is exhausting, but proves fruitful. He secures a number of high profile clients, including a college and a hotel.</p> <p>Taking out advertisements online or in a newspaper probably would have had a broader reach, but Kojo is confident that his new clients will make good use of the mobile application. Plus, if all goes well, these high profile clients will look good on a investment proposal.</p>",
             impact: {
               income: 100,
@@ -616,7 +616,7 @@ export default Ember.Component.extend({
         ]
       },
       11: {
-        questionText: "<p>Business is doing well. Recycle Accra! has now been downloaded over 200 times, and has over 50 regular users in four different neighborhoods throughout Accra. Kojo’s cash is running low, however, and he doesn’t think he will be able to expand his business much further without investors.</p> <p>However, Kojo is not confident that his business proposal will be able to win over potential investors. In particular, he needs to find an effective way to convey his plan to monetize the application, and generate a more steady flow of revenue.</p>",
+        questionText: "<p>Business is doing well. Recycle Accra! has now been downloaded over 200 times, and has over 50 regular users in four different neighborhoods throughout the city. Kojo’s cash is running low, however, and he doesn’t think he will be able to expand his business much further without investors.</p> <p>However, Kojo is not confident that his business proposal will be able to win over potential investors. In particular, he needs to find an effective way to convey his plan to monetize the application, and generate a more steady flow of revenue.</p>",
         answerOptions: [
           {
             text: "Pay a professional business consultant to improve Kojo’s business proposal, and streamline the plan to generate revenue (₵500).",
