@@ -730,7 +730,7 @@ export default Ember.Component.extend({
               cash: -250,
               income: 370,
               resilience: 2,
-              environment: 1, n
+              environment: 1,
             }
           },
           {
