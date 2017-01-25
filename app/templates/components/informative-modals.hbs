@@ -2,62 +2,62 @@
   {{~#if partial.isLinkable ~}}
     {{~#if partial.isSusu ~}}
       <span {{action 'renderModal' 'susu' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isGuinea ~}}
       <span {{action 'renderModal' 'guinea' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isEqwip ~}}
       <span {{action 'renderModal' 'eqwip' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isInvest ~}}
       <span {{action 'renderModal' 'invest' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isComputer ~}}
       <span {{action 'renderModal' 'computer' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isTravel ~}}
       <span {{action 'renderModal' 'travel' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isWhatsApp ~}}
       <span {{action 'renderModal' 'whatsapp' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isGoro ~}}
       <span {{action 'renderModal' 'goro' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isNorse ~}}
       <span {{action 'renderModal' 'norse' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isService ~}}
       <span {{action 'renderModal' 'service' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
     {{~#if partial.isMotor ~}}
       <span {{action 'renderModal' 'motor' bubbles=false}} class='modalLink u-colorBlue'>
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
     {{~/if}}
   {{~else~}}
       <span style="white-space: pre-line">
-        {{~partial.content~}}
+        {{~{partial.content}~}}
       </span>
   {{~/if}}
 {{~/each}}
