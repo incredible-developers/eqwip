@@ -10,6 +10,7 @@ export default Ember.Component.extend({
   followUpQuestion: null,
   currentModalText: null,
   endGame: null,
+  applyIncome: null,
 
   susuAcknowledged: null,
 
@@ -1092,7 +1093,9 @@ export default Ember.Component.extend({
       this.get('answerQuestion')(answer.impact)
     },
 
-    submitAnswer() {
+    submitAnswer(impact) {
+      this.get('applyIncome')(impact)
+
       if (this.get('month') > 12) {
         this.get('endGame')()
       }

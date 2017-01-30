@@ -24,8 +24,6 @@ export default Ember.Controller.extend({
     answerQuestion(impact) {
       this.setImpact(impact)
 
-      this.applyIncome()
-
       var nextMonth = this.get('month') + 1
       this.set('month', nextMonth)
     },
@@ -40,22 +38,27 @@ export default Ember.Controller.extend({
 
     endGame() {
       this.set('gameOverManGameOver', true)
-    }
+    },
+
+    applyIncome(impact) {
+      var income = parseInt(this.get('income'))
+      var currentCash = parseInt(this.get('cash'))
+      this.set('cash', currentCash + income)
+
+      var debtPayments = parseInt(this.get('debtPayments'))
+      var debt = this.get('debt')
+
+      if (!!debtPayments && !!debt) {
+        this.set('debt', (debt - debtPayments))
+        this.set('cash', (this.get('cash') - debtPayments))
+      }
+
+      if (impact.debtPayments != undefined) {
+        this.set('debtPayments', parseInt(this.get('debtPayments')) + impact.debtPayments)
+      }
+    },
   },
 
-  applyIncome: function() {
-    var income = parseInt(this.get('income'))
-    var currentCash = parseInt(this.get('cash'))
-    this.set('cash', currentCash + income)
-
-    var debtPayments = parseInt(this.get('debtPayments'))
-    var debt = this.get('debt')
-
-    if (!!debtPayments && !!debt) {
-      this.set('debt', (debt - debtPayments))
-      this.set('cash', (this.get('cash') - debtPayments))
-    }
-  },
 
   setImpact: function(impact) {
     if (impact.cash != undefined) {
@@ -72,9 +75,6 @@ export default Ember.Controller.extend({
     }
     if (impact.assets != undefined) {
       this.set('assets', parseInt(this.get('assets')) + impact.assets)
-    }
-    if (impact.debtPayments != undefined) {
-      this.set('debtPayments', parseInt(this.get('debtPayments')) + impact.debtPayments)
     }
     if (impact.environment != undefined) {
       this.set('environment', this.get('environment') + impact.environment)
