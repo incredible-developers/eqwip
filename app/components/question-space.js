@@ -729,7 +729,7 @@ export default Ember.Component.extend({
             resultText: "It’s not cheap, but Lamisi feels good about being a responsible steward of the environment.<br><br> After a few weeks of collecting waste, she decides to reach out to her neighbor and family friend, who rears cattle, so she can learn how to process the waste into manure. He is happy to help.<br><br> Though it’s a lot of extra work, Lamisi can now sell her manure, or use it to fertilize her family’s vegetable garden.",
             impact: {
               cash: -250,
-              income: 370,
+              income: 30,
               resilience: 2,
               environment: 1,
             }
