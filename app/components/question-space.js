@@ -65,7 +65,7 @@ export default Ember.Component.extend({
   questions: {
     'Zara': {
       1: {
-        questionText: "Working from home, Zara earns an average of ₵800 per month. She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare herself to launch a business.<br><br> She and her husband have agreed to invest ₵1100 of their shared personal savings into the business, but she will need much more cash than that. In addition to renting a space, she’ll also need to furnish it, and purchase supplies and equipment.<br><br> She crunches the numbers, and figures she will need access to about ₵5000, after rent.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "Working from home, Zara earns an average of ₵800 per month. She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare herself to launch a business.<br><br> She and her husband have agreed to invest ₵1100 of their shared personal savings into the business, but she will need much more cash than that. In addition to renting a space, she’ll also need to furnish it, and purchase supplies and equipment.<br><br> She crunches the numbers, and figures she will need access to about ₵5000, after rent.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it very difficult for female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
@@ -371,7 +371,7 @@ export default Ember.Component.extend({
     },
     'Kojo': {
       1: {
-        questionText: "First thing’s first — Kojo will need cash to fund his business endeavor! Currently, he has ₵1100 in savings, which he accumulated during his time with the national service. He figures he will need a lot more than that to successfully build a viable mobile application.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it all but impossible for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "First thing’s first — Kojo will need cash to fund his business endeavor! Currently, he has ₵1100 in savings, which he accumulated during his time with the national service. He figures he will need a lot more than that to successfully build a viable mobile application.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it very difficult for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
@@ -415,7 +415,7 @@ export default Ember.Component.extend({
         ]
       },
       3: {
-        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started.<br><br> RWS is willing to pay ₵35 per 25 kilogram load of plastics. Each client will receive ₵25 per load, ₵10 of which will go to Kojo to fund his operations.<br><br> After meeting with dozens of business owners and managers, and Kojo manages to generate a lot of interest in his app, but is unable to secure commitments from more than 2 or 3 clients. Many of the potential clients are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash!<br><br> In other words, Kojo needs to add value to business proposition.",
+        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started.<br><br> Kojo strikes a deal with a recycling plant located just outside of the city called Responsible Waste Services (RWS). RWS is willing to pay ₵35 per 25 kilogram load of plastics. Each client will receive ₵25 per load, ₵10 of which will go to Kojo to fund his operations.<br><br> After meeting with dozens of business owners and managers, and Kojo manages to generate a lot of interest in his app, but is unable to secure commitments from more than 2 or 3 clients. Many of the potential clients are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash!<br><br> In other words, Kojo needs to add value to business proposition.",
         answerOptions: [
           {
             text: "Offer to provide pro bono environmental training sessions for the staff of each business that agrees to pilot the project. It may be idealistic, but Kojo thinks that if he can convince people about the benefits of recycling and waste management, they will be more than happy to play their part.",
@@ -775,7 +775,7 @@ export default Ember.Component.extend({
           whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. "
         },
 
-        questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it all but impossible for young female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it very difficult for female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
