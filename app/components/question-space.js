@@ -1094,7 +1094,9 @@ export default Ember.Component.extend({
     },
 
     submitAnswer(impact) {
-      this.get('applyIncome')(impact)
+      if (impact != undefined) {
+        this.get('applyIncome')(impact)
+      }
 
       if (this.get('month') > 12) {
         this.get('endGame')()
