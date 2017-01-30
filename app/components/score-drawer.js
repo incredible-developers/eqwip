@@ -142,7 +142,7 @@ export default Ember.Component.extend({
   setCurrentDialogText(dialogType) {
     if (dialogType == 'environment') {
       this.set('currentDialogText',
-               'The environmental impact gauge measures the impact of your business on the natural environment that it operates in.'
+               'The environmental impact gauge measure the impact your business has on the natural environment.'
               )
     } else if (dialogType == 'resilience') {
       this.set('currentDialogText',
@@ -157,7 +157,7 @@ export default Ember.Component.extend({
       this.set('showCashChart', true)
     } else if (dialogType == 'monthlyIncome') {
       this.set('currentDialogText',
-               'This is the amount of profit — revenue minus expenses — that you and your business are raking in each month.'
+               'This is the amount of profit — revenue minus expenses — that you and your business are raking in each month. Your monthly income will be added to your cash at the beginning of each month.'
               )
     } else if (dialogType == 'debt') {
       this.set('currentDialogText',
