@@ -684,7 +684,7 @@ export default Ember.Component.extend({
     },
     'Lamisi': {
       1: {
-        questionText: "Lamisi has ₵500 in savings, half of which she is prepared to invest in her poultry farm immediately. She’s been raising chicks in her family’s yard for the last few months, and now has about twenty full grown birds.<br><br>  Now, she must build a small bird pen and a series of troughs for water and feed. She uses wooden planks and barbed wire to keep costs low. Next, she buys 25 more day-old chicks from a local hatchery, and enough feed to raise them. These chicks will take between 4 to 6 months to mature, after which they will be able to lay eggs for up two years.<br><br> Lamisi expects her flock to eventually produce about one crate of eggs per day, which she can sell for about ₵14. She can also sell her older birds for ₵25 each.<br><br> She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about ₵340 per month by the end of June.",
+        questionText: "Lamisi has ₵500 in cash, half of which she uses to build a new bird pen and purchase additional supplies. She currently has about 20 full grown birds, and plans to buy an additional two dozen from a local hatchery. It will take 4 to 6 months for these chicks to mature, after which they will be able to lay eggs for up to two years.<br><br> She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about ₵340 per month by the end of June.",
         answerOptions: [
           {
             text: "Time to get started!",
@@ -745,11 +745,11 @@ export default Ember.Component.extend({
       },
 
       4: {
-        questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled guinea fowl with <i>tuo zaafi.</i> As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
+        questionText: "Lamisi’s uncle is a bureaucrat based in Accra. He is visiting Tamale, and takes her out to a local restaurant known for its grilled meats and <i>tuo zaafi.</i> As they dine, she overhears the restaurant manager complaining about an inconsistent supply of poultry. She senses an opportunity.",
         answerOptions: [
           {
-            text: "After dinner, approach the manager, and offer to be his poultry supplier. Lamisi is confident in her product, and believes that risk-taking is the key to growth.  She promises to bring him 2 fowls first thing in the morning to try out.",
-            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?<br><br> After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative.<br><br> Before signing the contract, Lamisi agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
+            text: "After dinner, approach the manager, and offer to be his poultry supplier. Lamisi is confident in her product, and believes that risk-taking is the key to growth.  She promises to bring him a sample of product first thing in the morning.",
+            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?<br><br> After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative.<br><br> Lamisi also agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
             impact: {
               cash: -350,
               income: 225,
@@ -758,7 +758,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Don’t approach the manager. It will be embarrassing if she is rejected in front of her uncle. Plus, Lamisi thinks it is unlikely that the restaurant manager will partner with a female poultry farmer.",
+            text: "Don’t approach the manager. It will be embarrassing if she is rejected in front of her uncle. Plus, Lamisi thinks it is unlikely that the restaurant manager will be interested in partnering with a female poultry farmer.",
             resultText: "No risk, no reward. Lamisi leaves the restaurant with a deflated sense of confidence. At least she didn’t have to face rejection.",
             impact: {
               resilience: -2,
@@ -771,15 +771,15 @@ export default Ember.Component.extend({
       5: {
         optionalText: {
           toggle: 'madeTheDeal',
-          whenFalse: "Now that Lamisi needs to supply a restaurant with live birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. ",
+          whenFalse: "Now that Lamisi needs to supply a restaurant with birds, she needs to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash.",
           whenTrue: "Lamisi is ready to expand the size of her pen, and purchase additional chicks and feed. To do this, she will need more cash. "
         },
 
-        questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it very difficult for female entrepreneurs to access credit through formal financial institutions in northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "Unfortunately, high interest rates, negative attitudes towards women in business, and other bureaucratic obstacles make it very difficult for female entrepreneurs to access credit through formal financial institutions in Northern Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
             text: "Reach out to family for a loan.",
-            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is \ a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.<br><br> Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year.<br><br> Lamisi is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.",
+            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is operating a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.<br><br> Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year.<br><br> Lamisi is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.",
             impact: {
               cash: 850,
               resilience: 3,
@@ -811,7 +811,7 @@ export default Ember.Component.extend({
        questionText: "The government announces that it is cracking down on ‘illegal businesses’. The newspapers claim that inspection officers will be issuing fines to businesses that are not properly registered. ",
        answerOptions: [
          {
-           text: "Get the paperwork together, and register! To operate legally, Lamisi will need to apply for a Tax Identification Number (₵25) and register her business as a sole proprietorship (₵35).",
+           text: "Get the paperwork together, and register! To operate legally, Lamisi will need to apply for a Tax Identification Number and register her business as a sole proprietorship (₵55).",
            resultText: "Lamisi spends most of her weekend sorting her way through the convoluted application paperwork. On Monday, she heads to the registration office, but there is a massive queue. She waits for several hours, but the queue barely moves. She’s one of the only women present in the queue, and a couple of men begin to harass and tease her. Frustrated and tired, Lamisi decides to go home.<br><br> The next day, determined to properly register her business, Lamisi decides to hire a man that will wait in line at the office on her behalf. This costs her an extra (₵50), but it does the trick. A few weeks later, her application is accepted.",
             impact: {
               cash: -110,
@@ -825,7 +825,7 @@ export default Ember.Component.extend({
                 questionText: "Lo and behold, two weeks following the government’s announcement, an inspection officer arrives at Lamisi’s farm, asking for her registration papers and TIN. The fine, he explains, will be very expensive.",
                 answerOptions: [
                   {
-                    text: "Lamisi doesn’t want any more trouble. Ignore the officer’s hint, and accept the fine (₵ 500).",
+                    text: "Lamisi doesn’t want any more trouble. Ignore the officer’s hint, and accept the fine (₵500).",
                     resultText: "Ouch.",
                     impact: {
                       cash: -500,
@@ -864,7 +864,7 @@ export default Ember.Component.extend({
             },
           ]
         },
-          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.<br><br> However, just as the rainy season is coming to a close, a number of her layer birds fall sick. Lamisi will have to hire a veterinarian to tend to the sick birds (₵300).",
+          questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.<br><br> However, just as the rainy season is coming to a close, a number of her birds fall sick. Lamisi will have to hire a veterinarian to tend to the sick birds (₵300).",
           answerOptions: [
             {
               text: "Pay the school fees, and hope that the birds can recover on their own.",
@@ -878,7 +878,7 @@ export default Ember.Component.extend({
             },
             {
               text: "Hire the vet to tend to the flock. Someone else will have to cover the school fees this year.",
-              resultText: "The vet is able to nurse the birds back to health, but Lamisi’s family is not happy that she put her business over her family. Now, she will be expected to contribute a larger sum this time next year, or if a new problem should arise.",
+              resultText: "The vet is able to nurse the birds back to health, but Lamisi’s family is not happy that she chose to put her business over her family.",
               impact: {
                 cash: -300,
                 resilience: -2,
@@ -888,11 +888,11 @@ export default Ember.Component.extend({
       },
       // esoko
       8: {
-       questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more.<br><br> Esoko just opened a branch in Tamale, the trader explains. Esoko’s Managing Director claims that the branch was established to bridge the gap in information flow between smallholder farmers and key players in the agricultural value chain.<br><br> This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
+       questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more. Esoko just opened a branch in Tamale, he explains.<br><br> This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
        answerOptions: [
          {
            text: "Buy a cell phone and data package, and sign up for Esoko!  (₵500 for a new phone, plus ₵20/month for data). ",
-           resultText: "What a difference! Corresponding with the Esoko experts provides Lamisi with the confidence to make changes to her business model and the way that she manages her farm. She develops a better system for tracking changes in the market and setting your prices, and a new feed mix that makes use of low-cost substitutes. Esoko also offers tips on how to better clean and maintain the feeding and watering troughs for your birds.<br><br> Investing in a smartphone has also made it much easier to connect with her current clients and advertise her business using the digital communications tool WhatsApp.",
+           resultText: "What a difference! Corresponding with the Esoko experts provides Lamisi with the confidence to make changes to her business model and the way that she manages her farm. She develops a better system for tracking changes in the market and setting your prices, and a new feed mix that makes use of low-cost substitutes. Esoko also offers tips on how to better clean and maintain the feeding and watering troughs for your birds.",
             impact: {
               cash: -500,
               income: 200,
@@ -903,8 +903,8 @@ export default Ember.Component.extend({
             }
          },
          {
-           text: "Save the cash. Lamisi has contacts in the marketplace that provide information about prices and market trends. Plus, she grew up on a farm! She can take care of her birds without the help of experts in an office far away.",
-           resultText: "Maybe down the road, when Lamisi has more cash saved, she will consider buying a cell phone. Back to work.",
+           text: "Save the cash. Lamisi has contacts in the marketplace that provide information about prices and market trends. Plus, she grew up on a farm! She can take care of her birds without the help of experts in some office far away.",
+           resultText: "Maybe down the road, when Lamisi has more cash saved, she will consider buying a smartphone. Back to work.",
             impact: {
               cash: 0,
             }
@@ -912,11 +912,11 @@ export default Ember.Component.extend({
        ]
       },
       9: {
-        questionText: "The rainy season is ending, and the <i>Harmattan</i> — a dry and dusty northeasterly trade wind that blows from the Sahara over West Africa from December to March — is on its way. The hot, dry weather will make it difficult for Lamisi’s birds to thrive, and the farm’s production will likely suffer.<br><br> Lamisi begins to worry about the sustainability of her business. The market has become saturated — services like Esoko have made it easier for new entrepreneurs to enter the market, further eating into her demand.<br><br> Lamisi must find a new way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.<br><br> Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.<br><br>  However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.<br><br> Lamisi comes up with two ways to make use of these findings:",
+        questionText: "Lamisi is worried about the sustainability of her business. New competitors seem to be entering the market each week! She needs to find a way to innovate — to bring something new or different to the table. She reaches out to customers, restaurant owners, and wholesalers, in order to find out how to better improve her business.<br><br> Lamisi’s research produces some interesting findings. First, she learns that most restaurants, hotels, and households in urban areas in Northern Ghana rely on frozen poultry products imported from the South or from overseas — these products are typically cheaper, pre-cut, processed, and ready to use.<br><br> However, customers and restaurants also reported a preference for local, fresh poultry, even if it is a bit more expensive. Many customers believe that fresh poultry is healthier than the frozen kind. However, frozen poultry is considered more convenient and more reliable. Plus, customers do not want to kill or prepare their own birds.<br><br> Lamisi comes up with two ways to make use of these findings.",
         answerOptions: [
           {
             text: "Rebrand the business: “Lamisi’s Free-Range Farm: the fresh and healthy choice for poultry in Tamale.”<br><br> <i>Improve the quality of the product, and increase the price.</i>",
-            resultText: "For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality as advertised!<br><br> After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (₵150 per month). She also further expands her pen to create more space for her birds to roam (₵150).<br><br> Lamisi will eventually have to raise her prices, but not just yet.",
+            resultText: "For this scheme to work, Lamisi will need to produce goods that are as healthy and high quality! After consulting with some more experienced farmers and doing some research online, she replaces many of the low-cost ingredients in her feed mix with higher-quality, organic products, and also begins to add herbal supplements to her birds’ water supply. (₵150 per month). She also further expands her pen to create more space for her birds to roam (₵150).",
             impact: {
               cash: -150,
               income: -150,
@@ -942,23 +942,23 @@ export default Ember.Component.extend({
       10: {
         dependsOn: 'rebranded',
         alternate: {
-          questionText: "Lamisi will need to find an efficient way to deliver her products to the two restaurants she has agreed to supply.<br><br> Unfortunately, getting around in Tamale is not very easy. There is no formal public transit, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances — and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.",
+          questionText: "Lamisi now needs to find an efficient way to deliver her products to the two restaurants she has agreed to supply. Unfortunately, getting around in Tamale is not very easy. There is no formal public transit, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances — and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.",
           answerOptions: [
             {
               text: "Hire a Yellow Yellow each week, and personally deliver the products to each restaurant (₵70 per month). Lamisi wants her partnerships to succeed, which means making sure that her goods arrive on time, and in good order.",
-              resultText: "The restaurateurs are very happy with both Lamisi’s product, and her service. Particularly, they appreciate that she is thorough, punctual, and willing to follow up after the delivery. They are happy to continue with the agreement.",
+              resultText: "The restaurateurs are very happy with both Lamisi’s product, and her service. Particularly, they appreciate that she is thorough, punctual, and willing to follow up after the delivery.",
               impact: {
               }
             },
             {
-              text: "One of the traders in Lamisi’s Susu circle works as a distributer of Brukina — a popular millet-based drink and breakfast substitute. She works closely with a Motorking driver who delivers Brukina throughout the region for a good rate.<br><br> Offer your friend’s driver ₵35 a month to add the poultry products to his regular route. Lamisi can save money on transport, and the driver will be happy for the extra cash.",
-              resultText: "The scheme backfires. On the second week, the delivery driver collides with another vehicle, and Lamisi’s eggs are crushed by a tumbling crate of Brukina. She loses a week’s profit, and the restaurant managers are <i>not happy.</i><br><br> One of them terminates the contract.",
+              text: "One of the traders in Lamisi’s Susu circle works as a distributer of <i>Brukina</i> — a popular millet-based drink and breakfast substitute. She works closely with a Motorking driver who delivers Brukina throughout the region for a good rate.<br><br> Offer your friend’s driver ₵35 a month to add the poultry products to his regular route.",
+              resultText: "The scheme backfires. On the second week, the delivery driver collides with another vehicle, and Lamisi’s eggs are crushed by a tumbling crate of <i>Brukina</i>. She loses a week’s profit, and the restaurant managers are <i>not happy.</i><br><br> One of them terminates the contract.",
               impact: {
               }
             },
           ]
         },
-        questionText: "Lamisi’s birds are fattening up nicely. Her timing is good, too — the Bugum Chugu (Fire Festival) is just around the corner! The festival, which marks the start of a new lunar year, is one of the most important holidays and biggest parties for residents in northern Ghana. The demand for plump guinea fowl is sure to spike.<br><br> This is a perfect opportunity to market her new brand, and to attract new customers. She will also need to raise her prices to cover her new expenses.",
+        questionText: "Lamisi’s birds are fattening up nicely on their new diet, which means she can now charge more for them. The timing is good, too — the Bugum Chugu (Fire Festival) is just around the corner! The festival, which marks the start of a new lunar year, is one of the most important holidays and biggest parties for residents in Northern Ghana. The demand for plump guinea fowl is sure to spike.<br><br> This is a perfect opportunity to market her new brand, and to attract new customers.",
         answerOptions: [
           {
             text: "Purchase ₵250 worth of prime time radio ads, which buys a series of day-time mentions on <i>Diamond FM</i> and a series of evening messages on <i>NorthStar Radio.</i>",
@@ -980,7 +980,7 @@ export default Ember.Component.extend({
           text: "Six months have passed, and it’s Lamisi’s turn once again to access the cash from her Susu circle (₵400). Now that she has enough cash, she purchases a round of vaccinations for her a flock, which should last her through the coming season (₵200).",
           debt: 400,
           debtPayments: 80,
-          cash: 1750
+          cash: 200
         },
         questionText: "Lamisi’s cousin, who is getting married next week, drops by the farm and asks her to provide a half dozen birds for the occasion.<br><br> She is happy to oblige, and offers the half-dozen birds for a price of ₵150. Her cousin gets upset, and claims that he is offended that she would try to charge a family member, as if he was just another customer. He re-asserts that she should give the birds to him for free.",
         answerOptions: [
@@ -1005,7 +1005,7 @@ export default Ember.Component.extend({
       12: {
         dependsOn: 'rebranded',
         alternate: {
-          questionText: "The <i>Harmattan</i> passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates.<br><br> A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these keys prices on the rise.",
+          questionText: "Over the past several weeks, Lamisi has watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these prices on the rise.",
           answerOptions: [
             {
               text: "Change the bird feed mix to make use of low-cost substitutes for white corn and soybean meal.",
@@ -1026,7 +1026,7 @@ export default Ember.Component.extend({
             },
           ]
         },
-        questionText: "The <i>Harmattan</i> passes, and Lamisi’s business is humming. However, over the past several weeks, she’s watched with anxiety as the price of white corn — a key ingredient in her new bird feed mix — steadily inflates.<br><br> A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these key prices on the rise.",
+        questionText: "Over the past several weeks, Lamisi has watched with anxiety as the price of white corn — a key ingredient in her new bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these key prices on the rise.",
         answerOptions: [
           {
             text: "Revert back to the old feed mix, which used low-cost substitutes for white corn and soybean meal, and keep your prices where they are. Lamisi will have to wait this out, and hope that the quality of her product does not suffer significantly.",
