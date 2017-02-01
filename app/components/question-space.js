@@ -684,7 +684,7 @@ export default Ember.Component.extend({
     },
     'Lamisi': {
       1: {
-        questionText: "Lamisi has ₵500 in cash, half of which she uses to build a new bird pen and purchase additional supplies. She currently has about 20 full grown birds, and plans to buy an additional two dozen from a local hatchery. It will take 4 to 6 months for these chicks to mature, after which they will be able to lay eggs for up to two years.<br><br> She crunches the numbers. Taking into account the cost of feed and other expenses, Lamisi expects to turn a profit of about ₵340 per month by the end of June.",
+        questionText: "Lamisi starts with ₵500 in cash and 20 full grown birds. She spends ₵250 on building a new pen, and purchasing bird feed and other supplies. She also buys an additional two dozen chicks from a local hatchery. It will take 4 to 6 months for these chicks to mature, at which point they will be able to lay eggs for up to two years. <br><br>She crunches the numbers. Based on current poultry prices, Lamisi expects to turn a profit of about ₵340 per month by the end of June.",
         answerOptions: [
           {
             text: "Time to get started!",
