@@ -202,7 +202,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "Hire a makeup artist full-time to take on regular clients and help with training (₵550 per month). Having a second staff member will also allow Zara to spend more time with her children, away from work.",
-            resultText: "Though having a new person on the payroll is major expense, it benefits Zara’s business immensely. She is now able to launch a new vocational training course in the late evenings. What’s more, she no longer need to worry about traveling with her children for out of town jobs — the staff member now takes care of any clients that require travel.
+            resultText: "Though having a new person on the payroll is major expense, it benefits Zara’s business immensely. She is now able to launch a new vocational training course in the late evenings. What’s more, she no longer need to worry about traveling with her children for out of town jobs — the staff member now takes care of any clients that require travel.",
             impact: {
               cash: 1700,
               income: -550,
@@ -587,7 +587,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but hey — it might be effective.
+            text: "Go door-to-door to meet business owners throughout Dansoman in person. It’s a tedious gig, but hey — it might be effective.",
             resultText: "Kojo’s door-to-door undertaking proves fruitful. He secures a number of high profile clients, including a college and a hotel.Taking out advertisements online or in a newspaper probably would have had a broader reach, but Kojo is confident that his new clients will make good use of the mobile application.",
             impact: {
               income: 100,
