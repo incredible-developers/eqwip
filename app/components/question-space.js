@@ -542,7 +542,7 @@ export default Ember.Component.extend({
             },b>
           },
           {
-            text: "<b>Launch a social media campaign to raise awareness about the causes of flooding, and ways that Accrans can deal with their waste more responsibly.</b> <br><br>Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
+            text: "<b>Launch a social media campaign to raise awareness about the causes of flooding, and ways that people in Accra can deal with their waste more responsibly.</b> <br><br>Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
             resultText: "Kojo’s brother-in-law is happy to help. Together, they put together a series of infographics that provide helpful tips on recycling, composting, and responsibly sorting waste. The NGO also offers to donate ₵300 to the campaign, which Kojo puts towards advertisements on Facebook and Twitter.<br><br> The social media campaign really seems to strike a chord in the weeks following the floods. It is shared thousands of times, and is promoted by Accra’s municipal government.",
             impact: {
               income: 50,
