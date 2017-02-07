@@ -1005,7 +1005,7 @@ export default Ember.Component.extend({
       12: {
         dependsOn: 'rebranded',
         alternate: {
-          questionText: "Over the past several weeks, Lamisi has watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 100kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these prices on the rise.",
+          questionText: "Over the past several weeks, Lamisi has watched with anxiety as the price of white corn — a key ingredient in her bird feed mix — steadily inflates. A 50kg bag of white corn, which cost her just ₵55 just 3 months ago, now costs ₵100. It looks like the price of soybean meal is also on the rise.<br><br> It doesn’t look like Lamisi will be able to sustain her business model with these prices on the rise.",
           answerOptions: [
             {
               text: "<b>Change the bird feed mix to make use of low-cost substitutes for white corn and soybean meal.</b>",
