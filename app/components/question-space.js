@@ -249,7 +249,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "<b>Get the paperwork together, and register!</b> <br><br>To operate legally, Zara will need to apply for a Tax Identification Number (TIN) and register her business as a sole proprietorship (₵55).",
-            resultText: "Zara and Musa spend the better part of a weekend sorting through the convoluted paperwork for the application. On Monday, she heads to the registration office, but there is a massive queue. She waits for a few hours, but the queue barely moves. She’s one of the only women present, and a couple of men begin to harass and tease her. Annoyed and tired, Zara decides to go home.",
+            resultText: "Zara and Musa spend most of the weekend sorting through the convoluted paperwork for the application. On Monday, she heads to the registration office, but there is a massive queue. She waits for a few hours, but the queue barely moves. She’s one of the only women present, and a couple of men begin to harass and tease her. Annoyed and tired, Zara decides to go home.",
             impact: {
               resilience: -1,
             },
@@ -296,7 +296,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "The registration office in Accra is known to be much bigger and better organized than the one in Tamale. Many claim that it’s faster to bus to Accra than to queue up here in town. <br><br> <b>Road trip!</b>",
-            resultText: "Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (₵90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! <br><br> With a couple of hours to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (₵100). She will be able to sell these to her customers at a nice premium.",
+            resultText: "Zara finds a sitter, and buys an overnight bus ticket for a round trip to Accra — an exhausting, 6 hour journey each way (₵90). Fortunately, things go smoothly once she arrives. Indeed, the entire process only takes two hours! <br><br> With time to kill, Zara heads to the marketplace to stock up on organic makeup products not available in Tamale (₵100). She will be able to sell these to her customers at a premium.",
             impact: {
               cash: -190,
               resilience: 2,
@@ -304,7 +304,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "Last time Zara was in line at the registration office, she was approached by a duo of <i>Goro Boys</i> who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office, nor does does she want to be harassed while waiting in line again.<br><br> <b>Head back to the registration office, and offer the boys ₵200 for their services.</b>",
+            text: "Last time Zara was in line at the registration office, she was approached by a duo of <i>Goro Boys</i> who offered to ‘facilitate’ the registration process for a fee. Zara knows that these boys are working illegally, but she does not have time to navigate the dysfunctional bureaucracy of the registration office.<br><br> <b>Head back to the registration office, and offer the boys ₵200 for their services.</b>",
             resultText: "The <i>Goro Boys</i> do their thing. One week later, Zara receives word that her business has been successfully registered.",
             impact: {
               cash: -200,
@@ -343,8 +343,8 @@ export default Ember.Component.extend({
       12: {
         optionalText: {
           toggle: 'hasSusu',
-          whenFalse: "Zara has nearly paid off her debt to her friend and creditor. And she still has access to a nice sum of cash. Her profits, however, have stagnated. She needs to find a way to increase revenue, or otherwise expand her business.",
-          whenTrue: "Zara’s profits have stagnated. She needs to find a way to increase revenue, or otherwise expand her business."
+          whenFalse: "Zara has nearly paid off her debt, And she still has access to a nice sum of cash. Her profits, however, have stagnated. She needs to find a way to increase revenue and expand her business.",
+          whenTrue: "Zara’s profits have stagnated. She needs to find a way to increase revenue and expand her business."
         },
         questionText: "As the new year approaches, she decides to set an ambitious, long-term goal on which to focus her efforts in the coming months. She consults with her students, clients, and colleagues for ideas, and comes up with two options.",
         answerOptions: [
@@ -371,11 +371,11 @@ export default Ember.Component.extend({
     },
     'Kojo': {
       1: {
-        questionText: "First thing’s first — Kojo needs cash! Currently, he has ₵1100 in savings, which he accumulated during his time with the national service. He will need a lot more than that to successfully build a viable mobile application.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it very difficult for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
+        questionText: "First thing’s first — Kojo needs cash! Currently, he has ₵1100 in savings from his time with the national service. He will need a lot more than that to successfully build a viable mobile application.<br><br> Unfortunately, high interest rates, mandatory collateral requirements, and other bureaucratic obstacles make it very difficult for young entrepreneurs to access credit through formal financial institutions in Ghana. Therefore, most young entrepreneurs must rely on the help of relatives and friends, or access credit through informal alternatives.",
         answerOptions: [
           {
             text: "<b>Reach out to family for a loan.</b>",
-            resultText: "Kojo asks his family for a loan of ₵3000. His two older siblings and uncle are happy to help him out. His father, however, is very reluctant — he worked hard to pay for his son’s tertiary education, and does not understand why he is building gadgets instead of finding a real job. He finally concedes, but warns Kojo that the family will not lend him any more money if he is not able to repay the loan within a year.<br><br> Kojo will pay back the loan in monthly installments of ₵250.",
+            resultText: "Kojo asks his family for a loan of ₵3000. His two older siblings and uncle are happy to help him out. His father, however, is reluctant — he worked hard to pay for his son’s tertiary education, and does not understand why he is building gadgets instead of finding a real job. He finally concedes, but warns Kojo that the family will not lend him any more money if he does not repay him within a year.<br><br> Kojo promises to pay back the loan in monthly installments of ₵250.",
             impact: {
               cash: 3000,
               debt: 3000,
@@ -383,7 +383,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "<b>Apply for part-time work as a teacher or a tutor at the local secondary school.</b>",
+            text: "<b>Apply for part-time work as a teacher at the local secondary school.</b>",
             resultText: "Kojo’s background in accounting qualifies him to teach mathematics to junior high school students. He can earn ₵500 per month teaching 3 afternoons a week, though this means that he will have less time to focus on his business.",
             impact: {
               income: 500,
@@ -392,7 +392,7 @@ export default Ember.Component.extend({
         ]
       },
       2: {
-        questionText: "Now that Kojo has found a source of cash, it’s time to build the mobile application!<br><br> Though Kojo has some experience building websites and a rudimentary understanding of coding, he will not be able to build a fully functional app on his own.",
+        questionText: "Now that Kojo has found a source of cash, it’s time to build the mobile application! Though he has some experience building websites and a rudimentary understanding of coding, he will not be able to build a fully functional app on his own.",
         answerOptions: [
           {
             text: "<b>Hire a developer to build the mobile application.</b> <br><br>Kojo gets a quote from a development firm that can build a basic mobile application over the course of 3 months for ₵3500. The developer is willing to accept payment in monthly installments of ₵875, starting next month",
@@ -404,8 +404,8 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "<b>Enroll in a coding bootcamp, and build the app from scratch.</b> <br><br>The Code School is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs ₵1000 up front. He will also have to purchase a laptop (₵1100).",
-            resultText: " As the name implies, a coding bootcamp is no walk in the park. Every weekday morning for 8 weeks straight, Kojo will learn the fundamental technical skills needed to build a mobile app. However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, The Code School provides ongoing mentorship and support for graduates of the program.<br><br> A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function.",
+            text: "<b>Enroll in a coding bootcamp, and build the app from scratch.</b> <br><br><i>The Code School</i> is offering an 8-week intensive program. The program, which starts at the beginning of next month, costs ₵1000 up front. He will also have to purchase a new laptop (₵1100).",
+            resultText: " As the name implies, a coding bootcamp is no walk in the park. Every weekday morning for 8 weeks, Kojo will learn the fundamental technical skills needed to build a mobile app. However, he believes that if he works hard, he will become equipped with the skills required to not only build a basic application, but to better overcome obstacles that are all but certain to arise down the road. What’s more, <i>The Code School</i> provides ongoing mentorship and support for graduates of the program.<br><br> A major risk, of course, is that Kojo may end up building an application that is riddled with mistakes, or that does not properly function.",
             impact: {
               cash: -2100,
               resilience: 2,
@@ -415,7 +415,7 @@ export default Ember.Component.extend({
         ]
       },
       3: {
-        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started.<br><br> Kojo strikes a deal with a recycling plant located just outside of the city called Responsible Waste Services (RWS). RWS is willing to pay ₵35 per 25kg load of plastic. Each client will receive ₵25 per load, and Kojo will take the remaining ₵10 to Kojo to fund the operation.<br><br>Kojo meets with dozens of business owners and managers, but is only able to secure 2 clients. Others are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash!<br><br>Kojo needs to come up with a way to add value to business proposition.",
+        questionText: "It will still be several weeks until the Recycle Accra! application is ready. In the meantime, Kojo strikes a deal with a recycling plant located just outside of the city called Responsible Waste Services (RWS). RWS is willing to pay ₵35 per 25kg load of plastic. Each client will receive ₵25 per load, and Kojo will take the remaining ₵10 to Kojo to fund the operation.<br><br>Now, Kojo needs to find some clients to pilot the project! He aims to partner with at least 10 businesses before getting started. He meets with dozens of business owners and managers, but is only able to secure 2 clients. Others are skeptical: a few dozen cedis per week is not very much money, and it will be difficult to convince busy employees to sort through trash!<br><br>Kojo needs to come up with a way to add value his business proposition.",
         answerOptions: [
           {
             text: "<b>Offer to provide <i>pro bono</i> environmental training sessions for the staff of each business that agrees to pilot the project.</b> <br><br>It may be idealistic, but Kojo thinks that if he can convince people about the benefits of recycling and waste management, they will be more than happy to play their part.",
@@ -452,7 +452,7 @@ export default Ember.Component.extend({
             },
             {
               text: "<b>Promise the clients that specialized bins will be provided once the pilot is complete.</b> <br><br>Request they do their best to properly sort and label their trash in the meantime.",
-              resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refused to collect the plastic waste from two of the supermarket locations, because it was mixed with organic waste and other forms of trash.<br><br> In order to keep the clients on board and happy, Kojo must reimburse these two clients (₵50), and purchase each of them a specialized bin from RWS (₵150).",
+              resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refuse to collect the plastic waste from two of the supermarket locations, because it is mixed with organic waste and other forms of trash.<br><br> In order to keep the clients on board and happy, Kojo must reimburse these two clients (₵50), and purchase each of them a specialized bin from RWS (₵150).",
               impact: {
                 cash: -200,
                 income: 400,
@@ -463,11 +463,11 @@ export default Ember.Component.extend({
             },
           ]
         },
-        questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at The Code School, gets to work on the mobile application. He runs into very few problems building the basic infrastructure for the application, but runs into trouble trying to develop the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the application is ready to be piloted.<br><br> During the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo hires a Motorking driver to pick up the missed bins, and reimburses his clients out of pocket (₵70).",
+        questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at <i>The Code School,</i> gets to work on the app. He runs into very few problems building the basic infrastructure for the application, but has trouble devloping the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the app is ready to be piloted.<br><br>However, during the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo must hire a Motorking driver to pick up the missed bins, and reimburse his clients out of pocket (₵70).",
         answerOptions: [
           {
-            text: "<b>Spend some time at The Code School lab to work out the app’s bugs.</b> <br><br>Hopefully things will get back on track.",
-            resultText: "After a few all-nighters and extensive testing, Kojo is confident that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
+            text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b> <br><br>Hopefully things will get back on track shortly.",
+            resultText: "After a few all-nighters and extensive testing, Kojo thinks that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
             impact: {
               cash: -70,
               income: 400,
