@@ -28,7 +28,7 @@ export default Ember.Component.extend({
       return 'Lamisi’s poultry farm has had a negative impact on the environment. Increasingly, businesses are expected to be responsible stewards of the natural environment. Continued disregard may undermine her business’s sustainability.'
     };
     if (character == 'Kojo') {
-      return ''
+      return 'Despite the fact that Kojo’s business was designed to facilitate responsible waste management, Recycle Accra! has not had a very positive environmental impact. Kojo may need to consider a new approach if he wants to continue marketing his business as a ‘social enterprise’.'
     };
   }),
 
@@ -134,7 +134,7 @@ export default Ember.Component.extend({
       return 'Lamisi does not have very much cash. This will make it difficult for her to grow her business, and will limit her ability to innovate. She should consider looking for alternative sources of credit, and cutting down on unnecessary expenses.'
     };
     if (character == 'Kojo') {
-      return null
+      return 'Kojo does not have very much cash. This will make it difficult for him to further expand his business. If Kojo is not able to secure further investment for Recycle Accra!, he should consider looking for alternative sources of credit with which to further innovate. '
     };
   }),
 
@@ -147,7 +147,7 @@ export default Ember.Component.extend({
       return 'Lamisi has amassed a considerable amount of cash. However, her business is still new, and vulnerable to unexpected changes in the market. She should consider investing some of her capital back into her business in order to make it more resilient. For example, she may invest in technology, advertising, market research, or efforts to innovate her business model.'
     };
     if (character == 'Kojo') {
-      return null
+      return 'Kojo now has a sizeable amount of cash, much of which he should invest back into his company immediately. In order to make Recycle Accra! more sustainable, he may consider hiring staff, purchasing new equipment, or searching for new marketing opportunities.'
     };
   }),
 
@@ -160,7 +160,7 @@ export default Ember.Component.extend({
       return 'Lamisi has amassed an impressive amount of of cash. She should look for new and innovated ways to invest this capital back into her business, in order to set herself apart from her competition.'
     };
     if (character == 'Kojo') {
-      return null
+      return 'Kojo now has a tonne of cash. He would be wise to work with his investors or his mentors to carefully manage the money, and to make sure that it is used to effectively grow and sustain his business.'
     };
   }),
 
