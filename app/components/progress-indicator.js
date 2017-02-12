@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: [],
+  classNames: ['sidebar-gauge-container'],
   gauge: null,
   min: null,
   max: null,

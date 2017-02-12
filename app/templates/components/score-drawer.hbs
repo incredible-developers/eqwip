@@ -172,6 +172,14 @@
       </div>
     </div>
     <div class="row align-middle">
+      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'monthlyIncome'}}>
+        Monthly Profit
+      </div>
+      <div class="columns totalsList-total">
+        ₵{{income}}
+      </div>
+    </div>
+    <div class="row align-middle">
       <div class="columns totalsList-label clickable" {{action 'renderDialog' 'debt'}}>
         Debt
       </div>
@@ -180,11 +188,11 @@
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'monthlyIncome'}}>
-        Monthly Profit
+      <div class="columns totalsList-label clickable">
+        Debt Payments
       </div>
       <div class="columns totalsList-total">
-        ₵{{income}}
+        ₵{{debtPayments}}
       </div>
     </div>
   </div>
