@@ -157,7 +157,7 @@ export default Ember.Component.extend({
       this.set('showCashChart', true)
     } else if (dialogType == 'monthlyIncome') {
       this.set('currentDialogText',
-               'This is the amount of profit — revenue minus expenses — that you and your business are raking in each month. Your monthly income will be added to your cash at the beginning of each month.'
+               'This is the amount of profit — revenue minus expenses — that you and your business are raking in each month. Your monthly profit will be added to your cash at the beginning of each month.'
               )
     } else if (dialogType == 'debt') {
       this.set('currentDialogText',
