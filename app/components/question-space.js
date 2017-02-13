@@ -749,7 +749,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "<b>Approach the manager, and offer to be his poultry supplier.</b> <br><br>Lamisi is confident in her product, and believes that risk-taking is the key to growth.",
-            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?<br><br> After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative.<br><br> Lamisi also agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
+            resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?<br><br> After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative. Lamisi also agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
             impact: {
               cash: -350,
               income: 225,
@@ -779,7 +779,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "<b>Reach out to family for a loan.</b>",
-            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is operating a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.<br><br> Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year.<br><br> Lamisi is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.",
+            resultText: "Lamisi’s parents deny her request for a loan. Though they have come to term with the fact that she is operating a small poultry operation in the yard, they do not think that she will be able to run a successful farm on a larger scale.<br><br> Lamisi reluctantly decides to ask her long-time friend, who owns a local catering company, for a loan. He agrees to loan her ₵1000, which she will pay back, with interest, in installments of ₵100 per month for one year. She is relieved to have found a source of cash to invest in her business. She spends ₵150 expanding her pen and purchasing additional feed.",
             impact: {
               cash: 850,
               resilience: 3,
