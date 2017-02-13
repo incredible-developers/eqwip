@@ -451,7 +451,7 @@ export default Ember.Component.extend({
               }
             },
             {
-              text: "<b>Promise the clients that specialized bins will be provided once the pilot is complete.</b> <br><br>Request they do their best to properly sort and label their trash in the meantime.",
+              text: "<b>Promise the clients that specialized bins will be provided once the pilot is complete. Request they do their best to properly sort and label their trash in the meantime.</b>",
               resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refuse to collect the plastic waste from two of the supermarket locations, because it is mixed with organic waste and other forms of trash.<br><br> In order to keep the clients on board and happy, Kojo must reimburse these two clients (₵50), and purchase each of them a specialized bin from RWS (₵150).",
               impact: {
                 cash: -200,
@@ -466,7 +466,7 @@ export default Ember.Component.extend({
         questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at <i>The Code School,</i> gets to work on the app. He runs into very few problems building the basic infrastructure for the application, but has trouble devloping the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the app is ready to be piloted.<br><br>However, during the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo must hire a Motorking driver to pick up the missed bins, and reimburse his clients out of pocket (₵70).",
         answerOptions: [
           {
-            text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b> <br><br>Hopefully things will get back on track shortly.",
+            text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b>",
             resultText: "After a few all-nighters and extensive testing, Kojo thinks that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
             impact: {
               cash: -70,
@@ -487,7 +487,7 @@ export default Ember.Component.extend({
         ]
       },
       5: {
-        questionText: "With the pilot well underway, Kojo is looking to expand his clientele. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
+        questionText: "Kojo is reaady to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
             text: "<b>Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (₵80 per week).</b>",
@@ -499,7 +499,7 @@ export default Ember.Component.extend({
           },
           {
             text: "<b>Offer new clients in Awoshie and additional ₵10 per load if they drop off their waste at the collections site for the first 3 months.</b> <br><br>Kojo will have to pay this extra sum out of his own pocket.",
-            resultText: "A number of smaller businesses in Awoshie are convinced by this added incentive, and sign up for Recycle Accra! The larger businesses are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them.<br><br> By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis.",
+            resultText: "A number of smaller businesses in Awoshie are convinced by this incentive, and sign up for Recycle Accra! The larger businesses, however, are not willing to transport their plastics to a central location, and ask Kojo to return when his business can better accommodate them.<br><br> By the end of the month, Kojo manages to secure 6 new clients, most of which are using the app on a regular basis.",
             impact: {
               resilience: 2,
             },
@@ -507,7 +507,7 @@ export default Ember.Component.extend({
         ]
       },
       6: {
-        questionText: "Things seem to be going well as Kojo enters the third and final month of the pilot!<br><br> However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government.<br><br> Within a week, Kojo receives a cease and desist notice. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. However, unwilling to be pushed out of Awoshie, Kojo gets his paperwork together, and heads to the registration office.<br><br> To operate legally, he will need to apply for a Business Operating Permit (₵500). Unfortunately, the registration officer tells Kojo that it will take at least 90 days to review his application.",
+        questionText: "Things seem to be going well as Kojo enters the third and final month of the pilot!<br><br> However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government. Within a week, Kojo receives a cease and desist notice. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. Unwilling to be pushed out of Awoshie, Kojo gets his paperwork together, and heads to the registration office.<br><br> To operate legally, he will need to apply for a Business Operating Permit (₵500). Unfortunately, the registration officer tells Kojo that it will take at least 90 days to review his application.",
         answerOptions: [
           {
             text: "<b>Inform the clients in Awoshie that, due to unforeseen circumstances, services will have to be paused for the next three months.</b> <br><br>The last thing Kojo’s project needs right now is legal trouble!",
@@ -532,7 +532,7 @@ export default Ember.Component.extend({
         answerOptions: [
           {
             text: "<b>Purchase specially outfitted plastic recycle bins from RWS, and install them in strategic locations — next to open drains or near busy marketplaces.</b> <br><br>This won’t be a cheap endeavor — in addition to purchasing the bins, Kojo will also have to hire a Motorking driver to make weekly pickups. In total, Kojo estimates that he will need to fork over about ₵500 to pull this off.",
-            resultText: "Kojo hires a number of enthusiastic young people that are willing to encourage the use of his newly installed bins around town, which seems to do the trick. By the end of the month, all 6 of Kojo’s bins are being filled and transferred to RWS on a regular basis. Not only is this good publicity for Recycle Accra!, but it also brings in an extra ₵200 a week.",
+            resultText: "Kojo hires a number of enthusiastic young people that are willing to encourage the use of his newly installed bins around town (₵50 per month), which seems to do the trick. By the end of the month, all 6 of Kojo’s bins are being filled and transferred to RWS on a regular basis. Not only is this good publicity for Recycle Accra!, but it also brings in an extra ₵200 a month.",
             impact: {
               cash: -500,
               income: 150,
@@ -542,7 +542,7 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "<b>Launch a social media campaign to raise awareness about the causes of flooding, and ways that people in Accra can deal with their waste more responsibly. <br><br>Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
+            text: "<b>Launch a social media campaign to raise awareness about the causes of flooding, and ways that people in Accra can deal with their waste more responsibly.<br><br>Kojo will reach out to his brother-in-law, who works with an NGO focused on environmental sustainability, for support in designing the campaign.",
             resultText: "Kojo’s brother-in-law is happy to help. Together, they put together a series of infographics that provide helpful tips on recycling, composting, and responsibly sorting waste. The NGO also offers to donate ₵300 to the campaign, which Kojo puts towards advertisements on Facebook and Twitter.<br><br> The social media campaign really seems to strike a chord in the weeks following the floods. It is shared thousands of times, and is promoted by Accra’s municipal government.",
             impact: {
               income: 50,
@@ -597,10 +597,10 @@ export default Ember.Component.extend({
         ]
       },
       10: {
-        questionText: "One of Kojo’s colleagues from the bootcamp invites him to take part in a hackathon — a weekend event where teams of computer coders, designers, and social entrepreneurs compete to develop the best web or mobile based computer program. The hackathon, which will be held at the U-Code computer lab in Accra, will be judged by an esteemed panel of local and international judges.<br><br> The contest costs ₵350 to enter. The hackathon will be highly competitive, but the winning team will get to work with business experts and a tech incubator to further develop their idea.",
+        questionText: "One of Kojo’s colleagues from the bootcamp invites him to take part in a 'hackathon' — a weekend event where teams of computer coders, designers, and social entrepreneurs compete to develop the best web or mobile based computer program. The hackathon, which will be held at the U-Code computer lab in Accra, will be judged by an esteemed panel of local and international judges.<br><br> The contest costs ₵350 to enter. The hackathon will be highly competitive, but the winning team will get to work with business experts and a tech incubator to further develop their idea.",
         answerOptions: [
           {
-            text: "<b>Sign up!</b> <br><br>This sounds like a great opportunity for Kojo to meet fellow social entrepreneurs, and to hone his coding skills.",
+            text: "<b>Sign up!</b><br><br>This sounds like a great opportunity for Kojo to meet fellow social entrepreneurs, and to hone his coding skills.",
             resultText: "Though his team does not win the hackathon, Kojo has an excellent time. His team built a prototype that helps connect Ghanaians to affordable health care professionals in their area, and Kojo was able to contribute his GIS digital mapping skills.<br><br> The hackathon also helped Kojo expand his network — throughout the weekend, he forged a close connection with a terrific web designer, who offered her help to improve the look and interface of his app, and deepened his friendship with the app’s main developer, an experienced coder who has promised to help Kojo with any bugs he many have in the future.",
             impact: {
               cash: -350,
@@ -609,7 +609,7 @@ export default Ember.Component.extend({
           },
           {
             text: "<b>Maybe next time.</b> <br><br>Cash is low, and Kojo would rather focus on his own application at this time.",
-            resultText: "Accra loves hackathons. There will be plenty of opportunities in the future.",
+            resultText: "Hackathons are popular in Accra. There will be plenty of opportunities in the future.",
             impact: {
               cash: 0,
             },
@@ -629,8 +629,8 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "<b>Seek advice and mentorship from local community business leaders.</b> <br><br>One of Kojo’s close friends, Donna, is currently enrolled in the EQWIP HUBs entrepreneurship training program. The EQWIP HUB Network, she explains, connects young entrepreneurs to mentors within the community. She thinks they will be able to help him out.",
-            resultText: "Kojo meets up with Donna at the EQWIP HUB one day after her training. After a long discussion about his business proposal, one of the staff members offers to connect Kojo to the Executive Director of a major environmental NGO that is based in Accra. They set up a Skype meeting.<br><br> The meeting is eye-opening. The Executive Director thinks that Kojo has an excellent product, but  recommends that he focus less on monetizing the application, and more on building partnerships with nonprofit or governmental organizations that focus on environmental stewardship.",
+            text: "<b>Seek advice and mentorship from local community business leaders.</b>.",
+            resultText: "One of Kojo’s close friends, Donna, is currently enrolled in the EQWIP HUBs entrepreneurship training program. The EQWIP HUB Network, she explains, connects young entrepreneurs to mentors within the community. She thinks they will be able to help him out.<br><br>Kojo meets up with Donna at the EQWIP HUB one day after her training. After a long discussion about his business proposal, one of the staff members offers to connect Kojo to the Executive Director of a major environmental NGO that is based in Accra. They set up a Skype meeting.<br><br> The meeting is eye-opening. The Executive Director thinks that Kojo has an excellent product, but  recommends that he focus less on monetizing the application, and more on building partnerships with nonprofit or governmental organizations that focus on environmental stewardship.",
             impact: {
               resilience: 3,
               gameFlowVariable: ['consultant', false]
@@ -644,7 +644,7 @@ export default Ember.Component.extend({
           questionText: "As the end of the year approaches, Kojo decides, at last, to reach out to potential investors. Kojo sets up meetings with a number of organizations and companies. He recieves two offers.",
           answerOptions: [
             {
-              text: "A large waste collection and recycling firm that is partnered with the municipal government offers Kojo ₵50,000 to purchase Recycle Accra!, which they will adapt to their city-wide services.<b> <br><br> Kojo will retain a 10% stake in the business, and will be kept on as an ‘advisor’.",
+              text: "A large waste collection and recycling firm that is partnered with the municipal government offers Kojo ₵50,000 to purchase Recycle Accra!, which they will adapt to their city-wide services. Kojo will retain a 10% stake in the business, and will be kept on as an ‘advisor’.</b>",
               resultText: "Wow! ₵50,000 is <i>a lot</i> of money. Kojo can now pay back his debts, upgrade his tech equipment, and help his family out with some of their expenses.<br><br> Unfortunately, the waste company does not seem interested in giving Kojo much of a say regarding their use of his application. Though officially an ‘advisor’, he suspects that this does not give him very much influence.<br><br> On the other hand, Kojo now has more than enough cash to invest in a new enterprise, if he chooses. Now that he has extensive experience and a solid network, he can easily put together a team of like-minded young entrepreneurs with which to develop new and innovative tech-based social enterprises.",
               impact: {
                 cash: 50000,
@@ -652,8 +652,8 @@ export default Ember.Component.extend({
               },
             },
             {
-              text: "An international NGO dedicated to fostering environmental sustainability throughout Ghana offers to partner with Kojo. They offer him ₵5,000 in seed capital to grow and expand Recycle Accra!, and a two-year salaried position (₵1,200/month) as a technology and innovation advisor.",
-              resultText: "Kojo is thrilled by this offer. ₵5,000, plus a monthly salary, will provide him with enough cash to service his debts, upgrade his equipment, and invest in expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, as an employee of a major NGO, he will now be able to leverage the support of an impressive and diverse network of professionals to not only expand Recycle Accra!, but also build new and innovative social enterprises.<br><br> Kojo thinks the future looks bright.",
+              text: "<b>An international NGO dedicated to fostering environmental sustainability throughout Ghana offers to partner with Kojo. They offer him ₵5,000 in seed capital to grow and expand Recycle Accra!, and a two-year salaried position (₵1,200/month) as a technology and innovation advisor.</b>",
+              resultText: "Kojo is thrilled by this offer. ₵5,000, plus a monthly salary, will provide him with enough cash to service his debts, upgrade his equipment, and invest in expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, as an employee of a major NGO, he will now be able to leverage the support of an impressive and diverse network of professionals to not only expand Recycle Accra!, but also build new and innovative social enterprises.",
               impact: {
                 cash: 10000,
                 resilience: 3,
@@ -664,7 +664,7 @@ export default Ember.Component.extend({
         questionText: "As the end of the year approaches, Kojo decides, at last, to reach out to potential investors. Kojo sets up meetings with a list of organizations and companies provided to him by the business consultant. He receives two offers.",
         answerOptions: [
           {
-            text: "A private waste collection and processings firm that operates nation-wide offers ₵50,000 to purchase Recycle Accra!, and adapt the technology to service their own operations. Kojo will retain a 10% stake in the company, and will stay on board as an ‘advisor’.",
+            text: "<b>A private waste collection and processings firm that operates nation-wide offers ₵50,000 to purchase Recycle Accra!, and adapt the technology to service their own operations. Kojo will retain a 10% stake in the company, and will stay on board as an ‘advisor’.</b>",
             resultText: "Wow! ₵50,000 is <i>a lot of money</i>. Kojo will be able to pay back his debts, upgrade his tech equipment, and help his family out with some of their expenses.<br><br> Unfortunately, the private waste company does not seem interested in giving Kojo much of a say regarding their use of his application. Though officially an ‘advisor’, he suspects that this does not give him very much influence.<br><br> On the other hand, Kojo now has more than enough cash to invest in a new enterprise. Now that he has extensive experience and a solid network, he can easily put together a team of like-minded young entrepreneurs with which to develop new and innovative tech-based social enterprises.",
             impact: {
               cash: 50000,
@@ -672,8 +672,8 @@ export default Ember.Component.extend({
             },
           },
           {
-            text: "A small tech incubator offers Kojo ₵10,000 in seed funding in exchange for 20% of Recycle Accra! In addition to seed funding, the incubator will also provide Kojo with the space, support, and mentorship he will need to take the business to the next level.",
-            resultText: "Kojo is thrilled by this offer. ₵10,000 provides him with enough cash to service his debts, upgrade his equipment, and invest in further expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, he now has access to an incredible tech lab, an extensive network of fellow entrepreneurs and mentors, and the support of a incubator that wants his business to succeed.<br><br>. Kojo thinks the future looks bright.",
+            text: "<b>A small tech incubator offers Kojo ₵10,000 in seed funding in exchange for 20% of Recycle Accra! In addition to seed funding, the incubator will also provide Kojo with the space, support, and mentorship he will need to take the business to the next level.</b>",
+            resultText: "Kojo is thrilled by this offer. ₵10,000 provides him with enough cash to service his debts, upgrade his equipment, and invest in further expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, he now has access to an incredible tech lab, an extensive network of fellow entrepreneurs and mentors, and the support of a incubator that wants his business to succeed.",
             impact: {
               cash: 10000,
               resilience: 3,
