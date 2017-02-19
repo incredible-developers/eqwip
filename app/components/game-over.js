@@ -228,8 +228,8 @@ export default Ember.Component.extend({
     };
   }),
 
-  resilienceMedium: Ember.computed('resilienceHigh', 'resilienceLow', function() {
-    !(this.get('resilienceHigh') || this.get('resilienceLow'))
+  resilienceMedium: Ember.computed('character', function() {
+    return !(this.get('resilienceHigh') || this.get('resilienceLow'))
   }),
 
   resilienceLow: Ember.computed('character', function() {
