@@ -281,7 +281,7 @@ export default Ember.Component.extend({
     };
 
     if (character == 'Kojo') {
-      false
+      return false
     };
   }),
 
