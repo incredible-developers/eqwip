@@ -12,8 +12,13 @@
 
 @font-face {
   font-family: "Calibre-Regular";
-  font-weight: bold;
   src: url("/assets/fonts/Calibre-Regular.otf") format('opentype');
+ }
+
+ @font-face {
+   font-family: "Calibre-Regular";
+   src: url("/assets/fonts/Calibre-Bold.otf");
+   font-weight: bold;
  }
 
 html, body {
