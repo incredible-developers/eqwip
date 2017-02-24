@@ -487,7 +487,7 @@ export default Ember.Component.extend({
         ]
       },
       5: {
-        questionText: "Kojo is reaady to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
+        questionText: "Kojo is ready to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
             text: "<b>Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (₵80 per week).</b>",
