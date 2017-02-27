@@ -22,10 +22,12 @@ export default Ember.Controller.extend({
 
   actions: {
     answerQuestion(impact) {
-      this.setImpact(impact)
-
-      var nextMonth = this.get('month') + 1
-      this.set('month', nextMonth)
+      this.setImpact(impact);
+      //Fix for Lamisi first month
+      if(this.get('month') === 1 && this.get('character') === 'Lamisi'){
+        var nextMonth = this.get('month') + 1
+        this.set('month', nextMonth)
+      }
     },
 
     startGameClicked: function() {

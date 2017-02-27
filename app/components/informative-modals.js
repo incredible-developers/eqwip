@@ -4,16 +4,31 @@ export default Ember.Component.extend({
   tagName: 'span',
   susuRegex: /susu collector/i ,
   guineaRegex: /guinea fowl/i ,
-  eqwipRegex: /eqwip hubs/i ,
-  travelRegex: /traveling around Northern Ghana/i ,
+  eqwipHubRegex: /a training program on entrepreneurship with EQWIP  HUBs/i, //Adding Extra string
+  eqwipRegex: /eqwip hubs|entrepreneurship training program with EQWIP  HUBs/i ,
+  travelRegex: /traveling around Northern Ghana|getting around Northern Ghana is not easy./i ,
   whatsAppRegex: /WhatsApp/i ,
-  eqwipComputerRegex: /EQWIP HUB computer lab/i ,
+  eqwipComputerRegex: /EQWIP  HUBs computer lab/i ,
   goroRegex: /Goro Boys/i,
   norseRegex: /NORSAAC/,
   susuIndicator: "#SUSU#",
   investRegex: /investor deposits were being diverted into the bank accounts of firm managers/,
   serviceRegex: /national service/i,
   motorRegex: /Motorking/i,
+  tamaleRegex: /Tamale/i,
+  moreRegex: /and  more/i,
+  yamRegex: /a ‘yam’/i,
+  tuoZaafiRegex: /tuo zaafi/i,
+  bribeRegex: /Offer the officer a ₵150 bribe|Offer a ₵150 bribe/i,
+  creditProRegex: /very difficult for female entrepreneurs to access credit through formal financial institutions in Northern Ghana/i,
+  accraRegex:/  Accra/i, // pending
+  bootCampRegex:/Enroll in a coding bootcamp/i,
+  codeSchoolRegex: /The Code School/i,
+  floodAccraRegex: /major floods sweep across Accra/i,
+  eqwipHubNetworkRegex: /EQWIP HUB Network/i,
+  eqwipHubCLabRegex: /EQWIP HUB computer lab/i,
+  launchTraningRegex: /she's ready to launch the vocational training component of her business/i,
+  crunchesNumberRegex: /She crunches the numbers/i,
   renderDialog: null,
 
   partials: Ember.computed('inputText', function(){
@@ -88,6 +103,18 @@ export default Ember.Component.extend({
 
     flattened = [].concat.apply([], flattened);
 
+    var modelKeyName = ["#TAMALE#","#EQWIPHUB#","#ANDMORE#","#YAM#","#TUAZAAFI#",
+                        "#CREDITPRO#","#BRIBE#","#ACCRA#","#BOOTCAMP#","#CODESCHOOL#",
+                        "#FLOODACCRA#","#EQWIPHUBNETWORK#","#LAUNCHTRANING#","#EQWIPHUBCLAB#"
+                        ,"#CRUNCHESNUMBER#"];
+
+    for (var i = 0; i < modelKeyName.length; i++) {
+      flattened = flattened.map((string) => {
+        return string.split(modelKeyName[i])
+      })
+      flattened = [].concat.apply([], flattened);
+    }
+
     return flattened.map((string) => {
       return {
         content: string,
@@ -102,6 +129,21 @@ export default Ember.Component.extend({
         isService: this.get('serviceRegex').test(string),
         isMotor: this.get('motorRegex').test(string),
         isNorse: this.get('norseRegex').test(string),
+        isTamale: this.get('tamaleRegex').test(string),
+        isEqwipHub: this.get('eqwipHubRegex').test(string),
+        isMore: this.get('moreRegex').test(string),
+        isYam: this.get('yamRegex').test(string),
+        isTuaZaafi: this.get('tuoZaafiRegex').test(string),
+        isCreditPro: this.get('creditProRegex').test(string),
+        isOfferBribe: this.get('bribeRegex').test(string),
+        isAccra: this.get('accraRegex').test(string), 
+        isBootCamp: this.get('bootCampRegex').test(string),
+        isCodeSchool: this.get('codeSchoolRegex').test(string),
+        isFloodAccra: this.get('floodAccraRegex').test(string),
+        isLaunchTraning: this.get('launchTraningRegex').test(string),
+        isEwipHubCLab: this.get('eqwipHubCLabRegex').test(string),
+        isEqwipHubNetwork: this.get('eqwipHubNetworkRegex').test(string),
+        isCrunchesNumber: this.get('crunchesNumberRegex').test(string),
         isLinkable: this.get('susuRegex').test(string) ||
           this.get('guineaRegex').test(string) ||
           this.get('eqwipRegex').test(string) ||
@@ -112,7 +154,22 @@ export default Ember.Component.extend({
           this.get('norseRegex').test(string) ||
           this.get('serviceRegex').test(string) ||
           this.get('motorRegex').test(string) ||
-          this.get('investRegex').test(string)
+          this.get('investRegex').test(string) ||
+          this.get('tamaleRegex').test(string) ||
+          this.get('moreRegex').test(string) ||
+          this.get('yamRegex').test(string) ||
+          this.get('tuoZaafiRegex').test(string) ||
+          this.get('creditProRegex').test(string) ||
+          this.get('accraRegex').test(string) ||
+          this.get('bribeRegex').test(string) ||
+          this.get('bootCampRegex').test(string) ||
+          this.get('codeSchoolRegex').test(string) ||
+          this.get('floodAccraRegex').test(string) ||
+          this.get('eqwipHubNetworkRegex').test(string) ||
+          this.get('eqwipHubCLabRegex').test(string) ||
+          this.get('launchTraningRegex').test(string) ||
+          this.get('crunchesNumberRegex').test(string) ||
+          this.get('eqwipHubRegex').test(string) 
       };
     });
   }),
@@ -165,7 +222,29 @@ export default Ember.Component.extend({
       return "#MOTOR#" + s + "#MOTOR#";
     });
 
+    var regexToKey = {
+      tamaleRegex: "TAMALE",
+      eqwipHubRegex: "EQWIPHUB",
+      moreRegex: "ANDMORE",
+      yamRegex: "YAM",
+      tuoZaafiRegex: "TUAZAAFI",
+      creditProRegex: "CREDITPRO",
+      bribeRegex: "BRIBE",
+      accraRegex: "ACCRA",
+      bootCampRegex: "BOOTCAMP",
+      codeSchoolRegex: "CODESCHOOL",
+      floodAccraRegex: "FLOODACCRA",
+      eqwipHubNetworkRegex: "EQWIPHUBNETWORK",
+      launchTraningRegex: "LAUNCHTRANING",
+      eqwipHubCLabRegex: "EQWIPHUBCLAB",
+      crunchesNumberRegex: "CRUNCHESNUMBER"
+    }
 
+    for(var x in regexToKey){
+      text = text.replace(this.get(x), function(s) {
+        return "#"+regexToKey[x]+"#" + s + "#"+regexToKey[x]+"#";
+      });
+    }
     return text
   },
 

@@ -1,35 +1,38 @@
+{{#if isShowingModal}}
+  {{#modal-dialog close="renderDialog"
+    translucentOverlay=true renderInPlace=true container-class="card flexBlock flexVertical modalShit modalFadeIn"}}
+      <p>
+      {{{currentModalText}}}
+      </p>
+      <div class="button button--blue" {{action 'renderDialog'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
 {{#if isLamisi}}
   <div class="titleLabel">
     Introduction
   </div>
-  <p>Lamisi is a 26-year-old entrepreneur living in Tamale. She has a Higher National Diploma in Business Administration, but has been unemployed for several months. She recently completed a training program on entrepreneurship with EQWIP HUBs.</p>
-
-  <p>Lamisi comes from a family of farmers and has lots of experience in animal husbandry. Now, she wants to start a small poultry farm in her family’s yard. However, farming is a male-dominated industry in Ghana, and Lamisi’s family is not very supportive of her ambitions. Though she does not have children, her family thinks that she should choose a more traditional vocation — one that will not interfere with the obligations of motherhood.</p>
-
-  <p>Despite her family’s objections, Lamisi decides to launch her business.</p>
-
+  {{#each intro.Lamisi as |temp|}}
+    <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
+  {{/each}}
 {{/if}}
 
 {{#if isZara}}
   <div class="titleLabel">
     Introduction
   </div>
-  <p>Zara is a 31-year-old entrepreneur and a mother of two young children — a 5-year-old daughter and a 3-year-old son. She lives in Tamale with her husband, Musa, who is a bank teller. She has a background in Marketing and Finance, but currently works from home as a professional makeup artist.</p>
-
-  <p>Zara wants to open a new beauty bar that offers makeup services and provides vocational training for young girls in her community. However, this will require significant capital to pay for supplies and to rent a space for her classes.</p>
-
-  <p>She has just started an entrepreneurship training program with EQWIP HUBs, to better prepare herself to launch her business.</p>
+  {{#each intro.Zara as |temp|}}
+    <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
+  {{/each}}
 {{/if}}
 
 {{#if isKojo}}
   <div class="titleLabel">
     Introduction
   </div>
-
-  <p>Kojo is a 22-year-old entrepreneur, born and raised in Accra. He has a Higher National Diploma in Accounting, but is currently unemployed.</p>
-
-  <p>Inspired by his passion for the environment, and by the increasing popularity of smartphones around Accra, Kojo has come up with a new idea: he will to build a mobile application that allows small business owners to schedule a pickup of their plastic waste, which will then be transported to a recycling and processing plant outside of the city. Upon delivery, the small business will receive a mobile money transfer, depending on the weight of each load. The app will be called <i>Recycle Accra!</i>.</p>
-
-   <p>However, developing this business won't be easy. Though Kojo is tech-savvy and has lots of experience with computers, he has never built a fully functioning mobile application before.</p>
-
+  {{#each intro.Kojo as |temp|}}
+    <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
+  {{/each}}
 {{/if}}

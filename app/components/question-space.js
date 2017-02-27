@@ -487,7 +487,7 @@ export default Ember.Component.extend({
         ]
       },
       5: {
-        questionText: "Kojo is ready to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
+        questionText: "Kojo is reaady to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
         answerOptions: [
           {
             text: "<b>Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (₵80 per week).</b>",
@@ -888,7 +888,7 @@ export default Ember.Component.extend({
       },
       // esoko
       8: {
-       questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and more. Esoko just opened a branch in Tamale, he explains.<br><br> This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
+       questionText: "One of the traders in Lamisi’s Susu circle tells her about Esoko — a mobile agribusiness tool that connects smallholder farmers with businesses, governments, and NGOs. Farmers can sign up using their cell phone to access key information about market prices, weather forecasts, agronomic tips, crop calendars, market trends, and  more. Esoko just opened a branch in Tamale, he explains.<br><br> This sounds like a great opportunity! Unfortunately, Esoko is designed to work most efficiently with smartphones — Lamisi only has a ‘yam’.",
        answerOptions: [
          {
            text: "<b>Buy a cell phone and data package, and sign up for Esoko!  (₵500 for a new phone, plus ₵20/month for data).</b>",
@@ -967,7 +967,7 @@ export default Ember.Component.extend({
             }
           },
           {
-            text: "<b>Book a day off, head to the EQWIP HUBs computer lab downtown, and put together a social media campaign to promote the new brand.</b> <br><br>Lamisi’s sister is willing to take care of the chores around the farm while she is gone.",
+            text: "<b>Book a day off, head to the EQWIP  HUBs computer lab downtown, and put together a social media campaign to promote the new brand.</b> <br><br>Lamisi’s sister is willing to take care of the chores around the farm while she is gone.",
             resultText: "With the support of EQWIP volunteers and staff, Lamisi creates a basic website for her business and adds it to online business directories throughout Tamale. She also launches a Facebook page, and spreads word of her business on WhatsApp.<br><br> She has to purchase a bigger data package to maintain her social media accounts (₵35 month), but the social media campaign seem to work! Within a few weeks, her profits begin to rise. Not everyone who drops by purchases from her — the prices are too high, they say — but the farm has never been busier.",
             impact: {
               assetText: 'a website'
@@ -1098,6 +1098,9 @@ export default Ember.Component.extend({
         this.get('applyIncome')(impact)
       }
 
+      var nextMonth = this.get('month') + 1
+      this.set('month', nextMonth)
+
       if (this.get('month') > 12) {
         this.get('endGame')()
       }
@@ -1122,19 +1125,19 @@ export default Ember.Component.extend({
       this.set('currentModalText', 'Susu collection is a traditional form of banking that has been adapted to provide informal credit and savings opportunities to those who do not have access to the formal banking sector.<br><br> Over the course of a month, groups of 3 to 6 ‘traders’ make small, daily cash deposits to a local Susu collector, who typically sets up shop in the marketplace (‘susu’ means ‘small small’ in the Akan language). At the end of each month, one of the contributors is given the accumulated sum, minus a small fee taken by the collector. In other words, a Susu collector acts as a type of rotating savings and credit service, in which each contributor is given access to a cheap loan at least twice per year.<br><br> Unlike formal banks, Susu collectors are flexible, do not require paperwork, and do not charge transaction fees or interest. However, the rotating nature of Susu collection means that each member has to wait until their turn to access a loan.<br><br> There are an estimated 4,000 Susu collectors in Ghana, each serving between 400 and 1,500 customers daily.<br><br>')
     } else if (whichModal == 'guinea') {
       this.set('currentModalText',
-               'Guinea fowl are a species of bird indigenous to Africa. Lean, nutritious, and rich in fatty acids, guinea fowl is an extremely popular bird in Ghana, and a favorite at roadside barbecue stands and upscale restaurants. Raising guinea fowl is also a relatively low-maintenance gig, when it comes to livestock. The average guinea fowl also produces 55 to 100 eggs per year.'
+               'Guinea fowl are a species of bird indigenous to Africa. Lean, nutritious, and rich in fatty acids, guinea fowl is an extremely popular bird in Ghana, and a favorite at roadside barbecue stands and upscale restaurants. Raising guinea fowl is also a relatively low-maintenance gig, when it comes to livestock. <br/><br/> The average guinea fowl also produces 55 to 100 eggs per year.'
               )
     } else if (whichModal == 'eqwip') {
       this.set('currentModalText',
-               'EQWIP HUBs offers free entrepreneurship training courses to local youth. These courses are focused on providing youth with opportunities to develop an innovative mindset to approach business idea generation, and on building practical skills with which they can develop, evaluate, and test these ideas. The courses will also enable participants to develop market-relevant skills, build networks, and access technology.'
+               'EQWIP HUBs offers free entrepreneurship training courses to local youth.<br/><br/> These courses are focused on providing youth with opportunities to develop an innovative mindset to approach business idea generation, and on building practical skills with which they can develop, evaluate, and test these ideas. The courses will also enable participants to develop market-relevant skills, build networks, and access technology.'
               )
     } else if (whichModal == 'invest') {
       this.set('currentModalText',
-               '<a target="_blank" href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> Read more about the recent DKM Microfinance Company scandal in Ghana</a>'
+               'Read about the recent DKM Microfinance Company scandal in Ghana <a target="_blank" href="http://www.ghanaweb.com/GhanaHomePage/business/DKM-customers-threaten-demo-over-non-payment-of-claims-490980"> here </a>'
               )
     } else if (whichModal == 'computer') {
       this.set('currentModalText',
-               'In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in the Global South.'
+               'In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in low and middle income countries.'
               )
     } else if (whichModal == 'travel') {
       this.set('currentModalText',
@@ -1147,14 +1150,50 @@ export default Ember.Component.extend({
                "NORSAAC is an empowerment for change organization committed to women and young people in Ghana’s Northern Region."
     )} else if (whichModal == 'service') {
       this.set('currentModalText',
-               "Ghanaian students who graduate from accredited tertiary institutions are required by law to do a one-year national service to the country. Graduates are posted to various sectors as service personnel, and provided with a monthly stipend of ₵350. The National Service Secretariat (NSS) is the Government of Ghana agency mandated to formulate policies and structures for national service."
+               "Ghanaian students who graduate from accredited tertiary institutions are required by law to do a one-year national service to the country. Graduates are posted to various sectors as service personnel, and provided with a monthly stipend of ₵350.<br/><br/> The National Service Secretariat (NSS) is the Government of Ghana agency mandated to formulate policies and structures for national service."
     )} else if (whichModal == 'motor') {
       this.set('currentModalText',
-               "A Motorking is a motorized tricycle with a back carriage for transporting goods."
+               "A motorized tricycle with a back carriage for transporting goods."
     )} else if (whichModal == 'goro') {
       this.set('currentModalText',
-               "<a href='http://3news.com/goro-boys-keep-frustrating-applicants-at-passport-office/' target='_blank'>Learn more</a>"
-              )} else {
+               "<a href='http://3news.com/goro-boys-keep-frustrating-applicants-at-passport-office/' target='_blank'>Learn more about Goro Boys here.</a>"
+    )} else if(whichModal == 'andMore'){
+      this.set('currentModalText',
+        "This information is pushed out to farmers via SMS messaging, or they can speak directly over the phone with agents ready to offer expert advice. <br/><br/> For example, if the price of eggs across the country rises, farmers will be sent a notice of the change. If it seems like your birds are not as healthy as they ought to be, you can reach out to Esoko for advice on improving your feed."
+    )} else if(whichModal == 'yam'){
+      this.set('currentModalText',
+        "A brick; a basic cellphone without internet access or a camera."
+    )} else if(whichModal == 'tuaZaafi'){
+      this.set('currentModalText',
+        "A popular dish in Northern Ghana consisting primarily of cooked maize dough plus a little dried  cassava dough and water."
+    )} else if(whichModal == 'creditProblem'){
+      this.set('currentModalText',
+        "In many lower-middle income countries, women face a number of major obstacles to entrepreneurship. These include not only limited access to the formal sector of financial products, but also the pressure to prioritize household and family responsibilities over education, systemic discrimination and gender-based cultural norms and practices that limit women's ability to access training, services, and support, and a vulnerability to gender-based violence."
+    )} else if(whichModal == 'offerBribe'){
+      this.set('currentModalText',
+        "<a href='http://www.business-anti-corruption.com/country-profiles/ghana' target='_blank'> Ghana's police force is plagued by a relatively high level of corruption:</a> extortion and bribery are widespread among the ranks of officers; and officers have been known to set up illegal checkpoints, and carrying out arrests as a means to extort irregular payments from citizens or from business associates of the detained"
+    )} else if(whichModal == 'bootCamp'){
+      this.set('currentModalText',
+        "Boot camps, which are <a href='http://www.macleans.ca/work/jobs/how-coding-boot-camps-are-filling-the-talent-gap/' target='_blank'>‘an accelerated launch pad into a career’</a> in web development and design, are taking off in Canada and around the world."
+    )} else if(whichModal == 'codeSchool'){
+      this.set('currentModalText',
+        "<a href='http://thecodeschool.net/' target='_blank'>Visit The Code School website here</a>"
+    )} else if(whichModal == 'floodAccra'){
+      this.set('currentModalText',
+        "Ghana has for two decades been one of Africa’s fastest-growing economies. The country’s infrastructure, however, has not been able to keep up with its growth. This has led to a major problem with trash in major cities. In recent years, the accumulation of improperly disposed plastic bags in Accra has clogged up and damaged municipal drainage systems, causing major floods, <a href='https://www.wsj.com/articles/ghanas-growth-spurs-uncontrollable-trash-1434928945' target='_blank'>some of which have been deadly.</a>"
+    )} else if(whichModal == 'eqwipHubNetwork'){
+      this.set('currentModalText',
+        "A solid network is an essential asset for young entrepreneurs. That’s why participants at each HUB are introduced to group of local leaders — including private and public sector representatives, established entrepreneurs, and like-minded civil society organization — dedicated to identifying opportunities, and providing mentorship and coaching to budding entrepreneurs. <br/><br/>Participants in the HUB Network will benefit greatly from increased information about the market, better access to capital and local labour markets, and an expanded network of skilled and highly motivated youth."
+    )} else if(whichModal == 'launchTraining'){
+      this.set('currentModalText',
+        "She has designed a 2-week training course for young women (₵500 per person), and will also offer one-day introductory lessons for ₵55."
+    )} else if(whichModal == 'ewipHubCLab'){
+      this.set('currentModalText',
+        "In addition to offering training programs on digital literacy, EQWIP HUBs also provides participants with free access to computers and other information technology. By improving access to technology, EQWIP HUBs seeks to foster innovation and create a more sustainable livelihood for young entrepreneurs in the Global South."
+    )} else if(whichModal == 'crunchesNumber'){
+      this.set('currentModalText',
+        "Lamisi expects her flock to eventually produce about one crate of eggs per day, which she can sell for about ₵14. She can also sell her older birds for ₵25 each."
+    )} else {
       this.set('currentModalText', '')
     }
   },
