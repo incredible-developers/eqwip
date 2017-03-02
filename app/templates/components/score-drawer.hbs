@@ -171,7 +171,7 @@
         ₵{{cash}}
       </div>
     </div>
-    <div class="row align-middle">
+    <div class="row align-middle u-textSmall">
       <div class="columns totalsList-label clickable" {{action 'renderDialog' 'monthlyIncome'}}>
         Monthly Profit
       </div>
@@ -179,7 +179,7 @@
         ₵{{income}}
       </div>
     </div>
-    <div class="row align-middle">
+    <div class="row align-middle u-textSmall">
       <div class="columns totalsList-label clickable" {{action 'renderDialog' 'debt'}}>
         Debt
       </div>
@@ -187,7 +187,7 @@
         ₵{{debt}}
       </div>
     </div>
-    <div class="row align-middle">
+    <div class="row align-middle u-textSmall">
       <div class="columns totalsList-label clickable">
         Debt Payments
       </div>
@@ -198,22 +198,6 @@
   </div>
 </div>
 <div class="sidebar-section sidebar-section--gauges">
-  <div class="row">
-    <div class="columns">
-      <div class="row">
-        <div class="columns totalsList-label clickable" {{action 'renderDialog' 'resilience'}}>
-          Resilience
-        </div>
-        <div class="columns totalsList-total">
-          {{resilience}}
-        </div>
-      </div>
-      <div class="sidebar-gauge show-for-medium-up">
-        {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
-        {{/progress-indicator}}
-      </div>
-    </div>
-  </div>
   <div class="row">
     <div class="columns">
       <div class="row">
@@ -228,6 +212,22 @@
         {{#flat-indicator value=assets min=assetsMin max=assetsMax}}
           <div class="indicator-bar"></div>
         {{/flat-indicator}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="row">
+        <div class="columns totalsList-label clickable" {{action 'renderDialog' 'resilience'}}>
+          Resilience
+        </div>
+        <div class="columns totalsList-total">
+          {{resilience}}
+        </div>
+      </div>
+      <div class="sidebar-gauge show-for-medium-up">
+        {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
+        {{/progress-indicator}}
       </div>
     </div>
   </div>

@@ -1,12 +1,37 @@
+{{#if isShowingGetInvolved}}
+  {{#modal-dialog close='howToGetInvolved' translucentOverlay=true targetAttachment='none' container-class='centered-scrolling-container card flexBlock flexVertical modalShit modalFadeIn' overlay-class='centered-scrolling-overlay' wrapper-class='centered-scrolling-wrapper'}}
+    <p>Put your skills and experience into action and join Canada World Youth and Youth Challenge International as a volunteer on our innovative youth development project, EQWIP HUBs.</p>
+    <p>Located in six countries around the world, EQWIP HUBs are dynamic learning spaces where local young women and men benefit from employment and entrepreneurship training and youth-to-youth mentorship, and find the support they need to help propel themselves, their communities, and the world, forward.</p>
+    <p>Our volunteers live and work in Bolivia, Ghana, Indonesia, Peru, Senegal or Tanzania on 3 or 12 month placements. Once they arrive, they work side-by-side with EQWIP HUBs staff and partners to offer the specialized training and support needed to help local youth launch a career, or business.</p>
+    <p>Together, we can propel 100,000 #YouthForward by 2020!</p>
+    <a href="http://eqwiphubs.org/current-opportunities/" target="_blank">Explore current placements and complete your application online.</a>
+      <div class="button button--blue" {{action 'howToGetInvolved'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
+{{#if isShowingTakeSurvey}}
+  {{#modal-dialog close='takeOurSurvey' translucentOverlay=true renderInPlace=true container-class="card flexBlock flexVertical modalShit modalFadeIn"}}
+      <p>Help us Improve !!</p>
+      <p> With a Short Survey </p>
+      <div class="row">
+        <div class="columns">
+          <a class="button button--blue" target="_blank" href="https://docs.google.com/forms/d/1-8uEXmsrsa7oYi4ATBJFz8hibe5eBz4ShIeze7BPVE4/viewform">Yes</a>
+          <a class="button button--green" {{action 'takeOurSurvey'}}>No, Continue</a>
+        </div>
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
 <div class="flexBlock flexBlock--noGrow flexBlock--noShrink u-padding">
   <div class="row">
     <div class="columns">
       <h2 class="u-marginBottomNone">{{character}} has been in business for an entire year! Let’s take a closer look at how things are going.</h2>
     </div>
     <div class="columns u-textRight">
-      <div class="button button--blue">
-        Play Again
-      </div>
+      <a class="button button--blue" href="/">Play Again</a>
+      <a class="button button--green" {{action 'howToGetInvolved'}}>How to Get Involved</a>
     </div>
   </div>
 </div>

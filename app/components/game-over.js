@@ -4,6 +4,17 @@ export default Ember.Component.extend({
   character: null,
   assetsArray: [],
   classNames: ["flexBlock flexVertical"],
+  isShowingGetInvolved: false,
+  isShowingTakeSurvey: true,
+
+  actions: {
+    howToGetInvolved: function(){
+      this.toggleProperty('isShowingGetInvolved')
+    },
+    takeOurSurvey: function(){
+      this.toggleProperty('isShowingTakeSurvey')
+    }
+  },
 
   environmentText: Ember.computed('character', function() {
     if (this.get('environmentLow')) {
