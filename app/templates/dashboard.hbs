@@ -1,3 +1,96 @@
+{{#if isShowingModal}}
+  {{#modal-dialog close='renderDialog' translucentOverlay=true targetAttachment='none' container-class='centered-scrolling-container card flexBlock flexVertical modalShit modalFadeIn' overlay-class='centered-scrolling-overlay' wrapper-class='centered-scrolling-wrapper'}}  
+      <p>
+      {{{currentModalText}}}
+      </p>
+      <div class="button button--blue" {{action 'renderDialog'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
+{{#if isShowingAboutGhana}}
+  {{#modal-dialog close='aboutGhana' translucentOverlay=true targetAttachment='none' container-class='centered-scrolling-container card flexBlock flexVertical modalShit modalFadeIn' overlay-class='centered-scrolling-overlay' wrapper-class='centered-scrolling-wrapper'}}
+    <p class="u-colorBlueDark u-textLarger">Ghana</p>
+
+    <p>Ghana is a multicultural nation of some 27 million people, located along the Gulf of Guinea and the Atlantic Ocean in West Africa. Over the past two decades, Ghana's economy has grown to become one of the strongest and most diversified in Africa. This growth has significantly reduced the level of poverty in the region — according to the World Bank, the poverty level has dropped from 51 percent in 1991 to its current level of about 24 percent.</p>
+
+    <p>Young people between the ages of 15 and 24 make up close to 20 percent of the Ghana population. Though Ghana’s youth are attaining higher levels of education than ever before, their participation in labor markets has been in decline. It is estimated that the youth unemployment rate is 14.9 percent.</p>
+
+    <p class="u-colorBlueDark u-textLarger">Tamale</p>
+
+    <p>Tamale is the third largest city in Ghana, and the capital of the country’s Northern Region. Historically formed around an important trade crossroad, Tamale has in recent years experienced a high degree development, which has produced a new stadium and an international airport.</p>
+
+    <p>In Tamale, the informal business sector is by far the largest employer. Indeed, self-employment and small business entrepreneurship is very popular, and on the rise, especially among young women. Other important sources of employment in Tamale include agriculture, services and sales, crafts, the nonprofit sector, and the government.</p>
+
+    <p class="u-colorBlueDark u-textLarger">Accra</p>
+
+    <p>A sprawling metropolis of approximately 2,291,352 residents, Accra is the capital of Ghana, and its administrative, economic, and educational center. Accra’s primary economic activities are financial and government services, communications, construction, transport, and agriculture. The city is also home to over 70% of the country’s manufacturing capacity.</p>
+
+    <p>Though Accra is one of the wealthiest and most modern cities on the African continent, it is also beset by problems that include congestion, pollution, and poverty. Youth unemployment is a major problem in the capital, with an estimated 30% unemployment rate for people between the ages of 15 and 24.</p>
+
+    <p class="u-colorBlueDark u-textLarger">Northern Ghana</p>
+
+    <p>In general, the Northern Region of Ghana is less populated and urbanized compared the most parts of the country, and has also experienced lesser rate of growth and prosperity. Youth between the ages of 20 and 35 in this region make up about 25% of the total population. Among youth in the Northern Region, there currently exists lower levels of education and literacy compared to the general population, and a significant gap in these levels between men and women.</p>
+      <div class="button button--blue" {{action 'aboutGhana'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
+
+{{#if isShowingHowToPlayModal}}
+  {{#modal-dialog close='howToPlayDialog' translucentOverlay=true targetAttachment='none' container-class='centered-scrolling-container card flexBlock flexVertical modalShit modalFadeIn' overlay-class='centered-scrolling-overlay' wrapper-class='centered-scrolling-wrapper'}}
+      <p>
+        As a young Ghanaian, your goal is to build a business that will be both profitable and sustainable. Over the course 12 months, you will face a series of challenges, each of which will require tough decisions that will impact your business and your personal life. It won’t be easy, but as a driven and passionate entrepreneur, you’re up for the task, and down for the adventure!
+      </p>
+      <p>
+        First, choose your character. Each character is has a different background, and will face a unique set of challenges as they seek to build a sustainable business over the course of a single year.
+      </p>
+      <p>
+        Each month, you will be presented with a new scenario, and given 2 or 3 courses of action to choose from. The decision you make will impact a set of ‘indicators’, which will be located on the left-side of your screen. These include the following:
+      </p>
+      <p>
+        (ICON) Cash - How much cash you have on hand. Ghana’s official currency is the Ghana Cedi (₵), which is worth about ⅓ of a Canadian dollar
+        <br/>
+        (ICON) Debt: How much money you owe family, friends and creditors. Monthly payments for this debt will come out of your cash each month.
+        <br/>
+        Debt Payments: The amount put towards your debt each month.
+        <br/>
+        (ICON) Monthly Profit: The amount of profit — revenue minus expenses — that your business is making each month. The monthly profit will be added to your cash at the beginning of each month.
+        <br/>
+        (ICON) Assets: Non-financial assets, including equipment, stored goods, electronics, etc.
+        <br/>
+        (ICON) Resilience: Your ability to adapt to changing circumstances and to overcome unexpected challenges. 
+        <br/>
+        (ICON) Environmental Impact : Your impact on the natural environment.
+        <br/>
+      </p>
+      <p>
+        Make sure to monitor these indicators, and change your decisions accordingly. You can click on each of the indicators at any time during the simulation for more information.  At the end of the game, you will get a report on your progress.  
+      </p>
+      <p>
+        You are ready to start the game!  Choose your character, and get EQWIP’d!
+      </p>
+      <div class="button button--blue" {{action 'howToPlayDialog'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
+{{#if isShowingAboutUs}}
+  {{#modal-dialog close='aboutUs' translucentOverlay=true targetAttachment='none' container-class='centered-scrolling-container card flexBlock flexVertical modalShit modalFadeIn' overlay-class='centered-scrolling-overlay' wrapper-class='centered-scrolling-wrapper'}}
+    <p>EQWIP’d: Ghana was developed in partnership by the Alberta Council for Global Cooperation and EQWIP HUBs — an initiative powered by Canada World Youth (CWY) and Youth Challenge International.</p>
+
+    <p>The Alberta Council for Global Cooperation (ACGC) is a coalition of voluntary sector organizations located in Alberta, working locally and globally to achieve sustainable human development. We are committed to international cooperation that is people-centred, democratic, just, inclusive, and respectful of the environment and indigenous cultures. We work towards ending poverty and achieving a peaceful and healthy world, with dignity and full participation for all.</p>
+
+    <p>EQWIP HUBs are dynamic innovation spaces spanning 17 urban centers across Bolivia, Ghana, Indonesia, Peru, Senegal, and Tanzania. Buzzing with collaborative energy, each EQWIP HUB provides a unique platform for young minds – especially women – to build market-relevant skills, gain access to the mentorship, networks, technology and capital to prepare them for meaningful employment, or to launch a new wave of enterprise. Qualified and passionate young Canadians will work in specialized teams to support each EQWIP HUB, fuelling cross-cultural innovation, gender responsive programming and peer-to-peer mentorship. </p>
+      <div class="button button--blue" {{action 'aboutUs'}}>
+        Got it
+      </div>
+  {{/modal-dialog}}
+{{/if}}
+
 <div class="flexBlock">
   <div class="dashboard">
     <div class="fadeUp">
@@ -21,9 +114,16 @@
           <p>
             EQWIP’d: Ghana will simulate the experience of a young entrepreneur in Ghana, as he or she tries to develop a start-up enterprise into a sustainable and profitable business.           
           </p>
-          {{#link-to 'character-select'}}
-            <a href="#" class="button button--green">Start New Game</a>
+          <a class="button button--green" {{action "howToPlayDialog"}}>How to play</a>
+          {{#link-to 'character-select' class="button button--blue"}}
+            Start New Game
           {{/link-to}}
+          <a class="button button--green" {{action "aboutGhana"}}>About Ghana</a>
+        </div>
+      </div>
+      <div class="row align-center u-marginTopLargest">
+        <div class="small-12 medium-6 columns u-textCenter u-colorBlue totalsList-label clickable">
+          <a {{action "aboutUs"}}> About </a>
         </div>
       </div>
     </div>
