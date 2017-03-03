@@ -5,14 +5,10 @@ export default Ember.Component.extend({
   assetsArray: [],
   classNames: ["flexBlock flexVertical"],
   isShowingGetInvolved: false,
-  isShowingTakeSurvey: true,
 
   actions: {
     howToGetInvolved: function(){
       this.toggleProperty('isShowingGetInvolved')
-    },
-    takeOurSurvey: function(){
-      this.toggleProperty('isShowingTakeSurvey')
     }
   },
 

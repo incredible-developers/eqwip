@@ -171,27 +171,27 @@
         ₵{{cash}}
       </div>
     </div>
-    <div class="row align-middle u-textSmall">
-      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'monthlyIncome'}}>
+    <div class="row align-middle">
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall" {{action 'renderDialog' 'monthlyIncome'}}>
         Monthly Profit
       </div>
-      <div class="columns totalsList-total">
+      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
         ₵{{income}}
       </div>
     </div>
-    <div class="row align-middle u-textSmall">
-      <div class="columns totalsList-label clickable" {{action 'renderDialog' 'debt'}}>
+    <div class="row align-middle">
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall" {{action 'renderDialog' 'debt'}}>
         Debt
       </div>
-      <div class="columns totalsList-total">
+      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
         ₵{{debt}}
       </div>
     </div>
-    <div class="row align-middle u-textSmall">
-      <div class="columns totalsList-label clickable">
+    <div class="row align-middle">
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
         Debt Payments
       </div>
-      <div class="columns totalsList-total">
+      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
         ₵{{debtPayments}}
       </div>
     </div>
@@ -203,9 +203,6 @@
       <div class="row">
         <div class="columns totalsList-label clickable"  {{action 'renderDialog' 'assets'}}>
           Assets
-        </div>
-        <div class="columns totalsList-total">
-          {{assets}}
         </div>
       </div>
       <div class="sidebar-gauge show-for-medium-up">
@@ -221,9 +218,6 @@
         <div class="columns totalsList-label clickable" {{action 'renderDialog' 'resilience'}}>
           Resilience
         </div>
-        <div class="columns totalsList-total">
-          {{resilience}}
-        </div>
       </div>
       <div class="sidebar-gauge show-for-medium-up">
         {{#progress-indicator value=resilience gauge-id='resilience-gauge' min=resilienceMin max=resilienceMax}}
@@ -236,9 +230,6 @@
       <div class="row">
         <div class="columns totalsList-label clickable" {{action 'renderDialog' 'environment'}}>
           Environmental Impact
-        </div>
-        <div class="columns totalsList-total">
-          {{environment}}
         </div>
       </div>
       <div class="sidebar-gauge show-for-medium-up u-borderBottomNone">

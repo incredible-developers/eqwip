@@ -22,6 +22,7 @@ export default Ember.Component.extend({
   madeTheDeal: null,
   rebranded: null,
   hasSusu: null,
+  bootcamp: null,
   wentToAccra: null,
 
   currentQuestion: Ember.computed('character', 'month', 'followUpQuestion', function() {
@@ -437,50 +438,50 @@ export default Ember.Component.extend({
       4: {
         dependsOn: 'bootcamp',
         alternate: {
-          questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> A number of Kojo’s clients request specialized trash bins to help them keep the plastics separate from other trash. Unfortunately, though RWS does have specialized bins, they are not willing to provide them to Kojo’s clients during the pilot stage of the project. They will, however, offer to sell and deliver the bins to Kojo’s clients for ₵400.",
+          questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at <i>The Code School,</i> gets to work on the app. He runs into very few problems building the basic infrastructure for the application, but has trouble devloping the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the app is ready to be piloted.<br><br>However, during the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo must hire a Motorking driver to pick up the missed bins, and reimburse his clients out of pocket (₵70).",
           answerOptions: [
             {
-              text: "<b>Fork over the money.</b> <br><br>Kojo is willing to do what it takes to avoid issues during these early stages of the project.",
-              resultText: "This was not a cheap decision to make, but Kojo’s clients seem happy and eager to get started.",
+              text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b>",
+              resultText: "After a few all-nighters and extensive testing, Kojo thinks that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
               impact: {
-                cash: -400,
+                cash: -70,
                 income: 400,
-                resilience: 1,
-                environment: 1,
-                assets: 2
+                assets: 1
               }
             },
             {
-              text: "<b>Promise the clients that specialized bins will be provided once the pilot is complete. Request they do their best to properly sort and label their trash in the meantime.</b>",
-              resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refuse to collect the plastic waste from two of the supermarket locations, because it is mixed with organic waste and other forms of trash.<br><br> In order to keep the clients on board and happy, Kojo must reimburse these two clients (₵50), and purchase each of them a specialized bin from RWS (₵150).",
+              text: "<b>Hire an expert developer to work out the app’s kinks, and to make sure that there won’t be more problems in the future (₵400).</b>",
+              resultText: "Kojo learned a lot during the bootcamp, but he is still a beginner, in the big scheme of things. Though he built the majority of the application’s code himself, there is always more he can learn from an expert.<br><br> The developer Kojo hires fixes the application’s GIS, and explains to Kojo exactly what went wrong. Should be smooth sailing from here.",
               impact: {
-                cash: -200,
+                cash: -470,
                 income: 400,
-                resilience: -1,
-                environment: -1,
+                resilience: 2,
                 assets: 1
               }
             },
           ]
         },
-        questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at <i>The Code School,</i> gets to work on the app. He runs into very few problems building the basic infrastructure for the application, but has trouble devloping the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the app is ready to be piloted.<br><br>However, during the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo must hire a Motorking driver to pick up the missed bins, and reimburse his clients out of pocket (₵70).",
+        questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> A number of Kojo’s clients request specialized trash bins to help them keep the plastics separate from other trash. Unfortunately, though RWS does have specialized bins, they are not willing to provide them to Kojo’s clients during the pilot stage of the project. They will, however, offer to sell and deliver the bins to Kojo’s clients for ₵400.",
         answerOptions: [
           {
-            text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b>",
-            resultText: "After a few all-nighters and extensive testing, Kojo thinks that the app is fixed, though he remains somewhat nervous. The business is still in a stage of infancy, and another major mistake could put the whole enterprise at risk.",
+            text: "<b>Fork over the money.</b> <br><br>Kojo is willing to do what it takes to avoid issues during these early stages of the project.",
+            resultText: "This was not a cheap decision to make, but Kojo’s clients seem happy and eager to get started.",
             impact: {
-              cash: -70,
+              cash: -400,
               income: 400,
-              assets: 1
+              resilience: 1,
+              environment: 1,
+              assets: 2
             }
           },
           {
-            text: "<b>Hire an expert developer to work out the app’s kinks, and to make sure that there won’t be more problems in the future (₵400).</b>",
-            resultText: "Kojo learned a lot during the bootcamp, but he is still a beginner, in the big scheme of things. Though he built the majority of the application’s code himself, there is always more he can learn from an expert.<br><br> The developer Kojo hires fixes the application’s GIS, and explains to Kojo exactly what went wrong. Should be smooth sailing from here.",
+            text: "<b>Promise the clients that specialized bins will be provided once the pilot is complete. Request they do their best to properly sort and label their trash in the meantime.</b>",
+            resultText: "Turns out that the concerns raised by Kojo’s clients were valid. During the second week of the pilot, the RWS trucks refuse to collect the plastic waste from two of the supermarket locations, because it is mixed with organic waste and other forms of trash.<br><br> In order to keep the clients on board and happy, Kojo must reimburse these two clients (₵50), and purchase each of them a specialized bin from RWS (₵150).",
             impact: {
-              cash: -470,
+              cash: -200,
               income: 400,
-              resilience: 2,
+              resilience: -1,
+              environment: -1,
               assets: 1
             }
           },
@@ -691,6 +692,7 @@ export default Ember.Component.extend({
             resultText: null,
             impact: {
               income: 0,
+              cash: -250,
               assetText: "a well built pen"
             }
           },

@@ -11,18 +11,6 @@
   {{/modal-dialog}}
 {{/if}}
 
-{{#if isShowingTakeSurvey}}
-  {{#modal-dialog close='takeOurSurvey' translucentOverlay=true renderInPlace=true container-class="card flexBlock flexVertical modalShit modalFadeIn"}}
-      <p>Help us Improve !!</p>
-      <p> With a Short Survey </p>
-      <div class="row">
-        <div class="columns">
-          <a class="button button--blue" target="_blank" href="https://docs.google.com/forms/d/1-8uEXmsrsa7oYi4ATBJFz8hibe5eBz4ShIeze7BPVE4/viewform">Yes</a>
-          <a class="button button--green" {{action 'takeOurSurvey'}}>No, Continue</a>
-        </div>
-      </div>
-  {{/modal-dialog}}
-{{/if}}
 
 <div class="flexBlock flexBlock--noGrow flexBlock--noShrink u-padding">
   <div class="row">
@@ -30,8 +18,9 @@
       <h2 class="u-marginBottomNone">{{character}} has been in business for an entire year! Let’s take a closer look at how things are going.</h2>
     </div>
     <div class="columns u-textRight">
-      <a class="button button--blue" href="/">Play Again</a>
-      <a class="button button--green" {{action 'howToGetInvolved'}}>How to Get Involved</a>
+      <a class="button button--green" href="/">Play Again</a>
+      <a class="button button--blue" {{action 'howToGetInvolved'}}>How to Get Involved</a>
+      <a class="button button--green" href="https://docs.google.com/forms/d/1-8uEXmsrsa7oYi4ATBJFz8hibe5eBz4ShIeze7BPVE4/viewform" target="_blank">Take Survey</a>
     </div>
   </div>
 </div>
