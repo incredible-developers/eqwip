@@ -11,7 +11,6 @@ export default Ember.Component.extend({
   isKojo: Ember.computed('character', function() {
     return this.get('character') === 'Kojo';
   }),
-  custom: 'cool',
   intro : {
     'Lamisi':[
       'Lamisi is a 26-year-old entrepreneur living in Tamale. She has a Higher National Diploma in Business Administration, but has been unemployed for several months. She recently completed a training program on entrepreneurship with EQWIP  HUBs.',
@@ -28,6 +27,11 @@ export default Ember.Component.extend({
       'Inspired by his passion for the environment, and by the increasing popularity of smartphones around   Accra, Kojo has come up with a new idea: he will to build a mobile application that allows small business owners to schedule a pickup of their plastic waste, which will then be transported to a recycling and processing plant outside of the city. Upon delivery, the small business will receive a mobile money transfer, depending on the weight of each load. The app will be called <i>Recycle Accra!</i>.',
       'However, developing this business won\'t be easy. Though Kojo is tech-savvy and has lots of experience with computers, he has never built a fully functioning mobile application before.'
     ]
+  },
+  introImages:{
+    'Lamisi' : 'Lamisi_Lundy.png',
+    'Zara' : 'Zara_Lundy.png',
+    'Kojo' : 'Kojo_Lundy.png',
   },
 
   actions: {

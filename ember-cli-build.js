@@ -9,6 +9,9 @@ module.exports = function(defaults) {
       'modernizr': true,
       'fastclick': true,
       'foundationJs': 'all'
+    },
+    'fingerprint': {
+      'exclude': ['images'],
     }
   });
 

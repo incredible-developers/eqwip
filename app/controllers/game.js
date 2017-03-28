@@ -20,6 +20,11 @@ export default Ember.Controller.extend({
   environment: 0,
   assetsArray: [],
 
+  progressBarWidth : Ember.computed('month',function() {
+     return this.get('month')*(100/12)
+    }
+  ),
+
   actions: {
     answerQuestion(impact) {
       this.setImpact(impact);

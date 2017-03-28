@@ -30,12 +30,22 @@
       <div class="flexBlock flexVertical">
         <div class="flexBlock flexBlock--noGrow flexBlock--noShrink header">
           <div class="flexContent">
-            <h3 class="u-marginBottomNone u-textRight">
-              From Startup to Sustainability
+            <img src="/assets/images/eqwip-short.png" class="logo-sidebar-banner"/>
+            <h3 class="u-marginBottomNone u-textRight u-colorBlue u-textRegular">
+              <!--
+              from <span class="u-colorGlue"> Start Up </span> to <span class="u-colorGlue"> Sustainability </span>
+              -->
+              
             </h3>
           </div>
 
         </div>
+        <div class="progress">
+            <div class="progress-bar"  style="width: {{progressBarWidth}}%">
+              {{month}}/12
+          </div>
+        </div>
+
         <div class="flexBlock">
           <div class="storyContainer">
             {{question-space

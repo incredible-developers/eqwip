@@ -163,6 +163,10 @@ export default Ember.Component.extend({
       this.set('currentDialogText',
                'How much you owe to friends, family, and other creditors.'
               )
+    } else if (dialogType == 'debtPayment') {
+      this.set('currentDialogText',
+               'The amount of cash put towards your debt each month.'
+              )
     }
   },
 

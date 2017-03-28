@@ -163,35 +163,39 @@
 </div>
 <div class="sidebar-section sidebar-section--totals">
   <div class="totalsList">
-    <div class="row align-middle">
+    <div class="row align-middle u-textLarge">
       <div class="columns totalsList-label clickable" {{action 'renderDialog' 'cash'}}>
+        <img class="sidebar-icons" src="/assets/images/icons/CashTransparent2.png"/>
         Cash
       </div>
-      <div class="columns totalsList-total">
+      <div class="columns small-4 totalsList-total">
         ₵{{cash}}
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall" {{action 'renderDialog' 'monthlyIncome'}}>
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller" {{action 'renderDialog' 'monthlyIncome'}}>
+        <img class="sidebar-icons" src="/assets/images/icons/MonthlyProfitTransparent2.png"/>
         Monthly Profit
       </div>
-      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
+      <div class="columns small-4 totalsList-total u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller">
         ₵{{income}}
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall" {{action 'renderDialog' 'debt'}}>
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller" {{action 'renderDialog' 'debt'}}>
+        <img class="sidebar-icons" src="/assets/images/icons/DebtPaymentTransparent2.png"/>
         Debt
       </div>
-      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
+      <div class="columns small-4 totalsList-total u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller">
         ₵{{debt}}
       </div>
     </div>
     <div class="row align-middle">
-      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
+      <div class="columns totalsList-label clickable u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller" {{action 'renderDialog' 'debtPayment'}}>
+        <img class="sidebar-icons" src="/assets/images/icons/MonthlyProfitTransparent2.png"/>
         Debt Payments
       </div>
-      <div class="columns totalsList-total u-textSmaller u-paddingTopSmall u-paddingBottomSmall">
+      <div class="columns small-4 totalsList-total u-textSmaller u-paddingTopSmaller u-paddingBottomSmaller">
         ₵{{debtPayments}}
       </div>
     </div>
@@ -202,6 +206,7 @@
     <div class="columns">
       <div class="row">
         <div class="columns totalsList-label clickable"  {{action 'renderDialog' 'assets'}}>
+          <img class="sidebar-icons" src="/assets/images/icons/KojoLamisiAssetsTransparent2.png"/>
           Assets
         </div>
       </div>
@@ -216,6 +221,7 @@
     <div class="columns">
       <div class="row">
         <div class="columns totalsList-label clickable" {{action 'renderDialog' 'resilience'}}>
+          <img class="sidebar-icons" src="/assets/images/icons/ResilienceTransparent2.png"/>
           Resilience
         </div>
       </div>
@@ -229,6 +235,7 @@
     <div class="columns">
       <div class="row">
         <div class="columns totalsList-label clickable" {{action 'renderDialog' 'environment'}}>
+          <img class="sidebar-icons" src="/assets/images/icons/EnvironmentAllImpactTransparent2.png"/>
           Environmental Impact
         </div>
       </div>

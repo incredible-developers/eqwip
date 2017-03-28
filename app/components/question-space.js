@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   month: null,
   renderingResult: null,
   resultText: null,
+  impactImage: null,
   rejected: null,
   followUpQuestion: null,
   currentModalText: null,
@@ -24,6 +25,11 @@ export default Ember.Component.extend({
   hasSusu: null,
   bootcamp: null,
   wentToAccra: null,
+
+  isZara: Ember.computed('character', function() {
+    return this.get('character') === 'Zara';
+  }),
+  
 
   currentQuestion: Ember.computed('character', 'month', 'followUpQuestion', function() {
     var question = this.get('questions')[this.get('character')][this.get('month')]
@@ -56,6 +62,11 @@ export default Ember.Component.extend({
     }
   ),
 
+  questionImage : Ember.computed('currentQuestion', function() {
+     return this.get('currentQuestion')['questionImage'] || ""
+    }
+  ),
+
   answerOptions: Ember.computed('currentQuestion', function() {
     var options = this.get('currentQuestion')['answerOptions']
     return this.get('currentQuestion')['answerOptions']
@@ -71,6 +82,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Reach out to friends for a loan.</b>",
             resultText: "Zara's long-time friend, Mo, who owns a local catering company, agrees to lend her ₵5000. She promises to repay him, with interest, in installments of ₵550 per month for one year.",
+            impactImage: "Loan_Lundy.png",
             impact: {
               cash: 5000,
               resilience: 2,
@@ -86,6 +98,7 @@ export default Ember.Component.extend({
           {
            text: "<b>Organize a small loan through a Susu collector.</b>",
             resultText: "Zara reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a group of six traders to start a rotating Susu circle. Each member will contribute ₵350 per month. Every six months, a different trader will be given access to the total monthly sum.<br><br> The group of traders agrees to let Zara access the first loan (₵1750). She is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.",
+            impactImage:"Susu_Lundy.png",
             impact: {
               cash: 1750,
               resilience: 3,
@@ -98,6 +111,7 @@ export default Ember.Component.extend({
       },
       2: {
         questionText: "Now that she has funding, Zara needs to rent a location for her beauty bar.",
+        questionImage: "Cityscape_Lundy.png",
         answerOptions: [
           {
             text: "<b>Rent a space in central Tamale.</b> <br><br> It will be easy to attract new clients in the busy city core, and her students will appreciate a central location (₵4200/year).",
@@ -127,6 +141,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Build the website at the EQWIP HUB computer lab.</b> <br><br>It’s a bit of commute, though — an hour and a half each way. Zara will have to shut down the beauty bar for a day or two, and find a sitter while she is away.",
             resultText: "Working closely with a couple of the volunteers at the EQWIP HUB computer lab over the course of two days, Zara is able to set up a basic website, a business email, and a Facebook page. She adds her business to a number of online business directories, and begins advertising her new website on social media.<br><br> By the end of the month, five women have signed up for Zara’s first vocational training course, which is set to begin in May. A slow start, but a start nonetheless.",
+            impactImage: "Hackathon_Lundy.png",
             impact: {
               cash: -150,
               income: -200,
@@ -173,6 +188,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Invest ₵750 in prime time radio ads.</b> <br><br>This amount will purchase Zara a series of day-time messages on <i>Diamond FM</i> and evening messages on <i>NorthStar Radio</i>.",
             resultText: "The ads seem to do the trick! Over the next couple of weeks, new customers trickle in, and Zara manages to book a number of weddings and events for the coming months. Her vocational training courses also receive a considerable bump in sign-ups.<br><br> This successful marketing campaign will increase Zara’s monthly income signficantly.",
+            impactImage: "Radio_Lundy.png",
             impact: {
               cash: 1250,
               income: 300,
@@ -247,6 +263,7 @@ export default Ember.Component.extend({
       },
       8: {
         questionText: "The government announces that it is cracking down on ‘illegal businesses’. The papers claim that officers will be issuing fines to any business that is not properly registered.",
+        questionImage: "Registration_Lundy.png",
         answerOptions: [
           {
             text: "<b>Get the paperwork together, and register!</b> <br><br>To operate legally, Zara will need to apply for a Tax Identification Number (TIN) and register her business as a sole proprietorship (₵55).",
@@ -439,6 +456,7 @@ export default Ember.Component.extend({
         dependsOn: 'bootcamp',
         alternate: {
           questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> Kojo finishes his bootcamp at the end of April, and, with the help of his mentors at <i>The Code School,</i> gets to work on the app. He runs into very few problems building the basic infrastructure for the application, but has trouble devloping the geographic information system (GIS) (i.e. the ‘mapping’ aspect of the app). Eventually, after much testing, the app is ready to be piloted.<br><br>However, during the first week of the pilot, the RWS trucks are twice sent to the wrong location, and are unable to make the pickup. In order to keep the pilot on track, Kojo must hire a Motorking driver to pick up the missed bins, and reimburse his clients out of pocket (₵70).",
+          questionImage: "Motorking_Lundy.png",
           answerOptions: [
             {
               text: "<b>Spend some time at <i>The Code School</i> lab to work out the app’s bugs.</b>",
@@ -462,6 +480,7 @@ export default Ember.Component.extend({
           ]
         },
         questionText: "At last, the mobile application is ready to go! With 10 clients signed up, Kojo expects to generate a monthly revenue of approximately ₵400.<br><br> A number of Kojo’s clients request specialized trash bins to help them keep the plastics separate from other trash. Unfortunately, though RWS does have specialized bins, they are not willing to provide them to Kojo’s clients during the pilot stage of the project. They will, however, offer to sell and deliver the bins to Kojo’s clients for ₵400.",
+        questionImage: "Motorking_Lundy.png",
         answerOptions: [
           {
             text: "<b>Fork over the money.</b> <br><br>Kojo is willing to do what it takes to avoid issues during these early stages of the project.",
@@ -471,7 +490,8 @@ export default Ember.Component.extend({
               income: 400,
               resilience: 1,
               environment: 1,
-              assets: 2
+              assets: 2,
+              debtPayments:-875
             }
           },
           {
@@ -482,13 +502,15 @@ export default Ember.Component.extend({
               income: 400,
               resilience: -1,
               environment: -1,
-              assets: 1
+              assets: 1,
+              debtPayments:-875
             }
           },
         ]
       },
       5: {
         questionText: "Kojo is reaady to expand. After doing some research, he decides to target businesses in Awoshie, a neighborhood on the periphery of Accra that is severely underserviced in terms of both infrastructure and municipal services.<br><br> RWS is interested in expanding the project, but is not willing to provide a door-to-door collection service to a location so far from the processing plant. Kojo’s clients will have to drop their plastic waste at a single collection point closer to the city’s main roadways. Kojo worries that this inconvenience will scare away some of his potential clients.",
+        questionImage: "Cityscape_Lundy.png",
         answerOptions: [
           {
             text: "<b>Hire a Motorking driver to make weekly collections in Awoshie, at least until RWS can be convinced to expand their service area. (₵80 per week).</b>",
@@ -509,6 +531,7 @@ export default Ember.Component.extend({
       },
       6: {
         questionText: "Things seem to be going well as Kojo enters the third and final month of the pilot!<br><br> However, with the quick expansion into Awoshie, Kojo appears to have encroached onto the territory of a private waste disposal enterprise — a competitor with close ties to the municipal government. Within a week, Kojo receives a cease and desist notice. As an unregistered business, it states, he is operating illegally in Awoshie and is subject to a heavy fine. Unwilling to be pushed out of Awoshie, Kojo gets his paperwork together, and heads to the registration office.<br><br> To operate legally, he will need to apply for a Business Operating Permit (₵500). Unfortunately, the registration officer tells Kojo that it will take at least 90 days to review his application.",
+        questionImage:"Registration_Lundy.png",
         answerOptions: [
           {
             text: "<b>Inform the clients in Awoshie that, due to unforeseen circumstances, services will have to be paused for the next three months.</b> <br><br>The last thing Kojo’s project needs right now is legal trouble!",
@@ -555,6 +578,7 @@ export default Ember.Component.extend({
       },
       8: {
         questionText: "Things seem to be back on track. With dozens of clients using the application regularly, RWS is now providing new clients with specialized recycling bins, free of charge.<br><br> Now, Kojo wants to upgrade some of his equipment — a new modem, router, and an external hard drive will go a long way (₵ 250). Before he makes any purchases, though, Kojo receives a phone call from sister. Her three young children are heading back to school next month, and she needs money for their school fees (₵200).",
+        questionImage: "School_Lundy.png",
         answerOptions: [
           {
             text: "<b>Family first. Offer her ₵250 to cover school fees and to buy her children some new school clothes.</b>",
@@ -603,6 +627,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Sign up!</b><br><br>This sounds like a great opportunity for Kojo to meet fellow social entrepreneurs, and to hone his coding skills.",
             resultText: "Though his team does not win the hackathon, Kojo has an excellent time. His team built a prototype that helps connect Ghanaians to affordable health care professionals in their area, and Kojo was able to contribute his GIS digital mapping skills.<br><br> The hackathon also helped Kojo expand his network — throughout the weekend, he forged a close connection with a terrific web designer, who offered her help to improve the look and interface of his app, and deepened his friendship with the app’s main developer, an experienced coder who has promised to help Kojo with any bugs he many have in the future.",
+            impactImage: "Hackathon_Lundy.png",
             impact: {
               cash: -350,
               resilience: 3,
@@ -647,6 +672,7 @@ export default Ember.Component.extend({
             {
               text: "A large waste collection and recycling firm that is partnered with the municipal government offers Kojo ₵50,000 to purchase Recycle Accra!, which they will adapt to their city-wide services. Kojo will retain a 10% stake in the business, and will be kept on as an ‘advisor’.</b>",
               resultText: "Wow! ₵50,000 is <i>a lot</i> of money. Kojo can now pay back his debts, upgrade his tech equipment, and help his family out with some of their expenses.<br><br> Unfortunately, the waste company does not seem interested in giving Kojo much of a say regarding their use of his application. Though officially an ‘advisor’, he suspects that this does not give him very much influence.<br><br> On the other hand, Kojo now has more than enough cash to invest in a new enterprise, if he chooses. Now that he has extensive experience and a solid network, he can easily put together a team of like-minded young entrepreneurs with which to develop new and innovative tech-based social enterprises.",
+              impactImage: "Loan_Lundy.png",
               impact: {
                 cash: 50000,
                 resilience: -3,
@@ -655,6 +681,7 @@ export default Ember.Component.extend({
             {
               text: "<b>An international NGO dedicated to fostering environmental sustainability throughout Ghana offers to partner with Kojo. They offer him ₵5,000 in seed capital to grow and expand Recycle Accra!, and a two-year salaried position (₵1,200/month) as a technology and innovation advisor.</b>",
               resultText: "Kojo is thrilled by this offer. ₵5,000, plus a monthly salary, will provide him with enough cash to service his debts, upgrade his equipment, and invest in expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, as an employee of a major NGO, he will now be able to leverage the support of an impressive and diverse network of professionals to not only expand Recycle Accra!, but also build new and innovative social enterprises.",
+              impactImage: "Loan_Lundy.png",
               impact: {
                 cash: 10000,
                 resilience: 3,
@@ -667,6 +694,7 @@ export default Ember.Component.extend({
           {
             text: "<b>A private waste collection and processings firm that operates nation-wide offers ₵50,000 to purchase Recycle Accra!, and adapt the technology to service their own operations. Kojo will retain a 10% stake in the company, and will stay on board as an ‘advisor’.</b>",
             resultText: "Wow! ₵50,000 is <i>a lot of money</i>. Kojo will be able to pay back his debts, upgrade his tech equipment, and help his family out with some of their expenses.<br><br> Unfortunately, the private waste company does not seem interested in giving Kojo much of a say regarding their use of his application. Though officially an ‘advisor’, he suspects that this does not give him very much influence.<br><br> On the other hand, Kojo now has more than enough cash to invest in a new enterprise. Now that he has extensive experience and a solid network, he can easily put together a team of like-minded young entrepreneurs with which to develop new and innovative tech-based social enterprises.",
+            impactImage: "Loan_Lundy.png",
             impact: {
               cash: 50000,
               resilience: -3,
@@ -675,6 +703,7 @@ export default Ember.Component.extend({
           {
             text: "<b>A small tech incubator offers Kojo ₵10,000 in seed funding in exchange for 20% of Recycle Accra! In addition to seed funding, the incubator will also provide Kojo with the space, support, and mentorship he will need to take the business to the next level.</b>",
             resultText: "Kojo is thrilled by this offer. ₵10,000 provides him with enough cash to service his debts, upgrade his equipment, and invest in further expanding and marketing Recycle Accra!<br><br> Though it was tough to turn down a significantly larger cash offer, Kojo is relieved that he will not have to cede control of the project he worked so hard to build. Indeed, he now has access to an incredible tech lab, an extensive network of fellow entrepreneurs and mentors, and the support of a incubator that wants his business to succeed.",
+            impactImage: "Loan_Lundy.png",
             impact: {
               cash: 10000,
               resilience: 3,
@@ -752,6 +781,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Approach the manager, and offer to be his poultry supplier.</b> <br><br>Lamisi is confident in her product, and believes that risk-taking is the key to growth.",
             resultText: "Though hesitant, the manager offers to give Lamisi a shot — what does he have to lose?<br><br> After sampling her product, he agrees to do business. He offers to purchase a supply of 12 birds a month at a price of ₵25 each. He praises her confidence and initiative. Lamisi also agrees to pay for a veterinarian to assess the health of her birds (₵350), and hires a Motorking driver to make her deliveries once a week (₵40/month).",
+            impactImage: "Loan_Lundy.png",
             impact: {
               cash: -350,
               income: 225,
@@ -797,6 +827,7 @@ export default Ember.Component.extend({
           {
             text: "<b>Organize a small loan through a <i>Susu collector.</i></b>",
             resultText: "Lamisi reaches out to some of her colleagues from the EQWIP HUBs entrepreneurship program, and puts together a small group of six traders to start a rotating Susu circle. Each member will contribute ₵80 per month. Every six m onths, a different trader will be given access to the total monthly sum. The group of traders agrees to let Lamisi access the first loan (₵400).<br><br> Lamisi is relieved to have found a source of cash to invest in her business, and is happy to have established a network of young, like-minded entrepreneurs.<br><br> She spends ₵150 expanding her pen and purchasing additional feed.",
+            impactImage:"Susu_Lundy.png",
             impact: {
               cash: 250,
               resilience: 1,
@@ -811,6 +842,7 @@ export default Ember.Component.extend({
 
       6: {
        questionText: "The government announces that it is cracking down on ‘illegal businesses’. The newspapers claim that inspection officers will be issuing fines to businesses that are not properly registered. ",
+       questionImage: "Registration_Lundy.png",
        answerOptions: [
          {
            text: "<b>Get the paperwork together, and register!</b> <br><br>To operate legally, Lamisi will need to apply for a Tax Identification Number and register her business as a sole proprietorship (₵55).",
@@ -851,6 +883,7 @@ export default Ember.Component.extend({
         dependsOn: 'vaccinated',
         alternate: {
           questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due. As the older sister, Lamisi is expected to cover the school fees (₵150).",
+          questionImage:"School_Lundy.png",
           answerOptions: [
             {
               text: "<b>Pay the fees, and wish her luck.</b>",
@@ -867,6 +900,7 @@ export default Ember.Component.extend({
           ]
         },
           questionText: "Lamisi’s younger sister has just started Junior High School, and her fees are due (₵150). As the older sister, Lamisi is expected to cover the school fees.<br><br> However, just as the rainy season is coming to a close, a number of her birds fall sick. Lamisi will have to hire a veterinarian to tend to the sick birds (₵300).",
+          questionImage:"School_Lundy.png",
           answerOptions: [
             {
               text: "<b>Pay the school fees, and hope that the birds can recover on their own.</b>",
@@ -925,7 +959,7 @@ export default Ember.Component.extend({
               resilience: 3,
               environment: 1,
               assets: 2,
-              gameFlowVariable: ['rebranded', true]
+              gameFlowVariable: ['rebranded', false]
             }
           },
           {
@@ -936,7 +970,7 @@ export default Ember.Component.extend({
               income: 200,
               resilience: 2,
               environment: -1,
-              gameFlowVariable: ['rebranded', false]
+              gameFlowVariable: ['rebranded', true]
             }
           },
         ]
@@ -945,6 +979,7 @@ export default Ember.Component.extend({
         dependsOn: 'rebranded',
         alternate: {
           questionText: "Lamisi now needs to find an efficient way to deliver her products to the two restaurants she has agreed to supply. Unfortunately, getting around in Tamale is not very easy. There is no formal public transit, and very few people have access to cars or trucks. Beyond walking or cycling, the two most popular forms of transportation are Yellow Yellows — informal motorized tricycle taxis used to travel short distances — and Motorking motorized tricycles, which come equipped with a small truck bed for transporting goods. When it rains, roads become very muddy, and transportation can be very difficult, and even dangerous.",
+          questionImage: "Motorking_Lundy.png",
           answerOptions: [
             {
               text: "<b>Hire a Yellow Yellow each week, and personally deliver the products to each restaurant (₵70 per month).</b> <br><br>Lamisi wants her partnerships to succeed, which means making sure that her goods arrive on time, and in good order.",
@@ -961,10 +996,11 @@ export default Ember.Component.extend({
           ]
         },
         questionText: "Lamisi’s birds are fattening up nicely on their new diet, which means she can now charge more for them. The timing is good, too — the Bugum Chugu (Fire Festival) is just around the corner! The festival, which marks the start of a new lunar year, is one of the most important holidays and biggest parties for residents in Northern Ghana. The demand for plump guinea fowl is sure to spike.<br><br> This is a perfect opportunity to market her new brand, and to attract new customers.",
-        answerOptions: [
+        answerOptions: [  
           {
             text: "<r>Purchase ₵250 worth of prime time radio ads, which buys a series of day-time mentions on <i>Diamond FM</i> and a series of evening messages on <i>NorthStar Radio.</i></b>",
             resultText: "The radio ads work! As the Fire Festival approaches, dozens of new customers arrive. Not everyone who drops by purchases a bird — the prices are too high, some complain — but Lamisi’s farm has never been busier. ",
+            impactImage: "Radio_Lundy.png",
             impact: {
             }
           },
@@ -1076,9 +1112,11 @@ export default Ember.Component.extend({
 
   actions: {
     renderResult(answer) {
+      
       this.set('rejected', false)
       this.set('chosenAnswer', answer)
       this.set('resultText', answer.resultText)
+      this.set('impactImage', answer.impactImage || "")
       this.set('followUpQuestion', null)
 
       if (answer.reject) {
@@ -1108,6 +1146,7 @@ export default Ember.Component.extend({
       }
 
       this.set('resultText', null)
+      this.set('impactImage', null)
       this.set('chosenAnswer', null)
     },
 

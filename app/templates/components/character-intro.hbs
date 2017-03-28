@@ -17,6 +17,7 @@
   {{#each intro.Lamisi as |temp|}}
     <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
   {{/each}}
+  <img class="illustrations-image" src="/assets/images/{{introImages.Lamisi}}"/>
 {{/if}}
 
 {{#if isZara}}
@@ -26,6 +27,7 @@
   {{#each intro.Zara as |temp|}}
     <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
   {{/each}}
+  <img class="illustrations-image" src="/assets/images/{{introImages.Zara}}"/>
 {{/if}}
 
 {{#if isKojo}}
@@ -35,4 +37,5 @@
   {{#each intro.Kojo as |temp|}}
     <p>{{informative-modals inputText=temp renderDialog=(action 'renderDialog')}}</p>
   {{/each}}
+  <img class="illustrations-image" src="/assets/images/{{introImages.Kojo}}"/>
 {{/if}}

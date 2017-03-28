@@ -12,10 +12,44 @@
 
 {{#if resultText}}
   <div class="row align-center u-marginBottom fadeUp">
+    <div class="large-12 u-textCenter">
+      {{#if chosenAnswer.impact}}             
+          <div class="variation-image-wrapper">
+            {{#if chosenAnswer.impact.cash}}
+              <img src="/assets/images/icons/Cash{{indicator-variation chosenAnswer.impact.cash}}.png"/>
+            {{/if}}
+            {{#if chosenAnswer.impact.debt}}
+              <img src="/assets/images/icons/Debt{{indicator-variation chosenAnswer.impact.debt}}.png"/>
+            {{/if}}
+            {{#if chosenAnswer.impact.debtPayments}}
+              <img src="/assets/images/icons/DebtPayment{{indicator-variation chosenAnswer.impact.debtPayments}}.png"/>
+            {{/if}}
+            {{#if chosenAnswer.impact.environment}}
+              <img src="/assets/images/icons/EnvironmentAllImpact{{indicator-variation chosenAnswer.impact.environment}}.png"/>
+            {{/if}}
+            {{#if chosenAnswer.impact.income}}
+              <img src="/assets/images/icons/MonthlyProfit{{indicator-variation chosenAnswer.impact.income}}.png"/>
+            {{/if}}
+            {{#if chosenAnswer.impact.resilience}}
+              <img src="/assets/images/icons/Resilience{{indicator-variation chosenAnswer.impact.resilience}}.png"/>
+            {{/if}} 
+            {{#if chosenAnswer.impact.assets}}
+              {{#if isZara}}
+                <img src="/assets/images/icons/ZaraAssets{{indicator-variation chosenAnswer.impact.resilience}}.png"/>
+              {{else}}
+                <img src="/assets/images/icons/KojoLamisiAssets{{indicator-variation chosenAnswer.impact.resilience}}.png"/>
+              {{/if}}
+            {{/if}}
+          </div>
+      {{/if}}
+    </div>
     <div class="small-12 medium-8 columns u-textCenter">
       <p class="u-blueDark">
         {{informative-modals inputText=resultText renderDialog=(action 'renderDialog')}}
       </p>
+      {{#if impactImage}}
+        <img  class="illustrations-image" src="/assets/images/{{impactImage}}"/>
+      {{/if}}      
     </div>
   </div>
 
@@ -57,6 +91,9 @@
 
     <div class="row align-center u-marginBottom fadeUp">
       <div class="small-12 medium-8 columns u-textCenter">
+        {{#if questionImage}}
+          <img class="illustrations-image" src="/assets/images/{{questionImage}}"/>
+        {{/if}}
         <p class="u-colorBlueDark">
           {{informative-modals inputText=questionText renderDialog=(action 'renderDialog')}}
         </p>
